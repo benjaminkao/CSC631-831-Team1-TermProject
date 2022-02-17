@@ -84,8 +84,8 @@ crashlytics-build.properties
 # project stuff
 Wwise/*/.cache/
 Wwise/*/*.prof
-Wwise/*/*_WwiseProject.*.validationcache
-Wwise/*/*_WwiseProject.*.wsettings
+Wwise/*/*.validationcache
+Wwise/*/*.wsettings
 Wwise/*/**/*.akd
 
 # build stuff (unsure?)
