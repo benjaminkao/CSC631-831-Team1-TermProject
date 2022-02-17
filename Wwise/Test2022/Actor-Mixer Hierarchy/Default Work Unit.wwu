@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AA6607AB-C9AE-4046-9AFD-07E5DC3C65A2}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{AA6607AB-C9AE-4046-9AFD-07E5DC3C65A2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="TestSFX" ID="{BC44641D-9F3C-43D7-BC77-8543808A69F6}" ShortID="585671810">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7ABFBF34-EDB4-4A7C-B2E7-FB27CEB6DE78}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92AF51C6-865D-48B0-A7AE-600A432030C0}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Player_Hard_Impact" ID="{C8D7E633-EEE6-4345-AB48-0C20CECD2FA6}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Player_Hard_Impact.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="140745162"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Player_Hard_Impact" ID="{C8D7E633-EEE6-4345-AB48-0C20CECD2FA6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

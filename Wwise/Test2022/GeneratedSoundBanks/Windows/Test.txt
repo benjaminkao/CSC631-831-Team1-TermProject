@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2013398331	Play_TestSFX			\Default Work Unit\Play_TestSFX	
+	2872770759	Play_TestMusic			\Default Work Unit\Play_TestMusic	
+	3991482221	Stop_TestMusic			\Default Work Unit\Stop_TestMusic	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	140745162	TestSFX	C:\Users\Kevin\Documents\WwiseProjects\Test2022\.cache\Windows\SFX\SFX_Player_Hard_Impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\TestSFX		399612
+	422748452	Mood_Board_Loop_Full	C:\Users\Kevin\Documents\WwiseProjects\Test2022\.cache\Windows\SFX\Mood_Board_Loop_Full_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\TestMusic\Mood_Board_Loop_Full\Mood_Board_Loop_Full		9020516
+
