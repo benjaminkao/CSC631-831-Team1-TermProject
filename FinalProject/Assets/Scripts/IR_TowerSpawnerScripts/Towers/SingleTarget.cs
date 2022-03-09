@@ -6,6 +6,7 @@ public class SingleTarget : TowerTargeting
 {
     private const float ST_RADIUS = 7.0f;
     private const float ST_COOLDOWN = 0.5f;
+    private const int ST_DAMAGE = 15;
 
     void Start()
     {
@@ -41,6 +42,13 @@ public class SingleTarget : TowerTargeting
             }
         }
         // apply damage if enemy exists 
-        if (nearest) Debug.Log("Applying damage to " + nearest.name);
+        if (nearest)
+        {
+            Health enemyHP = nearest.GetComponent<Health>();
+            enemyHP.alterHealth(-ST_DAMAGE);
+            Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
+                ST_DAMAGE, nearest.name, enemyHP.HealthValue)
+            );
+        }
     }
 }

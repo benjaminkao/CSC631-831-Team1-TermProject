@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 1176699980194058601}
   - component: {fileID: 1176699980194058600}
   m_Layer: 0
-  m_Name: CapsuleTower
+  m_Name: SingleTargetTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spawn Sphere
+  m_Text: Area Effect Tower
 --- !u!1 &1176699980487827045
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 1176699980738573468}
   - component: {fileID: 1176699980738573467}
   m_Layer: 0
-  m_Name: SphereTower
+  m_Name: AreaEffectTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,4 +1502,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spawn Capsule
+  m_Text: Single Target Tower
