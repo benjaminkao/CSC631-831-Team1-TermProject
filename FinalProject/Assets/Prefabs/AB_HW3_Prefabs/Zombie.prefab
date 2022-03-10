@@ -1977,6 +1977,7 @@ GameObject:
   - component: {fileID: 1627830379669161339}
   - component: {fileID: 1627830379669161338}
   - component: {fileID: 272816709}
+  - component: {fileID: 1298483422411257379}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -2064,3 +2065,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: {fileID: 11400000, guid: 378bb0967c3f7d3469d1adf90624769d, type: 2}
   bloodSpawnPosition: {fileID: 1627830380885482458}
+--- !u!114 &1298483422411257379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778273763740868439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d026df65e548a248842127ddfc216ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

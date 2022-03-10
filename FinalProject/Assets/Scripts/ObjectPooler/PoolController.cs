@@ -51,6 +51,7 @@ public class PoolController : ScriptableObject
     {
         Poolable poolableObject = GetPooledObject();
 
+        // No more available poolable objects, need to create more.
         if (poolableObject == null)
         {
             poolableObject = CreatePooledObject();
