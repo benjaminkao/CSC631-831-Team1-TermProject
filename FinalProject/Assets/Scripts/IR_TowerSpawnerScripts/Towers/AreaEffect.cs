@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class AreaEffect : TowerTargeting
 {
-    private const float AOE_RADIUS = 5.0f;
-    private const float AOE_COOLDOWN = 1.0f;
-    private const int AOE_DAMAGE = 15;
+    [SerializeField] private float _aoeRadius = 5.0f;
+    [SerializeField] private float _aoeCooldown = 1.0f;
+    [SerializeField] private int _aoeDamage = 15;
     private const int AOE_HEAL = 5;
 
     void Start()
     {
-        _targetingRadius = AOE_RADIUS;
-        _cooldownTime = AOE_COOLDOWN;
+        _targetingRadius = _aoeRadius;
+        _cooldownTime = _aoeCooldown;
     }
 
     void Update()
     {
-        SearchForTargets(AOE_COOLDOWN);
+        SearchForTargets();
     }
 
     // Area-Effect Tower behavior: Apply appropriate effects to all Players/Enemies
@@ -38,9 +38,9 @@ public class AreaEffect : TowerTargeting
             else if (obj.CompareTag("Enemy"))
             {
                 Health enemyHP = obj.GetComponent<Health>();
-                enemyHP.alterHealth(-AOE_DAMAGE);
+                enemyHP.alterHealth(-_aoeDamage);
                 Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
-                    AOE_DAMAGE, obj.name, enemyHP.HealthValue)
+                    _aoeDamage, obj.name, enemyHP.HealthValue)
                 );
             }
         }
