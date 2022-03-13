@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="959552862" Language="SFX" Hash="3356835127">
+			<ObjectPath>\SoundBanks\Test\Test_Master</ObjectPath>
+			<ShortName>Test_Master</ShortName>
+			<Path>Test_Master.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2600493958" Name="Play_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Play\Play_Test_2D_Env_Switch">
+					<IncludedMemoryFiles>
+						<File Id="139233690" Language="SFX">
+							<ShortName>Test_Indoor_Ambiance.wav</ShortName>
+							<Path>SFX\Test_Indoor_Ambiance_D79FB2B7.wem</Path>
+						</File>
+						<File Id="160682465" Language="SFX">
+							<ShortName>Test_Silent.wav</ShortName>
+							<Path>SFX\Test_Silent_D79FB2B7.wem</Path>
+						</File>
+						<File Id="773901135" Language="SFX">
+							<ShortName>Test_Outdoor_Ambiance.wav</ShortName>
+							<Path>SFX\Test_Outdoor_Ambiance_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{929DBB78-E36F-4F66-BDEC-F433D080DC67}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{3139690D-A056-49AB-AB1F-3F657BE696CB}">
+							<Media>
+								<File Id="773901135"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B292D674-75DF-47C3-B94B-AED36B7AD61E}">
+							<Media>
+								<File Id="139233690"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{929DBB78-E36F-4F66-BDEC-F433D080DC67}">
+							<Media>
+								<File Id="160682465"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3428582015" Name="Play_Test_3D_Ambiance" ObjectPath="\Events\Test\SFX\Play\Play_Test_3D_Ambiance">
+					<IncludedMemoryFiles>
+						<File Id="254003914" Language="SFX">
+							<ShortName>Test_3D_Ambiance.wav</ShortName>
+							<Path>SFX\Test_3D_Ambiance_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3195805575" Name="Play_Test_Click" ObjectPath="\Events\Test\SFX\Play\Play_Test_Click">
+					<IncludedMemoryFiles>
+						<File Id="194517771" Language="SFX">
+							<ShortName>Test_Click.wav</ShortName>
+							<Path>SFX\Test_Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1001261022" Name="Play_Test_Explosion" ObjectPath="\Events\Test\SFX\Play\Play_Test_Explosion">
+					<IncludedMemoryFiles>
+						<File Id="800788653" Language="SFX">
+							<ShortName>Test_Explosion.wav</ShortName>
+							<Path>SFX\Test_Explosion_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2053261897" Name="Play_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Gameplay_Music">
+					<IncludedMemoryFiles>
+						<File Id="265934756" Language="SFX">
+							<ShortName>Test_Low_Intensity_Music.wav</ShortName>
+							<Path>SFX\Test_Low_Intensity_Music_D79FB2B7.wem</Path>
+						</File>
+						<File Id="271685855" Language="SFX">
+							<ShortName>Test_Preparation_Music.wav</ShortName>
+							<Path>SFX\Test_Preparation_Music_D79FB2B7.wem</Path>
+						</File>
+						<File Id="493028397" Language="SFX">
+							<ShortName>Test_High_Intensity_Music.wav</ShortName>
+							<Path>SFX\Test_High_Intensity_Music_D79FB2B7.wem</Path>
+						</File>
+						<File Id="722686722" Language="SFX">
+							<ShortName>Test_Boss_Music.wav</ShortName>
+							<Path>SFX\Test_Boss_Music_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{40170DB8-4C13-4B50-8ECA-B18533331FFF}">
+							<Media>
+								<File Id="722686722"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}">
+							<Media>
+								<File Id="493028397"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{4C638990-785C-424E-9FF1-E12F1E23260B}">
+							<Media>
+								<File Id="265934756"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}">
+							<Media>
+								<File Id="271685855"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3782809477" Name="Play_Test_Gunshot" ObjectPath="\Events\Test\SFX\Play\Play_Test_Gunshot">
+					<IncludedMemoryFiles>
+						<File Id="512659968" Language="SFX">
+							<ShortName>Test_Gunshot.wav</ShortName>
+							<Path>SFX\Test_Gunshot_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4045756732" Name="Play_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Main_Menu_Music">
+					<IncludedMemoryFiles>
+						<File Id="423697351" Language="SFX">
+							<ShortName>Test_Main_Menu_Music.wav</ShortName>
+							<Path>SFX\Test_Main_Menu_Music_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2610155023" Name="Play_Test_NPC_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_Footstep">
+					<IncludedMemoryFiles>
+						<File Id="561729691" Language="SFX">
+							<ShortName>Test_NPC_Footstep.wav</ShortName>
+							<Path>SFX\Test_NPC_Footstep_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2377014604" Name="Play_Test_NPC_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_VO">
+					<IncludedMemoryFiles>
+						<File Id="1024711393" Language="SFX">
+							<ShortName>Test_NPC_VO.wav</ShortName>
+							<Path>SFX\Test_NPC_VO_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="838584038" Name="Test_Reverb_Indoor" ObjectPath="\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Indoor"/>
+						<AuxBus Id="3089001037" Name="Test_Reverb_Outdoor" ObjectPath="\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3016857871" Name="Play_Test_Player_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_Footstep">
+					<IncludedMemoryFiles>
+						<File Id="1042278865" Language="SFX">
+							<ShortName>Test_Player_Footstep.wav</ShortName>
+							<Path>SFX\Test_Player_Footstep_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="82526284" Name="Play_Test_Player_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_VO">
+					<IncludedMemoryFiles>
+						<File Id="157487487" Language="SFX">
+							<ShortName>Test_Player_VO.wav</ShortName>
+							<Path>SFX\Test_Player_VO_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="177170041" Name="Set_State_Indoor" ObjectPath="\Events\Test\States\Set_State_Indoor">
+					<ActionSetState>
+						<ActionSetStateEntry Id="340398852" Name="Indoor" ObjectPath="\States\Test\Env\Indoor"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2284758210" Name="Set_State_Low" ObjectPath="\Events\Test\States\Set_State_Low">
+					<ActionSetState>
+						<ActionSetStateEntry Id="545371365" Name="Low" ObjectPath="\States\Test\Player_Lfe\Low"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2630068541" Name="Set_State_Normal" ObjectPath="\Events\Test\States\Set_State_Normal">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1160234136" Name="Normal" ObjectPath="\States\Test\Player_Lfe\Normal"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1265723240" Name="Set_State_Outdoor" ObjectPath="\Events\Test\States\Set_State_Outdoor">
+					<ActionSetState>
+						<ActionSetStateEntry Id="144697359" Name="Outdoor" ObjectPath="\States\Test\Env\Outdoor"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2829022778" Name="Set_State_Pause" ObjectPath="\Events\Test\States\Set_State_Pause">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3092587493" Name="Pause" ObjectPath="\States\Test\Pause\Pause"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2198731741" Name="Set_State_Unpause" ObjectPath="\Events\Test\States\Set_State_Unpause">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3412868374" Name="Unpause" ObjectPath="\States\Test\Pause\Unpause"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="252326232" Name="Set_Switch_Indoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Indoor">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="340398852" Name="Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Indoor"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3679741275" Name="Set_Switch_Outdoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Outdoor">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="144697359" Name="Outdoor" ObjectPath="\Switches\Test\Test_2D_Env\Outdoor"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1809104726" Name="Set_Switch_Silent" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Silent">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="3160623154" Name="Silent" ObjectPath="\Switches\Test\Test_2D_Env\Silent"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1883426811" Name="Set_Switch_Test_Boss" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Boss">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="86589546" Name="Set_Switch_Test_High_Intensity" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_High_Intensity">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="811206454" Name="Test_High_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_High_Intensity"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2649609692" Name="Set_Switch_Test_Low_Intensity" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Low_Intensity">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Low_Intensity"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1013698891" Name="Set_Switch_Test_Preparation" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Preparation">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="986341748" Name="Stop_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Stop\Stop_Test_2D_Env_Switch"/>
+				<Event Id="327767067" Name="Stop_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Gameplay_Music"/>
+				<Event Id="3682958602" Name="Stop_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Main_Menu_Music"/>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="144697359" Name="Outdoor" ObjectPath="\States\Test\Env\Outdoor" GUID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="340398852" Name="Indoor" ObjectPath="\States\Test\Env\Indoor" GUID="{81EFDE15-30C3-44B3-9C4D-5679E2F3B1A6}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="545371365" Name="Low" ObjectPath="\States\Test\Player_Lfe\Low" GUID="{968644F9-960B-4B21-B0F8-1B1460874D7C}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1160234136" Name="Normal" ObjectPath="\States\Test\Player_Lfe\Normal" GUID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3092587493" Name="Pause" ObjectPath="\States\Test\Pause\Pause" GUID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3412868374" Name="Unpause" ObjectPath="\States\Test\Pause\Unpause" GUID="{5092C350-92E6-4BEB-82AC-904683FC231D}">
+					<States/>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="144697359" Name="Outdoor" ObjectPath="\Switches\Test\Test_2D_Env\Outdoor" GUID="{3139690D-A056-49AB-AB1F-3F657BE696CB}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="340398852" Name="Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Indoor" GUID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="811206454" Name="Test_High_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_High_Intensity" GUID="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="1631956748" Name="Test_Gameplay_Music" ObjectPath="\Switches\Test\Test_Gameplay_Music" GUID="{7D67397C-554E-4EE1-A08D-7D1D9BE49434}">
+					<Switches>
+						<Switch Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation" GUID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
+						<Switch Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Low_Intensity" GUID="{4C638990-785C-424E-9FF1-E12F1E23260B}"/>
+						<Switch Id="811206454" Name="Test_High_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_High_Intensity" GUID="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}"/>
+						<Switch Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss" GUID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss" GUID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="3160623154" Name="Silent" ObjectPath="\Switches\Test\Test_2D_Env\Silent" GUID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Low_Intensity" GUID="{4C638990-785C-424E-9FF1-E12F1E23260B}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation" GUID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="4223207942" Name="Test_2D_Env" ObjectPath="\Switches\Test\Test_2D_Env" GUID="{4AA38C12-D1E5-4E30-93E6-E4BB6E76C8E2}">
+					<Switches>
+						<Switch Id="144697359" Name="Outdoor" ObjectPath="\Switches\Test\Test_2D_Env\Outdoor" GUID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
+						<Switch Id="340398852" Name="Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Indoor" GUID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
+						<Switch Id="3160623154" Name="Silent" ObjectPath="\Switches\Test\Test_2D_Env\Silent" GUID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="864498113">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="838584038" Name="Test_Reverb_Indoor" ObjectPath="\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Indoor"/>
+				<AuxBus Id="3089001037" Name="Test_Reverb_Outdoor" ObjectPath="\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor"/>
+			</IncludedAuxBusses>
+			<StateGroups>
+				<StateGroup Id="529726550" Name="Env" ObjectPath="\States\Test\Env" GUID="{414029D0-8D36-460D-9F01-0C921FEA7193}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Test\Env\None" GUID="{FAE9719B-5578-4D70-BD80-84C35D27D3EA}"/>
+						<State Id="340398852" Name="Indoor" ObjectPath="\States\Test\Env\Indoor" GUID="{81EFDE15-30C3-44B3-9C4D-5679E2F3B1A6}"/>
+						<State Id="144697359" Name="Outdoor" ObjectPath="\States\Test\Env\Outdoor" GUID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1124169588" Name="Player_Lfe" ObjectPath="\States\Test\Player_Lfe" GUID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Test\Player_Lfe\None" GUID="{9D5D2FC8-EDB9-4E61-B5CE-C6A1CF5B7D3A}"/>
+						<State Id="1160234136" Name="Normal" ObjectPath="\States\Test\Player_Lfe\Normal" GUID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+						<State Id="545371365" Name="Low" ObjectPath="\States\Test\Player_Lfe\Low" GUID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3092587493" Name="Pause" ObjectPath="\States\Test\Pause" GUID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Test\Pause\None" GUID="{29A434D7-6B31-4A6D-A101-47B3920E2624}"/>
+						<State Id="3092587493" Name="Pause" ObjectPath="\States\Test\Pause\Pause" GUID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+						<State Id="3412868374" Name="Unpause" ObjectPath="\States\Test\Pause\Unpause" GUID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

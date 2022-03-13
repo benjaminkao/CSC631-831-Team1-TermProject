@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0CD2CAEE-8021-4B67-8BEF-59790C3746E6}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Test" ID="{0CD2CAEE-8021-4B67-8BEF-59790C3746E6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Test_Gameplay_Music" ID="{7D67397C-554E-4EE1-A08D-7D1D9BE49434}">
+					<ChildrenList>
+						<Switch Name="Test_Preparation" ID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
+						<Switch Name="Test_Low_Intensity" ID="{4C638990-785C-424E-9FF1-E12F1E23260B}"/>
+						<Switch Name="Test_High_Intensity" ID="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}"/>
+						<Switch Name="Test_Boss" ID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Test_2D_Env" ID="{4AA38C12-D1E5-4E30-93E6-E4BB6E76C8E2}">
+					<ChildrenList>
+						<Switch Name="Outdoor" ID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
+						<Switch Name="Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
+						<Switch Name="Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

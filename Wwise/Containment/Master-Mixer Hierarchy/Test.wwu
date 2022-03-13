@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2391C773-871B-45CE-A34D-68C696B94384}" SchemaVersion="103">
+	<Busses>
+		<WorkUnit Name="Test" ID="{2391C773-871B-45CE-A34D-68C696B94384}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Test_Master" ID="{A00FE194-7973-47CB-8F55-6E5C1934CC5F}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{FACE9F2F-3C50-4053-ABC7-61E0D5214ED9}" WorkUnitID="{59F44D14-A58C-4E45-9A5F-704630A76188}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Test_Music" ID="{619BE842-6F3A-4F50-8C61-BAFCF3F17BC7}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Player_Lfe" ID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Pause" ID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+										<CustomState Name="" ID="{031266C9-C952-4AED-838C-D9999FEA8E81}" ShortID="971402495">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Low" ID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+										<CustomState Name="" ID="{A87C310E-72C6-4BD5-B98E-513404683A97}" ShortID="344941028">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+										<CustomState Name="" ID="{EF47A7EE-4F58-4B9A-B673-9A4891445674}" ShortID="367403209"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+										<CustomState Name="" ID="{BAD49089-86B0-4EE0-9740-AD96AA14C0C2}" ShortID="432469150"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Test_SFX" ID="{1AA135A7-859F-4955-B20C-C5F5BBCA877F}">
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Test_Reverb_Indoor" ID="{BDC5B7FE-D59E-4FA5-BB4C-241EE6C9E674}" WorkUnitID="{2391C773-871B-45CE-A34D-68C696B94384}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Test_Reverb_Outdoor" ID="{518A8613-8905-4051-BA30-D9DB6665C3E0}" WorkUnitID="{2391C773-871B-45CE-A34D-68C696B94384}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Bus Name="Test_2D_Env" ID="{93606A63-CCA0-431C-B92E-0D598AC3B5B6}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Test_3D_Env" ID="{00AC8A78-509C-470E-9D9E-8750A12372DE}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Test_Player_SFX" ID="{162299BD-E9C2-4872-AE0B-5DB445F9EFE8}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Test_Combat" ID="{8D1387F1-2725-46CB-A29E-E0979ED32C9D}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Test_NPC_SFX" ID="{5B601BF4-A77D-4F3D-A27A-4E0B20B8BAD6}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Test_Explosions" ID="{165BE7F3-B03B-449D-8FF5-213AEBB09712}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Player_Lfe" ID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Pause" ID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+										<CustomState Name="" ID="{E1B9BCE1-4B7A-4A16-8C17-10389078659A}" ShortID="472346811">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Low" ID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+										<CustomState Name="" ID="{7446B8A7-4AEB-4470-BF0B-F900EB16F713}" ShortID="1071704071">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+										<CustomState Name="" ID="{800FEB3D-19CE-460D-9675-29D627F7E613}" ShortID="169182621"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+										<CustomState Name="" ID="{E8BF584E-3F4F-436B-9715-589842E36F15}" ShortID="300687288"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Test_VO" ID="{B1C62C05-AB06-447E-BDBF-048CFE205CAD}">
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Test_Reverb_Indoor" ID="{BDC5B7FE-D59E-4FA5-BB4C-241EE6C9E674}" WorkUnitID="{2391C773-871B-45CE-A34D-68C696B94384}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Test_Reverb_Outdoor" ID="{518A8613-8905-4051-BA30-D9DB6665C3E0}" WorkUnitID="{2391C773-871B-45CE-A34D-68C696B94384}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Player_Lfe" ID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Pause" ID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+										<CustomState Name="" ID="{F5FAFE7A-1BFF-4B2B-920D-0715A831AEBB}" ShortID="912347942">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Low" ID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+										<CustomState Name="" ID="{04F042C8-3BEB-438A-BE79-FD74814AD234}" ShortID="257169427">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+										<CustomState Name="" ID="{F652586D-C41E-460F-9688-005A2E1D376C}" ShortID="1058656214"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+										<CustomState Name="" ID="{8D3AAA51-2274-4A8D-A19D-4B68AA9C1754}" ShortID="41597171"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</Bus>
+						<AuxBus Name="Test_Reverb_Indoor" ID="{BDC5B7FE-D59E-4FA5-BB4C-241EE6C9E674}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Hall_Small" ID="{D65B5F04-B83B-412C-9434-34A13A477E24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Env" ID="{414029D0-8D36-460D-9F01-0C921FEA7193}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Player_Lfe" ID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Outdoor" ID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
+										<CustomState Name="" ID="{D8E44551-5D2D-4CCF-9FD4-2A7CD8FC200A}" ShortID="846774747">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Indoor" ID="{81EFDE15-30C3-44B3-9C4D-5679E2F3B1A6}"/>
+										<CustomState Name="" ID="{AB89ECD9-4637-400A-873B-69FDC882A772}" ShortID="171898880"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Pause" ID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+										<CustomState Name="" ID="{436837A7-EDD5-41DC-B2F0-5884BCC0F0B3}" ShortID="14035810">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Low" ID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+										<CustomState Name="" ID="{BD0390D1-F7B9-4A37-8CAB-BD6416355BDD}" ShortID="3632512">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-10"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+										<CustomState Name="" ID="{D794434A-0241-4D27-A1D0-B2CD0DC47F25}" ShortID="193355014"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+										<CustomState Name="" ID="{80F7BB91-59CD-4C2D-A306-87C8F10C7807}" ShortID="766362904"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</AuxBus>
+						<AuxBus Name="Test_Reverb_Outdoor" ID="{518A8613-8905-4051-BA30-D9DB6665C3E0}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Env" ID="{414029D0-8D36-460D-9F01-0C921FEA7193}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Player_Lfe" ID="{59CE82E6-DBCC-4ADC-AB6B-D4ABF12E6CC7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Outdoor" ID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
+										<CustomState Name="" ID="{3EB14073-4FDE-418F-AD9E-AF274BCA5A4F}" ShortID="609651842"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Indoor" ID="{81EFDE15-30C3-44B3-9C4D-5679E2F3B1A6}"/>
+										<CustomState Name="" ID="{82FEC077-62FC-41BF-A23D-79CE162DDF5B}" ShortID="1016843337">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Pause" ID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}"/>
+										<CustomState Name="" ID="{B8A9BBCE-FA55-4AA4-AD0A-A81A63417CD9}" ShortID="91133324">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Low" ID="{968644F9-960B-4B21-B0F8-1B1460874D7C}"/>
+										<CustomState Name="" ID="{3F3571F4-59B4-4EB4-A305-D56AAB0DC2AA}" ShortID="785276943">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-10"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+										<CustomState Name="" ID="{7FB6217C-79BB-4C2E-87BB-85240F4BE75B}" ShortID="355087860"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+										<CustomState Name="" ID="{BCAEB8A9-4874-4DF8-8910-F05B3B45C503}" ShortID="128006934"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</AuxBus>
+						<Bus Name="Test_UI" ID="{F8C74DAA-5395-489B-A363-CA59351CF95E}">
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists/>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

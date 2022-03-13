@@ -1,0 +1,60 @@
+Event	ID	Name			Wwise Object Path	Notes
+	82526284	Play_Test_Player_VO			\Test\SFX\Play\Play_Test_Player_VO	
+	86589546	Set_Switch_Test_High_Intensity			\Test\Music\Switches\Set_Switch_Test_High_Intensity	
+	177170041	Set_State_Indoor			\Test\States\Set_State_Indoor	
+	252326232	Set_Switch_Indoor			\Test\SFX\Switches\Set_Switch_Indoor	
+	327767067	Stop_Test_Gameplay_Music			\Test\Music\Stop\Stop_Test_Gameplay_Music	
+	986341748	Stop_Test_2D_Env_Switch			\Test\SFX\Stop\Stop_Test_2D_Env_Switch	
+	1001261022	Play_Test_Explosion			\Test\SFX\Play\Play_Test_Explosion	
+	1013698891	Set_Switch_Test_Preparation			\Test\Music\Switches\Set_Switch_Test_Preparation	
+	1265723240	Set_State_Outdoor			\Test\States\Set_State_Outdoor	
+	1809104726	Set_Switch_Silent			\Test\SFX\Switches\Set_Switch_Silent	
+	1883426811	Set_Switch_Test_Boss			\Test\Music\Switches\Set_Switch_Test_Boss	
+	2053261897	Play_Test_Gameplay_Music			\Test\Music\Play\Play_Test_Gameplay_Music	
+	2198731741	Set_State_Unpause			\Test\States\Set_State_Unpause	
+	2284758210	Set_State_Low			\Test\States\Set_State_Low	
+	2377014604	Play_Test_NPC_VO			\Test\SFX\Play\Play_Test_NPC_VO	
+	2600493958	Play_Test_2D_Env_Switch			\Test\SFX\Play\Play_Test_2D_Env_Switch	
+	2610155023	Play_Test_NPC_Footstep			\Test\SFX\Play\Play_Test_NPC_Footstep	
+	2630068541	Set_State_Normal			\Test\States\Set_State_Normal	
+	2649609692	Set_Switch_Test_Low_Intensity			\Test\Music\Switches\Set_Switch_Test_Low_Intensity	
+	2829022778	Set_State_Pause			\Test\States\Set_State_Pause	
+	3016857871	Play_Test_Player_Footstep			\Test\SFX\Play\Play_Test_Player_Footstep	
+	3195805575	Play_Test_Click			\Test\SFX\Play\Play_Test_Click	
+	3428582015	Play_Test_3D_Ambiance			\Test\SFX\Play\Play_Test_3D_Ambiance	
+	3679741275	Set_Switch_Outdoor			\Test\SFX\Switches\Set_Switch_Outdoor	
+	3682958602	Stop_Test_Main_Menu_Music			\Test\Music\Stop\Stop_Test_Main_Menu_Music	
+	3782809477	Play_Test_Gunshot			\Test\SFX\Play\Play_Test_Gunshot	
+	4045756732	Play_Test_Main_Menu_Music			\Test\Music\Play\Play_Test_Main_Menu_Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1631956748	Test_Gameplay_Music			\Test\Test_Gameplay_Music	
+	4223207942	Test_2D_Env			\Test\Test_2D_Env	
+
+Switch	ID	Name	Switch Group			Notes
+	811206454	Test_High_Intensity	Test_Gameplay_Music			
+	2766477831	Test_Boss	Test_Gameplay_Music			
+	3275738912	Test_Low_Intensity	Test_Gameplay_Music			
+	3922783959	Test_Preparation	Test_Gameplay_Music			
+	144697359	Outdoor	Test_2D_Env			
+	340398852	Indoor	Test_2D_Env			
+	3160623154	Silent	Test_2D_Env			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	139233690	Test_Indoor_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Indoor_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Indoor_Ambiance		341848
+	157487487	Test_Player_VO	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Player_VO_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Player\Test_VO\Test_Player_VO		440492
+	160682465	Test_Silent	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Silent_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Silent		180528
+	194517771	Test_Click	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_UI\Test_Click		103348
+	254003914	Test_3D_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_3D_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_3D_Ambiance		411076
+	265934756	Test_Low_Intensity_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Low_Intensity_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Low_Intensity_Combat_Music\Test_Low_Intensity_Music\Test_Low_Intensity_Music		414764
+	271685855	Test_Preparation_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Preparation_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Preparation_Music\Test_Preparation_Music\Test_Preparation_Music		376796
+	423697351	Test_Main_Menu_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Main_Menu_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Main_Menu_Music\Test_Main_Menu_Music_01\Test_Main_Menu_Music		369088
+	493028397	Test_High_Intensity_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_High_Intensity_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_High_Intensity_Combat_Music\Test_High_Intensity_Music\Test_High_Intensity_Music		347672
+	512659968	Test_Gunshot	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Gunshot_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Weapons\Test_Guns\Test_Gunshot		198288
+	561729691	Test_NPC_Footstep	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_NPC_Footstep_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_NPC\Test_Locomotion\Test_NPC_Footstep		234420
+	722686722	Test_Boss_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Music\Test_Boss_Music		414712
+	773901135	Test_Outdoor_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Outdoor_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Outdoor_Ambiance		493672
+	800788653	Test_Explosion	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Weapons\Test_Explosions\Test_Explosion		244916
+	1024711393	Test_NPC_VO	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_NPC_VO_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_NPC\Test_VO\Test_NPC_VO		349548
+	1042278865	Test_Player_Footstep	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Player_Footstep_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Player\Test_Locomotion\Test_Player_Footstep		160480
+

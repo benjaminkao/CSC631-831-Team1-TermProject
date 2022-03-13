@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FF80B100-C724-4341-A59C-96ABA97F3F4B}" SchemaVersion="103">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{FF80B100-C724-4341-A59C-96ABA97F3F4B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Test" ID="{979227C5-68A4-40D4-B6A5-2DA7850E467F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Test_Main_Menu_Music" ID="{F262FC67-BB34-4C49-8E28-9597BA66C0F2}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Test_Main_Menu_Music" ID="{8239333E-AA7A-463E-BFEA-7F02053D4AC5}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_3D_Ambiance" ID="{A596E7E5-26C0-4066-AF23-CCE5D0634692}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Gameplay_Music" ID="{D79CBA72-9B7F-4F05-B286-404CAECC0823}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Test_Gameplay_Music" ID="{DCD2AB84-EA41-4AE9-B59D-F0C7E40E780A}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Click" ID="{7AFDB266-716A-4EA7-B65B-07CA78A327BF}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_2D_Env_Switch" ID="{90D0F4B0-05D5-4FFC-98C1-6B895EAA90EC}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Test_2D_Env_Switch" ID="{17655664-1DDD-4DF9-90A5-984B4D223BE7}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Explosion" ID="{40A6C4D6-1508-4CB2-805D-85B8F82C4A9B}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Player_VO" ID="{B457CDA6-B4C4-47AF-B96B-BE7330BAA9CA}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Player_Footstep" ID="{A6254BE1-C859-4BE4-A0E7-316ED4119D9C}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Gunshot" ID="{E5CA984A-3FA9-4555-BC69-59E91EB38373}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_NPC_VO" ID="{4BC146E7-5B32-4E57-A3F1-8DBE1187B37F}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_NPC_Footstep" ID="{A3A6396C-ABE6-42FB-A9C9-DD7C8ECA10A5}" WorkUnitID="{83D31152-8164-4D4E-BC7A-E1AECEC07899}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
+						<CurrentStateRef Name="Outdoor" ID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
+						<CurrentStateRef Name="Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
+						<CurrentSwitchRef Name="Test_Preparation" ID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
