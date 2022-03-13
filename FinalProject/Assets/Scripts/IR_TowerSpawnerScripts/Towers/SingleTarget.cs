@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class SingleTarget : TowerTargeting
 {
-    private const float ST_RADIUS = 7.0f;
-    private const float ST_COOLDOWN = 0.5f;
-    private const int ST_DAMAGE = 15;
+    [SerializeField] private float _stRadius = 7.0f;
+    [SerializeField] private float _stCooldown = 0.5f;
+    [SerializeField] private int _stDamage = 25;
 
     void Start()
     {
-        _targetingRadius = ST_RADIUS;
-        _cooldownTime = ST_COOLDOWN;
+        _targetingRadius = _stRadius;
+        _cooldownTime = _stCooldown;
     }
 
     void Update()
     {
-        SearchForTargets(ST_COOLDOWN);
+        SearchForTargets();
     }
 
     // Single-Target Tower behavior: Find closest enemy and apply damage to them
@@ -45,9 +45,9 @@ public class SingleTarget : TowerTargeting
         if (nearest)
         {
             Health enemyHP = nearest.GetComponent<Health>();
-            enemyHP.alterHealth(-ST_DAMAGE);
+            enemyHP.alterHealth(-_stDamage);
             Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
-                ST_DAMAGE, nearest.name, enemyHP.HealthValue)
+                _stDamage, nearest.name, enemyHP.HealthValue)
             );
         }
     }
