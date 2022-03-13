@@ -7,6 +7,10 @@ public abstract class Poolable : MonoBehaviour, IEquatable<Poolable>
 {
     private int poolIndex;
 
+
+    public static event Action<Poolable> OnPoolableDespawn;
+
+
     public int PoolIndex
     {
         get
@@ -36,6 +40,7 @@ public abstract class Poolable : MonoBehaviour, IEquatable<Poolable>
     public virtual void Despawn()
     {
         this.gameObject.SetActive(false);
+        OnPoolableDespawn?.Invoke(this);
     }
 
 

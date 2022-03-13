@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 693299377}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &454090820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454090821}
+  m_Layer: 2
+  m_Name: FPSCamTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454090821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454090820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.004, y: 0.158, z: 0.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8773961288263506069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693299376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,6 +2354,7 @@ GameObject:
   - component: {fileID: 1069179642}
   - component: {fileID: 1069179643}
   - component: {fileID: 1069179644}
+  - component: {fileID: 420942053}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -2428,10 +2459,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteractEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnInteractExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCraftEnter:
     m_PersistentCalls:
       m_Calls:
@@ -2449,12 +2504,24 @@ MonoBehaviour:
         m_CallState: 2
   OnCraftExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameMenuUIManager, Assembly-CSharp
+        m_MethodName: ToggleCraftingMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onGround: 1
   sprinting: 0
   jumpForce: 10
-  walkSpeed: 3
-  sprintSpeed: 6
+  walkSpeed: 7
+  sprintSpeed: 14
   turnSpeed: 100
   nearbyTowerSpawners: []
 --- !u!114 &1069179643
@@ -2547,6 +2614,20 @@ MonoBehaviour:
   - {fileID: 8776431862765686404}
   - {fileID: 8778496212788568308}
   - {fileID: 8778084465821797202}
+--- !u!114 &420942053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775023972565943452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79935a640b55c0445a9953893f3f1031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 0}
+  _aimCamera: {fileID: 0}
 --- !u!1 &8775040452616206618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,19 +3188,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
+--- !u!1 &8773961288263795883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4460838899841102683, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
+  m_PrefabInstance: {fileID: 4912101278718097392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8773961288263506059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4460838899840872315, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
   m_PrefabInstance: {fileID: 4912101278718097392}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &8773961288263506069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4460838899840872293, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
+  m_PrefabInstance: {fileID: 4912101278718097392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8300251190910902517 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3970803149760501509, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-  m_PrefabInstance: {fileID: 4912101278718097392}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8773961288263795883 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4460838899841102683, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
   m_PrefabInstance: {fileID: 4912101278718097392}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1865537159

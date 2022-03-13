@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: ce43c5d7025b31648b7869b486730a50
+guid: 6d935ec27d0ec534f88cbad0c76dc338
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - enemyType: {instanceID: 0}
-  - bloodSpawnPosition: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

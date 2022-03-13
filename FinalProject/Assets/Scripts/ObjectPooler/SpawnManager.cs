@@ -5,17 +5,19 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private SpawnPoolManager spawnPoolManager;
+    private SpawnPoolManager _spawnPoolManager;
 
     [SerializeField]
-    private List<PoolItem> poolItems;
+    private List<PoolItem> _poolItems;
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach(PoolItem poolItem in poolItems)
+        GameManager.Instance.RegisterSpawnManager(this);
+
+        foreach(PoolItem poolItem in _poolItems)
         {
-            spawnPoolManager.AddPool(poolItem);
+            _spawnPoolManager.AddPool(poolItem);
         }
     }
 
@@ -25,7 +27,7 @@ public class SpawnManager : MonoBehaviour
 
         Poolable objectToSpawn = null;
 
-        foreach(PoolItem poolItem in poolItems)
+        foreach(PoolItem poolItem in _poolItems)
         {
             if(poolItem.Prefab.Equals(prefab))
             {
@@ -39,8 +41,7 @@ public class SpawnManager : MonoBehaviour
             return null;
         }
 
-
-        Poolable spawnedObject = spawnPoolManager.Get(objectToSpawn);
+        Poolable spawnedObject = _spawnPoolManager.Get(objectToSpawn);
 
         spawnedObject.gameObject.transform.position = worldPosition;
 

@@ -27,6 +27,17 @@ public class SpawnPoolManager : MonoBehaviour
     }
 
 
+    private void OnEnable()
+    {
+        Poolable.OnPoolableDespawn += ReturnToPool;
+    }
+
+    private void OnDisable()
+    {
+        Poolable.OnPoolableDespawn -= ReturnToPool;
+    }
+
+
     public void AddPool(PoolItem poolItem)
     {
         // Check if a Pool already exists for the given poolableObject
@@ -83,19 +94,20 @@ public class SpawnPoolManager : MonoBehaviour
         return poolController.GetObject(position, rotation);
     }
 
-    public bool ReturnToPool(Poolable poolableObject)
+    public void ReturnToPool(Poolable poolableObject)
     {
         if(!HasPool(poolableObject))
         {
             Debug.LogError("Error: No pool found of this Poolable object.");
-            return false;
+            return;
         }
+
+        Debug.Log("Return to pool");
 
         PoolController poolController = poolControllers[poolableObject.PoolIndex];
 
         poolController.ReturnPooledObject(poolableObject);
 
-        return true;
     }
 
     private bool HasPool(Poolable poolableObject)

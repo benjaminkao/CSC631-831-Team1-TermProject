@@ -97,8 +97,6 @@ public class PoolController : ScriptableObject
 
     public void ReturnPooledObject(Poolable poolableObject)
     {
-        poolableObject.Despawn();
-
         // Add poolableObject back to the pool
         pool.Enqueue(poolableObject);
     }

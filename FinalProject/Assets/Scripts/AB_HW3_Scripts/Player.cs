@@ -61,6 +61,8 @@ public class Player : MonoBehaviour
 
         // Lock Mouse to center
         Cursor.lockState = CursorLockMode.Locked;
+
+        GameManager.Instance.RegisterPlayer(this);
     }
 
     // Update is called once per frame

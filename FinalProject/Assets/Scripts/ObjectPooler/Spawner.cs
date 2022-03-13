@@ -5,25 +5,25 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    private SpawnManager spawnManager;
+    private SpawnManager _spawnManager;
 
 
     [SerializeField]
-    private int spawnRange;
+    private int _spawnRange;
 
     [SerializeField]
-    private SpawnerPreset spawnerPreset;
+    private SpawnerPreset _spawnerPreset;
 
     void Awake()
     {
-        if(spawnerPreset == null)
+        if(_spawnerPreset == null)
         {
             Debug.LogError("Spawner does not have a SpawnerPreset");
         }
 
 
         // Get the SpawnManager GameObject
-        spawnManager = GameObject.FindObjectOfType<SpawnManager>();
+        _spawnManager = GameObject.FindObjectOfType<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class Spawner : MonoBehaviour
 
     void SpawnRandomPoolableObject()
     {
-        Poolable poolableObject = spawnManager.Get(GetRandomEnemy(), (this.transform.position + this.GetRandomPosition(spawnRange)));
+        Poolable poolableObject = _spawnManager.Get(GetRandomEnemy(), (this.transform.position + this.GetRandomPosition(_spawnRange)));
 
         poolableObject.Spawn();
 
@@ -54,16 +54,16 @@ public class Spawner : MonoBehaviour
 
     Poolable GetRandomEnemy()
     {
-        if(spawnerPreset == null)
+        if(_spawnerPreset == null)
         {
             return null;
         }
 
-        int n = spawnerPreset.spawnablePrefabs.Count;
+        int n = _spawnerPreset.spawnablePrefabs.Count;
 
         int rand = Random.Range(0, n);
 
-        return spawnerPreset.spawnablePrefabs[rand];
+        return _spawnerPreset.spawnablePrefabs[rand];
     }
 
 

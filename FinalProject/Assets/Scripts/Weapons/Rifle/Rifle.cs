@@ -79,19 +79,15 @@ public class Rifle : MonoBehaviour
 
         if(gunHit.transform.gameObject == cameraHit.transform.gameObject)
         {
-            Debug.Log(gunHit.transform.name);
-            Zombie zombie = gunHit.transform.gameObject.GetComponent<Zombie>();
+            Enemy enemy = gunHit.transform.gameObject.GetComponent<Enemy>();
 
-            if(zombie == null)
+            if(enemy == null)
             {
                 return;
             }
 
-            zombie.Died();
+            enemy.Damage(this.damage);
 
-        } else
-        {
-            Debug.Log("Wall in front of gun");
         }
         
 
