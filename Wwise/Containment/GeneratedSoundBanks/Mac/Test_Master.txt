@@ -1,31 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
 	82526284	Play_Test_Player_VO			\Test\SFX\Play\Play_Test_Player_VO	
 	86589546	Set_Switch_Test_High_Intensity			\Test\Music\Switches\Set_Switch_Test_High_Intensity	
-	177170041	Set_State_Indoor			\Test\States\Set_State_Indoor	
-	252326232	Set_Switch_Indoor			\Test\SFX\Switches\Set_Switch_Indoor	
+	271680069	Set_State_Test_Outdoor			\Test\States\Set_State_Test_Outdoor	
 	327767067	Stop_Test_Gameplay_Music			\Test\Music\Stop\Stop_Test_Gameplay_Music	
+	899382483	Set_Switch_Test_Silent			\Test\SFX\Switches\Set_Switch_Test_Silent	
 	986341748	Stop_Test_2D_Env_Switch			\Test\SFX\Stop\Stop_Test_2D_Env_Switch	
 	1001261022	Play_Test_Explosion			\Test\SFX\Play\Play_Test_Explosion	
 	1013698891	Set_Switch_Test_Preparation			\Test\Music\Switches\Set_Switch_Test_Preparation	
-	1265723240	Set_State_Outdoor			\Test\States\Set_State_Outdoor	
-	1809104726	Set_Switch_Silent			\Test\SFX\Switches\Set_Switch_Silent	
+	1347450883	Set_State_Test_Low			\Test\States\Set_State_Test_Low	
 	1883426811	Set_Switch_Test_Boss			\Test\Music\Switches\Set_Switch_Test_Boss	
 	2053261897	Play_Test_Gameplay_Music			\Test\Music\Play\Play_Test_Gameplay_Music	
-	2198731741	Set_State_Unpause			\Test\States\Set_State_Unpause	
-	2284758210	Set_State_Low			\Test\States\Set_State_Low	
 	2377014604	Play_Test_NPC_VO			\Test\SFX\Play\Play_Test_NPC_VO	
+	2540652967	Set_State_Test_Pause			\Test\States\Set_State_Test_Pause	
 	2600493958	Play_Test_2D_Env_Switch			\Test\SFX\Play\Play_Test_2D_Env_Switch	
 	2610155023	Play_Test_NPC_Footstep			\Test\SFX\Play\Play_Test_NPC_Footstep	
-	2630068541	Set_State_Normal			\Test\States\Set_State_Normal	
 	2649609692	Set_Switch_Test_Low_Intensity			\Test\Music\Switches\Set_Switch_Test_Low_Intensity	
-	2829022778	Set_State_Pause			\Test\States\Set_State_Pause	
 	3016857871	Play_Test_Player_Footstep			\Test\SFX\Play\Play_Test_Player_Footstep	
 	3195805575	Play_Test_Click			\Test\SFX\Play\Play_Test_Click	
+	3327457886	Set_State_Test_Indoor			\Test\States\Set_State_Test_Indoor	
 	3428582015	Play_Test_3D_Ambiance			\Test\SFX\Play\Play_Test_3D_Ambiance	
-	3679741275	Set_Switch_Outdoor			\Test\SFX\Switches\Set_Switch_Outdoor	
 	3682958602	Stop_Test_Main_Menu_Music			\Test\Music\Stop\Stop_Test_Main_Menu_Music	
 	3782809477	Play_Test_Gunshot			\Test\SFX\Play\Play_Test_Gunshot	
+	3974311268	Set_Switch_Test_Outdoor			\Test\SFX\Switches\Set_Switch_Test_Outdoor	
+	4019638669	Set_Switch_Test_Indoor			\Test\SFX\Switches\Set_Switch_Test_Indoor	
 	4045756732	Play_Test_Main_Menu_Music			\Test\Music\Play\Play_Test_Main_Menu_Music	
+	4046133020	Set_State_Test_Unpause			\Test\States\Set_State_Test_Unpause	
+	4124505310	Set_State_Test_Normal			\Test\States\Set_State_Test_Normal	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1631956748	Test_Gameplay_Music			\Test\Test_Gameplay_Music	
@@ -36,9 +36,9 @@ Switch	ID	Name	Switch Group			Notes
 	2766477831	Test_Boss	Test_Gameplay_Music			
 	3275738912	Test_Low_Intensity	Test_Gameplay_Music			
 	3922783959	Test_Preparation	Test_Gameplay_Music			
-	144697359	Outdoor	Test_2D_Env			
-	340398852	Indoor	Test_2D_Env			
-	3160623154	Silent	Test_2D_Env			
+	836963824	Test_Outdoor	Test_2D_Env			
+	2395569889	Test_Indoor	Test_2D_Env			
+	3264954983	Test_Silent	Test_2D_Env			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	139233690	Test_Indoor_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Indoor_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Indoor_Ambiance		341848

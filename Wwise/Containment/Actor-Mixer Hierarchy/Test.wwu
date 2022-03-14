@@ -309,7 +309,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E4AFD52B-45B7-4B42-BC79-4AB1ADE54FEE}"/>
 								</Reference>
 								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}" WorkUnitID="{0CD2CAEE-8021-4B67-8BEF-59790C3746E6}"/>
+									<ObjectRef Name="Test_Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}" WorkUnitID="{0CD2CAEE-8021-4B67-8BEF-59790C3746E6}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DC8EC009-407B-4F28-B2CD-2EF47BC7E8D4}"/>
@@ -413,19 +413,19 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Outdoor" ID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
+										<SwitchRef Name="Test_Outdoor" ID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
 										<ItemList>
 											<ItemRef Name="Test_Outdoor_Ambiance" ID="{57C0DCB8-6114-452B-A899-78CE958DE259}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
+										<SwitchRef Name="Test_Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
 										<ItemList>
 											<ItemRef Name="Test_Indoor_Ambiance" ID="{46E5F66C-043A-4123-8143-52C069E01D99}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
+										<SwitchRef Name="Test_Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
 										<ItemList>
 											<ItemRef Name="Test_Silent" ID="{884EE7EC-53CE-4EB0-B83F-20514933DAAC}"/>
 										</ItemList>

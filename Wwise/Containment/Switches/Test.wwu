@@ -13,9 +13,9 @@
 				</SwitchGroup>
 				<SwitchGroup Name="Test_2D_Env" ID="{4AA38C12-D1E5-4E30-93E6-E4BB6E76C8E2}">
 					<ChildrenList>
-						<Switch Name="Outdoor" ID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
-						<Switch Name="Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
-						<Switch Name="Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
+						<Switch Name="Test_Outdoor" ID="{3139690D-A056-49AB-AB1F-3F657BE696CB}"/>
+						<Switch Name="Test_Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
+						<Switch Name="Test_Silent" ID="{929DBB78-E36F-4F66-BDEC-F433D080DC67}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
