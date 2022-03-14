@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
 
 // Require a RigidBody and Animator component to be on whatever GameObject
 // this PlayerController is attached to
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
 
     #region Actions/Events
@@ -16,6 +17,12 @@ public class Player : MonoBehaviour
     public UnityEvent<TowerSpawner> OnCraftEnter;
     public UnityEvent<TowerSpawner> OnCraftExit;
 
+
+    public static event Action<Player> OnPlayerJoin;
+    public static event Action<Player> OnPlayerLeave;
+
+    public static event Action<Player> OnLocalPlayerJoin;
+    public static event Action<Player> OnLocalPlayerLeave;
 
     #endregion Actions/Events
 
@@ -33,6 +40,8 @@ public class Player : MonoBehaviour
     public float turnSpeed;
 
     public List<TowerSpawner> nearbyTowerSpawners;
+
+    public GameObject playerCam;
 
     #endregion Public Variables
 
@@ -52,22 +61,53 @@ public class Player : MonoBehaviour
     #endregion Private Variables
 
     // Start is called before the first frame update
-    void Start()
+
+
+    public override void OnStartAuthority()
+    {
+
+        // Lock Mouse to center
+        Cursor.lockState = CursorLockMode.Locked;
+
+
+        Debug.Log("Local Player: " + isLocalPlayer);
+        Debug.Log("Is Server: " + isServer);
+        if(isLocalPlayer)
+        {
+            OnLocalPlayerJoin?.Invoke(this);
+        }
+    }
+
+    private void OnEnable()
     {
         // Get any necessary components before the game starts
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
 
+        
+        OnPlayerJoin?.Invoke(this);
+    }
 
-        // Lock Mouse to center
-        Cursor.lockState = CursorLockMode.Locked;
 
-        GameManager.Instance.RegisterPlayer(this);
+    private void OnDisable()
+    {
+        if(isLocalPlayer)
+        {
+            OnLocalPlayerLeave?.Invoke(this);
+        }
+
+        OnPlayerLeave?.Invoke(this);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(!isLocalPlayer)
+        {
+            return;
+        }
+
 
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");

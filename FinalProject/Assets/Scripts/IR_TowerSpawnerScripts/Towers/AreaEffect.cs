@@ -17,6 +17,11 @@ public class AreaEffect : TowerTargeting
 
     void Update()
     {
+        if(!isServer)
+        {
+            return;
+        }
+
         SearchForTargets();
     }
 

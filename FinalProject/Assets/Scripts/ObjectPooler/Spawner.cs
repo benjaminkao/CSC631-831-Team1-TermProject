@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class Spawner : NetworkBehaviour
 {
 
     private SpawnManager _spawnManager;
@@ -29,6 +30,14 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Is Server: " + isServer);
+        // Anything that spawns should only be handled by the server
+        if(!isServer)
+        {
+            return;
+        }
+
+
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             SpawnRandomPoolableObject();
@@ -41,6 +50,8 @@ public class Spawner : MonoBehaviour
         Poolable poolableObject = _spawnManager.Get(GetRandomEnemy(), (this.transform.position + this.GetRandomPosition(_spawnRange)));
 
         poolableObject.Spawn();
+
+        NetworkServer.Spawn(poolableObject.gameObject);
 
         //StartCoroutine(DespawnTimer(poolableObject));
     }

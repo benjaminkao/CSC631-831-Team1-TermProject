@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class PlayerAimController : MonoBehaviour
+public class PlayerAimController : NetworkBehaviour
 {
     [SerializeField] private float _mouseSensitivity = 100f;
     [SerializeField] private float yClamp = 90.0f;
@@ -15,11 +16,23 @@ public class PlayerAimController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public override void OnStartClient()
     {
         if(_mainCamera == null || _aimCamera == null || _cameraTarget == null)
         {
             Debug.LogError("Please reference the main and aim cameras in PlayerAimController.");
+        }
+
+        if(isLocalPlayer)
+        {
+            _mainCamera.SetActive(true);
+            _aimCamera.SetActive(false);
+            _cameraTarget.SetActive(true);
+        } else
+        {
+            _mainCamera.SetActive(false);
+            _aimCamera.SetActive(false);
+            _cameraTarget.SetActive(false);
         }
     }
 

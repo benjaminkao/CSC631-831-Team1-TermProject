@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
+public class TowerSpawnerInteractable : NetworkBehaviour, IInteractable
 {
     [SerializeField]
     private GameObject _spawnerMenu;
@@ -19,7 +20,7 @@ public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
         }
     }
 
-    private void Start()
+    void OnEnable()
     {
         _canInteract = true;
         _spawnerMenu.SetActive(false);    
@@ -27,16 +28,19 @@ public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
 
     public void PerformInteractAction()
     {
-        if(_canInteract)
+        //Debug.Log("Can open Spawn Menu: " + _canInteract);
+        if (_canInteract)
         {
             Debug.Log("Tower Spawner interacted with");
             if (_spawnerMenu.activeInHierarchy)
             {
                 _spawnerMenu.SetActive(false);
-            }
+            Cursor.lockState = CursorLockMode.Locked;
+        }
             else
             {
                 _spawnerMenu.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }

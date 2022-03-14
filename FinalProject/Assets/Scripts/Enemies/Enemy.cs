@@ -32,6 +32,11 @@ public class Enemy : Poolable
 
     private void OnEnable()
     {
+        if(GameManager.Instance.Players.Count <= 0)
+        {
+            return;
+        } 
+
         player = GameManager.Instance.Players[0].gameObject;
     }
 
@@ -40,6 +45,11 @@ public class Enemy : Poolable
 
     private void Update()
     {
+        if(player == null)
+        {
+            return;
+        }
+
         agent.SetDestination(player.transform.position);
     }
 

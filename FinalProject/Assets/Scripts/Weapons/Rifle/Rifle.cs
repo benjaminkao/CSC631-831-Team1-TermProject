@@ -14,6 +14,7 @@ public class Rifle : MonoBehaviour
 
     private void OnEnable()
     {
+        tpsCamera = Camera.main;
         if(tpsCamera == null)
         {
             Debug.LogError("TPS Camera not referenced.");

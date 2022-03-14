@@ -284,7 +284,6 @@ GameObject:
   - component: {fileID: 1176699979981302670}
   - component: {fileID: 1176699979981302669}
   - component: {fileID: 1176699979981302668}
-  - component: {fileID: 1176699979981302667}
   m_Layer: 0
   m_Name: SpawnerMenu
   m_TagString: Untagged
@@ -309,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.001, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &1176699979981302670
@@ -373,18 +372,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1176699979981302667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176699979981302666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f562262ff20ae40bd63a8b4c2ee5c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1176699980098020241
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,12 +588,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176699979981302667}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpawnerMenuSelection, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 9197539406107801151, guid: 44e474f1ca7c4cf4d871d180c473f8f6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1065,12 +1052,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176699979981302667}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpawnerMenuSelection, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 2245730833943698834, guid: bcd4c6aa30af14d4f94b98df6d2846d6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1198,7 +1185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176699979981302667}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpawnerMenuSelection, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 2
@@ -1323,6 +1310,7 @@ GameObject:
   - component: {fileID: 1176699981091442715}
   - component: {fileID: 1176699981091442714}
   - component: {fileID: 1176699981091442713}
+  - component: {fileID: 3384844743856144413}
   m_Layer: 0
   m_Name: TowerSpawner-v2
   m_TagString: Untagged
@@ -1337,7 +1325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176699981091442712}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.99, y: 3.06, z: 1.644}
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_Children:
@@ -1423,7 +1411,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1a3e14a109b264d9300894feca8bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _spawnerMenu: {fileID: 1176699979981302666}
+--- !u!114 &3384844743856144413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176699981091442712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f562262ff20ae40bd63a8b4c2ee5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &1176699981126330317
 GameObject:
   m_ObjectHideFlags: 0

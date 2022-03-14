@@ -16,6 +16,11 @@ public class SingleTarget : TowerTargeting
 
     void Update()
     {
+        if(!isServer)
+        {
+            return;
+        }
+
         SearchForTargets();
     }
 
