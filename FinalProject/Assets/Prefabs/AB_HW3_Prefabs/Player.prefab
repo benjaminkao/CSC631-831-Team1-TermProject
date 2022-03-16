@@ -190,36 +190,6 @@ Transform:
   m_Father: {fileID: 693299377}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &454090820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 454090821}
-  m_Layer: 2
-  m_Name: FPSCamTarget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &454090821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454090820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.004, y: 0.158, z: 0.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8773961288263506069}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625563069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3214,9 @@ MonoBehaviour:
   turnSpeed: 100
   nearbyTowerSpawners: []
   playerCam: {fileID: 0}
+  gun: {fileID: 4912101277020332407}
+  playerAnim: {fileID: 0}
+  playerRb: {fileID: 0}
 --- !u!114 &1069179643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4021,9 +3994,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8778562130956354502}
     m_Modifications:
-    - target: {fileID: 3970803149760501509, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 1865537159, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
+      propertyPath: shootDelay
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4460838899840872315, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
       propertyPath: m_RootOrder
@@ -4069,45 +4042,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102657, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102659, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102661, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102663, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102667, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102669, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102671, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4460838899841102683, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
       propertyPath: m_Name
       value: Rifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460838899841102683, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593863512719973463, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
@@ -4116,76 +4053,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4460838899840872315, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
   m_PrefabInstance: {fileID: 4912101278718097392}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8773961288263795883 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4460838899841102683, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-  m_PrefabInstance: {fileID: 4912101278718097392}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8773961288263506069 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4460838899840872293, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-  m_PrefabInstance: {fileID: 4912101278718097392}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8300251190910902517 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3970803149760501509, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
-  m_PrefabInstance: {fileID: 4912101278718097392}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1865537159
+--- !u!114 &4912101277020332407 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1865537159, guid: 047fd91d59bc4ca4193a4f2578b7a1ad, type: 3}
+  m_PrefabInstance: {fileID: 4912101278718097392}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8773961288263795883}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cc67b9b9466ce94f97c55962d154704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  tpsCamera: {fileID: 0}
-  gunPoint: {fileID: 8300251190910902517}
---- !u!114 &1865537160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8773961288263795883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_RawSignal: {fileID: 11400000, guid: 4c30c884fa661ef40b62983c66407e76, type: 2}
-    m_AmplitudeGain: 0.05
-    m_FrequencyGain: 1
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 1000
-    m_PropagationSpeed: 343

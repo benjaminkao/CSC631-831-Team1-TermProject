@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Rifle : MonoBehaviour
@@ -5,6 +7,9 @@ public class Rifle : MonoBehaviour
 
     public float damage = 10f;
     public float range = 100f;
+    public float shootDelay = 0.5f;
+
+    public bool canShoot;
 
     [SerializeField] private Camera tpsCamera;
 
@@ -12,8 +17,9 @@ public class Rifle : MonoBehaviour
     [SerializeField] private GameObject gunPoint;
 
 
-    private void OnEnable()
+    void OnEnable()
     {
+        canShoot = true;
         tpsCamera = Camera.main;
         if(tpsCamera == null)
         {
@@ -27,27 +33,38 @@ public class Rifle : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void ClientShoot()
     {
+        StartCoroutine(ShootDelay());
 
-        if(Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-        }
-
-
-        
+        source = GetComponent<Cinemachine.CinemachineImpulseSource>();
+        source.GenerateImpulse(tpsCamera.transform.forward);
     }
 
 
-    void Shoot()
+    public GameObject Shoot(Vector3 startPos, Vector3 forward)
     {
-        source = GetComponent<Cinemachine.CinemachineImpulseSource>();
-        source.GenerateImpulse(tpsCamera.transform.forward);
+        
 
 
+        return HandleShoot(startPos, forward);
+
+    }
+
+
+    IEnumerator ShootDelay()
+    {
+        canShoot = false;
+
+        yield return new WaitForSeconds(shootDelay);
+        Debug.Log("Can shoot");
+        canShoot = true;
+    } 
+
+
+
+    private GameObject HandleShoot(Vector3 startPos, Vector3 forward)
+    {
         RaycastHit cameraHit;
         RaycastHit gunHit;
 
@@ -55,42 +72,34 @@ public class Rifle : MonoBehaviour
         layerMask = ~layerMask;
 
         // Camera: Physics.Raycast(origin, endPoint, hit)
-        bool camera = Physics.Raycast(tpsCamera.transform.position, tpsCamera.transform.forward, out cameraHit, range, layerMask);
+        bool camera = Physics.Raycast(startPos, forward, out cameraHit, range, layerMask);
 
 
-        if(!camera)
+        if (!camera)
         {
             // Camera ray didn't hit anything, so no need to check gun raycast
-            return;
+            return null;
         }
 
 
         bool gun = Physics.Linecast(gunPoint.transform.position, cameraHit.transform.position, out gunHit);
 
-        
+
         // Two Cases:
         // 1. Gun ray hit GameObject that is the same as Camera ray hit
         // 2. Gun ray hit GameObject (Wall/Obstacle) that is not the same as Camera ray hit
 
-        if(!gun)
+        if (!gun)
         {
-            return;
+            return null;
         }
 
 
-        if(gunHit.transform.gameObject == cameraHit.transform.gameObject)
+        if (gunHit.transform.gameObject == cameraHit.transform.gameObject)
         {
-            Enemy enemy = gunHit.transform.gameObject.GetComponent<Enemy>();
-
-            if(enemy == null)
-            {
-                return;
-            }
-
-            enemy.Damage(this.damage);
-
+            return gunHit.transform.gameObject;
         }
-        
 
+        return null;
     }
 }

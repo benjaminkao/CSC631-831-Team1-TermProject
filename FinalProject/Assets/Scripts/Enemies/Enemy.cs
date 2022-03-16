@@ -1,9 +1,15 @@
 using UnityEngine;
 using UnityEngine.AI;
+using Mirror;
 
-[RequireComponent(typeof(Health))]
-public class Enemy : Poolable
+[RequireComponent(typeof(NavMeshAgent), typeof(Health), typeof(EnemyPoolable))]
+public class Enemy : NetworkBehaviour
 {
+
+    public Health Health {
+        get { return health; }
+       }
+
 
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private GameObject bloodSpawnPosition;
@@ -12,6 +18,8 @@ public class Enemy : Poolable
 
     private NavMeshAgent agent;
     private Health health;
+
+    private EnemyPoolable enemyPoolable;
 
     void Awake()
     {
@@ -28,6 +36,8 @@ public class Enemy : Poolable
 
         health = GetComponent<Health>();
         agent = GetComponent<NavMeshAgent>();
+        enemyPoolable = GetComponent<EnemyPoolable>();
+
     }
 
     private void OnEnable()
@@ -56,13 +66,38 @@ public class Enemy : Poolable
 
     public void Damage(float damage)
     {
+        if(!isServer)
+        {
+            return;
+        }
+
+
+        Debug.Log("Enemy hit");
+
         health.alterHealth(-damage);
 
         if(health.Died)
         {
-            base.Despawn();
+            enemyPoolable.Despawn();
         }
     }
+
+    [ClientRpc]
+    public void RpcUpdateHealth(float healthValue)
+    {
+        if(isServer)
+        {
+            return;
+        }
+
+        health.SetHealth(healthValue);
+        Debug.Log(healthValue);
+        if(health.Died)
+        {
+            enemyPoolable.Despawn();
+        }
+    }
+
 
 
     public void Died()
@@ -72,8 +107,4 @@ public class Enemy : Poolable
         Destroy(gameObject);
     }
 
-    protected override void OnDisable()
-    {
-        
-    }
 }

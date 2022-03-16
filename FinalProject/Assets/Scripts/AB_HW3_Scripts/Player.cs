@@ -51,9 +51,10 @@ public class Player : NetworkBehaviour
     //[SerializeField] private Collider hitbox;
     //[SerializeField] private Collider interactableRange;
 
+    [SerializeField] private Rifle gun;
 
-    private Animator playerAnim;
-    private Rigidbody playerRb;
+    [SerializeField] private Animator playerAnim;
+    [SerializeField] private Rigidbody playerRb;
 
     private bool canInteract = false;
     private bool interacting = false;
@@ -83,7 +84,6 @@ public class Player : NetworkBehaviour
         // Get any necessary components before the game starts
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
-
         
         OnPlayerJoin?.Invoke(this);
     }
@@ -106,6 +106,16 @@ public class Player : NetworkBehaviour
         if(!isLocalPlayer)
         {
             return;
+        }
+
+        if(Input.GetButton("Fire1"))
+        {
+            if(gun.canShoot) {
+
+                gun.ClientShoot();
+
+                CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
+            }
         }
 
 
@@ -166,6 +176,31 @@ public class Player : NetworkBehaviour
 
 
 
+    }
+
+    [Command]
+    void CmdShoot(Vector3 startPos, Vector3 forward)
+    {
+        GameObject targetHit = gun.Shoot(startPos, forward);
+
+        if(targetHit == null)
+        {
+            return;
+        }
+
+
+        Enemy enemy = targetHit.gameObject.GetComponent<Enemy>();
+
+        if(enemy == null)
+        {
+            return;
+        }
+
+        // Update Enemy Health on Server
+        enemy.Damage(gun.damage);
+
+
+        enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
 
 
