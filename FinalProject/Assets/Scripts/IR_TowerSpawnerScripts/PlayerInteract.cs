@@ -74,7 +74,7 @@ public class PlayerInteract : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            Player player = other.gameObject.GetComponent<Player>();
+            ContainmentPlayer player = other.gameObject.GetComponent<ContainmentPlayer>();
 
             towerSpawnerIdentity.AssignClientAuthority(player.GetComponent<NetworkIdentity>().connectionToClient);
 

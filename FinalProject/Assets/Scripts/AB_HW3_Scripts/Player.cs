@@ -12,10 +12,6 @@ public class Player : NetworkBehaviour
 {
 
     #region Actions/Events
-    public UnityEvent OnInteractEnter;
-    public UnityEvent OnInteractExit;
-    public UnityEvent<TowerSpawner> OnCraftEnter;
-    public UnityEvent<TowerSpawner> OnCraftExit;
 
 
     public static event Action<Player> OnPlayerJoin;
@@ -159,19 +155,19 @@ public class Player : NetworkBehaviour
         {
             sprinting = false;
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (interacting)
-            {
-                interacting = false;
-                OnCraftExit.Invoke(nearbyTowerSpawners[0]);
-            }
-            else if (canInteract)
-            {
-                interacting = true;
-                OnCraftEnter.Invoke(nearbyTowerSpawners[0]);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    if (interacting)
+        //    {
+        //        interacting = false;
+        //        OnCraftExit.Invoke(nearbyTowerSpawners[0]);
+        //    }
+        //    else if (canInteract)
+        //    {
+        //        interacting = true;
+        //        OnCraftEnter.Invoke(nearbyTowerSpawners[0]);
+        //    }
+        //}
 
 
 
@@ -220,41 +216,41 @@ public class Player : NetworkBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            canInteract = true;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        canInteract = true;
 
-            // Add TowerSpawner to nearbyTowerSpawners
-            nearbyTowerSpawners.Add(other.GetComponent<TowerSpawner>());
+    //        // Add TowerSpawner to nearbyTowerSpawners
+    //        nearbyTowerSpawners.Add(other.GetComponent<TowerSpawner>());
 
-            // Invoke the OnInteractEnter event to update UI
-            OnInteractEnter.Invoke();
-        }
-    }
+    //        // Invoke the OnInteractEnter event to update UI
+    //        OnInteractEnter.Invoke();
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            canInteract = false;
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        canInteract = false;
 
-            // Remove TowerSpawner to nearbyTowerSpawners
-            nearbyTowerSpawners.Remove(other.GetComponent<TowerSpawner>());
+    //        // Remove TowerSpawner to nearbyTowerSpawners
+    //        nearbyTowerSpawners.Remove(other.GetComponent<TowerSpawner>());
 
 
-            // Invoke the OnInteractExit and OnCraftExit events to update UI
-            OnInteractExit.Invoke();
+    //        // Invoke the OnInteractExit and OnCraftExit events to update UI
+    //        OnInteractExit.Invoke();
 
-            if (interacting)
-            {
-                interacting = false;
-                OnCraftExit.Invoke(nearbyTowerSpawners[0]);
+    //        if (interacting)
+    //        {
+    //            interacting = false;
+    //            OnCraftExit.Invoke(nearbyTowerSpawners[0]);
 
-            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
 }
