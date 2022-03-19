@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
+
+    public float HealthValue
+    {
+        get { return _healthValue;  }
+
+        set
+        {
+            _healthValue = value;
+            _healthBarUI.SetHealth(value);
+            Debug.Log("got here");
+            HandleShowHealthBar();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +30,31 @@ public class EnemyHealth : Health
     {
         base.alterHealth(value);
 
-        if(atMaxHealth())
+        HandleShowHealthBar();
+    }
+
+    public override void SetHealth(float healthValue)
+    {
+        base.SetHealth(healthValue);
+
+        HandleShowHealthBar();
+    }
+
+    private void HandleShowHealthBar()
+    {
+        
+        if (atMaxHealth())
         {
             _healthBarUI.gameObject.SetActive(false);
-        } else if(!atZeroHealth() || !atMaxHealth())
-        {
-            _healthBarUI.gameObject.SetActive(true);
         }
+
+        Debug.Log("Should show health bar");
+        _healthBarUI.gameObject.SetActive(true);
+        
     }
+
+    
+
 
     public bool Died()
     {

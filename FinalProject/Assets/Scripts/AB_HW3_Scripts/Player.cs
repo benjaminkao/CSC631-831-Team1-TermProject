@@ -1,21 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
 
 // Require a RigidBody and Animator component to be on whatever GameObject
 // this PlayerController is attached to
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
 
     #region Actions/Events
-    public UnityEvent OnInteractEnter;
-    public UnityEvent OnInteractExit;
-    public UnityEvent<TowerSpawner> OnCraftEnter;
-    public UnityEvent<TowerSpawner> OnCraftExit;
 
+
+    public static event Action<Player> OnPlayerJoin;
+    public static event Action<Player> OnPlayerLeave;
+
+    public static event Action<Player> OnLocalPlayerJoin;
+    public static event Action<Player> OnLocalPlayerLeave;
 
     #endregion Actions/Events
 
@@ -34,6 +37,8 @@ public class Player : MonoBehaviour
 
     public List<TowerSpawner> nearbyTowerSpawners;
 
+    public GameObject playerCam;
+
     #endregion Public Variables
 
 
@@ -42,9 +47,10 @@ public class Player : MonoBehaviour
     //[SerializeField] private Collider hitbox;
     //[SerializeField] private Collider interactableRange;
 
+    [SerializeField] private Rifle gun;
 
-    private Animator playerAnim;
-    private Rigidbody playerRb;
+    [SerializeField] private Animator playerAnim;
+    [SerializeField] private Rigidbody playerRb;
 
     private bool canInteract = false;
     private bool interacting = false;
@@ -52,22 +58,62 @@ public class Player : MonoBehaviour
     #endregion Private Variables
 
     // Start is called before the first frame update
-    void Start()
-    {
-        // Get any necessary components before the game starts
-        playerRb = GetComponent<Rigidbody>();
-        playerAnim = GetComponent<Animator>();
 
+
+    public override void OnStartAuthority()
+    {
 
         // Lock Mouse to center
         Cursor.lockState = CursorLockMode.Locked;
 
-        GameManager.Instance.RegisterPlayer(this);
+
+        Debug.Log("Local Player: " + isLocalPlayer);
+        Debug.Log("Is Server: " + isServer);
+        if(isLocalPlayer)
+        {
+            OnLocalPlayerJoin?.Invoke(this);
+        }
+    }
+
+    private void OnEnable()
+    {
+        // Get any necessary components before the game starts
+        playerRb = GetComponent<Rigidbody>();
+        playerAnim = GetComponent<Animator>();
+        
+        OnPlayerJoin?.Invoke(this);
+    }
+
+
+    private void OnDisable()
+    {
+        if(isLocalPlayer)
+        {
+            OnLocalPlayerLeave?.Invoke(this);
+        }
+
+        OnPlayerLeave?.Invoke(this);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(!isLocalPlayer)
+        {
+            return;
+        }
+
+        if(Input.GetButton("Fire1"))
+        {
+            if(gun.canShoot) {
+
+                gun.ClientShoot();
+
+                CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
+            }
+        }
+
 
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -109,23 +155,48 @@ public class Player : MonoBehaviour
         {
             sprinting = false;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    if (interacting)
+        //    {
+        //        interacting = false;
+        //        OnCraftExit.Invoke(nearbyTowerSpawners[0]);
+        //    }
+        //    else if (canInteract)
+        //    {
+        //        interacting = true;
+        //        OnCraftEnter.Invoke(nearbyTowerSpawners[0]);
+        //    }
+        //}
+
+
+
+
+    }
+
+    [Command]
+    void CmdShoot(Vector3 startPos, Vector3 forward)
+    {
+        GameObject targetHit = gun.Shoot(startPos, forward);
+
+        if(targetHit == null)
         {
-            if (interacting)
-            {
-                interacting = false;
-                OnCraftExit.Invoke(nearbyTowerSpawners[0]);
-            }
-            else if (canInteract)
-            {
-                interacting = true;
-                OnCraftEnter.Invoke(nearbyTowerSpawners[0]);
-            }
+            return;
         }
 
 
+        Enemy enemy = targetHit.gameObject.GetComponent<Enemy>();
+
+        if(enemy == null)
+        {
+            return;
+        }
+
+        // Update Enemy Health on Server
+        enemy.Damage(gun.damage);
 
 
+        enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
 
 
@@ -145,41 +216,41 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            canInteract = true;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        canInteract = true;
 
-            // Add TowerSpawner to nearbyTowerSpawners
-            nearbyTowerSpawners.Add(other.GetComponent<TowerSpawner>());
+    //        // Add TowerSpawner to nearbyTowerSpawners
+    //        nearbyTowerSpawners.Add(other.GetComponent<TowerSpawner>());
 
-            // Invoke the OnInteractEnter event to update UI
-            OnInteractEnter.Invoke();
-        }
-    }
+    //        // Invoke the OnInteractEnter event to update UI
+    //        OnInteractEnter.Invoke();
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            canInteract = false;
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        canInteract = false;
 
-            // Remove TowerSpawner to nearbyTowerSpawners
-            nearbyTowerSpawners.Remove(other.GetComponent<TowerSpawner>());
+    //        // Remove TowerSpawner to nearbyTowerSpawners
+    //        nearbyTowerSpawners.Remove(other.GetComponent<TowerSpawner>());
 
 
-            // Invoke the OnInteractExit and OnCraftExit events to update UI
-            OnInteractExit.Invoke();
+    //        // Invoke the OnInteractExit and OnCraftExit events to update UI
+    //        OnInteractExit.Invoke();
 
-            if (interacting)
-            {
-                interacting = false;
-                OnCraftExit.Invoke(nearbyTowerSpawners[0]);
+    //        if (interacting)
+    //        {
+    //            interacting = false;
+    //            OnCraftExit.Invoke(nearbyTowerSpawners[0]);
 
-            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
 }

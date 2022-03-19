@@ -7,9 +7,16 @@ public class Health : MonoBehaviour
     [SerializeField] protected float _maxHealth;
     [SerializeField] protected HealthBar _healthBarUI;
 
-    private float _healthValue;
+    [SerializeField] protected float _healthValue;
 
-    public float HealthValue { get { return _healthValue; } }
+    public float HealthValue { 
+        get { return _healthValue; }
+
+        set { 
+            _healthValue = value;
+            _healthBarUI.SetHealth(value);
+        }
+    }
 
     public bool Died
     {
@@ -43,6 +50,11 @@ public class Health : MonoBehaviour
             _healthValue = 0;
         }
         _healthBarUI.SetHealth(_healthValue);
+    }
+
+    public virtual void SetHealth(float healthValue)
+    {
+        HealthValue = healthValue;
     }
 
     protected virtual bool atMaxHealth() { return _healthValue >= _maxHealth; }

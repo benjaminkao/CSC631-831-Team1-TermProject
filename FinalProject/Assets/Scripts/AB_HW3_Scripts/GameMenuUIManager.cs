@@ -21,7 +21,7 @@ public class GameMenuUIManager : MonoBehaviour
         if(pauseMenu == null)
         {
             Debug.LogError("Pause Menu is undefined.");
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 
@@ -43,7 +43,8 @@ public class GameMenuUIManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        Debug.Log("Return to main menu");
+        //SceneManager.LoadScene(0);
     }
 
 
