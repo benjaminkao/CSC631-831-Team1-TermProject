@@ -8,16 +8,25 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    [SerializeField] private List<Player> _players;
-    [SerializeField] private Player _localPlayer;
-    [SerializeField] private SpawnManager _spawnManager;
+    [SerializeField] private List<ContainmentPlayer> _players;
+    [SerializeField] private ContainmentPlayer _localPlayer;
 
-    public Player LocalPlayer
+    public List<GameObject> EnemyTargetables
+    {
+        get
+        {
+            return _enemyTargetables;
+        }
+    }
+
+    [SerializeField] private List<GameObject> _enemyTargetables;
+
+    public ContainmentPlayer LocalPlayer
     {
         get { return _localPlayer; }
     }
 
-    public List<Player> Players
+    public List<ContainmentPlayer> Players
     {
         get { return _players; }
     }
@@ -36,53 +45,130 @@ public class GameManager : MonoBehaviour
         // Move GameManager GameObject into DontDestroyOnLoad scene
         DontDestroyOnLoad(gameObject);
 
-        this._players = new List<Player>();
+        this._players = new List<ContainmentPlayer>();
     }
 
     private void OnEnable()
     {
-        Player.OnPlayerJoin += RegisterPlayer;
-        Player.OnPlayerLeave += RemovePlayer;
-        Player.OnLocalPlayerJoin += RegisterLocalPlayer;
-        Player.OnLocalPlayerLeave += RemoveLocalPlayer;
+        ContainmentPlayer.OnPlayerJoin += RegisterPlayer;
+        ContainmentPlayer.OnPlayerLeave += RemovePlayer;
+        ContainmentPlayer.OnPlayerDown += HandlePlayerDowned;
+        ContainmentPlayer.OnPlayerDeath += HandlePlayerDeath;
+        TargetableManager.OnTargetableEnabled += RegisterTargetable;
+        TargetableManager.OnTargetableDisabled += DeregisterTargetable;
+
+
+        //ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
+        //ContainmentPlayer.OnLocalPlayerLeave += RemoveLocalPlayer;
     }
 
     private void OnDisable()
     {
-        Player.OnPlayerJoin -= RegisterPlayer;
-        Player.OnPlayerLeave -= RemovePlayer;
-        Player.OnLocalPlayerJoin -= RegisterLocalPlayer;
-        Player.OnLocalPlayerLeave -= RemoveLocalPlayer;
+        ContainmentPlayer.OnPlayerJoin -= RegisterPlayer;
+        ContainmentPlayer.OnPlayerLeave -= RemovePlayer;
+        ContainmentPlayer.OnPlayerDown -= HandlePlayerDowned;
+        ContainmentPlayer.OnPlayerDeath -= HandlePlayerDeath;
+        TargetableManager.OnTargetableEnabled -= RegisterTargetable;
+        TargetableManager.OnTargetableDisabled -= DeregisterTargetable;
+
+
+        //ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
+        //ContainmentPlayer.OnLocalPlayerLeave -= RemoveLocalPlayer;
     }
 
 
-
+    // NOTE: For Networking, the parameters for these functions may need to be changed
+    // to NetworkIdentity
 
     // Register player with the game so Enemies can target the players
-    public void RegisterPlayer(Player player)
+    public void RegisterPlayer(ContainmentPlayer player)
     {
         this._players.Add(player);
     }
 
-    public void RemovePlayer(Player player)
+    public void RemovePlayer(ContainmentPlayer player)
     {
         this._players.Remove(player);
     }
 
 
-    public void RegisterLocalPlayer(Player player)
+    public void RegisterLocalPlayer(ContainmentPlayer player)
     {
         this._localPlayer = player;
     }
 
-    public void RemoveLocalPlayer(Player player)
+    public void RemoveLocalPlayer(ContainmentPlayer player)
     {
         this._localPlayer = null;
     }
 
-    public void RegisterSpawnManager(SpawnManager spawnManager)
+    public void RegisterTargetable(ITargetable targetable)
     {
-        this._spawnManager = spawnManager;
+        this._enemyTargetables.Add(targetable.gameObject);
     }
+
+    public void DeregisterTargetable(ITargetable targetable)
+    {
+        this._enemyTargetables.Remove(targetable.gameObject);
+    }
+
+
+
+    
+    public void HandlePlayerDowned(ContainmentPlayer playerDowned)
+    {
+        bool gameOver = true;
+        foreach(ContainmentPlayer player in this._players)
+        {
+            if(player == playerDowned)
+            {
+                player.Downed = true;
+            }
+
+            if(!player.Downed && !player.Died)
+            {
+                gameOver = false;
+            }
+        }
+
+
+        if(gameOver)
+        {
+            Debug.Log("Game Over");
+            // Handle Game Over
+        }
+
+        // Networking - Notify clients of player down and if game is over
+    }
+
+    public void HandlePlayerDeath(ContainmentPlayer playerDied)
+    {
+        bool gameOver = true;
+
+        foreach(ContainmentPlayer player in this._players)
+        {
+            if(player == playerDied)
+            {
+                player.Died = true;
+            }
+
+            if(!player.Downed && !player.Died)
+            {
+                gameOver = false;
+            }
+        }
+        
+
+        if(gameOver)
+        {
+            Debug.Log("Game Over");
+            // Handle Game Over
+        }
+
+        // Networking - Notify clients of player died and if game is over
+    }
+
+
+
     
 }

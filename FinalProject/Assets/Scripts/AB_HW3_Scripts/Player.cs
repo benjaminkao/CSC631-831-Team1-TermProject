@@ -193,7 +193,7 @@ public class Player : NetworkBehaviour
         }
 
         // Update Enemy Health on Server
-        enemy.Damage(gun.damage);
+        //enemy.Damage(gun.damage);
 
 
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);

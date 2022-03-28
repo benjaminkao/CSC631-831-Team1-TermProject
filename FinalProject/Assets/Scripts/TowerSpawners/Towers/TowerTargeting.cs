@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public abstract class TowerTargeting: MonoBehaviour
+public abstract class TowerTargeting: MonoBehaviour, ITargetable
 {
     protected float _targetingRadius;
     protected float _cooldownTime;
@@ -12,6 +12,19 @@ public abstract class TowerTargeting: MonoBehaviour
     // TowerTargeting sub-classes will implement the reaction to collisions
     // for players, enemies, or both.
     public abstract void ApplyEffects(Collider[] collisions);
+
+
+    private void OnEnable()
+    {
+        this.RegisterTargetable();
+    }
+
+    private void OnDisable()
+    {
+        this.DeregisterTargetable();
+    }
+
+
 
     // Update function for TowerTargeting sub-classes
     public void SearchForTargets()
@@ -36,5 +49,10 @@ public abstract class TowerTargeting: MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(_cooldownTime);
         _canShoot = true;
+    }
+
+    public void Damage(float damage)
+    {
+        Debug.Log($"{this.name} Damaged");
     }
 }

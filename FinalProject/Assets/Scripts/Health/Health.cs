@@ -27,11 +27,6 @@ public class Health : MonoBehaviour
     {
         _healthValue = _maxHealth;
 
-        if(_healthBarUI == null)
-        {
-            Debug.LogError("Please attach the HealthBar component.");
-        }
-
         _healthBarUI.SetMaxHealth(_maxHealth);
         _healthBarUI.SetHealth(_maxHealth);
     }

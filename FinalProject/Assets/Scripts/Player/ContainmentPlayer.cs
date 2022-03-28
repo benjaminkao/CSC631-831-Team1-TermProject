@@ -1,17 +1,62 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 
-public class ContainmentPlayer : MonoBehaviour
+public class ContainmentPlayer : MonoBehaviour, ITargetable
 {
 
     public ContainmentPlayerController Character;
     public ContainmentPlayerCamera CharacterCamera;
 
 
+    public bool Downed
+    {
+        get
+        {
+            return this.health.IsDown;
+        }
+
+        set
+        {
+            this.health.IsDown = value;
+        }
+    }
+
+    public bool Died
+    {
+        get
+        {
+            return this.health.Died;
+        }
+
+        set
+        {
+            this.health.Died = value;
+        }
+    }
+
+    public int Points
+    {
+        get
+        {
+            return this._points;
+        }
+    }
+
+
+
+
     [SerializeField] private Rifle gun;
+
+
+    [SerializeField] private PlayerHealth health;
+
+    [SerializeField] private PlayerPoints playerPoints;
+
+    private int _points;
 
 
     private const string MouseXInput = "Mouse X";
@@ -21,24 +66,49 @@ public class ContainmentPlayer : MonoBehaviour
     private const string VerticalInput = "Vertical";
 
 
+    public static event Action<ContainmentPlayer> OnPlayerDown;
+    public static event Action<ContainmentPlayer> OnPlayerDeath;
+
+    public static event Action<ContainmentPlayer> OnPlayerJoin;
+    public static event Action<ContainmentPlayer> OnPlayerLeave;
+
+
+
     void Start()
     {
+        // Find the Main Camera
+        CharacterCamera = GameObject.Find("PlayerCamera").GetComponent<ContainmentPlayerCamera>();
 
-            CharacterCamera = GameObject.Find("PlayerCamera").GetComponent<ContainmentPlayerCamera>();
+        Cursor.lockState = CursorLockMode.Locked;
 
-            Cursor.lockState = CursorLockMode.Locked;
+        Character.CameraFollowPoint.position = Character.MainFollowPoint.position;
 
-            Character.CameraFollowPoint.position = Character.MainFollowPoint.position;
+        // Tell camera to follow main camera follow point transform
+        CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
 
-            // Tell camera to follow main camera follow point transform
-            CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
-
-            // Ignore the character's collider(s) for camera obstruction checks
-            CharacterCamera.IgnoredColliders.Clear();
-            CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
+        // Ignore the character's collider(s) for camera obstruction checks
+        CharacterCamera.IgnoredColliders.Clear();
+        CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
 
 
+
+        // Set what Player the health is for
+        health.Player = this;
+            
     }
+
+
+    private void OnEnable()
+    {
+        OnPlayerJoin?.Invoke(this);
+        this.RegisterTargetable();
+    }
+
+    private void OnDisable()
+    {
+        this.DeregisterTargetable();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -67,6 +137,39 @@ public class ContainmentPlayer : MonoBehaviour
     }
 
 
+    public void Damage(float damage)
+    {
+        Debug.Log("Player hit");
+
+        health.alterHealth(-damage);
+
+        if(health.IsDown)
+        {
+            // Handle Player Down
+
+            OnPlayerDown?.Invoke(this);
+        }
+
+        if(health.Died)
+        {
+            // Handle Player Death
+
+            OnPlayerDeath?.Invoke(this);
+        }
+    }
+
+    public void AddPoints(int points)
+    {
+        this._points += points;
+    }
+
+    public void SubtractPoints(int points)
+    {
+        this._points -= points;
+    }
+
+
+
     void CmdShoot(Vector3 startPos, Vector3 forward)
     {
         GameObject targetHit = gun.Shoot(startPos, forward);
@@ -85,10 +188,12 @@ public class ContainmentPlayer : MonoBehaviour
         }
 
         // Update Enemy Health on Server
-        enemy.Damage(gun.damage);
+        enemy.Damage(this, gun.damage);
+
 
 
         //enemy.RpcUpdateHealth(enemy.Health.HealthValue);
+        //this.RpcUpdatePoints(this.points);
     }
 
 

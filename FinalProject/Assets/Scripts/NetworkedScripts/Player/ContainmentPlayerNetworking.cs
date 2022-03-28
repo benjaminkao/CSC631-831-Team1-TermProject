@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class ContainmentPlayerNetworking : NetworkBehaviour
+public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
 {
     public ContainmentPlayerController Character;
     public ContainmentPlayerCamera CharacterCamera;
@@ -37,6 +37,16 @@ public class ContainmentPlayerNetworking : NetworkBehaviour
             CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
         }
 
+    }
+
+    private void OnEnable()
+    {
+        this.RegisterTargetable();
+    }
+
+    private void OnDisable()
+    {
+        this.DeregisterTargetable();
     }
 
     // Update is called once per frame
@@ -73,6 +83,26 @@ public class ContainmentPlayerNetworking : NetworkBehaviour
         HandleCameraInput();
     }
 
+    public void Damage(float damage)
+    {
+        Debug.Log("Player hit");
+
+        //health.alterHealth(-damage);
+
+        //if (health.IsDown)
+        //{
+        //    // Handle Player Down
+
+        //    OnPlayerDown?.Invoke(this);
+        //}
+
+        //if (health.Died)
+        //{
+        //    // Handle Player Death
+
+        //    OnPlayerDeath?.Invoke(this);
+        //}
+    }
 
     [Command]
     void CmdShoot(Vector3 startPos, Vector3 forward)
@@ -85,7 +115,7 @@ public class ContainmentPlayerNetworking : NetworkBehaviour
         }
 
 
-        Enemy enemy = targetHit.gameObject.GetComponent<Enemy>();
+        EnemyNetworking enemy = targetHit.gameObject.GetComponent<EnemyNetworking>();
 
         if (enemy == null)
         {
@@ -93,7 +123,7 @@ public class ContainmentPlayerNetworking : NetworkBehaviour
         }
 
         // Update Enemy Health on Server
-        enemy.Damage(gun.damage);
+        //enemy.Damage(this, gun.damage);
 
 
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);

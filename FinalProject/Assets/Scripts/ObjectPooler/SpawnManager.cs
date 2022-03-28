@@ -13,8 +13,6 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.RegisterSpawnManager(this);
-
         foreach(PoolItem poolItem in _poolItems)
         {
             _spawnPoolManager.AddPool(poolItem);
