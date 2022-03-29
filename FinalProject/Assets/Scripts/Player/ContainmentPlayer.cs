@@ -116,13 +116,18 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
         if (Input.GetButton("Fire1"))
         {
-            if (gun.canShoot)
+            if (gun.CanShoot)
             {
 
                 gun.ClientShoot();
 
                 CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
             }
+        }
+
+        if(Input.GetButtonDown("Reload"))
+        {
+            gun.Reload();
         }
 
 

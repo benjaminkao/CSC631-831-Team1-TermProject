@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5624697592953160145}
   - component: {fileID: 5624697592953160150}
   m_Layer: 0
-  m_Name: JD_BasicLevel
+  m_Name: JD_BasicLevel_Laboratory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

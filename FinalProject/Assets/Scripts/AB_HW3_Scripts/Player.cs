@@ -106,7 +106,7 @@ public class Player : NetworkBehaviour
 
         if(Input.GetButton("Fire1"))
         {
-            if(gun.canShoot) {
+            if(gun.CanShoot) {
 
                 gun.ClientShoot();
 

@@ -59,7 +59,7 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
 
         if (Input.GetButton("Fire1"))
         {
-            if (gun.canShoot)
+            if (gun.CanShoot)
             {
 
                 gun.ClientShoot();
