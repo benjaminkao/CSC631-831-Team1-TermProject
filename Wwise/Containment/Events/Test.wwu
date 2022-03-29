@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{73AE54C0-F34F-4940-B6F6-F0E9302BE79B}" ShortID="767665132">
 					<ChildrenList>
-						<Folder Name="Switches" ID="{BFFE2607-B7DE-4ACB-9104-E5E385303A98}" ShortID="438035846">
+						<Folder Name="Not_Currently_Used_Switches" ID="{BFFE2607-B7DE-4ACB-9104-E5E385303A98}" ShortID="438035846">
 							<ChildrenList>
 								<Event Name="Set_Switch_Test_Boss" ID="{4B683778-B45E-49E6-ACDE-7B36C4314111}">
 									<ChildrenList>
@@ -87,13 +87,13 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{73CAD1E8-E809-47C3-A722-44DEA3FBE65C}" ShortID="716260432">
+										<Action Name="" ID="{FCE33CD7-38CA-4733-8B78-2A0F1FB74C69}" ShortID="424670972">
 											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="23"/>
+												<Property Name="ActionType" Type="int16" Value="22"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Test_Preparation" ID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}" WorkUnitID="{0CD2CAEE-8021-4B67-8BEF-59790C3746E6}"/>
+													<ObjectRef Name="Test_Preparation" ID="{412B51A0-0D26-433D-8E51-DB3C1434D300}" WorkUnitID="{048AB1FB-BA40-45AA-A8BC-4D5AA5A5A73E}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -126,6 +126,66 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Test_Main_Menu_Music" ID="{C5CAFE2A-E97C-443C-8B30-39A6CA04D725}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="States" ID="{2A561679-51ED-40DA-87D1-184FBDEF1E38}" ShortID="415494251">
+							<ChildrenList>
+								<Event Name="Set_State_Test_Low_Intensity" ID="{58B04FD9-FC8F-4204-9EED-ABE9C524B727}">
+									<ChildrenList>
+										<Action Name="" ID="{04EA92BC-EE2A-42DC-A75D-DBFDA4ABEF47}" ShortID="1036134254">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Test_Low_Intensity" ID="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}" WorkUnitID="{048AB1FB-BA40-45AA-A8BC-4D5AA5A5A73E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Set_State_Test_Boss" ID="{269615EF-D836-4D2C-B52F-F670DF25A350}">
+									<ChildrenList>
+										<Action Name="" ID="{835554B6-D48C-4BE1-9670-FC0E41BCDC74}" ShortID="664128123">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Test_Boss" ID="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}" WorkUnitID="{048AB1FB-BA40-45AA-A8BC-4D5AA5A5A73E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Set_State_Test_High_Intensity" ID="{DA6AF43D-2B96-44DE-8D2D-507AC5DAB887}">
+									<ChildrenList>
+										<Action Name="" ID="{1FC29C11-3064-4AA4-B4B3-2BDEEB2D0051}" ShortID="371022455">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Test_High_Intensity" ID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}" WorkUnitID="{048AB1FB-BA40-45AA-A8BC-4D5AA5A5A73E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Set_State_Test_Preparation" ID="{E919F878-7DA1-4CC0-B628-3A45040A6556}">
+									<ChildrenList>
+										<Action Name="" ID="{70875E77-10FF-4685-8FE2-CC4138DBFDCC}" ShortID="715891801">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Test_Preparation" ID="{412B51A0-0D26-433D-8E51-DB3C1434D300}" WorkUnitID="{048AB1FB-BA40-45AA-A8BC-4D5AA5A5A73E}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

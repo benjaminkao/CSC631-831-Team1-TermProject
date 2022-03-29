@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="959552862" Language="SFX" Hash="3446478765">
+		<SoundBank Id="959552862" Language="SFX" Hash="2219865678">
 			<ObjectPath>\SoundBanks\Test\Test_Master</ObjectPath>
 			<ShortName>Test_Master</ShortName>
 			<Path>Test_Master.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2600493958" Name="Play_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Play\Play_Test_2D_Env_Switch">
+				<Event Id="2600493958" Name="Play_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Play\Play_Test_2D_Env_Switch" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="139233690" Language="SFX">
 							<ShortName>Test_Indoor_Ambiance.wav</ShortName>
@@ -50,7 +50,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3428582015" Name="Play_Test_3D_Ambiance" ObjectPath="\Events\Test\SFX\Play\Play_Test_3D_Ambiance">
+				<Event Id="3428582015" Name="Play_Test_3D_Ambiance" ObjectPath="\Events\Test\SFX\Play\Play_Test_3D_Ambiance" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="254003914" Language="SFX">
 							<ShortName>Test_3D_Ambiance.wav</ShortName>
@@ -58,7 +58,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3195805575" Name="Play_Test_Click" ObjectPath="\Events\Test\SFX\Play\Play_Test_Click">
+				<Event Id="3195805575" Name="Play_Test_Click" ObjectPath="\Events\Test\SFX\Play\Play_Test_Click" DurationType="OneShot" DurationMin="0.58551" DurationMax="0.58551">
 					<IncludedMemoryFiles>
 						<File Id="194517771" Language="SFX">
 							<ShortName>Test_Click.wav</ShortName>
@@ -66,7 +66,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1001261022" Name="Play_Test_Explosion" ObjectPath="\Events\Test\SFX\Play\Play_Test_Explosion">
+				<Event Id="1001261022" Name="Play_Test_Explosion" ObjectPath="\Events\Test\SFX\Play\Play_Test_Explosion" DurationType="OneShot" DurationMin="1.38805" DurationMax="1.38805">
 					<IncludedMemoryFiles>
 						<File Id="800788653" Language="SFX">
 							<ShortName>Test_Explosion.wav</ShortName>
@@ -74,7 +74,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2053261897" Name="Play_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Gameplay_Music">
+				<Event Id="2053261897" Name="Play_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Gameplay_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="265934756" Language="SFX">
 							<ShortName>Test_Low_Intensity_Music.wav</ShortName>
@@ -94,32 +94,32 @@
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
-						<SwitchContainer SwitchValue="{40170DB8-4C13-4B50-8ECA-B18533331FFF}">
-							<Media>
-								<File Id="722686722"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}">
-							<Media>
-								<File Id="493028397"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{4C638990-785C-424E-9FF1-E12F1E23260B}">
-							<Media>
-								<File Id="265934756"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}">
+						<SwitchContainer SwitchValue="{412B51A0-0D26-433D-8E51-DB3C1434D300}">
 							<Media>
 								<File Id="271685855"/>
 							</Media>
 						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}">
+							<Media>
+								<File Id="265934756"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}">
+							<Media>
+								<File Id="493028397"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}">
+							<Media>
+								<File Id="722686722"/>
+							</Media>
+						</SwitchContainer>
 					</SwitchContainers>
-					<ActionSetSwitch>
-						<ActionSetSwitchEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation"/>
-					</ActionSetSwitch>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Preparation"/>
+					</ActionSetState>
 				</Event>
-				<Event Id="3782809477" Name="Play_Test_Gunshot" ObjectPath="\Events\Test\SFX\Play\Play_Test_Gunshot">
+				<Event Id="3782809477" Name="Play_Test_Gunshot" ObjectPath="\Events\Test\SFX\Play\Play_Test_Gunshot" DurationType="OneShot" DurationMin="1.123719" DurationMax="1.123719">
 					<IncludedMemoryFiles>
 						<File Id="512659968" Language="SFX">
 							<ShortName>Test_Gunshot.wav</ShortName>
@@ -127,7 +127,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4045756732" Name="Play_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Main_Menu_Music">
+				<Event Id="4045756732" Name="Play_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Play\Play_Test_Main_Menu_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="423697351" Language="SFX">
 							<ShortName>Test_Main_Menu_Music.wav</ShortName>
@@ -135,7 +135,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2610155023" Name="Play_Test_NPC_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_Footstep">
+				<Event Id="2610155023" Name="Play_Test_NPC_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_Footstep" DurationType="OneShot" DurationMin="1.328549" DurationMax="1.328549">
 					<IncludedMemoryFiles>
 						<File Id="561729691" Language="SFX">
 							<ShortName>Test_NPC_Footstep.wav</ShortName>
@@ -143,7 +143,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2377014604" Name="Play_Test_NPC_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_VO">
+				<Event Id="2377014604" Name="Play_Test_NPC_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_NPC_VO" DurationType="OneShot" DurationMin="1.981202" DurationMax="1.981202">
 					<IncludedMemoryFiles>
 						<File Id="1024711393" Language="SFX">
 							<ShortName>Test_NPC_VO.wav</ShortName>
@@ -155,7 +155,7 @@
 						<AuxBus Id="3089001037" Name="Test_Reverb_Outdoor" ObjectPath="\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="3016857871" Name="Play_Test_Player_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_Footstep">
+				<Event Id="3016857871" Name="Play_Test_Player_Footstep" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_Footstep" DurationType="OneShot" DurationMin="0.909388" DurationMax="0.909388">
 					<IncludedMemoryFiles>
 						<File Id="1042278865" Language="SFX">
 							<ShortName>Test_Player_Footstep.wav</ShortName>
@@ -163,7 +163,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="82526284" Name="Play_Test_Player_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_VO">
+				<Event Id="82526284" Name="Play_Test_Player_VO" ObjectPath="\Events\Test\SFX\Play\Play_Test_Player_VO" DurationType="OneShot" DurationMin="2.496757" DurationMax="2.496757">
 					<IncludedMemoryFiles>
 						<File Id="157487487" Language="SFX">
 							<ShortName>Test_Player_VO.wav</ShortName>
@@ -171,89 +171,130 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3327457886" Name="Set_State_Test_Indoor" ObjectPath="\Events\Test\States\Set_State_Test_Indoor">
+				<Event Id="1780085868" Name="Set_State_Test_Boss" ObjectPath="\Events\Test\Music\States\Set_State_Test_Boss" DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="2766477831" Name="Test_Boss" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Boss"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="813794069" Name="Set_State_Test_High_Intensity" ObjectPath="\Events\Test\Music\States\Set_State_Test_High_Intensity" DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="811206454" Name="Test_High_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_High_Intensity"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3327457886" Name="Set_State_Test_Indoor" ObjectPath="\Events\Test\States\Set_State_Test_Indoor" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2395569889" Name="Test_Indoor" ObjectPath="\States\Test\Test_Env\Test_Indoor"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1347450883" Name="Set_State_Test_Low" ObjectPath="\Events\Test\States\Set_State_Test_Low">
+				<Event Id="1347450883" Name="Set_State_Test_Low" ObjectPath="\Events\Test\States\Set_State_Test_Low" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="3561702010" Name="Test_Low" ObjectPath="\States\Test\Test_Player_Lfe\Test_Low"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4124505310" Name="Set_State_Test_Normal" ObjectPath="\Events\Test\States\Set_State_Test_Normal">
+				<Event Id="1612650449" Name="Set_State_Test_Low_Intensity" ObjectPath="\Events\Test\Music\States\Set_State_Test_Low_Intensity" DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Low_Intensity"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4124505310" Name="Set_State_Test_Normal" ObjectPath="\Events\Test\States\Set_State_Test_Normal" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="565720069" Name="Test_Normal" ObjectPath="\States\Test\Test_Player_Lfe\Test_Normal"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="271680069" Name="Set_State_Test_Outdoor" ObjectPath="\Events\Test\States\Set_State_Test_Outdoor">
+				<Event Id="271680069" Name="Set_State_Test_Outdoor" ObjectPath="\Events\Test\States\Set_State_Test_Outdoor" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="836963824" Name="Test_Outdoor" ObjectPath="\States\Test\Test_Env\Test_Outdoor"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2540652967" Name="Set_State_Test_Pause" ObjectPath="\Events\Test\States\Set_State_Test_Pause">
+				<Event Id="2540652967" Name="Set_State_Test_Pause" ObjectPath="\Events\Test\States\Set_State_Test_Pause" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2923888242" Name="Test_Pause" ObjectPath="\States\Test\Test_Pause\Test_Pause"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4046133020" Name="Set_State_Test_Unpause" ObjectPath="\Events\Test\States\Set_State_Test_Unpause">
+				<Event Id="2578618902" Name="Set_State_Test_Preparation" ObjectPath="\Events\Test\Music\States\Set_State_Test_Preparation" DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Preparation"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4046133020" Name="Set_State_Test_Unpause" ObjectPath="\Events\Test\States\Set_State_Test_Unpause" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="4239277797" Name="Test_Unpause" ObjectPath="\States\Test\Test_Pause\Test_Unpause"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1883426811" Name="Set_Switch_Test_Boss" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Boss">
+				<Event Id="1883426811" Name="Set_Switch_Test_Boss" ObjectPath="\Events\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_Boss" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="86589546" Name="Set_Switch_Test_High_Intensity" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_High_Intensity">
+				<Event Id="86589546" Name="Set_Switch_Test_High_Intensity" ObjectPath="\Events\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_High_Intensity" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="811206454" Name="Test_High_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_High_Intensity"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="4019638669" Name="Set_Switch_Test_Indoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Indoor">
+				<Event Id="4019638669" Name="Set_Switch_Test_Indoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Indoor" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="2395569889" Name="Test_Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Test_Indoor"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="2649609692" Name="Set_Switch_Test_Low_Intensity" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Low_Intensity">
+				<Event Id="2649609692" Name="Set_Switch_Test_Low_Intensity" ObjectPath="\Events\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_Low_Intensity" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Low_Intensity"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="3974311268" Name="Set_Switch_Test_Outdoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Outdoor">
+				<Event Id="3974311268" Name="Set_Switch_Test_Outdoor" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Outdoor" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="836963824" Name="Test_Outdoor" ObjectPath="\Switches\Test\Test_2D_Env\Test_Outdoor"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="1013698891" Name="Set_Switch_Test_Preparation" ObjectPath="\Events\Test\Music\Switches\Set_Switch_Test_Preparation">
+				<Event Id="1013698891" Name="Set_Switch_Test_Preparation" ObjectPath="\Events\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_Preparation" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="899382483" Name="Set_Switch_Test_Silent" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Silent">
+				<Event Id="899382483" Name="Set_Switch_Test_Silent" ObjectPath="\Events\Test\SFX\Switches\Set_Switch_Test_Silent" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="3264954983" Name="Test_Silent" ObjectPath="\Switches\Test\Test_2D_Env\Test_Silent"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="986341748" Name="Stop_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Stop\Stop_Test_2D_Env_Switch"/>
-				<Event Id="327767067" Name="Stop_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Gameplay_Music"/>
-				<Event Id="3682958602" Name="Stop_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Main_Menu_Music"/>
+				<Event Id="986341748" Name="Stop_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Stop\Stop_Test_2D_Env_Switch" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="327767067" Name="Stop_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Gameplay_Music" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3682958602" Name="Stop_Test_Main_Menu_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Main_Menu_Music" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="565720069" Name="Test_Normal" ObjectPath="\States\Test\Test_Player_Lfe\Test_Normal" GUID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}">
 					<States/>
 				</StateGroup>
+				<StateGroup Id="811206454" Name="Test_High_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_High_Intensity" GUID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}">
+					<States/>
+				</StateGroup>
 				<StateGroup Id="836963824" Name="Test_Outdoor" ObjectPath="\States\Test\Test_Env\Test_Outdoor" GUID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}">
 					<States/>
 				</StateGroup>
+				<StateGroup Id="1631956748" Name="Test_Gameplay_Music" ObjectPath="\States\Test\Test_Gameplay_Music" GUID="{467B626C-DF4A-4E7D-B420-C0A62F4D9C73}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Test\Test_Gameplay_Music\None" GUID="{F9C24F83-C82A-4FB6-8E73-44EBA3A63A35}"/>
+						<State Id="3922783959" Name="Test_Preparation" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Preparation" GUID="{412B51A0-0D26-433D-8E51-DB3C1434D300}"/>
+						<State Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Low_Intensity" GUID="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}"/>
+						<State Id="811206454" Name="Test_High_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_High_Intensity" GUID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}"/>
+						<State Id="2766477831" Name="Test_Boss" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Boss" GUID="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2395569889" Name="Test_Indoor" ObjectPath="\States\Test\Test_Env\Test_Indoor" GUID="{81EFDE15-30C3-44B3-9C4D-5679E2F3B1A6}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2766477831" Name="Test_Boss" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Boss" GUID="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}">
 					<States/>
 				</StateGroup>
 				<StateGroup Id="2923888242" Name="Test_Pause" ObjectPath="\States\Test\Test_Pause\Test_Pause" GUID="{B060F76C-1D7E-4693-B49D-617AEDBC1FA8}">
 					<States/>
 				</StateGroup>
+				<StateGroup Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Low_Intensity" GUID="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}">
+					<States/>
+				</StateGroup>
 				<StateGroup Id="3561702010" Name="Test_Low" ObjectPath="\States\Test\Test_Player_Lfe\Test_Low" GUID="{968644F9-960B-4B21-B0F8-1B1460874D7C}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3922783959" Name="Test_Preparation" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Preparation" GUID="{412B51A0-0D26-433D-8E51-DB3C1434D300}">
 					<States/>
 				</StateGroup>
 				<StateGroup Id="4239277797" Name="Test_Unpause" ObjectPath="\States\Test\Test_Pause\Test_Unpause" GUID="{5092C350-92E6-4BEB-82AC-904683FC231D}">
@@ -266,14 +307,6 @@
 				</SwitchGroup>
 				<SwitchGroup Id="836963824" Name="Test_Outdoor" ObjectPath="\Switches\Test\Test_2D_Env\Test_Outdoor" GUID="{3139690D-A056-49AB-AB1F-3F657BE696CB}">
 					<Switches/>
-				</SwitchGroup>
-				<SwitchGroup Id="1631956748" Name="Test_Gameplay_Music" ObjectPath="\Switches\Test\Test_Gameplay_Music" GUID="{7D67397C-554E-4EE1-A08D-7D1D9BE49434}">
-					<Switches>
-						<Switch Id="3922783959" Name="Test_Preparation" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Preparation" GUID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
-						<Switch Id="3275738912" Name="Test_Low_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Low_Intensity" GUID="{4C638990-785C-424E-9FF1-E12F1E23260B}"/>
-						<Switch Id="811206454" Name="Test_High_Intensity" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_High_Intensity" GUID="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}"/>
-						<Switch Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss" GUID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}"/>
-					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2395569889" Name="Test_Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Test_Indoor" GUID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}">
 					<Switches/>
@@ -299,7 +332,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3002056635">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3890202188">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
