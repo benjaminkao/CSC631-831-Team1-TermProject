@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class TriggerBehavior : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _interactText;
-    [SerializeField]
-    private GameObject _spawnerMenu;
+    [SerializeField] private GameObject _interactText;
+    [SerializeField] private GameObject _spawnerMenu;
 
     void Start()
     {
@@ -20,7 +18,13 @@ public class TriggerBehavior : MonoBehaviour
         TowerSpawnerInteractable interactable = gameObject.GetComponentInParent<TowerSpawnerInteractable>();
         if (interactable.CanInteract)
         {
-            _interactText.SetActive(true);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                // set player reference to the most recent player that has stepped into
+                // the trigger
+                interactable.InteractPlayer = other.gameObject;
+                _interactText.SetActive(true);
+            }
         }
     }
 
