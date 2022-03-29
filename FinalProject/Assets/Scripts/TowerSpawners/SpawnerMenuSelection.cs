@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpawnerMenuSelection : MonoBehaviour
 {
+    [SerializeField] private GameObject _spawnMenu;
+    [SerializeField] private TowerSpawnerPreset towerSpawnerPreset;
+    [SerializeField] private int _spawnCost;
+    
     private float _towerHeight;
     private Vector3 _towerLocation;
-    [SerializeField] private GameObject _spawnMenu;
-
-    [SerializeField] private TowerSpawnerPreset towerSpawnerPreset;
+    private GameObject _towerOwner;
 
     public bool MenuActive
     {
@@ -27,30 +29,39 @@ public class SpawnerMenuSelection : MonoBehaviour
         _towerLocation = spawnLocation.position;
     }
 
-
-    
     public void CmdSpawnTower(int towerPrefabIndex)
     {
-
         Debug.Log("Should spawn Tower");
-
+        
         TowerSpawnerInteractable interactable = GetComponent<TowerSpawnerInteractable>();
-        if (interactable.CanInteract)
+        // Save the reference to the player to access their points in the future
+        _towerOwner = interactable.InteractPlayer;
+        PointBank playerBank = _towerOwner.GetComponent<PointBank>();
+
+        if (interactable.CanInteract && playerBank.HasSufficientPoints(_spawnCost))
         {
-            Debug.Log("Spawning new tower: " + towerPrefabIndex);
-
             GameObject towerPrefab = towerSpawnerPreset.GetTowerPrefab(towerPrefabIndex);
+            playerBank.SpendPoints(_spawnCost);
 
+            Debug.Log(string.Format("Spawning new tower: {0}. Bank before / after: {1} / {2}",
+                towerPrefabIndex, playerBank.TotalPoints + _spawnCost, playerBank.TotalPoints));
 
-            // places object at top of tower
-            Vector3 position = new Vector3(_towerLocation.x, _towerLocation.y + _towerHeight, _towerLocation.z);
-            GameObject tower = Instantiate(towerPrefab, position, Quaternion.identity);
-
+            StartCoroutine(TowerSpawnProgress(towerPrefab));
 
             // disable the tower, as it has already been used
             interactable.CanInteract = false;
             // auto exit the menu
             MenuActive = false;
         }
+    }
+
+    public IEnumerator TowerSpawnProgress(GameObject towerPrefab)
+    {
+        // can add multiple stages of waiting for gradually building the geometry
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        // places object at top of tower
+        Vector3 position = new Vector3(_towerLocation.x, _towerLocation.y + _towerHeight, _towerLocation.z);
+        Instantiate(towerPrefab, position, Quaternion.identity);
     }
 }

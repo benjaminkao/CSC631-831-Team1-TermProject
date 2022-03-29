@@ -1,5 +1,6 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	1023376889	Test_Player_Lfe			\Test\Test_Player_Lfe	
+	1631956748	Test_Gameplay_Music			\Test\Test_Gameplay_Music	
 	2923888242	Test_Pause			\Test\Test_Pause	
 	3579906457	Test_Env			\Test\Test_Env	
 
@@ -7,6 +8,11 @@ State	ID	Name	State Group			Notes
 	565720069	Test_Normal	Test_Player_Lfe			
 	748895195	None	Test_Player_Lfe			
 	3561702010	Test_Low	Test_Player_Lfe			
+	748895195	None	Test_Gameplay_Music			
+	811206454	Test_High_Intensity	Test_Gameplay_Music			
+	2766477831	Test_Boss	Test_Gameplay_Music			
+	3275738912	Test_Low_Intensity	Test_Gameplay_Music			
+	3922783959	Test_Preparation	Test_Gameplay_Music			
 	748895195	None	Test_Pause			
 	2923888242	Test_Pause	Test_Pause			
 	4239277797	Test_Unpause	Test_Pause			

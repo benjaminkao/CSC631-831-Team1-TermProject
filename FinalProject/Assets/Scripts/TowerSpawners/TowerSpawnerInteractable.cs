@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField]
-    private GameObject _spawnerMenu;
+    [SerializeField] private GameObject _spawnerMenu;
+    private GameObject _interactPlayer;
+    public GameObject InteractPlayer 
+    { 
+        get { return _interactPlayer; }
+        set { _interactPlayer = value; } 
+    }
+
     private bool _canInteract;
     public bool CanInteract
     {
-        get
-        {
-            return _canInteract;
-        }
-        set
-        {
-            _canInteract = value;
-        }
+        get { return _canInteract; }
+        set { _canInteract = value; }
     }
 
     void OnEnable()
@@ -34,7 +34,7 @@ public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
             if (_spawnerMenu.activeInHierarchy)
             {
                 _spawnerMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Locked;
             }   
             else
             {

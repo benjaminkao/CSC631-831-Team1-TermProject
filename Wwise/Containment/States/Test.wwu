@@ -30,6 +30,15 @@
 						<State Name="Test_Outdoor" ID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Test_Gameplay_Music" ID="{467B626C-DF4A-4E7D-B420-C0A62F4D9C73}">
+					<ChildrenList>
+						<State Name="None" ID="{F9C24F83-C82A-4FB6-8E73-44EBA3A63A35}"/>
+						<State Name="Test_Preparation" ID="{412B51A0-0D26-433D-8E51-DB3C1434D300}"/>
+						<State Name="Test_Low_Intensity" ID="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}"/>
+						<State Name="Test_High_Intensity" ID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}"/>
+						<State Name="Test_Boss" ID="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

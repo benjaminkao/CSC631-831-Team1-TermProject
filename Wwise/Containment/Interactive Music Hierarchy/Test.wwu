@@ -633,34 +633,29 @@
 								<MusicTransition Name="Transition" ID="{5774D7A4-4465-43AE-BD27-AF3455F3B3C2}">
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{4B56AEFB-7035-46D9-B6A0-3F6B83A4089B}">
+									<TransitionInfo/>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
 					<ObjectLists/>
 					<ArgumentList>
-						<ArgumentRef Name="Test_Gameplay_Music" ID="{7D67397C-554E-4EE1-A08D-7D1D9BE49434}"/>
+						<ArgumentRef Name="Test_Gameplay_Music" ID="{467B626C-DF4A-4E7D-B420-C0A62F4D9C73}"/>
 					</ArgumentList>
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Test_Boss" ID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}"/>
+								<PathElementRef Name="Test_Preparation" ID="{412B51A0-0D26-433D-8E51-DB3C1434D300}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Test_Boss_Music" ID="{37B02653-D5BD-4E1C-8FE8-5F2E154761ED}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
+								<AudioNodeRef Name="Test_Preparation_Music" ID="{1A6AC988-69D9-4E5B-9AA4-58EBE9C5F972}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Test_High_Intensity" ID="{D957DB42-B6B5-4126-82FF-A3202E0C9F7D}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="Test_High_Intensity_Combat_Music" ID="{C43F0C13-51B9-4EE0-AFF3-AD5F402EA9D2}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Test_Low_Intensity" ID="{4C638990-785C-424E-9FF1-E12F1E23260B}"/>
+								<PathElementRef Name="Test_Low_Intensity" ID="{E7CCDE3E-0D61-4519-95B0-C07568D2E149}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Test_Low_Intensity_Combat_Music" ID="{223C2A80-2FF3-47D8-8C49-0F32D2319A4B}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
@@ -668,10 +663,18 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Test_Preparation" ID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
+								<PathElementRef Name="Test_High_Intensity" ID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Test_Preparation_Music" ID="{1A6AC988-69D9-4E5B-9AA4-58EBE9C5F972}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
+								<AudioNodeRef Name="Test_High_Intensity_Combat_Music" ID="{C43F0C13-51B9-4EE0-AFF3-AD5F402EA9D2}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Test_Boss" ID="{C79679F0-12C3-482E-B7AE-F65D5CE77B78}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Test_Boss_Music" ID="{37B02653-D5BD-4E1C-8FE8-5F2E154761ED}" WorkUnitID="{948EFF04-F9A9-454B-BC0F-EB5B619E3DA0}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>
