@@ -67,10 +67,11 @@
 						<CurrentStateRef Name="Test_Unpause" ID="{5092C350-92E6-4BEB-82AC-904683FC231D}"/>
 						<CurrentStateRef Name="Test_Outdoor" ID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}"/>
 						<CurrentStateRef Name="Test_Normal" ID="{EA2CFDEB-C24B-4BB3-A1F8-B8F4BD467FCF}"/>
+						<CurrentStateRef Name="Test_High_Intensity" ID="{E890E2FD-F09A-4AA7-9AAF-1F12D7535B2B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Test_Indoor" ID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}"/>
-						<CurrentSwitchRef Name="Test_Preparation" ID="{AD790E4C-EB3E-44DD-9961-49C452E6FCB5}"/>
+						<CurrentSwitchRef Name="Test_Low_Intensity" ID="{4C638990-785C-424E-9FF1-E12F1E23260B}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
