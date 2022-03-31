@@ -65,7 +65,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Test
     guid: 73c791231b87ce45a34d68c696b94384
     GuidInternal: 
-    m_lastTime: -8585536965124775808
+    m_lastTime: -8585528377094775808
     List:
     - name: Test_2D_Env
       guid: 636a6093a0cc1c43b92e0d598ac3b5b6
@@ -369,7 +369,7 @@ MonoBehaviour:
     ParentPath: Events/Test
     guid: 5211d38364814e4dbc7ae1aecec07899
     GuidInternal: 
-    m_lastTime: -8585536965124775808
+    m_lastTime: -8585528377104775808
     List:
     - name: Music
       guid: c054ae734ff34049b6f6f0e9302be79b
@@ -388,9 +388,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play
-      guid: dcf6bb354cf7c14289b5bd4a492d0769
-      id: 1256202815
+    - name: Not_Currently_Used_Switches
+      guid: 0726febfdeb7cb4a9104e5e385303a98
+      id: 931355164
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -401,10 +401,10 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Play
+      - ElementName: Not_Currently_Used_Switches
         ObjectType: 4
-        guid: dcf6bb354cf7c14289b5bd4a492d0769
-      Path: Events/Test/Music/Play
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      Path: Events/Test/Music/Not_Currently_Used_Switches
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -425,6 +425,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 1bb6d73df92152439a1f378ece969c70
       Path: Events/Test/SFX/Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: dcf6bb354cf7c14289b5bd4a492d0769
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Play
+        ObjectType: 4
+        guid: dcf6bb354cf7c14289b5bd4a492d0769
+      Path: Events/Test/Music/Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -681,6 +701,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Set_State_Test_Boss
+      guid: ef15962636d82c4db52ff670df25a350
+      id: 1780085868
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Boss
+        ObjectType: 3
+        guid: ef15962636d82c4db52ff670df25a350
+      Path: Events/Test/Music/States/Set_State_Test_Boss
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Test_High_Intensity
+      guid: 3df46ada962bde448d2d507ac5dab887
+      id: 813794069
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_High_Intensity
+        ObjectType: 3
+        guid: 3df46ada962bde448d2d507ac5dab887
+      Path: Events/Test/Music/States/Set_State_Test_High_Intensity
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Set_State_Test_Indoor
       guid: 19301207a61ea54282eee7533f25117c
       id: 3327457886
@@ -718,6 +784,29 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0e2a805d8f19824da856055f5c09d1bb
       Path: Events/Test/States/Set_State_Test_Low
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Test_Low_Intensity
+      guid: d94fb0588ffc04429eedabe9c524b727
+      id: 1612650449
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Low_Intensity
+        ObjectType: 3
+        guid: d94fb0588ffc04429eedabe9c524b727
+      Path: Events/Test/Music/States/Set_State_Test_Low_Intensity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -781,6 +870,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Set_State_Test_Preparation
+      guid: 78f819e9a17dc04cb6283a45040a6556
+      id: 2578618902
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Preparation
+        ObjectType: 3
+        guid: 78f819e9a17dc04cb6283a45040a6556
+      Path: Events/Test/Music/States/Set_State_Test_Preparation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Set_State_Test_Unpause
       guid: 9eecc543f07587488f047cb95a34921c
       id: 4046133020
@@ -814,13 +926,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Switches
+      - ElementName: Not_Currently_Used_Switches
         ObjectType: 4
         guid: 0726febfdeb7cb4a9104e5e385303a98
       - ElementName: Set_Switch_Test_Boss
         ObjectType: 3
         guid: 7837684b5eb4e649acde7b36c4314111
-      Path: Events/Test/Music/Switches/Set_Switch_Test_Boss
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Boss
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -837,13 +949,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Switches
+      - ElementName: Not_Currently_Used_Switches
         ObjectType: 4
         guid: 0726febfdeb7cb4a9104e5e385303a98
       - ElementName: Set_Switch_Test_High_Intensity
         ObjectType: 3
         guid: d22e26cd946de44da4c08ccde49a3574
-      Path: Events/Test/Music/Switches/Set_Switch_Test_High_Intensity
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_High_Intensity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -883,13 +995,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Switches
+      - ElementName: Not_Currently_Used_Switches
         ObjectType: 4
         guid: 0726febfdeb7cb4a9104e5e385303a98
       - ElementName: Set_Switch_Test_Low_Intensity
         ObjectType: 3
         guid: 2b0388cd7ce2a4428706be2d10ff749e
-      Path: Events/Test/Music/Switches/Set_Switch_Test_Low_Intensity
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Low_Intensity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -929,13 +1041,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Switches
+      - ElementName: Not_Currently_Used_Switches
         ObjectType: 4
         guid: 0726febfdeb7cb4a9104e5e385303a98
       - ElementName: Set_Switch_Test_Preparation
         ObjectType: 3
         guid: 9df0933f448da54595b7dc330240c84f
-      Path: Events/Test/Music/Switches/Set_Switch_Test_Preparation
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Preparation
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -980,6 +1092,26 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: States
+      guid: 7916562aed51da4087d1184fbdef1e38
+      id: 1208172739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      Path: Events/Test/Music/States
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: States
       guid: 2a93c1613ed64d4db93ceefab12068a9
       id: 1208172739
       PathAndIcons:
@@ -993,26 +1125,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 2a93c1613ed64d4db93ceefab12068a9
       Path: Events/Test/States
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stop
-      guid: a1160634fadcc44eac9403648fbe4be6
-      id: 788884573
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: Music
-        ObjectType: 4
-        guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Stop
-        ObjectType: 4
-        guid: a1160634fadcc44eac9403648fbe4be6
-      Path: Events/Test/Music/Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1033,6 +1145,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
       Path: Events/Test/SFX/Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: a1160634fadcc44eac9403648fbe4be6
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Stop
+        ObjectType: 4
+        guid: a1160634fadcc44eac9403648fbe4be6
+      Path: Events/Test/Music/Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1106,26 +1238,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Switches
-      guid: 0726febfdeb7cb4a9104e5e385303a98
-      id: 1410275485
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: Music
-        ObjectType: 4
-        guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Switches
-        ObjectType: 4
-        guid: 0726febfdeb7cb4a9104e5e385303a98
-      Path: Events/Test/Music/Switches
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Switches
       guid: 876ee55dbceeee4cbe99e96a382b11c3
       id: 1410275485
       PathAndIcons:
@@ -1184,7 +1296,7 @@ MonoBehaviour:
     ParentPath: States/Test
     guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
     GuidInternal: 
-    m_lastTime: -8585536965124775808
+    m_lastTime: -8585528377094775808
     List:
     - name: Test_Env
       guid: d0294041368d0d469f010c921fea7193
@@ -1249,6 +1361,104 @@ MonoBehaviour:
         - ElementName: Test_Outdoor
           ObjectType: 8
           guid: 3f9ed59c56ca0d4399f980cc191999cf
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Test_Gameplay_Music
+      guid: 6c627b464adf7d4eb420c0a62f4d9c73
+      id: 1631956748
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+      - ElementName: Test_Gameplay_Music
+        ObjectType: 9
+        guid: 6c627b464adf7d4eb420c0a62f4d9c73
+      Path: States/Test/Test_Gameplay_Music
+      values:
+      - name: None
+        guid: 834fc2f92ac8b64f8e7344eba3a63a35
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: None
+          ObjectType: 8
+          guid: 834fc2f92ac8b64f8e7344eba3a63a35
+      - name: Test_Boss
+        guid: f07996c7c3122e48b7aef65d5ce77b78
+        id: 2766477831
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Boss
+          ObjectType: 8
+          guid: f07996c7c3122e48b7aef65d5ce77b78
+      - name: Test_High_Intensity
+        guid: fde290e89af0a74a9aaf1f12d7535b2b
+        id: 811206454
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_High_Intensity
+          ObjectType: 8
+          guid: fde290e89af0a74a9aaf1f12d7535b2b
+      - name: Test_Low_Intensity
+        guid: 3edecce7610d194595b0c07568d2e149
+        id: 3275738912
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Low_Intensity
+          ObjectType: 8
+          guid: 3edecce7610d194595b0c07568d2e149
+      - name: Test_Preparation
+        guid: a0512b41260d3d438e51db3c1434d300
+        id: 3922783959
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Preparation
+          ObjectType: 8
+          guid: a0512b41260d3d438e51db3c1434d300
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1409,7 +1619,7 @@ MonoBehaviour:
     ParentPath: Switches/Test
     guid: eecad20c2180674b8bef59790c3746e6
     GuidInternal: 
-    m_lastTime: -8585536965124775808
+    m_lastTime: -8585528377094775808
     List:
     - name: Test_2D_Env
       guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
