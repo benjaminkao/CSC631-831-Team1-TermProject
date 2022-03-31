@@ -38,6 +38,7 @@ public class SpawnerMenuSelection : MonoBehaviour
         _towerOwner = interactable.InteractPlayer;
         PointBank playerBank = _towerOwner.GetComponent<PointBank>();
 
+
         if (interactable.CanInteract && playerBank.HasSufficientPoints(_spawnCost))
         {
             GameObject towerPrefab = towerSpawnerPreset.GetTowerPrefab(towerPrefabIndex);
@@ -52,6 +53,9 @@ public class SpawnerMenuSelection : MonoBehaviour
             interactable.CanInteract = false;
             // auto exit the menu
             MenuActive = false;
+        } else
+        {
+            Debug.Log("Cannot spawn tower. Insufficient number of points.");
         }
     }
 
