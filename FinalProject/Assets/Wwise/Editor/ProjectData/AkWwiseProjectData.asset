@@ -515,8 +515,8 @@ MonoBehaviour:
         guid: 66b2fd7a6a71a74eb65b07ca78a327bf
       Path: Events/Test/SFX/Play/Play_Test_Click
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.58551
+      minDuration: 0.58551
     - name: Play_Test_Explosion
       guid: d6c4a6400815b24c805d85b8f82c4a9b
       id: 1001261022
@@ -538,8 +538,8 @@ MonoBehaviour:
         guid: d6c4a6400815b24c805d85b8f82c4a9b
       Path: Events/Test/SFX/Play/Play_Test_Explosion
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.38805
+      minDuration: 1.38805
     - name: Play_Test_Gameplay_Music
       guid: 72ba9cd77f9b054fb286404caecc0823
       id: 2053261897
@@ -584,8 +584,8 @@ MonoBehaviour:
         guid: 4a98cae5a93f5545bc6959e91eb38373
       Path: Events/Test/SFX/Play/Play_Test_Gunshot
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.123719
+      minDuration: 1.123719
     - name: Play_Test_Main_Menu_Music
       guid: 67fc62f234bb494c8e289597ba66c0f2
       id: 4045756732
@@ -630,8 +630,8 @@ MonoBehaviour:
         guid: 6c39a6a3e6abfb42a9c9dd7c8eca10a5
       Path: Events/Test/SFX/Play/Play_Test_NPC_Footstep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.328549
+      minDuration: 1.328549
     - name: Play_Test_NPC_VO
       guid: e746c14b325b574ea3f18dbe1187b37f
       id: 2377014604
@@ -653,8 +653,8 @@ MonoBehaviour:
         guid: e746c14b325b574ea3f18dbe1187b37f
       Path: Events/Test/SFX/Play/Play_Test_NPC_VO
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.981202
+      minDuration: 1.981202
     - name: Play_Test_Player_Footstep
       guid: e14b25a659c8e44ba0e7316ed4119d9c
       id: 3016857871
@@ -676,8 +676,8 @@ MonoBehaviour:
         guid: e14b25a659c8e44ba0e7316ed4119d9c
       Path: Events/Test/SFX/Play/Play_Test_Player_Footstep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.909388
+      minDuration: 0.909388
     - name: Play_Test_Player_VO
       guid: a6cd57b4c4b4af47b96bbe7330baa9ca
       id: 82526284
@@ -699,8 +699,8 @@ MonoBehaviour:
         guid: a6cd57b4c4b4af47b96bbe7330baa9ca
       Path: Events/Test/SFX/Play/Play_Test_Player_VO
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.496757
+      minDuration: 2.496757
     - name: Set_State_Test_Boss
       guid: ef15962636d82c4db52ff670df25a350
       id: 1780085868
@@ -722,8 +722,8 @@ MonoBehaviour:
         guid: ef15962636d82c4db52ff670df25a350
       Path: Events/Test/Music/States/Set_State_Test_Boss
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_High_Intensity
       guid: 3df46ada962bde448d2d507ac5dab887
       id: 813794069
@@ -745,8 +745,8 @@ MonoBehaviour:
         guid: 3df46ada962bde448d2d507ac5dab887
       Path: Events/Test/Music/States/Set_State_Test_High_Intensity
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Indoor
       guid: 19301207a61ea54282eee7533f25117c
       id: 3327457886
@@ -765,8 +765,8 @@ MonoBehaviour:
         guid: 19301207a61ea54282eee7533f25117c
       Path: Events/Test/States/Set_State_Test_Indoor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Low
       guid: 0e2a805d8f19824da856055f5c09d1bb
       id: 1347450883
@@ -785,8 +785,8 @@ MonoBehaviour:
         guid: 0e2a805d8f19824da856055f5c09d1bb
       Path: Events/Test/States/Set_State_Test_Low
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Low_Intensity
       guid: d94fb0588ffc04429eedabe9c524b727
       id: 1612650449
@@ -808,8 +808,8 @@ MonoBehaviour:
         guid: d94fb0588ffc04429eedabe9c524b727
       Path: Events/Test/Music/States/Set_State_Test_Low_Intensity
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Normal
       guid: 6236bcd517f9fd45a8252d7f5d5e3f21
       id: 4124505310
@@ -828,8 +828,8 @@ MonoBehaviour:
         guid: 6236bcd517f9fd45a8252d7f5d5e3f21
       Path: Events/Test/States/Set_State_Test_Normal
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Outdoor
       guid: 07b89d58076bdb4aa34b288290241f6e
       id: 271680069
@@ -848,8 +848,8 @@ MonoBehaviour:
         guid: 07b89d58076bdb4aa34b288290241f6e
       Path: Events/Test/States/Set_State_Test_Outdoor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Pause
       guid: 2019bdd37477d34693f58dc19505ddc0
       id: 2540652967
@@ -868,8 +868,8 @@ MonoBehaviour:
         guid: 2019bdd37477d34693f58dc19505ddc0
       Path: Events/Test/States/Set_State_Test_Pause
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Preparation
       guid: 78f819e9a17dc04cb6283a45040a6556
       id: 2578618902
@@ -891,8 +891,8 @@ MonoBehaviour:
         guid: 78f819e9a17dc04cb6283a45040a6556
       Path: Events/Test/Music/States/Set_State_Test_Preparation
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_State_Test_Unpause
       guid: 9eecc543f07587488f047cb95a34921c
       id: 4046133020
@@ -911,8 +911,8 @@ MonoBehaviour:
         guid: 9eecc543f07587488f047cb95a34921c
       Path: Events/Test/States/Set_State_Test_Unpause
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Boss
       guid: 7837684b5eb4e649acde7b36c4314111
       id: 1883426811
@@ -934,8 +934,8 @@ MonoBehaviour:
         guid: 7837684b5eb4e649acde7b36c4314111
       Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Boss
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_High_Intensity
       guid: d22e26cd946de44da4c08ccde49a3574
       id: 86589546
@@ -957,8 +957,8 @@ MonoBehaviour:
         guid: d22e26cd946de44da4c08ccde49a3574
       Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_High_Intensity
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Indoor
       guid: 4f81ad39114fc541b15274709fb0a228
       id: 4019638669
@@ -980,8 +980,8 @@ MonoBehaviour:
         guid: 4f81ad39114fc541b15274709fb0a228
       Path: Events/Test/SFX/Switches/Set_Switch_Test_Indoor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Low_Intensity
       guid: 2b0388cd7ce2a4428706be2d10ff749e
       id: 2649609692
@@ -1003,8 +1003,8 @@ MonoBehaviour:
         guid: 2b0388cd7ce2a4428706be2d10ff749e
       Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Low_Intensity
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Outdoor
       guid: 42638b12e0b49540b16bccb23acb9302
       id: 3974311268
@@ -1026,8 +1026,8 @@ MonoBehaviour:
         guid: 42638b12e0b49540b16bccb23acb9302
       Path: Events/Test/SFX/Switches/Set_Switch_Test_Outdoor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Preparation
       guid: 9df0933f448da54595b7dc330240c84f
       id: 1013698891
@@ -1049,8 +1049,8 @@ MonoBehaviour:
         guid: 9df0933f448da54595b7dc330240c84f
       Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Preparation
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Set_Switch_Test_Silent
       guid: 579caca8a9ed4541a2a59b738a660d0f
       id: 899382483
@@ -1072,8 +1072,8 @@ MonoBehaviour:
         guid: 579caca8a9ed4541a2a59b738a660d0f
       Path: Events/Test/SFX/Switches/Set_Switch_Test_Silent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SFX
       guid: ec40455e58c4d74e90a7dff537df3f1c
       id: 393239870
@@ -1189,8 +1189,8 @@ MonoBehaviour:
         guid: 64566517dd1df94d90a5984b4d223be7
       Path: Events/Test/SFX/Stop/Stop_Test_2D_Env_Switch
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Test_Gameplay_Music
       guid: 84abd2dc41eae94ab59df0c7e40e780a
       id: 327767067
@@ -1212,8 +1212,8 @@ MonoBehaviour:
         guid: 84abd2dc41eae94ab59df0c7e40e780a
       Path: Events/Test/Music/Stop/Stop_Test_Gameplay_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Test_Main_Menu_Music
       guid: 3e3339827aaa3e46bfea7f02053d4ac5
       id: 3682958602
@@ -1235,8 +1235,8 @@ MonoBehaviour:
         guid: 3e3339827aaa3e46bfea7f02053d4ac5
       Path: Events/Test/Music/Stop/Stop_Test_Main_Menu_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Switches
       guid: 876ee55dbceeee4cbe99e96a382b11c3
       id: 1410275485
