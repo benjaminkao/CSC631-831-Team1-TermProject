@@ -45,10 +45,12 @@ public class SingleTarget : TowerTargeting
         // apply damage if enemy exists 
         if (nearest)
         {
-            Health enemyHP = nearest.GetComponent<Health>();
-            enemyHP.alterHealth(-_stDamage);
+            Enemy enemy = nearest.GetComponent<Enemy>();
+
+            enemy.Damage(this.Owner, this._stDamage);
+            
             Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
-                _stDamage, nearest.name, enemyHP.HealthValue)
+                _stDamage, nearest.name, enemy.Health.HealthValue)
             );
         }
     }

@@ -524,7 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeBetweenUpdatingTargets: 1
   AttackDamage: 10
-  AttackRange: 1
+  AttackRange: 1.5
   TimeBetweenAttacks: 0.5
   enemyType: {fileID: 11400000, guid: 378bb0967c3f7d3469d1adf90624769d, type: 2}
   bloodSpawnPosition: {fileID: 7806980428673422513}

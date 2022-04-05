@@ -448,26 +448,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play
-      guid: dcf6bb354cf7c14289b5bd4a492d0769
-      id: 1256202815
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: Music
-        ObjectType: 4
-        guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: Play
-        ObjectType: 4
-        guid: dcf6bb354cf7c14289b5bd4a492d0769
-      Path: Events/Test/Music/Play
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_Test_2D_Env_Switch
       guid: b0f4d090d505fc4f98c16b895eaa90ec
       id: 2600493958
@@ -1128,26 +1108,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 7916562aed51da4087d1184fbdef1e38
       Path: Events\Test\Music\States
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: States
-      guid: 7916562aed51da4087d1184fbdef1e38
-      id: 1208172739
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: Music
-        ObjectType: 4
-        guid: c054ae734ff34049b6f6f0e9302be79b
-      - ElementName: States
-        ObjectType: 4
-        guid: 7916562aed51da4087d1184fbdef1e38
-      Path: Events/Test/Music/States
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1823,9 +1783,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585539578715678064
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 0100000002000000040000000500000006000000070000000800000009000000150000001800000023000000290000002a0000003a0000003c0000003d00000041000000
+  ExpandedWaapiItemIds: 3a0000003c0000003d00000041000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

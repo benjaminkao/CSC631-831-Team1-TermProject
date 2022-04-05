@@ -102,7 +102,7 @@ public class SpawnPoolManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Return to pool");
+        //Debug.Log("Return to pool");
 
         PoolController poolController = poolControllers[poolableObject.PoolIndex];
 

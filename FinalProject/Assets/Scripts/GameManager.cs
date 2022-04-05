@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private List<ContainmentPlayer> _players;
     [SerializeField] private ContainmentPlayer _localPlayer;
+    [SerializeField] private List<Objective> _objectives;
+
+    [SerializeField] private WaveSpawner _waveSpawner;
+
+
+    private int _playersReadied;
 
     public List<GameObject> EnemyTargetables
     {
@@ -46,6 +52,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         this._players = new List<ContainmentPlayer>();
+        this._playersReadied = 0;
     }
 
     private void OnEnable()
@@ -54,12 +61,23 @@ public class GameManager : MonoBehaviour
         ContainmentPlayer.OnPlayerLeave += RemovePlayer;
         ContainmentPlayer.OnPlayerDown += HandlePlayerDowned;
         ContainmentPlayer.OnPlayerDeath += HandlePlayerDeath;
+        ContainmentPlayer.OnPlayerReady += HandlePlayerReady;
+
+
         TargetableManager.OnTargetableEnabled += RegisterTargetable;
         TargetableManager.OnTargetableDisabled += DeregisterTargetable;
 
 
+
+        Objective.OnObjectiveEnabled += RegisterObjective;
+        Objective.OnObjectiveDisabled += DeregisterObjective;
+        Objective.OnObjectiveDestroyed += HandleObjectiveDestroyed;
+
+
         //ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
         //ContainmentPlayer.OnLocalPlayerLeave += RemoveLocalPlayer;
+
+        this._playersReadied = 0;
     }
 
     private void OnDisable()
@@ -68,8 +86,17 @@ public class GameManager : MonoBehaviour
         ContainmentPlayer.OnPlayerLeave -= RemovePlayer;
         ContainmentPlayer.OnPlayerDown -= HandlePlayerDowned;
         ContainmentPlayer.OnPlayerDeath -= HandlePlayerDeath;
+        ContainmentPlayer.OnPlayerReady -= HandlePlayerReady;
+
+
         TargetableManager.OnTargetableEnabled -= RegisterTargetable;
         TargetableManager.OnTargetableDisabled -= DeregisterTargetable;
+
+
+
+        Objective.OnObjectiveEnabled -= RegisterObjective;
+        Objective.OnObjectiveDisabled -= DeregisterObjective;
+        Objective.OnObjectiveDestroyed -= HandleObjectiveDestroyed;
 
 
         //ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
@@ -102,6 +129,17 @@ public class GameManager : MonoBehaviour
         this._localPlayer = null;
     }
 
+    public void RegisterObjective(Objective objective)
+    {
+        this._objectives.Add(objective);
+    }
+
+    public void DeregisterObjective(Objective objective)
+    {
+        this._objectives.Remove(objective);
+    }
+
+
     public void RegisterTargetable(ITargetable targetable)
     {
         this._enemyTargetables.Add(targetable.gameObject);
@@ -110,6 +148,21 @@ public class GameManager : MonoBehaviour
     public void DeregisterTargetable(ITargetable targetable)
     {
         this._enemyTargetables.Remove(targetable.gameObject);
+    }
+
+
+    public void HandlePlayerReady(ContainmentPlayer player)
+    {
+
+
+        _playersReadied++;
+
+        if(_playersReadied >= this._players.Count)
+        {
+            StartNextWave();
+        }
+
+
     }
 
 
@@ -161,14 +214,33 @@ public class GameManager : MonoBehaviour
 
         if(gameOver)
         {
-            Debug.Log("Game Over");
+            Debug.Log("Game Over - All Players Down or Killed");
             // Handle Game Over
         }
 
         // Networking - Notify clients of player died and if game is over
     }
 
+    public void HandleObjectiveDestroyed(Objective objectiveDestroyed)
+    {
+        bool gameOver = true;
 
+        foreach(Objective objective in this._objectives)
+        {
+            if(!objective.Destroyed)
+            {
+                gameOver = false;
+            }
+        }
 
-    
+        if(gameOver)
+        {
+            Debug.Log("Game Over - All Objectives Destroyed");
+        }
+    }
+
+    public void StartNextWave()
+    {
+        this._waveSpawner.StartWave();
+    }
 }

@@ -9,6 +9,8 @@ public interface ITargetable
 
     void Damage(float damage);
 
+    GameObject GetTargetPosition();
+
 }
 
 public static class TargetableManager

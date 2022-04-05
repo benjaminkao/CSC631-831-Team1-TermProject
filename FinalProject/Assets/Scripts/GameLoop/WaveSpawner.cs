@@ -1,10 +1,15 @@
 // Justin Diones
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+
+    public static event Action OnWaveStart;
+    public static event Action OnWaveCompleted;
+
     public enum SpawnState {SPAWNING, WAITING, COUNTING};    // Check the state of the spawner
 
     public LightingManager lightingManager;
@@ -53,26 +58,42 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 
-        if (waveCountdown <= 0){    // Time to start spawning waves
-            if (state != SpawnState.SPAWNING){
+        if (waveCountdown <= 0)
+        {    // Time to start spawning waves
+            if (state != SpawnState.SPAWNING)
+            {
                 // Start spawning wave when countdown is at 0
-                StartCoroutine(SpawnWave(waves[nextWave])); 
+                StartCoroutine(SpawnWave(waves[nextWave]));
                 lightingManager.SetTime(5);
             }
-        } else {
+        }
+        else
+        {
             // Make sure that time counts down correctly to time and not frames drawn per second (countdown from 5)
             waveCountdown -= Time.deltaTime;
             lightingManager.SetTime(8);
         }
     }
 
+    public void StartWave()
+    {
+        StartCoroutine(SpawnWave(waves[nextWave]));
+        lightingManager.SetTime(5);
+    }
+
+
+
+
+
     // Tell the game what to do when a wave is completed
     void WaveCompleted(Wave _wave){
         Debug.Log("Wave Completed!");
-        
+
         // Set state back to counting when wave is completed and restart the countdown timer
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
+
+        //OnWaveCompleted?.Invoke();
 
 
         if (nextWave + 1 > waves.Length- 1){
@@ -115,7 +136,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(Transform _enemy){
         // Spawn/Instantiate enemy enemy
         Debug.Log("Spawning Enemy: " + _enemy.name);
-        Transform spawnPt = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Transform spawnPt = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, spawnPt.position, spawnPt.rotation);
     }
 }

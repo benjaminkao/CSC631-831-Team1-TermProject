@@ -104,6 +104,13 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
         //}
     }
 
+    public GameObject GetTargetPosition()
+    {
+        return this.gameObject;
+    }
+
+
+
     [Command]
     void CmdShoot(Vector3 startPos, Vector3 forward)
     {

@@ -15,7 +15,10 @@ public class SpawnerMenuSelection : MonoBehaviour
     public bool MenuActive
     {
         get { return _spawnMenu.activeInHierarchy; }
-        set { _spawnMenu.SetActive(value); }
+        set { 
+            _spawnMenu.SetActive(value);
+            Cursor.lockState = _spawnMenu.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
+        }
     }
 
     void Start()
@@ -66,6 +69,10 @@ public class SpawnerMenuSelection : MonoBehaviour
 
         // places object at top of tower
         Vector3 position = new Vector3(_towerLocation.x, _towerLocation.y + _towerHeight, _towerLocation.z);
-        Instantiate(towerPrefab, position, Quaternion.identity);
+        GameObject towerGO = Instantiate(towerPrefab, position, Quaternion.identity);
+
+        TowerTargeting tower = towerGO.GetComponent<TowerTargeting>();
+
+        tower.Owner = this._towerOwner.GetComponent<ContainmentPlayer>();
     }
 }

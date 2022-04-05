@@ -48,7 +48,7 @@ public class EnemyHealth : Health
             _healthBarUI.gameObject.SetActive(false);
         }
 
-        Debug.Log("Should show health bar");
+        //Debug.Log("Should show health bar");
         _healthBarUI.gameObject.SetActive(true);
         
     }

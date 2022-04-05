@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject bloodSpawnPosition;
 
     [SerializeField] private GameObject target;
+    private ITargetable targetable;
 
     [SerializeField] private int _pointsForDeath = 100;
 
@@ -85,11 +86,9 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        float sqrDistanceFromTarget = (target.transform.position - transform.position).sqrMagnitude;
+        float sqrDistanceFromTarget = (targetable.GetTargetPosition().gameObject.transform.position - transform.position).sqrMagnitude;
 
-        //Debug.Log(sqrDistanceFromTarget);
-        //Debug.Log($"Attack Range: {_sqrAttackRange}");
-        //Debug.Log(sqrDistanceFromTarget <= _sqrAttackRange);
+
 
         if (sqrDistanceFromTarget <= _sqrAttackRange)
         {
@@ -102,7 +101,7 @@ public class Enemy : MonoBehaviour
         {
 
 
-            agent.SetDestination(target.transform.position);
+            agent.SetDestination(targetable.GetTargetPosition().gameObject.transform.position);
         }
     }
 
@@ -111,7 +110,7 @@ public class Enemy : MonoBehaviour
     {
 
 
-        Debug.Log("Enemy hit");
+        //Debug.Log("Enemy hit");
 
         health.alterHealth(-damage);
 
@@ -166,6 +165,8 @@ public class Enemy : MonoBehaviour
     {
         _shouldUpdateTarget = false;
         target = FindClosestTarget();
+        targetable = target.GetComponent<ITargetable>();
+        
 
         yield return new WaitForSeconds(TimeBetweenUpdatingTargets);
 

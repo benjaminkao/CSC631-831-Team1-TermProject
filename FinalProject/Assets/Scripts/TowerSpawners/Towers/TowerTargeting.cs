@@ -9,6 +9,36 @@ public abstract class TowerTargeting: MonoBehaviour, ITargetable
     protected float _cooldownTime;
     private bool _canShoot = true;
 
+
+    public GameObject TargetPosition
+    {
+        get { return this._targetPosition; }
+    }
+
+    [Tooltip("The position that enemies will use to reference how far away they are from this tower.")]
+    [SerializeField] private GameObject _targetPosition;
+
+
+    [SerializeField] private Health health;
+
+
+
+    public ContainmentPlayer Owner
+    {
+        get
+        {
+            return this._owner;
+        }
+
+        set
+        {
+            this._owner = value;
+        }
+    }
+
+
+    [SerializeField] private ContainmentPlayer _owner;
+
     // TowerTargeting sub-classes will implement the reaction to collisions
     // for players, enemies, or both.
     public abstract void ApplyEffects(Collider[] collisions);
@@ -53,6 +83,17 @@ public abstract class TowerTargeting: MonoBehaviour, ITargetable
 
     public void Damage(float damage)
     {
-        Debug.Log($"{this.name} Damaged");
+        health.alterHealth(-damage);
+        
+
+        if(health.Died)
+        {
+            Destroy(this);
+        }
+    }
+
+    public GameObject GetTargetPosition()
+    {
+        return this._targetPosition;
     }
 }

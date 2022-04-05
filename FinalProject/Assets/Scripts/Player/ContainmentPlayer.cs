@@ -57,6 +57,8 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
     [SerializeField] private PlayerPoints playerPoints;
 
     private int _points;
+    private bool _ready;
+    private bool _inPreparationPhase;
 
 
     private const string MouseXInput = "Mouse X";
@@ -72,7 +74,7 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
     public static event Action<ContainmentPlayer> OnPlayerJoin;
     public static event Action<ContainmentPlayer> OnPlayerLeave;
 
-
+    public static event Action<ContainmentPlayer> OnPlayerReady;
 
     void Start()
     {
@@ -102,11 +104,18 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
     {
         OnPlayerJoin?.Invoke(this);
         this.RegisterTargetable();
+
+
+        WaveSpawner.OnWaveCompleted += HandleWaveCompleted;
+        WaveSpawner.OnWaveStart += HandleWaveStart;
     }
 
     private void OnDisable()
     {
         this.DeregisterTargetable();
+
+        WaveSpawner.OnWaveCompleted -= HandleWaveCompleted;
+        WaveSpawner.OnWaveStart -= HandleWaveStart;
     }
 
 
@@ -130,6 +139,12 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
             gun.Reload();
         }
 
+        if(this._inPreparationPhase && !this._ready && Input.GetKeyDown(KeyCode.Tab))
+        {
+            ReadyUp();
+        }
+
+
 
         HandleCharacterInput();
     }
@@ -141,6 +156,7 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
         HandleCameraInput();
     }
 
+    #region ITargetable Methods
 
     public void Damage(float damage)
     {
@@ -162,6 +178,13 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
             OnPlayerDeath?.Invoke(this);
         }
     }
+
+    public GameObject GetTargetPosition()
+    {
+        return this.gameObject;
+    }
+
+    #endregion ITargetable Methods
 
     public void AddPoints(int points)
     {
@@ -200,6 +223,35 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
         //enemy.RpcUpdateHealth(enemy.Health.HealthValue);
         //this.RpcUpdatePoints(this.points);
     }
+
+    private void HandleWaveCompleted()
+    {
+        this._inPreparationPhase = true;
+        this._ready = false;
+    }
+
+    private void HandleWaveStart()
+    {
+        this._inPreparationPhase = false;
+        this._ready = false;
+    }
+
+    private void ReadyUp()
+    {
+        this._ready = true;
+        OnPlayerReady?.Invoke(this);
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
     private void HandleCameraInput()

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bf4b3fd206f9d419dce011c3dea8eb, type: 3}
+  m_Name: C79679F0-12C3-482E-B7AE-F65D5CE77B78
+  m_EditorClassIdentifier: 
+  objectName: Test_Boss
+  id: 2766477831
+  guid: C79679F0-12C3-482E-B7AE-F65D5CE77B78
+  WwiseStateGroupReference: {fileID: 11400000, guid: 4b8c13e72d2eb9b44b63e8f6bde4bf73, type: 2}

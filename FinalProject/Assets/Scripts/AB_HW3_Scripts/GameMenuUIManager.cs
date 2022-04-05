@@ -33,7 +33,7 @@ public class GameMenuUIManager : MonoBehaviour
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
 
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.lockState = pauseMenu.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         }
 
 
