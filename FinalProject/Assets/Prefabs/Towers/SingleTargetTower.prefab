@@ -213,7 +213,7 @@ MonoBehaviour:
   _owner: {fileID: 0}
   _stRadius: 7
   _stCooldown: 0.5
-  _stDamage: 0
+  _stDamage: 30
 --- !u!114 &-6266299033618169996
 MonoBehaviour:
   m_ObjectHideFlags: 0

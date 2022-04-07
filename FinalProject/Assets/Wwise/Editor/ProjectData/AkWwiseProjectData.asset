@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ea1e2b304c7f2344922b1c3053e84ac8
     GuidInternal: 
-    m_lastTime: -8585539578715658502
+    m_lastTime: -8585522532598108309
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
     GuidInternal: 
-    m_lastTime: -8585539578716830739
+    m_lastTime: -8585522532599275120
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -65,7 +65,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Test
     guid: 73c791231b87ce45a34d68c696b94384
     GuidInternal: 
-    m_lastTime: -8585530135235373114
+    m_lastTime: -8585522532599255172
     List:
     - name: Test_2D_Env
       guid: 636a6093a0cc1c43b92e0d598ac3b5b6
@@ -315,7 +315,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 613d38226b083f45988bd5ca65749b4d
     GuidInternal: 
-    m_lastTime: -8585539578715823007
+    m_lastTime: -8585522532598248277
     List: []
   - PhysicalPath: SoundBanks\Test.wwu
     PathAndIcons:
@@ -328,7 +328,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Test
     guid: a0baf2314942bb42ace66b188a8353e9
     GuidInternal: 
-    m_lastTime: -8585539578715813035
+    m_lastTime: -8585522532598238305
     List:
     - name: Test_Master
       guid: e138b1966e26ca419d639ff5c7cb11af
@@ -356,7 +356,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9dc4f9894f993458bde01d3ffb2026b
     GuidInternal: 
-    m_lastTime: -8585539578717940406
+    m_lastTime: -8585522532600152772
     List: []
   - PhysicalPath: Events\Test.wwu
     PathAndIcons:
@@ -369,7 +369,7 @@ MonoBehaviour:
     ParentPath: Events\Test
     guid: 5211d38364814e4dbc7ae1aecec07899
     GuidInternal: 
-    m_lastTime: -8585530135238288004
+    m_lastTime: -8585522532600132822
     List:
     - name: Music
       guid: c054ae734ff34049b6f6f0e9302be79b
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1836d610d40dfb4faddc13e819bb9ce7
     GuidInternal: 
-    m_lastTime: -8585539578717910483
+    m_lastTime: -8585522532600112878
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -1283,7 +1283,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6095d92da86b84f8c13dbea62b3c8a6
     GuidInternal: 
-    m_lastTime: -8585539578715768240
+    m_lastTime: -8585522532598198414
     List: []
   - PhysicalPath: States\Test.wwu
     PathAndIcons:
@@ -1296,7 +1296,7 @@ MonoBehaviour:
     ParentPath: States\Test
     guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
     GuidInternal: 
-    m_lastTime: -8585530135235273390
+    m_lastTime: -8585522532598188438
     List:
     - name: Test_Env
       guid: d0294041368d0d469f010c921fea7193
@@ -1606,7 +1606,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d171cdcb3cf9d14780b6b2fae736e7e7
     GuidInternal: 
-    m_lastTime: -8585539578715737943
+    m_lastTime: -8585522532598168150
     List: []
   - PhysicalPath: Switches\Test.wwu
     PathAndIcons:
@@ -1619,7 +1619,7 @@ MonoBehaviour:
     ParentPath: Switches\Test
     guid: eecad20c2180674b8bef59790c3746e6
     GuidInternal: 
-    m_lastTime: -8585530135235241269
+    m_lastTime: -8585522532598148198
     List:
     - name: Test_2D_Env
       guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
@@ -1781,11 +1781,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6053f6c4d583f544aa4b00f85c8169c5
     GuidInternal: 
-    m_lastTime: -8585539578715678064
+    m_lastTime: -8585522532598128263
     List: []
-  ExpandedFileSystemItemIds: 0100000002000000040000000500000006000000070000000800000009000000150000001800000023000000290000002a0000003a0000003c0000003d00000041000000
-  ExpandedWaapiItemIds: 3a0000003c0000003d00000041000000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
