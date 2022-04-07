@@ -683,9 +683,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   shootDelay: 0.1
-  reloadTime: 1
-  ammoPerClip: 30
-  currentAmmo: 0
+  canShoot: 0
   tpsCamera: {fileID: 0}
   gunPoint: {fileID: 1624540227267797061}
 --- !u!114 &2418616444409012680
@@ -745,9 +743,7 @@ GameObject:
   - component: {fileID: 3999230457164330227}
   - component: {fileID: 5669764142939048168}
   - component: {fileID: 7330713135887376453}
-  - component: {fileID: 358286244}
-  - component: {fileID: 358286252}
-  - component: {fileID: 358286253}
+  - component: {fileID: 7400569273582783507}
   m_Layer: 2
   m_Name: Player-v2
   m_TagString: Player
@@ -914,7 +910,7 @@ MonoBehaviour:
   _maxHealth: 100
   _healthBarUI: {fileID: 0}
   _healthValue: 100
---- !u!114 &358286244
+--- !u!114 &7400569273582783507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -923,63 +919,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052736592563684396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a2bc3e026dbac419c6625195d306e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 875f806cd3edd03448c25341481d62d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingPoints: 500
   _player: {fileID: 5669764142939048168}
-  label: {fileID: 0}
---- !u!114 &358286252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052736592563684396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcdf821e4ede05a43916d2bc7c9be2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 48102284ee9983742af98ee58acfa4ca, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &358286253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052736592563684396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a79d6e3e6f6fe842bd0334e6ddf7f80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &2418616446353135364
 GameObject:
   m_ObjectHideFlags: 0
