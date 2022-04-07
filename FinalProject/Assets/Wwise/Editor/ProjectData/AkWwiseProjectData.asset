@@ -12,14 +12,1777 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab827c9d989895c4286095653538f319, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ea1e2b304c7f2344922b1c3053e84ac8
+    ParentPath: Virtual Acoustics/Default Work Unit
+    guid: ea1e2b304c7f2344922b1c3053e84ac8
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+  - PhysicalPath: Master-Mixer Hierarchy/Test.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Test
+      ObjectType: 12
+      guid: 73c791231b87ce45a34d68c696b94384
+    ParentPath: Master-Mixer Hierarchy/Test
+    guid: 73c791231b87ce45a34d68c696b94384
+    GuidInternal: 
+    m_lastTime: -8585528377094775808
+    List:
+    - name: Test_2D_Env
+      guid: 636a6093a0cc1c43b92e0d598ac3b5b6
+      id: 4223207942
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_2D_Env
+        ObjectType: 2
+        guid: 636a6093a0cc1c43b92e0d598ac3b5b6
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_2D_Env
+    - name: Test_3D_Env
+      guid: 788aac009c500e479d9e8750a12372de
+      id: 767111401
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_3D_Env
+        ObjectType: 2
+        guid: 788aac009c500e479d9e8750a12372de
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_3D_Env
+    - name: Test_Combat
+      guid: f187138d2527cb46a29ee0979ed32c9d
+      id: 3192105708
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_Combat
+        ObjectType: 2
+        guid: f187138d2527cb46a29ee0979ed32c9d
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_Combat
+    - name: Test_Explosions
+      guid: f3e75b163bb09d448ff5213aebb09712
+      id: 3105609280
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_Explosions
+        ObjectType: 2
+        guid: f3e75b163bb09d448ff5213aebb09712
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_Explosions
+    - name: Test_Master
+      guid: 94e10fa07379cb478f556e5c1934cc5f
+      id: 959552862
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      Path: Master-Mixer Hierarchy/Test/Test_Master
+    - name: Test_Music
+      guid: 42e89b613a6f504f8c61bafcf3f17bc7
+      id: 379521629
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_Music
+        ObjectType: 2
+        guid: 42e89b613a6f504f8c61bafcf3f17bc7
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_Music
+    - name: Test_NPC_SFX
+      guid: f41b605b7da73d4fa27a4e0b20b8bad6
+      id: 29620449
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_NPC_SFX
+        ObjectType: 2
+        guid: f41b605b7da73d4fa27a4e0b20b8bad6
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_NPC_SFX
+    - name: Test_Player_SFX
+      guid: bd992216c2e97248ae0b5db445f9efe8
+      id: 1328375135
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      - ElementName: Test_Player_SFX
+        ObjectType: 2
+        guid: bd992216c2e97248ae0b5db445f9efe8
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX/Test_Player_SFX
+    - name: Test_Reverb_Indoor
+      guid: feb7c5bd9ed5a54fbb4c241ee6c9e674
+      id: 838584038
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_Reverb_Indoor
+        ObjectType: 1
+        guid: feb7c5bd9ed5a54fbb4c241ee6c9e674
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_Reverb_Indoor
+    - name: Test_Reverb_Outdoor
+      guid: 13868a5105895140ba30d9db6665c3e0
+      id: 3089001037
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_Reverb_Outdoor
+        ObjectType: 1
+        guid: 13868a5105895140ba30d9db6665c3e0
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_Reverb_Outdoor
+    - name: Test_SFX
+      guid: a735a11a9f855549b20cc5f5bbca877f
+      id: 3712553433
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_SFX
+        ObjectType: 2
+        guid: a735a11a9f855549b20cc5f5bbca877f
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_SFX
+    - name: Test_UI
+      guid: aa4dc7f895539b48a363ca59351cf95e
+      id: 1896376002
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_UI
+        ObjectType: 2
+        guid: aa4dc7f895539b48a363ca59351cf95e
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_UI
+    - name: Test_VO
+      guid: 052cc6b106ab7e44bdbf048cfe205cad
+      id: 1913153617
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 73c791231b87ce45a34d68c696b94384
+      - ElementName: Test_Master
+        ObjectType: 2
+        guid: 94e10fa07379cb478f556e5c1934cc5f
+      - ElementName: Test_VO
+        ObjectType: 2
+        guid: 052cc6b106ab7e44bdbf048cfe205cad
+      Path: Master-Mixer Hierarchy/Test/Test_Master/Test_VO
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 613d38226b083f45988bd5ca65749b4d
+    ParentPath: SoundBanks/Default Work Unit
+    guid: 613d38226b083f45988bd5ca65749b4d
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  - PhysicalPath: SoundBanks/Test.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Test
+      ObjectType: 12
+      guid: a0baf2314942bb42ace66b188a8353e9
+    ParentPath: SoundBanks/Test
+    guid: a0baf2314942bb42ace66b188a8353e9
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List:
+    - name: Test_Master
+      guid: e138b1966e26ca419d639ff5c7cb11af
+      id: 959552862
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: a0baf2314942bb42ace66b188a8353e9
+      - ElementName: Test_Master
+        ObjectType: 7
+        guid: e138b1966e26ca419d639ff5c7cb11af
+      Path: SoundBanks/Test/Test_Master
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f9dc4f9894f993458bde01d3ffb2026b
+    ParentPath: Events/Default Work Unit
+    guid: f9dc4f9894f993458bde01d3ffb2026b
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  - PhysicalPath: Events/Test.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Test
+      ObjectType: 12
+      guid: 5211d38364814e4dbc7ae1aecec07899
+    ParentPath: Events/Test
+    guid: 5211d38364814e4dbc7ae1aecec07899
+    GuidInternal: 
+    m_lastTime: -8585528377104775808
+    List:
+    - name: Music
+      guid: c054ae734ff34049b6f6f0e9302be79b
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      Path: Events/Test/Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Not_Currently_Used_Switches
+      guid: 0726febfdeb7cb4a9104e5e385303a98
+      id: 931355164
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Not_Currently_Used_Switches
+        ObjectType: 4
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      Path: Events/Test/Music/Not_Currently_Used_Switches
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: 1bb6d73df92152439a1f378ece969c70
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      Path: Events/Test/SFX/Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: dcf6bb354cf7c14289b5bd4a492d0769
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Play
+        ObjectType: 4
+        guid: dcf6bb354cf7c14289b5bd4a492d0769
+      Path: Events/Test/Music/Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_2D_Env_Switch
+      guid: b0f4d090d505fc4f98c16b895eaa90ec
+      id: 2600493958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_2D_Env_Switch
+        ObjectType: 3
+        guid: b0f4d090d505fc4f98c16b895eaa90ec
+      Path: Events/Test/SFX/Play/Play_Test_2D_Env_Switch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_3D_Ambiance
+      guid: e5e796a5c0266640af23cce5d0634692
+      id: 3428582015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_3D_Ambiance
+        ObjectType: 3
+        guid: e5e796a5c0266640af23cce5d0634692
+      Path: Events/Test/SFX/Play/Play_Test_3D_Ambiance
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_Click
+      guid: 66b2fd7a6a71a74eb65b07ca78a327bf
+      id: 3195805575
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Click
+        ObjectType: 3
+        guid: 66b2fd7a6a71a74eb65b07ca78a327bf
+      Path: Events/Test/SFX/Play/Play_Test_Click
+      maxAttenuation: 0
+      maxDuration: 0.58551
+      minDuration: 0.58551
+    - name: Play_Test_Explosion
+      guid: d6c4a6400815b24c805d85b8f82c4a9b
+      id: 1001261022
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Explosion
+        ObjectType: 3
+        guid: d6c4a6400815b24c805d85b8f82c4a9b
+      Path: Events/Test/SFX/Play/Play_Test_Explosion
+      maxAttenuation: 0
+      maxDuration: 1.38805
+      minDuration: 1.38805
+    - name: Play_Test_Gameplay_Music
+      guid: 72ba9cd77f9b054fb286404caecc0823
+      id: 2053261897
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Play
+        ObjectType: 4
+        guid: dcf6bb354cf7c14289b5bd4a492d0769
+      - ElementName: Play_Test_Gameplay_Music
+        ObjectType: 3
+        guid: 72ba9cd77f9b054fb286404caecc0823
+      Path: Events/Test/Music/Play/Play_Test_Gameplay_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_Gunshot
+      guid: 4a98cae5a93f5545bc6959e91eb38373
+      id: 3782809477
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Gunshot
+        ObjectType: 3
+        guid: 4a98cae5a93f5545bc6959e91eb38373
+      Path: Events/Test/SFX/Play/Play_Test_Gunshot
+      maxAttenuation: 0
+      maxDuration: 1.123719
+      minDuration: 1.123719
+    - name: Play_Test_Main_Menu_Music
+      guid: 67fc62f234bb494c8e289597ba66c0f2
+      id: 4045756732
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Play
+        ObjectType: 4
+        guid: dcf6bb354cf7c14289b5bd4a492d0769
+      - ElementName: Play_Test_Main_Menu_Music
+        ObjectType: 3
+        guid: 67fc62f234bb494c8e289597ba66c0f2
+      Path: Events/Test/Music/Play/Play_Test_Main_Menu_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_NPC_Footstep
+      guid: 6c39a6a3e6abfb42a9c9dd7c8eca10a5
+      id: 2610155023
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_NPC_Footstep
+        ObjectType: 3
+        guid: 6c39a6a3e6abfb42a9c9dd7c8eca10a5
+      Path: Events/Test/SFX/Play/Play_Test_NPC_Footstep
+      maxAttenuation: 0
+      maxDuration: 1.328549
+      minDuration: 1.328549
+    - name: Play_Test_NPC_VO
+      guid: e746c14b325b574ea3f18dbe1187b37f
+      id: 2377014604
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_NPC_VO
+        ObjectType: 3
+        guid: e746c14b325b574ea3f18dbe1187b37f
+      Path: Events/Test/SFX/Play/Play_Test_NPC_VO
+      maxAttenuation: 0
+      maxDuration: 1.981202
+      minDuration: 1.981202
+    - name: Play_Test_Player_Footstep
+      guid: e14b25a659c8e44ba0e7316ed4119d9c
+      id: 3016857871
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Player_Footstep
+        ObjectType: 3
+        guid: e14b25a659c8e44ba0e7316ed4119d9c
+      Path: Events/Test/SFX/Play/Play_Test_Player_Footstep
+      maxAttenuation: 0
+      maxDuration: 0.909388
+      minDuration: 0.909388
+    - name: Play_Test_Player_VO
+      guid: a6cd57b4c4b4af47b96bbe7330baa9ca
+      id: 82526284
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Player_VO
+        ObjectType: 3
+        guid: a6cd57b4c4b4af47b96bbe7330baa9ca
+      Path: Events/Test/SFX/Play/Play_Test_Player_VO
+      maxAttenuation: 0
+      maxDuration: 2.496757
+      minDuration: 2.496757
+    - name: Set_State_Test_Boss
+      guid: ef15962636d82c4db52ff670df25a350
+      id: 1780085868
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Boss
+        ObjectType: 3
+        guid: ef15962636d82c4db52ff670df25a350
+      Path: Events/Test/Music/States/Set_State_Test_Boss
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_High_Intensity
+      guid: 3df46ada962bde448d2d507ac5dab887
+      id: 813794069
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_High_Intensity
+        ObjectType: 3
+        guid: 3df46ada962bde448d2d507ac5dab887
+      Path: Events/Test/Music/States/Set_State_Test_High_Intensity
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Indoor
+      guid: 19301207a61ea54282eee7533f25117c
+      id: 3327457886
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Indoor
+        ObjectType: 3
+        guid: 19301207a61ea54282eee7533f25117c
+      Path: Events/Test/States/Set_State_Test_Indoor
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Low
+      guid: 0e2a805d8f19824da856055f5c09d1bb
+      id: 1347450883
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Low
+        ObjectType: 3
+        guid: 0e2a805d8f19824da856055f5c09d1bb
+      Path: Events/Test/States/Set_State_Test_Low
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Low_Intensity
+      guid: d94fb0588ffc04429eedabe9c524b727
+      id: 1612650449
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Low_Intensity
+        ObjectType: 3
+        guid: d94fb0588ffc04429eedabe9c524b727
+      Path: Events/Test/Music/States/Set_State_Test_Low_Intensity
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Normal
+      guid: 6236bcd517f9fd45a8252d7f5d5e3f21
+      id: 4124505310
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Normal
+        ObjectType: 3
+        guid: 6236bcd517f9fd45a8252d7f5d5e3f21
+      Path: Events/Test/States/Set_State_Test_Normal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Outdoor
+      guid: 07b89d58076bdb4aa34b288290241f6e
+      id: 271680069
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Outdoor
+        ObjectType: 3
+        guid: 07b89d58076bdb4aa34b288290241f6e
+      Path: Events/Test/States/Set_State_Test_Outdoor
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Pause
+      guid: 2019bdd37477d34693f58dc19505ddc0
+      id: 2540652967
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Pause
+        ObjectType: 3
+        guid: 2019bdd37477d34693f58dc19505ddc0
+      Path: Events/Test/States/Set_State_Test_Pause
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Preparation
+      guid: 78f819e9a17dc04cb6283a45040a6556
+      id: 2578618902
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      - ElementName: Set_State_Test_Preparation
+        ObjectType: 3
+        guid: 78f819e9a17dc04cb6283a45040a6556
+      Path: Events/Test/Music/States/Set_State_Test_Preparation
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Test_Unpause
+      guid: 9eecc543f07587488f047cb95a34921c
+      id: 4046133020
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      - ElementName: Set_State_Test_Unpause
+        ObjectType: 3
+        guid: 9eecc543f07587488f047cb95a34921c
+      Path: Events/Test/States/Set_State_Test_Unpause
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Boss
+      guid: 7837684b5eb4e649acde7b36c4314111
+      id: 1883426811
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Not_Currently_Used_Switches
+        ObjectType: 4
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      - ElementName: Set_Switch_Test_Boss
+        ObjectType: 3
+        guid: 7837684b5eb4e649acde7b36c4314111
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Boss
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_High_Intensity
+      guid: d22e26cd946de44da4c08ccde49a3574
+      id: 86589546
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Not_Currently_Used_Switches
+        ObjectType: 4
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      - ElementName: Set_Switch_Test_High_Intensity
+        ObjectType: 3
+        guid: d22e26cd946de44da4c08ccde49a3574
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_High_Intensity
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Indoor
+      guid: 4f81ad39114fc541b15274709fb0a228
+      id: 4019638669
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Switches
+        ObjectType: 4
+        guid: 876ee55dbceeee4cbe99e96a382b11c3
+      - ElementName: Set_Switch_Test_Indoor
+        ObjectType: 3
+        guid: 4f81ad39114fc541b15274709fb0a228
+      Path: Events/Test/SFX/Switches/Set_Switch_Test_Indoor
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Low_Intensity
+      guid: 2b0388cd7ce2a4428706be2d10ff749e
+      id: 2649609692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Not_Currently_Used_Switches
+        ObjectType: 4
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      - ElementName: Set_Switch_Test_Low_Intensity
+        ObjectType: 3
+        guid: 2b0388cd7ce2a4428706be2d10ff749e
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Low_Intensity
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Outdoor
+      guid: 42638b12e0b49540b16bccb23acb9302
+      id: 3974311268
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Switches
+        ObjectType: 4
+        guid: 876ee55dbceeee4cbe99e96a382b11c3
+      - ElementName: Set_Switch_Test_Outdoor
+        ObjectType: 3
+        guid: 42638b12e0b49540b16bccb23acb9302
+      Path: Events/Test/SFX/Switches/Set_Switch_Test_Outdoor
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Preparation
+      guid: 9df0933f448da54595b7dc330240c84f
+      id: 1013698891
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Not_Currently_Used_Switches
+        ObjectType: 4
+        guid: 0726febfdeb7cb4a9104e5e385303a98
+      - ElementName: Set_Switch_Test_Preparation
+        ObjectType: 3
+        guid: 9df0933f448da54595b7dc330240c84f
+      Path: Events/Test/Music/Not_Currently_Used_Switches/Set_Switch_Test_Preparation
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Switch_Test_Silent
+      guid: 579caca8a9ed4541a2a59b738a660d0f
+      id: 899382483
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Switches
+        ObjectType: 4
+        guid: 876ee55dbceeee4cbe99e96a382b11c3
+      - ElementName: Set_Switch_Test_Silent
+        ObjectType: 3
+        guid: 579caca8a9ed4541a2a59b738a660d0f
+      Path: Events/Test/SFX/Switches/Set_Switch_Test_Silent
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX
+      guid: ec40455e58c4d74e90a7dff537df3f1c
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      Path: Events/Test/SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: States
+      guid: 7916562aed51da4087d1184fbdef1e38
+      id: 1208172739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: States
+        ObjectType: 4
+        guid: 7916562aed51da4087d1184fbdef1e38
+      Path: Events/Test/Music/States
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: States
+      guid: 2a93c1613ed64d4db93ceefab12068a9
+      id: 1208172739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: States
+        ObjectType: 4
+        guid: 2a93c1613ed64d4db93ceefab12068a9
+      Path: Events/Test/States
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
+      Path: Events/Test/SFX/Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: a1160634fadcc44eac9403648fbe4be6
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Stop
+        ObjectType: 4
+        guid: a1160634fadcc44eac9403648fbe4be6
+      Path: Events/Test/Music/Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Test_2D_Env_Switch
+      guid: 64566517dd1df94d90a5984b4d223be7
+      id: 986341748
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
+      - ElementName: Stop_Test_2D_Env_Switch
+        ObjectType: 3
+        guid: 64566517dd1df94d90a5984b4d223be7
+      Path: Events/Test/SFX/Stop/Stop_Test_2D_Env_Switch
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Test_Gameplay_Music
+      guid: 84abd2dc41eae94ab59df0c7e40e780a
+      id: 327767067
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Stop
+        ObjectType: 4
+        guid: a1160634fadcc44eac9403648fbe4be6
+      - ElementName: Stop_Test_Gameplay_Music
+        ObjectType: 3
+        guid: 84abd2dc41eae94ab59df0c7e40e780a
+      Path: Events/Test/Music/Stop/Stop_Test_Gameplay_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Test_Main_Menu_Music
+      guid: 3e3339827aaa3e46bfea7f02053d4ac5
+      id: 3682958602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Stop
+        ObjectType: 4
+        guid: a1160634fadcc44eac9403648fbe4be6
+      - ElementName: Stop_Test_Main_Menu_Music
+        ObjectType: 3
+        guid: 3e3339827aaa3e46bfea7f02053d4ac5
+      Path: Events/Test/Music/Stop/Stop_Test_Main_Menu_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Switches
+      guid: 876ee55dbceeee4cbe99e96a382b11c3
+      id: 1410275485
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Switches
+        ObjectType: 4
+        guid: 876ee55dbceeee4cbe99e96a382b11c3
+      Path: Events/Test/SFX/Switches
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 1836d610d40dfb4faddc13e819bb9ce7
+    ParentPath: Game Parameters/Default Work Unit
+    guid: 1836d610d40dfb4faddc13e819bb9ce7
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d6095d92da86b84f8c13dbea62b3c8a6
+    ParentPath: States/Default Work Unit
+    guid: d6095d92da86b84f8c13dbea62b3c8a6
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  - PhysicalPath: States/Test.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Test
+      ObjectType: 12
+      guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+    ParentPath: States/Test
+    guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+    GuidInternal: 
+    m_lastTime: -8585528377094775808
+    List:
+    - name: Test_Env
+      guid: d0294041368d0d469f010c921fea7193
+      id: 3579906457
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+      - ElementName: Test_Env
+        ObjectType: 9
+        guid: d0294041368d0d469f010c921fea7193
+      Path: States/Test/Test_Env
+      values:
+      - name: None
+        guid: 9b71e9fa7855704dbd8084c35d27d3ea
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Env
+          ObjectType: 9
+          guid: d0294041368d0d469f010c921fea7193
+        - ElementName: None
+          ObjectType: 8
+          guid: 9b71e9fa7855704dbd8084c35d27d3ea
+      - name: Test_Indoor
+        guid: 15deef81c330b3449c4d5679e2f3b1a6
+        id: 2395569889
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Env
+          ObjectType: 9
+          guid: d0294041368d0d469f010c921fea7193
+        - ElementName: Test_Indoor
+          ObjectType: 8
+          guid: 15deef81c330b3449c4d5679e2f3b1a6
+      - name: Test_Outdoor
+        guid: 3f9ed59c56ca0d4399f980cc191999cf
+        id: 836963824
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Env
+          ObjectType: 9
+          guid: d0294041368d0d469f010c921fea7193
+        - ElementName: Test_Outdoor
+          ObjectType: 8
+          guid: 3f9ed59c56ca0d4399f980cc191999cf
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Test_Gameplay_Music
+      guid: 6c627b464adf7d4eb420c0a62f4d9c73
+      id: 1631956748
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+      - ElementName: Test_Gameplay_Music
+        ObjectType: 9
+        guid: 6c627b464adf7d4eb420c0a62f4d9c73
+      Path: States/Test/Test_Gameplay_Music
+      values:
+      - name: None
+        guid: 834fc2f92ac8b64f8e7344eba3a63a35
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: None
+          ObjectType: 8
+          guid: 834fc2f92ac8b64f8e7344eba3a63a35
+      - name: Test_Boss
+        guid: f07996c7c3122e48b7aef65d5ce77b78
+        id: 2766477831
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Boss
+          ObjectType: 8
+          guid: f07996c7c3122e48b7aef65d5ce77b78
+      - name: Test_High_Intensity
+        guid: fde290e89af0a74a9aaf1f12d7535b2b
+        id: 811206454
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_High_Intensity
+          ObjectType: 8
+          guid: fde290e89af0a74a9aaf1f12d7535b2b
+      - name: Test_Low_Intensity
+        guid: 3edecce7610d194595b0c07568d2e149
+        id: 3275738912
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Low_Intensity
+          ObjectType: 8
+          guid: 3edecce7610d194595b0c07568d2e149
+      - name: Test_Preparation
+        guid: a0512b41260d3d438e51db3c1434d300
+        id: 3922783959
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 9
+          guid: 6c627b464adf7d4eb420c0a62f4d9c73
+        - ElementName: Test_Preparation
+          ObjectType: 8
+          guid: a0512b41260d3d438e51db3c1434d300
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Test_Pause
+      guid: db69ad33f8e941428fc23c523f789407
+      id: 2923888242
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+      - ElementName: Test_Pause
+        ObjectType: 9
+        guid: db69ad33f8e941428fc23c523f789407
+      Path: States/Test/Test_Pause
+      values:
+      - name: None
+        guid: d734a429316b6d4aa10147b3920e2624
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Pause
+          ObjectType: 9
+          guid: db69ad33f8e941428fc23c523f789407
+        - ElementName: None
+          ObjectType: 8
+          guid: d734a429316b6d4aa10147b3920e2624
+      - name: Test_Pause
+        guid: 6cf760b07e1d9346b49d617aedbc1fa8
+        id: 2923888242
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Pause
+          ObjectType: 9
+          guid: db69ad33f8e941428fc23c523f789407
+        - ElementName: Test_Pause
+          ObjectType: 8
+          guid: 6cf760b07e1d9346b49d617aedbc1fa8
+      - name: Test_Unpause
+        guid: 50c39250e692eb4b82ac904683fc231d
+        id: 4239277797
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Pause
+          ObjectType: 9
+          guid: db69ad33f8e941428fc23c523f789407
+        - ElementName: Test_Unpause
+          ObjectType: 8
+          guid: 50c39250e692eb4b82ac904683fc231d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Test_Player_Lfe
+      guid: e682ce59ccdbdc4aab6bd4abf12e6cc7
+      id: 1023376889
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+      - ElementName: Test_Player_Lfe
+        ObjectType: 9
+        guid: e682ce59ccdbdc4aab6bd4abf12e6cc7
+      Path: States/Test/Test_Player_Lfe
+      values:
+      - name: None
+        guid: c82f5d9db9ed614eb5cec6a1cf5b7d3a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Player_Lfe
+          ObjectType: 9
+          guid: e682ce59ccdbdc4aab6bd4abf12e6cc7
+        - ElementName: None
+          ObjectType: 8
+          guid: c82f5d9db9ed614eb5cec6a1cf5b7d3a
+      - name: Test_Low
+        guid: f94486960b96214bb0f81b1460874d7c
+        id: 3561702010
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Player_Lfe
+          ObjectType: 9
+          guid: e682ce59ccdbdc4aab6bd4abf12e6cc7
+        - ElementName: Test_Low
+          ObjectType: 8
+          guid: f94486960b96214bb0f81b1460874d7c
+      - name: Test_Normal
+        guid: ebfd2cea4bc2b34ba1f8b8f4bd467fcf
+        id: 565720069
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
+        - ElementName: Test_Player_Lfe
+          ObjectType: 9
+          guid: e682ce59ccdbdc4aab6bd4abf12e6cc7
+        - ElementName: Test_Normal
+          ObjectType: 8
+          guid: ebfd2cea4bc2b34ba1f8b8f4bd467fcf
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d171cdcb3cf9d14780b6b2fae736e7e7
+    ParentPath: Switches/Default Work Unit
+    guid: d171cdcb3cf9d14780b6b2fae736e7e7
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
+  - PhysicalPath: Switches/Test.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Test
+      ObjectType: 12
+      guid: eecad20c2180674b8bef59790c3746e6
+    ParentPath: Switches/Test
+    guid: eecad20c2180674b8bef59790c3746e6
+    GuidInternal: 
+    m_lastTime: -8585528377094775808
+    List:
+    - name: Test_2D_Env
+      guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
+      id: 4223207942
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: eecad20c2180674b8bef59790c3746e6
+      - ElementName: Test_2D_Env
+        ObjectType: 11
+        guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
+      Path: Switches/Test/Test_2D_Env
+      values:
+      - name: Test_Indoor
+        guid: 74d692b2df75c347b94baed36b7ad61e
+        id: 2395569889
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_2D_Env
+          ObjectType: 11
+          guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
+        - ElementName: Test_Indoor
+          ObjectType: 10
+          guid: 74d692b2df75c347b94baed36b7ad61e
+      - name: Test_Outdoor
+        guid: 0d69393156a0ab49ab1f3f657be696cb
+        id: 836963824
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_2D_Env
+          ObjectType: 11
+          guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
+        - ElementName: Test_Outdoor
+          ObjectType: 10
+          guid: 0d69393156a0ab49ab1f3f657be696cb
+      - name: Test_Silent
+        guid: 78bb9d926fe3664fbdecf433d080dc67
+        id: 3264954983
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_2D_Env
+          ObjectType: 11
+          guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
+        - ElementName: Test_Silent
+          ObjectType: 10
+          guid: 78bb9d926fe3664fbdecf433d080dc67
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Test_Gameplay_Music
+      guid: 7c39677d4e55e14ea08d7d1d9be49434
+      id: 1631956748
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: eecad20c2180674b8bef59790c3746e6
+      - ElementName: Test_Gameplay_Music
+        ObjectType: 11
+        guid: 7c39677d4e55e14ea08d7d1d9be49434
+      Path: Switches/Test/Test_Gameplay_Music
+      values:
+      - name: Test_Boss
+        guid: b80d1740134c504b8ecab18533331fff
+        id: 2766477831
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 11
+          guid: 7c39677d4e55e14ea08d7d1d9be49434
+        - ElementName: Test_Boss
+          ObjectType: 10
+          guid: b80d1740134c504b8ecab18533331fff
+      - name: Test_High_Intensity
+        guid: 42db57d9b5b6264182ffa3202e0c9f7d
+        id: 811206454
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 11
+          guid: 7c39677d4e55e14ea08d7d1d9be49434
+        - ElementName: Test_High_Intensity
+          ObjectType: 10
+          guid: 42db57d9b5b6264182ffa3202e0c9f7d
+      - name: Test_Low_Intensity
+        guid: 9089634c5c784e429ff1e12f1e23260b
+        id: 3275738912
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 11
+          guid: 7c39677d4e55e14ea08d7d1d9be49434
+        - ElementName: Test_Low_Intensity
+          ObjectType: 10
+          guid: 9089634c5c784e429ff1e12f1e23260b
+      - name: Test_Preparation
+        guid: 4c0e79ad3eebdd44996149c452e6fcb5
+        id: 3922783959
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Test
+          ObjectType: 12
+          guid: eecad20c2180674b8bef59790c3746e6
+        - ElementName: Test_Gameplay_Music
+          ObjectType: 11
+          guid: 7c39677d4e55e14ea08d7d1d9be49434
+        - ElementName: Test_Preparation
+          ObjectType: 10
+          guid: 4c0e79ad3eebdd44996149c452e6fcb5
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 6053f6c4d583f544aa4b00f85c8169c5
+    ParentPath: Triggers/Default Work Unit
+    guid: 6053f6c4d583f544aa4b00f85c8169c5
+    GuidInternal: 
+    m_lastTime: -8585536965124775808
+    List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
