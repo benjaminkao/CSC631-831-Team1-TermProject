@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
+using Mirror;
 
-public class ContainmentPlayer : MonoBehaviour, ITargetable
+public class ContainmentPlayer : NetworkBehaviour, ITargetable
 {
 
     public ContainmentPlayerController Character;
@@ -76,8 +77,15 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
     public static event Action<ContainmentPlayer> OnPlayerReady;
 
-    void Start()
+    public override void OnStartClient()
     {
+
+        if(!isLocalPlayer)
+        {
+            return;
+        }
+
+
         // Find the Main Camera
         CharacterCamera = GameObject.Find("PlayerCamera").GetComponent<ContainmentPlayerCamera>();
 
@@ -96,7 +104,8 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
         // Set what Player the health is for
         health.Player = this;
-            
+        health.HealthBarUI = GameObject.Find("HUD - Roaming").transform.Find("HealthBarCanvas").Find("HealthBar").GetComponent<HealthBar>();
+
     }
 
 
@@ -122,6 +131,10 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
     // Update is called once per frame
     void Update()
     {
+        if(!isLocalPlayer)
+        {
+            return;
+        }
 
         if (Input.GetButton("Fire1"))
         {
@@ -151,7 +164,10 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
     private void LateUpdate()
     {
-
+        if(!isLocalPlayer)
+        {
+            return;
+        }
 
         HandleCameraInput();
     }
@@ -160,9 +176,14 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
     public void Damage(float damage)
     {
-        Debug.Log("Player hit");
+        //Debug.Log("Player hit");
 
         health.alterHealth(-damage);
+
+        NetworkIdentity playerIdentity = this.GetComponent<NetworkIdentity>();
+
+
+        TargetUpdatePlayerHealth(playerIdentity.connectionToClient, this.health.HealthValue);
 
         if(health.IsDown)
         {
@@ -197,7 +218,9 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
     }
 
 
+    #region Mirror Remote Actions
 
+    [Command]
     void CmdShoot(Vector3 startPos, Vector3 forward)
     {
         GameObject targetHit = gun.Shoot(startPos, forward);
@@ -220,9 +243,23 @@ public class ContainmentPlayer : MonoBehaviour, ITargetable
 
 
 
-        //enemy.RpcUpdateHealth(enemy.Health.HealthValue);
-        //this.RpcUpdatePoints(this.points);
+        enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
+
+    [TargetRpc]
+    void TargetUpdatePlayerHealth(NetworkConnection target, float healthValue)
+    {
+        this.health.SetHealth(healthValue);
+    }
+
+
+
+
+
+    #endregion Mirror Remote Actions
+
+
+
 
     private void HandleWaveCompleted()
     {

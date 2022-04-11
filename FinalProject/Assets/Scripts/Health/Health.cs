@@ -9,12 +9,32 @@ public class Health : MonoBehaviour
 
     [SerializeField] protected float _healthValue;
 
+
+    public HealthBar HealthBarUI
+    {
+        get { return this._healthBarUI; }
+        set
+        {
+            this._healthBarUI = value;
+        }
+    }
+
+
+    public float MaxHealthValue
+    {
+        get { return _maxHealth; }
+    }
+
     public float HealthValue { 
         get { return _healthValue; }
 
         set { 
             _healthValue = value;
-            _healthBarUI.SetHealth(value);
+
+            if (_healthBarUI != null)
+            {
+                _healthBarUI.SetHealth(value);
+            }
         }
     }
 
@@ -27,8 +47,12 @@ public class Health : MonoBehaviour
     {
         _healthValue = _maxHealth;
 
-        _healthBarUI.SetMaxHealth(_maxHealth);
-        _healthBarUI.SetHealth(_maxHealth);
+        if (_healthBarUI != null)
+        {
+
+            _healthBarUI.SetMaxHealth(_maxHealth);
+            _healthBarUI.SetHealth(_maxHealth);
+        }
     }
 
     /* pass in a positive number to add health, or a negative to damage*/
@@ -44,7 +68,11 @@ public class Health : MonoBehaviour
         {
             _healthValue = 0;
         }
-        _healthBarUI.SetHealth(_healthValue);
+
+        if (_healthBarUI != null)
+        {
+            _healthBarUI.SetHealth(_healthValue);
+        }
     }
 
     public virtual void SetHealth(float healthValue)

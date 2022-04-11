@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public abstract class TowerTargeting: MonoBehaviour, ITargetable
+public abstract class TowerTargeting: NetworkBehaviour, ITargetable
 {
     protected float _targetingRadius;
     protected float _cooldownTime;

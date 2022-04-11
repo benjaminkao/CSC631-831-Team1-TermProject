@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class PlayerHealth : Health
 {
@@ -53,17 +54,10 @@ public class PlayerHealth : Health
 
     private ContainmentPlayer _player;
 
-    new
-
 
         // Start is called before the first frame update
-        void Start()
+     void Start()
     {
-
-        _healthBarUI = GameObject.Find("HUD - Roaming").transform.Find("HealthBarCanvas").Find("HealthBar").GetComponent<HealthBar>();
-
-
-        _healthBarUI.gameObject.SetActive(true);
 
         _hasDied = false;
         _isDown = false;

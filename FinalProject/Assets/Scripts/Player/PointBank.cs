@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Mirror;
 
-public class PointBank : MonoBehaviour
+public class PointBank : NetworkBehaviour
 {
     [SerializeField] private int _startingPoints;
     private int _totalPoints;
@@ -14,14 +15,18 @@ public class PointBank : MonoBehaviour
 
     public int TotalPoints { get { return _totalPoints; } }
 
-    void Start()
+    public override void OnStartClient()
     {
         if (_player == null)
         {
             Debug.LogError("Please instantiate the ContainmentPlayer object in PlayerPoints.");
         }
 
-        label = GameObject.Find("PlayerPointsLabel").GetComponent<TextMeshProUGUI>();
+
+        if (isLocalPlayer)
+        {
+            label = GameObject.Find("PlayerPointsLabel").GetComponent<TextMeshProUGUI>();
+        }
 
 
         
@@ -101,6 +106,11 @@ public class PointBank : MonoBehaviour
 
     private void UpdateUI()
     {
+        if(label == null)
+        {
+            return;
+        }
+
         label.text = $"{this._totalPoints}";
     }
 }

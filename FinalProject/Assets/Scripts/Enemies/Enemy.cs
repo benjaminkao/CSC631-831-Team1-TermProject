@@ -4,9 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Mirror;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Health), typeof(EnemyPoolable))]
-public class Enemy : MonoBehaviour
+public class Enemy : NetworkBehaviour
 {
 
 
@@ -75,6 +76,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if(!isServer)
+        {
+            return;
+        }
+
+
         if(_shouldUpdateTarget)
         {
             StartCoroutine(UpdateTarget());
@@ -114,7 +121,10 @@ public class Enemy : MonoBehaviour
 
         health.alterHealth(-damage);
 
-        if(health.Died)
+        this.RpcUpdateHealth(this.health.HealthValue);
+
+
+        if (health.Died)
         {
             OnEnemyDied?.Invoke(player, this._pointsForDeath);
             enemyPoolable.Despawn();
@@ -122,14 +132,15 @@ public class Enemy : MonoBehaviour
     }
 
 
-
+    [ClientRpc]
     public void RpcUpdateHealth(float healthValue)
     {
 
         health.SetHealth(healthValue);
-        Debug.Log(healthValue);
-        if(health.Died)
+        //Debug.Log(healthValue);
+        if(!isServer && health.Died)
         {
+            //OnEnemyDied?.Invoke(player, this._pointsForDeath);
             enemyPoolable.Despawn();
         }
     }

@@ -683,7 +683,9 @@ MonoBehaviour:
   damage: 10
   range: 100
   shootDelay: 0.1
-  canShoot: 0
+  reloadTime: 1
+  ammoPerClip: 30
+  currentAmmo: 0
   tpsCamera: {fileID: 0}
   gunPoint: {fileID: 1624540227267797061}
 --- !u!114 &2418616444409012680
@@ -742,8 +744,11 @@ GameObject:
   - component: {fileID: 458515033557248221}
   - component: {fileID: 3999230457164330227}
   - component: {fileID: 5669764142939048168}
+  - component: {fileID: -1990248360644953847}
   - component: {fileID: 7330713135887376453}
-  - component: {fileID: 7400569273582783507}
+  - component: {fileID: -720955074844046644}
+  - component: {fileID: 8018481888692623953}
+  - component: {fileID: -5152881195494091501}
   m_Layer: 2
   m_Name: Player-v2
   m_TagString: Player
@@ -890,11 +895,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e438c856bb8838746b56b277fc5c59d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   Character: {fileID: 3999230457164330227}
   CharacterCamera: {fileID: 0}
   gun: {fileID: 2418616444409012679}
   health: {fileID: 7330713135887376453}
   playerPoints: {fileID: 0}
+--- !u!114 &-1990248360644953847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052736592563684396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a2bc3e026dbac419c6625195d306e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  _startingPoints: 500
+  _player: {fileID: 5669764142939048168}
+  label: {fileID: 0}
 --- !u!114 &7330713135887376453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,10 +931,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d561bd1f66a75e14187f767e59ab54bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _maxHealth: 100
   _healthBarUI: {fileID: 0}
   _healthValue: 100
---- !u!114 &7400569273582783507
+--- !u!114 &-720955074844046644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -919,10 +945,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052736592563684396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875f806cd3edd03448c25341481d62d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 5669764142939048168}
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 457c8c738e9ad8d4d96f92714ab95c5c
+  hasSpawned: 0
+--- !u!114 &8018481888692623953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052736592563684396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 0
+  bufferTimeMultiplier: 1
+  bufferSizeLimit: 64
+  catchupThreshold: 4
+  catchupMultiplier: 0.1
+  onlySyncOnChange: 1
+  bufferResetMultiplier: 5
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &-5152881195494091501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052736592563684396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 7575131321492687406}
 --- !u!1 &2418616446353135364
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Objective : MonoBehaviour, ITargetable
+public class Objective : NetworkBehaviour, ITargetable
 {
     public static event Action<Objective> OnObjectiveEnabled;
     public static event Action<Objective> OnObjectiveDisabled;
@@ -17,7 +18,7 @@ public class Objective : MonoBehaviour, ITargetable
 
 
 
-    [SerializeField] Health health;
+    [SerializeField] protected Health health;
 
     private bool _isDestroyed;
     
@@ -38,9 +39,12 @@ public class Objective : MonoBehaviour, ITargetable
     }
 
 
-    public void Damage(float damage)
+    public virtual void Damage(float damage)
     {
         health.alterHealth(-damage);
+
+        RpcUpdateHealth(health.HealthValue);
+
 
         if(health.Died)
         {
@@ -48,6 +52,15 @@ public class Objective : MonoBehaviour, ITargetable
             OnObjectiveDestroyed?.Invoke(this);
         }
     }
+
+
+    [ClientRpc]
+    void RpcUpdateHealth(float healthValue)
+    {
+        this.health.SetHealth(healthValue);
+    }
+
+
 
     public GameObject GetTargetPosition()
     {

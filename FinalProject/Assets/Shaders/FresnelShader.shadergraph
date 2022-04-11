@@ -954,7 +954,7 @@
     },
     "m_Name": "Power",
     "m_DefaultReferenceName": "Vector1_e735d84dc3054b5e9b39013f7e66824a",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "power",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

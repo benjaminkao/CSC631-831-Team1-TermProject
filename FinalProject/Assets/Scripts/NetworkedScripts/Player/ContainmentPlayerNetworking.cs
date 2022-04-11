@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,49 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
     public ContainmentPlayerCamera CharacterCamera;
 
 
+    public bool Downed
+    {
+        get
+        {
+            return this.health.IsDown;
+        }
+
+        set
+        {
+            this.health.IsDown = value;
+        }
+    }
+
+    public bool Died
+    {
+        get
+        {
+            return this.health.Died;
+        }
+
+        set
+        {
+            this.health.Died = value;
+        }
+    }
+
+    public int Points
+    {
+        get
+        {
+            return this._points;
+        }
+    }
+
     [SerializeField] private Rifle gun;
+
+    [SerializeField] private PlayerHealth health;
+
+    [SerializeField] private PlayerPoints playerPoints;
+
+    private int _points;
+    private bool _ready;
+    private bool _inPreparationPhase;
 
 
     private const string MouseXInput = "Mouse X";
@@ -18,6 +61,14 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
     private const string HorizontalInput = "Horizontal";
     private const string VerticalInput = "Vertical";
 
+
+    public static event Action<ContainmentPlayer> OnPlayerDown;
+    public static event Action<ContainmentPlayer> OnPlayerDeath;
+
+    public static event Action<ContainmentPlayer> OnPlayerJoin;
+    public static event Action<ContainmentPlayer> OnPlayerLeave;
+
+    public static event Action<ContainmentPlayer> OnPlayerReady;
 
     public override void OnStartClient()
     {
@@ -35,6 +86,8 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
             // Ignore the character's collider(s) for camera obstruction checks
             CharacterCamera.IgnoredColliders.Clear();
             CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
+
+            //health.Player = this;
         }
 
     }

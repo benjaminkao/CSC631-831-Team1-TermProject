@@ -76,9 +76,9 @@ public class SingleTarget : TowerTargeting
         if (nearest)
         {
             SnapToEnemy(nearest.transform);
-            //emy enemy = nearest.GetComponent<Enemy>();
+            Enemy enemy = nearest.GetComponent<Enemy>();
 
-           //eney.Damage(this.Owner, this._stDamage);
+            enemy.Damage(this.Owner, this._stDamage);
             //  Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
             //    _stDamage, nearest.name, enemy.Health.HealthValue)
             //);

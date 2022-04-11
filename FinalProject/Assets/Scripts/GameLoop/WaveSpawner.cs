@@ -3,8 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSpawner : NetworkBehaviour
 {
 
     public static event Action OnWaveStart;
@@ -46,14 +47,21 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void Update(){
+
+        if(!isServer)
+        {
+            return;
+        }
+
+
         // Check if player has killed all enemies
         if (state == SpawnState.WAITING){
             if (!EnemyIsAlive()){
                 // Begin new round if EnemyIsAlive is false
-                lightingManager.SetTime(8);
+                Debug.Log("Should turn to day");
+                RpcDay();
                 WaveCompleted(waves[nextWave]);
             } else {
-                lightingManager.SetTime(5);
                 return; // Simply return until player kills all enemies
             }
         }
@@ -64,21 +72,19 @@ public class WaveSpawner : MonoBehaviour
             {
                 // Start spawning wave when countdown is at 0
                 StartCoroutine(SpawnWave(waves[nextWave]));
-                lightingManager.SetTime(5);
             }
         }
         else
         {
             // Make sure that time counts down correctly to time and not frames drawn per second (countdown from 5)
             waveCountdown -= Time.deltaTime;
-            lightingManager.SetTime(8);
         }
     }
 
     public void StartWave()
     {
         StartCoroutine(SpawnWave(waves[nextWave]));
-        lightingManager.SetTime(5);
+        RpcNight();
     }
 
 
@@ -120,6 +126,9 @@ public class WaveSpawner : MonoBehaviour
 
     // IEnumerator used to write method that has to wait a certain amount of time
     IEnumerator SpawnWave(Wave _wave){
+        Debug.Log("Should turn to night");
+        RpcNight();
+
         state = SpawnState.SPAWNING;
         for (int i = 0; i < _wave.count; i++){
             SpawnEnemy(_wave.enemy);
@@ -137,6 +146,25 @@ public class WaveSpawner : MonoBehaviour
         // Spawn/Instantiate enemy enemy
         Debug.Log("Spawning Enemy: " + _enemy.name);
         Transform spawnPt = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-        Instantiate(_enemy, spawnPt.position, spawnPt.rotation);
+
+        GameObject networkEnemy = Instantiate(_enemy.gameObject, spawnPt.position, spawnPt.rotation);
+        NetworkServer.Spawn(networkEnemy);
+    }
+
+
+    [ClientRpc]
+    public void RpcNight()
+    {
+        Debug.Log("Changing to Night");
+        lightingManager.SetTime(5);
+        
+    }
+
+    [ClientRpc]
+    public void RpcDay()
+    {
+        Debug.Log("Changing to Day");
+        lightingManager.SetTime(8);
+        
     }
 }

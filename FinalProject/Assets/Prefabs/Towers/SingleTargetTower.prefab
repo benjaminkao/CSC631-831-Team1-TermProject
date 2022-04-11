@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b235370cd9ac0844aae90f67ff18235b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _targetPosition: {fileID: 8771197037990565121}
   health: {fileID: -6266299033618169996}
   _owner: {fileID: 0}
@@ -229,6 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae86690c3118c04d9ccce32c473ff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _maxHealth: 200
   _healthBarUI: {fileID: 1030291148284468105}
   _healthValue: 0
@@ -263,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   sendInterval: 0.05
   syncPosition: 1
   syncRotation: 1
@@ -297,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   sendInterval: 0.05
   syncPosition: 1
   syncRotation: 1
