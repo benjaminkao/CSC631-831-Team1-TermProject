@@ -61,6 +61,9 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     private bool _ready;
     private bool _inPreparationPhase;
 
+    private bool _walking;
+    private bool _running;
+
 
     private const string MouseXInput = "Mouse X";
     private const string MouseYInput = "Mouse Y";
@@ -79,6 +82,8 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public override void OnStartClient()
     {
+        this._walking = false;
+        this._running = false;
 
         if(!isLocalPlayer)
         {
@@ -156,8 +161,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             ReadyUp();
         }
-
-
 
         HandleCharacterInput();
     }

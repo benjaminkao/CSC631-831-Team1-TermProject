@@ -36,7 +36,7 @@ public enum BonusOrientationMethod
 public class ContainmentPlayerController : MonoBehaviour, ICharacterController
 {
     public KinematicCharacterMotor Motor;
-    public Animator animator;
+    public ContainmentPlayerAnimator cpAnimator;
 
     [Header("Stable Movement")]
     public float MaxStableWalkSpeed = 10f;
@@ -297,8 +297,7 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
                         currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
 
 
-                        animator.SetFloat("Speed", currentVelocity.magnitude);
-
+                        cpAnimator.HandleMovementAnimation(currentVelocity.magnitude);
                     }
                     // Air movement
                     else
@@ -374,8 +373,7 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
                             _jumpedThisFrame = true;
 
 
-                            animator.SetTrigger("jumpTrig");
-
+                            cpAnimator.HandleJumpAnimation();
 
                         }
                     }
