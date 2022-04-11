@@ -47,8 +47,6 @@ public class WaveSpawnerNetworking : NetworkBehaviour
     }
 
     void Update(){
-        Debug.Log(isServer);
-        Debug.Log(waves.Length);
         if (!isServer)
         {
             return;
@@ -58,10 +56,10 @@ public class WaveSpawnerNetworking : NetworkBehaviour
         if (state == SpawnState.WAITING){
             if (!EnemyIsAlive()){
                 // Begin new round if EnemyIsAlive is false
-                lightingManager.SetTime(8);
+                Day();
                 WaveCompleted(waves[nextWave]);
             } else {
-                lightingManager.SetTime(5);
+                Night();
                 return; // Simply return until player kills all enemies
             }
         }
@@ -72,26 +70,25 @@ public class WaveSpawnerNetworking : NetworkBehaviour
             {
                 // Start spawning wave when countdown is at 0
                 StartCoroutine(SpawnWave(waves[nextWave]));
-                lightingManager.SetTime(5);
+                Night();
             }
         }
         else
         {
             // Make sure that time counts down correctly to time and not frames drawn per second (countdown from 5)
             waveCountdown -= Time.deltaTime;
-            lightingManager.SetTime(8);
+            Day();
         }
         // if (Input.GetKeyDown(KeyCode.LeftControl))
         // {
-        //     SpawnEnemy(waves[0].enemy);
-        //     Debug.Log("Got here");
+        //     DayNight();
         // }
     }
 
     public void StartWave()
     {
         StartCoroutine(SpawnWave(waves[nextWave]));
-        lightingManager.SetTime(5);
+        Night();
     }
 
     // Tell the game what to do when a wave is completed
@@ -148,5 +145,17 @@ public class WaveSpawnerNetworking : NetworkBehaviour
         Transform spawnPt = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
         GameObject networkEnemy = Instantiate(_enemy.gameObject, spawnPt.position, spawnPt.rotation);
         NetworkServer.Spawn(networkEnemy);
+    }
+
+    [Command(requiresAuthority=false)]
+    public void Night(){
+        lightingManager.SetTime(5);
+        Debug.Log("Changing to Night");
+    }
+
+    [Command(requiresAuthority=false)]
+    public void Day(){
+        lightingManager.SetTime(8);
+        Debug.Log("Changing to Day");
     }
 }
