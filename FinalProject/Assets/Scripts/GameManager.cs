@@ -1,6 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public enum GameState
+{
+    NOTSTARTED, PREPARATION, WAVEINPROGRESS, GAMEOVER
+}
+
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +21,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private WaveSpawner _waveSpawner;
 
+    // Used to give each player a unique player number, total number of players joined, doesn't decrease if players leave
+    private int _numPlayersJoined;
 
+    // Used for preparation phase
     private int _playersReadied;
 
     public List<GameObject> EnemyTargetables
@@ -38,6 +48,15 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+    public GameState GameState
+    {
+        get { return this._gameState; }
+    }
+
+    private GameState _gameState;
+
+
     private void Awake()
     {
         if(Instance != null)
@@ -52,7 +71,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         this._players = new List<ContainmentPlayer>();
+        this._numPlayersJoined = 0;
         this._playersReadied = 0;
+        this._gameState = GameState.NOTSTARTED;
     }
 
     private void OnEnable()
@@ -72,6 +93,12 @@ public class GameManager : MonoBehaviour
         Objective.OnObjectiveEnabled += RegisterObjective;
         Objective.OnObjectiveDisabled += DeregisterObjective;
         Objective.OnObjectiveDestroyed += HandleObjectiveDestroyed;
+
+
+        ShieldBeacon.OnShieldBeaconDamaged += NotifyShieldBeaconDamaged;
+
+        WaveSpawner.OnWaveSpawnerEnabled += RegisterWaveSpawner;
+        WaveSpawner.OnWaveStart += HandleWaveStart;
 
 
         //ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
@@ -99,6 +126,12 @@ public class GameManager : MonoBehaviour
         Objective.OnObjectiveDestroyed -= HandleObjectiveDestroyed;
 
 
+        ShieldBeacon.OnShieldBeaconDamaged -= NotifyShieldBeaconDamaged;
+
+        WaveSpawner.OnWaveSpawnerEnabled -= RegisterWaveSpawner;
+        WaveSpawner.OnWaveStart -= HandleWaveStart;
+
+
         //ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
         //ContainmentPlayer.OnLocalPlayerLeave -= RemoveLocalPlayer;
     }
@@ -111,6 +144,9 @@ public class GameManager : MonoBehaviour
     public void RegisterPlayer(ContainmentPlayer player)
     {
         this._players.Add(player);
+
+        player.PlayerNum = this._numPlayersJoined;
+        this._numPlayersJoined++;
     }
 
     public void RemovePlayer(ContainmentPlayer player)
@@ -128,6 +164,17 @@ public class GameManager : MonoBehaviour
     {
         this._localPlayer = null;
     }
+
+    public void RegisterWaveSpawner(WaveSpawner waveSpawner)
+    {
+        this._waveSpawner = waveSpawner;
+    }
+
+    public void DeregisterWaveSpawner(WaveSpawner waveSpawner)
+    {
+        this._waveSpawner = waveSpawner;
+    }
+
 
     public void RegisterObjective(Objective objective)
     {
@@ -153,7 +200,7 @@ public class GameManager : MonoBehaviour
 
     public void HandlePlayerReady(ContainmentPlayer player)
     {
-
+        
 
         _playersReadied++;
 
@@ -220,6 +267,35 @@ public class GameManager : MonoBehaviour
 
         // Networking - Notify clients of player died and if game is over
     }
+
+
+    public void HandleWaveStart()
+    {
+        this._playersReadied = 0;
+    }
+
+
+
+
+
+    public void NotifyShieldBeaconDamaged()
+    {
+        if(this._players.Count <= 0)
+        {
+            return;
+        }
+
+        // Notify random player to say voice line
+        int randomPlayer = (int)UnityEngine.Random.Range(0, this._players.Count);
+
+        ContainmentPlayer playerToNotify = this._players[randomPlayer];
+
+        playerToNotify.NotifyShieldBeaconDamaged();
+
+
+    }
+
+
 
     public void HandleObjectiveDestroyed(Objective objectiveDestroyed)
     {

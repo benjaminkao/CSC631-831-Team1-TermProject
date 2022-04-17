@@ -151,5 +151,6 @@ public class SpawnerMenuSelection : NetworkBehaviour
         TowerTargeting tower = towerGO.GetComponent<TowerTargeting>();
 
         tower.Owner = this._towerOwner.GetComponent<ContainmentPlayer>();
+        tower.TowerSpawner = this.GetComponent<TowerSpawnerInteractable>();
     }
 }

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
+public class TowerSpawnerInteractable : NetworkBehaviour, IInteractable
 {
     [SerializeField] private GameObject _spawnerMenu;
     private GameObject _interactPlayer;
@@ -12,7 +13,8 @@ public class TowerSpawnerInteractable : MonoBehaviour, IInteractable
         set { _interactPlayer = value; } 
     }
 
-    private bool _canInteract;
+    [SyncVar]
+    [SerializeField] private bool _canInteract;
     public bool CanInteract
     {
         get { return _canInteract; }

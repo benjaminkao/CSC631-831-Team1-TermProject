@@ -49,25 +49,25 @@ public class PointBank : NetworkBehaviour
             _totalPoints -= amount;
         }
 
-        UpdateUI();
+        RpcUpdatePlayerPoints(this._totalPoints);
     }
 
     public void AddPoints(int amount)
     {
         _totalPoints += amount;
 
-        UpdateUI();
+        RpcUpdatePlayerPoints(this._totalPoints);
     }
 
 
     void OnEnable()
     {
-        Enemy.OnEnemyDied += AddPoints;
+        Enemy.OnEnemyDiedPoints += AddPoints;
     }
 
     void OnDisable()
     {
-        Enemy.OnEnemyDied -= AddPoints;
+        Enemy.OnEnemyDiedPoints -= AddPoints;
     }
 
 
@@ -87,6 +87,8 @@ public class PointBank : NetworkBehaviour
 
         this._totalPoints += points;
 
+        RpcUpdatePlayerPoints(this._totalPoints);
+
         UpdateUI();
     }
 
@@ -98,6 +100,16 @@ public class PointBank : NetworkBehaviour
         }
 
         this._totalPoints += points;
+
+        RpcUpdatePlayerPoints(this._totalPoints);
+
+    }
+
+
+    [ClientRpc]
+    void RpcUpdatePlayerPoints(int points)
+    {
+        this._totalPoints = points;
 
         UpdateUI();
     }

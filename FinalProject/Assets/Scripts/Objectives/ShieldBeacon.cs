@@ -1,9 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldBeacon : Objective
 {
+
+    public static event Action OnShieldBeaconDamaged;
+
+
+
     [SerializeField] GameObject beaconSphere;
     Renderer beaconRenderer;
 
@@ -13,6 +19,9 @@ public class ShieldBeacon : Objective
     [Header("IsoSphere Rotation")]
     [SerializeField] private float rotationSpeed;
 
+
+    [SerializeField] private float notifyDamageCooldown;
+    private float _timeLastHit;
 
 
     private void Start()
@@ -31,8 +40,8 @@ public class ShieldBeacon : Objective
             this.beaconRenderer.material.SetFloat("power", Mathf.Lerp(0f, 5f, 1 - _startPower));
         }
 
-        
 
+        this._timeLastHit = 0;
         
     }
 
@@ -48,6 +57,16 @@ public class ShieldBeacon : Objective
     public override void Damage(float damage)
     {
         base.Damage(damage);
+
+        float currentTime = Time.time;
+
+        if(currentTime - this._timeLastHit > notifyDamageCooldown)
+        {
+            // Shield Beacon has been damaged and it has been enough time to notify players
+            OnShieldBeaconDamaged?.Invoke();
+        }
+
+        this._timeLastHit = currentTime;
 
 
         float powerPercentage = 1f - (this.health.HealthValue / this.health.MaxHealthValue);

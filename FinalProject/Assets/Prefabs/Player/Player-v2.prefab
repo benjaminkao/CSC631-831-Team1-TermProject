@@ -915,9 +915,13 @@ MonoBehaviour:
   syncInterval: 0.1
   Character: {fileID: 3999230457164330227}
   CharacterCamera: {fileID: 0}
+  _playerNum: 0
   gun: {fileID: 2418616444409012679}
   health: {fileID: 7330713135887376453}
-  playerPoints: {fileID: 0}
+  healthRegenCooldown: 2
+  healthRegenRate: 2
+  _readyNextWave: 0
+  _inPreparationPhase: 0
 --- !u!114 &-1990248360644953847
 MonoBehaviour:
   m_ObjectHideFlags: 0

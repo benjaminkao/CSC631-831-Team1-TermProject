@@ -19,6 +19,10 @@ public class Health : MonoBehaviour
         }
     }
 
+    public bool AtMaxHealth
+    {
+        get { return atMaxHealth();  }
+    }
 
     public float MaxHealthValue
     {

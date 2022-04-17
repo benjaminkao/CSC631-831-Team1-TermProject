@@ -38,7 +38,6 @@ public class ContainmentPlayerAnimator : MonoBehaviour
 
     public void HandleMovementAnimation(float speed)
     {
-        Debug.Log(speed);
 
         if(animator == null)
         {

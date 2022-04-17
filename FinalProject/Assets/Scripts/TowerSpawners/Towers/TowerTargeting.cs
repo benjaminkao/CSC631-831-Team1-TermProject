@@ -27,17 +27,31 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
     {
         get
         {
-            return this._owner;
+            return this._playerOwner;
         }
 
         set
         {
-            this._owner = value;
+            this._playerOwner = value;
+        }
+    }
+
+    public TowerSpawnerInteractable TowerSpawner
+    {
+        get
+        {
+            return this._towerSpawner;
+        }
+
+        set
+        {
+            this._towerSpawner = value;
         }
     }
 
 
-    [SerializeField] private ContainmentPlayer _owner;
+    [SerializeField] private ContainmentPlayer _playerOwner;
+    [SerializeField] private TowerSpawnerInteractable _towerSpawner;
 
     // TowerTargeting sub-classes will implement the reaction to collisions
     // for players, enemies, or both.
@@ -84,11 +98,14 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
     public void Damage(float damage)
     {
         health.alterHealth(-damage);
-        
+
+        RpcUpdateTowerHealth(health.HealthValue);
 
         if(health.Died)
         {
-            Destroy(this);
+            // Make sure that the tower spawner that this tower was on can be interacted with again.
+            this._towerSpawner.CanInteract = true;
+            Destroy(gameObject);
         }
     }
 
@@ -96,4 +113,16 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
     {
         return this._targetPosition;
     }
+
+
+    #region Mirror Remote Actions
+
+    [ClientRpc]
+    void RpcUpdateTowerHealth(float healthValue)
+    {
+        this.health.SetHealth(healthValue);
+    }
+
+
+    #endregion Mirror Remote Actions
 }

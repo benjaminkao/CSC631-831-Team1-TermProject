@@ -6,11 +6,44 @@ using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 using Mirror;
 
+
+public enum ContainmentPlayerVoiceLine
+{
+    SHIELDBEACONDAMAGED,
+    SHIELDBEACONLOW,
+    RELOADING,
+    DAMAGED,
+    BOSS,
+    ROUNDENDING
+}
+
+
+
 public class ContainmentPlayer : NetworkBehaviour, ITargetable
 {
-
+    [Header("Player Components")]
     public ContainmentPlayerController Character;
     public ContainmentPlayerCamera CharacterCamera;
+
+    
+    public int PlayerNum
+    {
+        get { return this._playerNum;  }
+
+        // Only the server should be allowed to assign a playerNum to the player.
+        set
+        {
+            if(!isServer)
+            {
+                return;
+            }
+
+            this._playerNum = value;
+        }
+    }
+
+    [SerializeField]
+    private int _playerNum;
 
 
     public bool Downed
@@ -39,30 +72,33 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         }
     }
 
-    public int Points
-    {
-        get
-        {
-            return this._points;
-        }
-    }
-
-
 
 
     [SerializeField] private Rifle gun;
 
 
+    [Header("Health")]
     [SerializeField] private PlayerHealth health;
 
-    [SerializeField] private PlayerPoints playerPoints;
+    [Tooltip("How long the player doesn't get hit for before health regeneration starts.")]
+    [SerializeField] private float healthRegenCooldown;
 
-    private int _points;
-    private bool _ready;
+    [Tooltip("How much the player regens health after every second.")]
+    [SerializeField] private float healthRegenRate;
+    private float lastDamaged;
+    private bool _canRegen;
+
+
+
+
+    [Header("Ready Up")]
+    [SerializeField]
+    [SyncVar]
+    private bool _readyNextWave;
+
+    [SerializeField]
+    [SyncVar]
     private bool _inPreparationPhase;
-
-    private bool _walking;
-    private bool _running;
 
 
     private const string MouseXInput = "Mouse X";
@@ -82,8 +118,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public override void OnStartClient()
     {
-        this._walking = false;
-        this._running = false;
 
         if(!isLocalPlayer)
         {
@@ -113,6 +147,22 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     }
 
+    public override void OnStartServer()
+    {
+        if(GameManager.Instance.GameState == GameState.NOTSTARTED || GameManager.Instance.GameState == GameState.PREPARATION)
+        {
+            this._inPreparationPhase = true;
+            this._readyNextWave = false;
+        } else
+        {
+            this._inPreparationPhase = false;
+            this._readyNextWave = false;
+        }
+
+        lastDamaged = 0;
+        _canRegen = true;
+    }
+
 
     private void OnEnable()
     {
@@ -136,7 +186,16 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     // Update is called once per frame
     void Update()
     {
-        if(!isLocalPlayer)
+        if (isServer)
+        {
+            if (ShouldRegenerateHealth())
+            {
+                StartCoroutine(RegenerateHealth());
+            }
+        }
+
+
+        if (!isLocalPlayer)
         {
             return;
         }
@@ -157,7 +216,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             gun.Reload();
         }
 
-        if(this._inPreparationPhase && !this._ready && Input.GetKeyDown(KeyCode.Tab))
+        if(this._inPreparationPhase && !this._readyNextWave && Input.GetKeyDown(KeyCode.Tab))
         {
             ReadyUp();
         }
@@ -179,14 +238,14 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public void Damage(float damage)
     {
+        lastDamaged = Time.time;
+
         //Debug.Log("Player hit");
 
         health.alterHealth(-damage);
 
-        NetworkIdentity playerIdentity = this.GetComponent<NetworkIdentity>();
 
-
-        TargetUpdatePlayerHealth(playerIdentity.connectionToClient, this.health.HealthValue);
+        RpcUpdatePlayerHealth(this.health.HealthValue);
 
         if(health.IsDown)
         {
@@ -210,18 +269,28 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     #endregion ITargetable Methods
 
-    public void AddPoints(int points)
+    public void NotifyShieldBeaconDamaged()
     {
-        this._points += points;
+        if(!isServer)
+        {
+            return;
+        }
+
+        TriggerVoiceLine(ContainmentPlayerVoiceLine.SHIELDBEACONDAMAGED);
+        
     }
 
-    public void SubtractPoints(int points)
-    {
-        this._points -= points;
-    }
+
 
 
     #region Mirror Remote Actions
+
+    [Command]
+    private void ReadyUp()
+    {
+        this._readyNextWave = true;
+        OnPlayerReady?.Invoke(this);
+    }
 
     [Command]
     void CmdShoot(Vector3 startPos, Vector3 forward)
@@ -249,50 +318,85 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
 
-    [TargetRpc]
-    void TargetUpdatePlayerHealth(NetworkConnection target, float healthValue)
+    [ClientRpc]
+    void RpcUpdatePlayerHealth(float healthValue)
     {
         this.health.SetHealth(healthValue);
     }
 
 
+    [ClientRpc]
+    void TriggerVoiceLine(ContainmentPlayerVoiceLine voiceLine)
+    {
+
+        //switch(voiceLine)
+        //{
+        //    case ContainmentPlayerVoiceLine.BOSS:
+        //        break;
+        //    case ContainmentPlayerVoiceLine.DAMAGED:
+        //        break;
+        //    case ContainmentPlayerVoiceLine.RELOADING:
+        //        break;
+        //    case ContainmentPlayerVoiceLine.ROUNDENDING:
+        //        break;
+        //    case ContainmentPlayerVoiceLine.SHIELDBEACONDAMAGED:
+        //        break;
+        //    case ContainmentPlayerVoiceLine.SHIELDBEACONLOW:
+        //        break;
+
+        //}
+
+        Debug.Log($"Triggered Voice Line: {voiceLine}");
+    }
 
 
 
     #endregion Mirror Remote Actions
 
 
-
+    #region Event Subscription Methods
 
     private void HandleWaveCompleted()
     {
         this._inPreparationPhase = true;
-        this._ready = false;
+        this._readyNextWave = false;
+
+        Debug.Log("In preparation phase, press ready to start next wave");
     }
 
     private void HandleWaveStart()
     {
         this._inPreparationPhase = false;
-        this._ready = false;
+        this._readyNextWave = false;
     }
 
-    private void ReadyUp()
+
+    #endregion Event Subscription Methods
+
+
+    IEnumerator RegenerateHealth()
     {
-        this._ready = true;
-        OnPlayerReady?.Invoke(this);
+        this._canRegen = false;
+        health.alterHealth(healthRegenRate);
+        RpcUpdatePlayerHealth(this.health.HealthValue);
+
+        //Debug.Log($"Regenerating Player Health: {this.health.HealthValue}");
+
+        yield return new WaitForSeconds(1f);
+        this._canRegen = true;
+
+    }
+
+    bool ShouldRegenerateHealth()
+    {
+        return !this.health.AtMaxHealth && this._canRegen && Time.time - lastDamaged >= healthRegenCooldown;
     }
 
 
 
 
 
-
-
-
-
-
-
-
+    #region Player Controls
 
     private void HandleCameraInput()
     {
@@ -353,4 +457,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         // Apply inputs to character
         Character.SetInputs(ref characterInputs);
     }
+
+    #endregion Player Controls
+
 }

@@ -11,7 +11,8 @@ public class Enemy : NetworkBehaviour
 {
 
 
-    public static event Action<ContainmentPlayer, int> OnEnemyDied;
+    public static event Action OnEnemyDied;
+    public static event Action<ContainmentPlayer, int> OnEnemyDiedPoints;
 
 
     public Health Health {
@@ -126,7 +127,8 @@ public class Enemy : NetworkBehaviour
 
         if (health.Died)
         {
-            OnEnemyDied?.Invoke(player, this._pointsForDeath);
+            OnEnemyDied?.Invoke();
+            OnEnemyDiedPoints?.Invoke(player, this._pointsForDeath);
             enemyPoolable.Despawn();
         }
     }
