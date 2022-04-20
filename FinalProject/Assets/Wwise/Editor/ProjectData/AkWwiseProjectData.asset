@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ea1e2b304c7f2344922b1c3053e84ac8
     GuidInternal: 
-    m_lastTime: -8585521377702752090
+    m_lastTime: -8585511158001375356
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
     GuidInternal: 
-    m_lastTime: -8585521377706218662
+    m_lastTime: -8585511158002458559
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,347 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  - PhysicalPath: Master-Mixer Hierarchy\Official.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: 4713921b18644442b3bacef2c3f7b0a6
+    ParentPath: Master-Mixer Hierarchy\Official
+    guid: 4713921b18644442b3bacef2c3f7b0a6
+    GuidInternal: 
+    m_lastTime: -8585512752198082104
+    List:
+    - name: 2D_Amb
+      guid: 22a57b9f1aaac246b491176eddae376b
+      id: 264242718
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      - ElementName: 2D_Amb
+        ObjectType: 2
+        guid: 22a57b9f1aaac246b491176eddae376b
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX\2D_Amb
+    - name: 3D_Env
+      guid: dfa534a4f2671a4da3995048872492f5
+      id: 2487412084
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      - ElementName: 3D_Env
+        ObjectType: 2
+        guid: dfa534a4f2671a4da3995048872492f5
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX\3D_Env
+    - name: BakedIn_Bypassed_Reverb
+      guid: dcc1304b86141447a1ce6a970d2f9ee1
+      id: 2410125880
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: BakedIn_Bypassed_Reverb
+        ObjectType: 2
+        guid: dcc1304b86141447a1ce6a970d2f9ee1
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\BakedIn_Bypassed_Reverb
+    - name: Combat
+      guid: 2f05318cf90fd742b9fedd8f3d6a5bf6
+      id: 2764240573
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      - ElementName: Combat
+        ObjectType: 2
+        guid: 2f05318cf90fd742b9fedd8f3d6a5bf6
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX\Combat
+    - name: Extra_Reverb
+      guid: 003a1535c2a1684e8bf8c4dea60f7e70
+      id: 1577402288
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: Extra_Reverb
+        ObjectType: 1
+        guid: 003a1535c2a1684e8bf8c4dea60f7e70
+      Path: Master-Mixer Hierarchy\Official\Master\Extra_Reverb
+    - name: Indoor_Reverb
+      guid: 80bb9da47b23a04186d57c921413a3d7
+      id: 3891222523
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: Indoor_Reverb
+        ObjectType: 1
+        guid: 80bb9da47b23a04186d57c921413a3d7
+      Path: Master-Mixer Hierarchy\Official\Master\Indoor_Reverb
+    - name: Master
+      guid: 10dc73a3a395d8489b0b49345d2e7ead
+      id: 4056684167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      Path: Master-Mixer Hierarchy\Official\Master
+    - name: Music
+      guid: 0d543c41b0078540941d40db8832c597
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: Music
+        ObjectType: 2
+        guid: 0d543c41b0078540941d40db8832c597
+      Path: Master-Mixer Hierarchy\Official\Master\Music
+    - name: NPC_SFX
+      guid: 7286d13d66c54643a3dbae6d5e685453
+      id: 2997659434
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      - ElementName: NPC_SFX
+        ObjectType: 2
+        guid: 7286d13d66c54643a3dbae6d5e685453
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX\NPC_SFX
+    - name: NPC_VO
+      guid: e827efbedc3fe245a06a7cbdbf156458
+      id: 4294123248
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: VO
+        ObjectType: 2
+        guid: 2f012c1d42b2a14ba14ba53d895d3c58
+      - ElementName: NPC_VO
+        ObjectType: 2
+        guid: e827efbedc3fe245a06a7cbdbf156458
+      Path: Master-Mixer Hierarchy\Official\Master\VO\NPC_VO
+    - name: Outdoor_Reverb
+      guid: 350be09577e6824e8a57300fd3611365
+      id: 487886702
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: Outdoor_Reverb
+        ObjectType: 1
+        guid: 350be09577e6824e8a57300fd3611365
+      Path: Master-Mixer Hierarchy\Official\Master\Outdoor_Reverb
+    - name: Player_SFX
+      guid: 0e6d5852c11fed419905d1cb4d5d7025
+      id: 817096458
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      - ElementName: Player_SFX
+        ObjectType: 2
+        guid: 0e6d5852c11fed419905d1cb4d5d7025
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX\Player_SFX
+    - name: Player_VO
+      guid: 1770c0ffe9c278478df18b9611259ec5
+      id: 4007621200
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: VO
+        ObjectType: 2
+        guid: 2f012c1d42b2a14ba14ba53d895d3c58
+      - ElementName: Player_VO
+        ObjectType: 2
+        guid: 1770c0ffe9c278478df18b9611259ec5
+      Path: Master-Mixer Hierarchy\Official\Master\VO\Player_VO
+    - name: SFX
+      guid: 0923985957fe74468042318dfd0a4fd3
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 0923985957fe74468042318dfd0a4fd3
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus\SFX
+    - name: SFX_Bus
+      guid: ca5d44039c918e4aae1a8f7f447777b8
+      id: 213475909
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: ca5d44039c918e4aae1a8f7f447777b8
+      Path: Master-Mixer Hierarchy\Official\Master\SFX_Bus
+    - name: UI
+      guid: 54b51d6840671a4fa31ffc865f0af967
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: UI
+        ObjectType: 2
+        guid: 54b51d6840671a4fa31ffc865f0af967
+      Path: Master-Mixer Hierarchy\Official\Master\UI
+    - name: VO
+      guid: 2f012c1d42b2a14ba14ba53d895d3c58
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 4713921b18644442b3bacef2c3f7b0a6
+      - ElementName: Master
+        ObjectType: 2
+        guid: 10dc73a3a395d8489b0b49345d2e7ead
+      - ElementName: VO
+        ObjectType: 2
+        guid: 2f012c1d42b2a14ba14ba53d895d3c58
+      Path: Master-Mixer Hierarchy\Official\Master\VO
   - PhysicalPath: Master-Mixer Hierarchy\Test.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -65,7 +406,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Test
     guid: 73c791231b87ce45a34d68c696b94384
     GuidInternal: 
-    m_lastTime: -8585521377706149021
+    m_lastTime: -8585511158002438586
     List:
     - name: Test_2D_Env
       guid: 636a6093a0cc1c43b92e0d598ac3b5b6
@@ -315,8 +656,35 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 613d38226b083f45988bd5ca65749b4d
     GuidInternal: 
-    m_lastTime: -8585521377703347561
+    m_lastTime: -8585511158001475090
     List: []
+  - PhysicalPath: SoundBanks\Official.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: 12cc4489b78e984cb50167eebe3599ac
+    ParentPath: SoundBanks\Official
+    guid: 12cc4489b78e984cb50167eebe3599ac
+    GuidInternal: 
+    m_lastTime: -8585512752034983647
+    List:
+    - name: Master
+      guid: 39b881528a9f0f44812de76462b06f5d
+      id: 4056684167
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 12cc4489b78e984cb50167eebe3599ac
+      - ElementName: Master
+        ObjectType: 7
+        guid: 39b881528a9f0f44812de76462b06f5d
+      Path: SoundBanks\Official\Master
   - PhysicalPath: SoundBanks\Test.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -328,7 +696,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Test
     guid: a0baf2314942bb42ace66b188a8353e9
     GuidInternal: 
-    m_lastTime: -8585521377703256053
+    m_lastTime: -8585511158001465115
     List:
     - name: Test_Master
       guid: e138b1966e26ca419d639ff5c7cb11af
@@ -356,8 +724,989 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9dc4f9894f993458bde01d3ffb2026b
     GuidInternal: 
-    m_lastTime: -8585521377708807194
+    m_lastTime: -8585511158002807619
     List: []
+  - PhysicalPath: Events\Official.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: e4cd8293f522fa43abeb7edcf5425841
+    ParentPath: Events\Official
+    guid: e4cd8293f522fa43abeb7edcf5425841
+    GuidInternal: 
+    m_lastTime: -8585512751050031618
+    List:
+    - name: 3D_Env
+      guid: b0480077c5bb8647bc0f541a7b253f91
+      id: 2487412084
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      Path: Events\Official\SFX\3D_Env
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Actors
+      guid: 983239d1b7df954e8ea1b192bbf5202a
+      id: 4151480447
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Actors
+        ObjectType: 4
+        guid: 983239d1b7df954e8ea1b192bbf5202a
+      Path: Events\Official\SFX\Actors
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Guns
+      guid: 7dbc640ec3b4644280bdb41c046adedf
+      id: 688956056
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      - ElementName: Guns
+        ObjectType: 4
+        guid: 7dbc640ec3b4644280bdb41c046adedf
+      Path: Events\Official\SFX\Weapons\Guns
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: HUD_Indicators
+      guid: f09dad826bd4d0479572e1c6e79786b7
+      id: 3729421033
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: HUD_Indicators
+        ObjectType: 4
+        guid: f09dad826bd4d0479572e1c6e79786b7
+      Path: Events\Official\SFX\HUD_Indicators
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      Path: Events\Official\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NPC
+      guid: d77e822dd1fcac41bb007f12390159ba
+      id: 662417162
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Actors
+        ObjectType: 4
+        guid: 983239d1b7df954e8ea1b192bbf5202a
+      - ElementName: NPC
+        ObjectType: 4
+        guid: d77e822dd1fcac41bb007f12390159ba
+      Path: Events\Official\SFX\Actors\NPC
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: f69a598e5358a74380fd8de329052fd0
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      - ElementName: Play
+        ObjectType: 4
+        guid: f69a598e5358a74380fd8de329052fd0
+      Path: Events\Official\SFX\3D_Env\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: 3eb29d304b23334eb836de991eedc58d
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Play
+        ObjectType: 4
+        guid: 3eb29d304b23334eb836de991eedc58d
+      Path: Events\Official\Music\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ammo_Pickup
+      guid: 6c08a3206fa2ad439194b5a9a567843a
+      id: 4269559823
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      - ElementName: Guns
+        ObjectType: 4
+        guid: 7dbc640ec3b4644280bdb41c046adedf
+      - ElementName: Play_Ammo_Pickup
+        ObjectType: 3
+        guid: 6c08a3206fa2ad439194b5a9a567843a
+      Path: Events\Official\SFX\Weapons\Guns\Play_Ammo_Pickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Gameplay_Music
+      guid: 9578f3999977f04e9605e26885f70f73
+      id: 1231987938
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Play
+        ObjectType: 4
+        guid: 3eb29d304b23334eb836de991eedc58d
+      - ElementName: Play_Gameplay_Music
+        ObjectType: 3
+        guid: 9578f3999977f04e9605e26885f70f73
+      Path: Events\Official\Music\Play\Play_Gameplay_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Low_Health
+      guid: e3c032cfab1e1d409c5bf1dbf3075d71
+      id: 833469641
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: HUD_Indicators
+        ObjectType: 4
+        guid: f09dad826bd4d0479572e1c6e79786b7
+      - ElementName: Play_Low_Health
+        ObjectType: 3
+        guid: e3c032cfab1e1d409c5bf1dbf3075d71
+      Path: Events\Official\SFX\HUD_Indicators\Play_Low_Health
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Main_Menu_Music
+      guid: a4acdb0b2a38714ca28e4803b45de3b3
+      id: 2895168921
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Play
+        ObjectType: 4
+        guid: 3eb29d304b23334eb836de991eedc58d
+      - ElementName: Play_Main_Menu_Music
+        ObjectType: 3
+        guid: a4acdb0b2a38714ca28e4803b45de3b3
+      Path: Events\Official\Music\Play\Play_Main_Menu_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Menu_Confirm
+      guid: f74039d9fd32da4bad093031498aa301
+      id: 817598862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: UI
+        ObjectType: 4
+        guid: 21d6121f686c4d4cb6d72d0a17d007a7
+      - ElementName: Play_Menu_Confirm
+        ObjectType: 3
+        guid: f74039d9fd32da4bad093031498aa301
+      Path: Events\Official\SFX\UI\Play_Menu_Confirm
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Menu_Select
+      guid: 8189f31f10db3e43b40b1de5db08bdcf
+      id: 2167056030
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: UI
+        ObjectType: 4
+        guid: 21d6121f686c4d4cb6d72d0a17d007a7
+      - ElementName: Play_Menu_Select
+        ObjectType: 3
+        guid: 8189f31f10db3e43b40b1de5db08bdcf
+      Path: Events\Official\SFX\UI\Play_Menu_Select
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Boss
+      guid: f3c059df91118d4bb90623b7a2df6bf4
+      id: 652482692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Boss
+        ObjectType: 3
+        guid: f3c059df91118d4bb90623b7a2df6bf4
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Boss
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_No_Ammo
+      guid: 53acbcd9a8b55f46874580049a7449ac
+      id: 3958639655
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_No_Ammo
+        ObjectType: 3
+        guid: 53acbcd9a8b55f46874580049a7449ac
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_No_Ammo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Progress
+      guid: 33bfd1862f5d304ba79eb1be72fe86df
+      id: 291024034
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Progress
+        ObjectType: 3
+        guid: 33bfd1862f5d304ba79eb1be72fe86df
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Progress
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Shield_Critical
+      guid: e9b6e1d0e9ec0b4e9bda0fee4a31d3d3
+      id: 3482054832
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Shield_Critical
+        ObjectType: 3
+        guid: e9b6e1d0e9ec0b4e9bda0fee4a31d3d3
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Shield_Critical
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Shield_Warning
+      guid: 145d73d0b47d93498256765a88b88802
+      id: 3013325661
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Shield_Warning
+        ObjectType: 3
+        guid: 145d73d0b47d93498256765a88b88802
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Shield_Warning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Start
+      guid: 80c93340b25466418cb20f782eb3f181
+      id: 3632975685
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Start
+        ObjectType: 3
+        guid: 80c93340b25466418cb20f782eb3f181
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Callout_Tower_Spawning
+      guid: d81fff90f97d0f4c91ccaa4694957e13
+      id: 2434368426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Callout_Tower_Spawning
+        ObjectType: 3
+        guid: d81fff90f97d0f4c91ccaa4694957e13
+      Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Tower_Spawning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Damage_Taken
+      guid: 8e14be35b0362141a30da994abd05d46
+      id: 1115356459
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Damage_Taken
+        ObjectType: 3
+        guid: 8e14be35b0362141a30da994abd05d46
+      Path: Events\Official\VO\Player_1\Play_Player_1_Damage_Taken
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_1_Reload
+      guid: f8a418ff5be4b840b6ae108d43c58496
+      id: 3620234915
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      - ElementName: Play_Player_1_Reload
+        ObjectType: 3
+        guid: f8a418ff5be4b840b6ae108d43c58496
+      Path: Events\Official\VO\Player_1\Play_Player_1_Reload
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_Damage_Taken
+      guid: 73350ad05a191d4380428ea05328a3b5
+      id: 3501151887
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Actors
+        ObjectType: 4
+        guid: 983239d1b7df954e8ea1b192bbf5202a
+      - ElementName: Player
+        ObjectType: 4
+        guid: c04eac1efdecec4294a3b357e38cb5dd
+      - ElementName: Play_Player_Damage_Taken
+        ObjectType: 3
+        guid: 73350ad05a191d4380428ea05328a3b5
+      Path: Events\Official\SFX\Actors\Player\Play_Player_Damage_Taken
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_Footsteps
+      guid: 388d5fc5e1e8cb49bad312a4b4ddb63c
+      id: 98439365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Actors
+        ObjectType: 4
+        guid: 983239d1b7df954e8ea1b192bbf5202a
+      - ElementName: Player
+        ObjectType: 4
+        guid: c04eac1efdecec4294a3b357e38cb5dd
+      - ElementName: Play_Player_Footsteps
+        ObjectType: 3
+        guid: 388d5fc5e1e8cb49bad312a4b4ddb63c
+      Path: Events\Official\SFX\Actors\Player\Play_Player_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Round_Start
+      guid: bf4f2be9f0241b47ae43784c590a019b
+      id: 1779266091
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: HUD_Indicators
+        ObjectType: 4
+        guid: f09dad826bd4d0479572e1c6e79786b7
+      - ElementName: Play_Round_Start
+        ObjectType: 3
+        guid: bf4f2be9f0241b47ae43784c590a019b
+      Path: Events\Official\SFX\HUD_Indicators\Play_Round_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Shield_Amb
+      guid: 99bcfa1eef676344b43e06cfa8ab6796
+      id: 3521700588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      - ElementName: Play
+        ObjectType: 4
+        guid: f69a598e5358a74380fd8de329052fd0
+      - ElementName: Play_Shield_Amb
+        ObjectType: 3
+        guid: 99bcfa1eef676344b43e06cfa8ab6796
+      Path: Events\Official\SFX\3D_Env\Play\Play_Shield_Amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Shield_Damaged
+      guid: 3c5bb52a92e16f46ba11b3b6adcc1e89
+      id: 831945545
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      - ElementName: Play
+        ObjectType: 4
+        guid: f69a598e5358a74380fd8de329052fd0
+      - ElementName: Play_Shield_Damaged
+        ObjectType: 3
+        guid: 3c5bb52a92e16f46ba11b3b6adcc1e89
+      Path: Events\Official\SFX\3D_Env\Play\Play_Shield_Damaged
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Shield_Warning
+      guid: 8db80c423decae4d9ba55a9615794c77
+      id: 4059671168
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: HUD_Indicators
+        ObjectType: 4
+        guid: f09dad826bd4d0479572e1c6e79786b7
+      - ElementName: Play_Shield_Warning
+        ObjectType: 3
+        guid: 8db80c423decae4d9ba55a9615794c77
+      Path: Events\Official\SFX\HUD_Indicators\Play_Shield_Warning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Starting_Gun_Reload
+      guid: 81ccd116ce0c194080ce1f3252f3be2a
+      id: 176859227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      - ElementName: Guns
+        ObjectType: 4
+        guid: 7dbc640ec3b4644280bdb41c046adedf
+      - ElementName: Play_Starting_Gun_Reload
+        ObjectType: 3
+        guid: 81ccd116ce0c194080ce1f3252f3be2a
+      Path: Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Reload
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Starting_Gun_Shoot
+      guid: 8ed63173ded10f47b7fd5b9c276019de
+      id: 4202111561
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      - ElementName: Guns
+        ObjectType: 4
+        guid: 7dbc640ec3b4644280bdb41c046adedf
+      - ElementName: Play_Starting_Gun_Shoot
+        ObjectType: 3
+        guid: 8ed63173ded10f47b7fd5b9c276019de
+      Path: Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Shoot
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player
+      guid: c04eac1efdecec4294a3b357e38cb5dd
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Actors
+        ObjectType: 4
+        guid: 983239d1b7df954e8ea1b192bbf5202a
+      - ElementName: Player
+        ObjectType: 4
+        guid: c04eac1efdecec4294a3b357e38cb5dd
+      Path: Events\Official\SFX\Actors\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_1
+      guid: b762de9d99008e46ae02b2e39eb31831
+      id: 2768693346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      - ElementName: Player_1
+        ObjectType: 4
+        guid: b762de9d99008e46ae02b2e39eb31831
+      Path: Events\Official\VO\Player_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 48fdd5a696ad03498b028946e5232b65
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      Path: Events\Official\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: States
+      guid: 14f805257a5403498703583e3ad17b59
+      id: 1208172739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: States
+        ObjectType: 4
+        guid: 14f805257a5403498703583e3ad17b59
+      Path: Events\Official\Music\States
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: dc407f6c011eab48984ddc0cc576beb7
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Stop
+        ObjectType: 4
+        guid: dc407f6c011eab48984ddc0cc576beb7
+      Path: Events\Official\Music\Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: 7186d9b84452284d8522acf1ad8de88b
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 7186d9b84452284d8522acf1ad8de88b
+      Path: Events\Official\SFX\3D_Env\Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Gameplay_Music
+      guid: a6afaa867c03cb4899fb2b5cc3446149
+      id: 3536547992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Stop
+        ObjectType: 4
+        guid: dc407f6c011eab48984ddc0cc576beb7
+      - ElementName: Stop_Gameplay_Music
+        ObjectType: 3
+        guid: a6afaa867c03cb4899fb2b5cc3446149
+      Path: Events\Official\Music\Stop\Stop_Gameplay_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Main_Menu_Music
+      guid: 0c96ad3361ccf749b7b9c83f3652e2ff
+      id: 2829915331
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: Music
+        ObjectType: 4
+        guid: 00c6e3b29be1b94a9ab6d17fa971d49d
+      - ElementName: Stop
+        ObjectType: 4
+        guid: dc407f6c011eab48984ddc0cc576beb7
+      - ElementName: Stop_Main_Menu_Music
+        ObjectType: 3
+        guid: 0c96ad3361ccf749b7b9c83f3652e2ff
+      Path: Events\Official\Music\Stop\Stop_Main_Menu_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Shield_Amb
+      guid: cb854e16c182764abf9d6b129337e41e
+      id: 820446518
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: 3D_Env
+        ObjectType: 4
+        guid: b0480077c5bb8647bc0f541a7b253f91
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 7186d9b84452284d8522acf1ad8de88b
+      - ElementName: Stop_Shield_Amb
+        ObjectType: 3
+        guid: cb854e16c182764abf9d6b129337e41e
+      Path: Events\Official\SFX\3D_Env\Stop\Stop_Shield_Amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: 21d6121f686c4d4cb6d72d0a17d007a7
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: UI
+        ObjectType: 4
+        guid: 21d6121f686c4d4cb6d72d0a17d007a7
+      Path: Events\Official\SFX\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VO
+      guid: 85c3644039f657418acc7754be63f017
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: VO
+        ObjectType: 4
+        guid: 85c3644039f657418acc7754be63f017
+      Path: Events\Official\VO
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Weapons
+      guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      id: 1467963052
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e4cd8293f522fa43abeb7edcf5425841
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 48fdd5a696ad03498b028946e5232b65
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: fb77d2a655b06d4086ee54b5dce6e3f7
+      Path: Events\Official\SFX\Weapons
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Test.wwu
     PathAndIcons:
     - ElementName: Events
@@ -369,7 +1718,7 @@ MonoBehaviour:
     ParentPath: Events\Test
     guid: 5211d38364814e4dbc7ae1aecec07899
     GuidInternal: 
-    m_lastTime: -8585521377708787245
+    m_lastTime: -8585511158002797323
     List:
     - name: Music
       guid: c054ae734ff34049b6f6f0e9302be79b
@@ -1269,8 +2618,77 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1836d610d40dfb4faddc13e819bb9ce7
     GuidInternal: 
-    m_lastTime: -8585521377708728882
+    m_lastTime: -8585511158002777360
     List: []
+  - PhysicalPath: Game Parameters\Official.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: af48b73903eae84b9ac4ca105bc1d93f
+    ParentPath: Game Parameters\Official
+    guid: af48b73903eae84b9ac4ca105bc1d93f
+    GuidInternal: 
+    m_lastTime: -8585512752970787967
+    List:
+    - name: Ammo_Count
+      guid: 40ed0bbf9e57204bb6d8eb9cf7f396dd
+      id: 4264596351
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: af48b73903eae84b9ac4ca105bc1d93f
+      - ElementName: Ammo_Count
+        ObjectType: 13
+        guid: 40ed0bbf9e57204bb6d8eb9cf7f396dd
+      Path: Game Parameters\Official\Ammo_Count
+    - name: Player_Health
+      guid: a8b4a86bd2270e4aa6f5a51470520d06
+      id: 215992295
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: af48b73903eae84b9ac4ca105bc1d93f
+      - ElementName: Player_Health
+        ObjectType: 13
+        guid: a8b4a86bd2270e4aa6f5a51470520d06
+      Path: Game Parameters\Official\Player_Health
+    - name: Shield_Distance
+      guid: de5d6c888eb1be49bf6ee14ad1d1763c
+      id: 290015844
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: af48b73903eae84b9ac4ca105bc1d93f
+      - ElementName: Shield_Distance
+        ObjectType: 13
+        guid: de5d6c888eb1be49bf6ee14ad1d1763c
+      Path: Game Parameters\Official\Shield_Distance
+    - name: Shield_Health
+      guid: 0f1912994ea29e48b31a3cfe343ac426
+      id: 878297735
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: af48b73903eae84b9ac4ca105bc1d93f
+      - ElementName: Shield_Health
+        ObjectType: 13
+        guid: 0f1912994ea29e48b31a3cfe343ac426
+      Path: Game Parameters\Official\Shield_Health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -1283,8 +2701,349 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6095d92da86b84f8c13dbea62b3c8a6
     GuidInternal: 
-    m_lastTime: -8585521377703105020
+    m_lastTime: -8585511158001435192
     List: []
+  - PhysicalPath: States\Official.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: e6dc25221ff5a24c995b333ad943df76
+    ParentPath: States\Official
+    guid: e6dc25221ff5a24c995b333ad943df76
+    GuidInternal: 
+    m_lastTime: -8585512752964202017
+    List:
+    - name: Env
+      guid: 31feea5dd19e484b89b85ee4882450c4
+      id: 529726550
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e6dc25221ff5a24c995b333ad943df76
+      - ElementName: Env
+        ObjectType: 9
+        guid: 31feea5dd19e484b89b85ee4882450c4
+      Path: States\Official\Env
+      values:
+      - name: Indoor
+        guid: 1f5fd42cb7f8034d99b192c4a6f6f18f
+        id: 340398852
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Env
+          ObjectType: 9
+          guid: 31feea5dd19e484b89b85ee4882450c4
+        - ElementName: Indoor
+          ObjectType: 8
+          guid: 1f5fd42cb7f8034d99b192c4a6f6f18f
+      - name: None
+        guid: 6be5e82fe6708e4b8e74ddea872bdb3e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Env
+          ObjectType: 9
+          guid: 31feea5dd19e484b89b85ee4882450c4
+        - ElementName: None
+          ObjectType: 8
+          guid: 6be5e82fe6708e4b8e74ddea872bdb3e
+      - name: Outdoor
+        guid: 02a8328e0c1c1146b93741f48eac77a8
+        id: 144697359
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Env
+          ObjectType: 9
+          guid: 31feea5dd19e484b89b85ee4882450c4
+        - ElementName: Outdoor
+          ObjectType: 8
+          guid: 02a8328e0c1c1146b93741f48eac77a8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Gameplay_Music
+      guid: f2910ed4009f9942b9983c8e609052c0
+      id: 2322231365
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e6dc25221ff5a24c995b333ad943df76
+      - ElementName: Gameplay_Music
+        ObjectType: 9
+        guid: f2910ed4009f9942b9983c8e609052c0
+      Path: States\Official\Gameplay_Music
+      values:
+      - name: Boss
+        guid: acd77b0e28f261458607649b944e18db
+        id: 1560169506
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: Boss
+          ObjectType: 8
+          guid: acd77b0e28f261458607649b944e18db
+      - name: Defeat
+        guid: 5fb967b9015dd346a646270b2a4e1cd2
+        id: 1593864692
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: Defeat
+          ObjectType: 8
+          guid: 5fb967b9015dd346a646270b2a4e1cd2
+      - name: High_Intensity
+        guid: 73fc4d469a517c49bc374c3f950a2397
+        id: 2083763927
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: High_Intensity
+          ObjectType: 8
+          guid: 73fc4d469a517c49bc374c3f950a2397
+      - name: Low_Intensity
+        guid: 5ef557c2472044458e68242139695163
+        id: 562163035
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: Low_Intensity
+          ObjectType: 8
+          guid: 5ef557c2472044458e68242139695163
+      - name: None
+        guid: 2112016e786f4d46871360185cfae62d
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: None
+          ObjectType: 8
+          guid: 2112016e786f4d46871360185cfae62d
+      - name: Start
+        guid: 5bcf27f189f59f4b9cda1eb34e591d9c
+        id: 1281810935
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: Start
+          ObjectType: 8
+          guid: 5bcf27f189f59f4b9cda1eb34e591d9c
+      - name: Victory
+        guid: a911c5efcd69fb4787c2f8507f5f9166
+        id: 2716678721
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Gameplay_Music
+          ObjectType: 9
+          guid: f2910ed4009f9942b9983c8e609052c0
+        - ElementName: Victory
+          ObjectType: 8
+          guid: a911c5efcd69fb4787c2f8507f5f9166
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Pause
+      guid: b25140b571eb524eaacc976af071816f
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e6dc25221ff5a24c995b333ad943df76
+      - ElementName: Pause
+        ObjectType: 9
+        guid: b25140b571eb524eaacc976af071816f
+      Path: States\Official\Pause
+      values:
+      - name: None
+        guid: b75967fb4eddda4c8f22cc0c8910c9b9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Pause
+          ObjectType: 9
+          guid: b25140b571eb524eaacc976af071816f
+        - ElementName: None
+          ObjectType: 8
+          guid: b75967fb4eddda4c8f22cc0c8910c9b9
+      - name: Pause
+        guid: 4fb946ec1957cd4fbea70704b3c286d3
+        id: 3092587493
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Pause
+          ObjectType: 9
+          guid: b25140b571eb524eaacc976af071816f
+        - ElementName: Pause
+          ObjectType: 8
+          guid: 4fb946ec1957cd4fbea70704b3c286d3
+      - name: Unpause
+        guid: 7d1ae24a9badfa4e93ba0aed34e58cc4
+        id: 3412868374
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Pause
+          ObjectType: 9
+          guid: b25140b571eb524eaacc976af071816f
+        - ElementName: Unpause
+          ObjectType: 8
+          guid: 7d1ae24a9badfa4e93ba0aed34e58cc4
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Player_Status
+      guid: e8f2f894de9d604f87899ab28e6c5f60
+      id: 1647429799
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: e6dc25221ff5a24c995b333ad943df76
+      - ElementName: Player_Status
+        ObjectType: 9
+        guid: e8f2f894de9d604f87899ab28e6c5f60
+      Path: States\Official\Player_Status
+      values:
+      - name: Downed
+        guid: e6a35c654a51434aa35509621f01fc7f
+        id: 966261518
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Player_Status
+          ObjectType: 9
+          guid: e8f2f894de9d604f87899ab28e6c5f60
+        - ElementName: Downed
+          ObjectType: 8
+          guid: e6a35c654a51434aa35509621f01fc7f
+      - name: None
+        guid: a467e85d36646c44ba597fc889d55524
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Player_Status
+          ObjectType: 9
+          guid: e8f2f894de9d604f87899ab28e6c5f60
+        - ElementName: None
+          ObjectType: 8
+          guid: a467e85d36646c44ba597fc889d55524
+      - name: Normal
+        guid: da3f784c999d5943afe3cb1239e7ffa7
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: e6dc25221ff5a24c995b333ad943df76
+        - ElementName: Player_Status
+          ObjectType: 9
+          guid: e8f2f894de9d604f87899ab28e6c5f60
+        - ElementName: Normal
+          ObjectType: 8
+          guid: da3f784c999d5943afe3cb1239e7ffa7
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: States\Test.wwu
     PathAndIcons:
     - ElementName: States
@@ -1296,7 +3055,7 @@ MonoBehaviour:
     ParentPath: States\Test
     guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
     GuidInternal: 
-    m_lastTime: -8585521377703006252
+    m_lastTime: -8585511158001425217
     List:
     - name: Test_Env
       guid: d0294041368d0d469f010c921fea7193
@@ -1606,8 +3365,71 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d171cdcb3cf9d14780b6b2fae736e7e7
     GuidInternal: 
-    m_lastTime: -8585521377702920450
+    m_lastTime: -8585511158001415245
     List: []
+  - PhysicalPath: Switches\Official.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Official
+      ObjectType: 12
+      guid: 8b4588e0071ec149b7caaac68cff8bb8
+    ParentPath: Switches\Official
+    guid: 8b4588e0071ec149b7caaac68cff8bb8
+    GuidInternal: 
+    m_lastTime: -8585512751072966119
+    List:
+    - name: Surface
+      guid: 687436df547ecb428a62862d1687b5ae
+      id: 1834394558
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Official
+        ObjectType: 12
+        guid: 8b4588e0071ec149b7caaac68cff8bb8
+      - ElementName: Surface
+        ObjectType: 11
+        guid: 687436df547ecb428a62862d1687b5ae
+      Path: Switches\Official\Surface
+      values:
+      - name: Dirt
+        guid: 5577c4fde5f7be4e8ff582752890aad4
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: 8b4588e0071ec149b7caaac68cff8bb8
+        - ElementName: Surface
+          ObjectType: 11
+          guid: 687436df547ecb428a62862d1687b5ae
+        - ElementName: Dirt
+          ObjectType: 10
+          guid: 5577c4fde5f7be4e8ff582752890aad4
+      - name: Metal
+        guid: 4e1e7700101a2c448900bf948325ea7d
+        id: 2473969246
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Official
+          ObjectType: 12
+          guid: 8b4588e0071ec149b7caaac68cff8bb8
+        - ElementName: Surface
+          ObjectType: 11
+          guid: 687436df547ecb428a62862d1687b5ae
+        - ElementName: Metal
+          ObjectType: 10
+          guid: 4e1e7700101a2c448900bf948325ea7d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: Switches\Test.wwu
     PathAndIcons:
     - ElementName: Switches
@@ -1619,7 +3441,7 @@ MonoBehaviour:
     ParentPath: Switches\Test
     guid: eecad20c2180674b8bef59790c3746e6
     GuidInternal: 
-    m_lastTime: -8585521377702870987
+    m_lastTime: -8585511158001395304
     List:
     - name: Test_2D_Env
       guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
@@ -1781,11 +3603,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6053f6c4d583f544aa4b00f85c8169c5
     GuidInternal: 
-    m_lastTime: -8585521377702799666
+    m_lastTime: -8585511158001385327
     List: []
-  ExpandedFileSystemItemIds: 010000000200000004000000050000000700000008000000090000000a0000000b000000180000003a0000003c0000003d00000041000000470000004b000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
