@@ -142,9 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c997cb965f27f75428d41c8282d49755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _targetPosition: {fileID: 5394477593705844068}
   health: {fileID: 2422721291120765057}
-  _owner: {fileID: 0}
+  _playerOwner: {fileID: 0}
+  _towerSpawner: {fileID: 0}
   _aoeRadius: 5
   _aoeCooldown: 1
   _aoeDamage: 15

@@ -15,14 +15,13 @@ public class SingleTarget : TowerTargeting
         _targetingRadius = _stRadius;
         _cooldownTime = _stCooldown;
 
-        // as of now the barrel will be the first (and only) child of the root game object
+        // moving section of the tower will be the first child of the root game object
         Transform turretBarrelTransform = transform.GetChild(0);
         _turretBarrel = turretBarrelTransform.gameObject;
     }
 
     void Update()
     {
-
         SearchForTargets();
     }
 
@@ -31,17 +30,11 @@ public class SingleTarget : TowerTargeting
     {
         float barrelTurnRateDegrees = 180f;
 
-        // Main turret body rotation: global y-axis to turn towards enemy
-        Vector3 turretBodyDirection = new Vector3(
-            enemyLocation.position.x,
-            transform.position.y, // locks y-axis rotation of main turret body
-            enemyLocation.position.z
-        );
-        transform.LookAt(turretBodyDirection);
-
-        // Turret barrel rotation: local x-axis to point directly at enemy
+        // Turret look movement: rotate on all axes to point directly at enemy
         Vector3 barrelAimDirection = enemyLocation.position - _turretBarrel.transform.position;
         Quaternion targetRotation = Quaternion.LookRotation(barrelAimDirection);
+
+        targetRotation.x = Mathf.Clamp(targetRotation.x, -0.10f, 0.20f);
 
         _turretBarrel.transform.rotation = Quaternion.RotateTowards(
             _turretBarrel.transform.rotation,
