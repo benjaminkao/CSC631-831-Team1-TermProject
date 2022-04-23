@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ea1e2b304c7f2344922b1c3053e84ac8
     GuidInternal: 
-    m_lastTime: -8585511158001375356
+    m_lastTime: -8585509223801467115
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09c08edc7b40284fb2cd2ef47bc7e8d4
     GuidInternal: 
-    m_lastTime: -8585511158002458559
+    m_lastTime: -8585509224614183020
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -65,7 +65,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Official
     guid: 4713921b18644442b3bacef2c3f7b0a6
     GuidInternal: 
-    m_lastTime: -8585512752198082104
+    m_lastTime: -8585509224610946170
     List:
     - name: 2D_Amb
       guid: 22a57b9f1aaac246b491176eddae376b
@@ -406,7 +406,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Test
     guid: 73c791231b87ce45a34d68c696b94384
     GuidInternal: 
-    m_lastTime: -8585511158002438586
+    m_lastTime: -8585509224617430922
     List:
     - name: Test_2D_Env
       guid: 636a6093a0cc1c43b92e0d598ac3b5b6
@@ -656,7 +656,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 613d38226b083f45988bd5ca65749b4d
     GuidInternal: 
-    m_lastTime: -8585511158001475090
+    m_lastTime: -8585509224630564854
     List: []
   - PhysicalPath: SoundBanks\Official.wwu
     PathAndIcons:
@@ -669,7 +669,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Official
     guid: 12cc4489b78e984cb50167eebe3599ac
     GuidInternal: 
-    m_lastTime: -8585512752034983647
+    m_lastTime: -8585509224627290447
     List:
     - name: Master
       guid: 39b881528a9f0f44812de76462b06f5d
@@ -685,33 +685,6 @@ MonoBehaviour:
         ObjectType: 7
         guid: 39b881528a9f0f44812de76462b06f5d
       Path: SoundBanks\Official\Master
-  - PhysicalPath: SoundBanks\Test.wwu
-    PathAndIcons:
-    - ElementName: SoundBanks
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Test
-      ObjectType: 12
-      guid: a0baf2314942bb42ace66b188a8353e9
-    ParentPath: SoundBanks\Test
-    guid: a0baf2314942bb42ace66b188a8353e9
-    GuidInternal: 
-    m_lastTime: -8585511158001465115
-    List:
-    - name: Test_Master
-      guid: e138b1966e26ca419d639ff5c7cb11af
-      id: 959552862
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: a0baf2314942bb42ace66b188a8353e9
-      - ElementName: Test_Master
-        ObjectType: 7
-        guid: e138b1966e26ca419d639ff5c7cb11af
-      Path: SoundBanks\Test\Test_Master
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -724,7 +697,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9dc4f9894f993458bde01d3ffb2026b
     GuidInternal: 
-    m_lastTime: -8585511158002807619
+    m_lastTime: -8585509224587966721
     List: []
   - PhysicalPath: Events\Official.wwu
     PathAndIcons:
@@ -737,7 +710,7 @@ MonoBehaviour:
     ParentPath: Events\Official
     guid: e4cd8293f522fa43abeb7edcf5425841
     GuidInternal: 
-    m_lastTime: -8585512751050031618
+    m_lastTime: -8585509224581451534
     List:
     - name: 3D_Env
       guid: b0480077c5bb8647bc0f541a7b253f91
@@ -929,8 +902,8 @@ MonoBehaviour:
         guid: 6c08a3206fa2ad439194b5a9a567843a
       Path: Events\Official\SFX\Weapons\Guns\Play_Ammo_Pickup
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.374989
+      minDuration: 0.374989
     - name: Play_Gameplay_Music
       guid: 9578f3999977f04e9605e26885f70f73
       id: 1231987938
@@ -1021,8 +994,8 @@ MonoBehaviour:
         guid: f74039d9fd32da4bad093031498aa301
       Path: Events\Official\SFX\UI\Play_Menu_Confirm
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.999977
+      minDuration: 0.999977
     - name: Play_Menu_Select
       guid: 8189f31f10db3e43b40b1de5db08bdcf
       id: 2167056030
@@ -1044,8 +1017,8 @@ MonoBehaviour:
         guid: 8189f31f10db3e43b40b1de5db08bdcf
       Path: Events\Official\SFX\UI\Play_Menu_Select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.499977
+      minDuration: 0.499977
     - name: Play_Player_1_Callout_Boss
       guid: f3c059df91118d4bb90623b7a2df6bf4
       id: 652482692
@@ -1066,9 +1039,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f3c059df91118d4bb90623b7a2df6bf4
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Boss
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 1.999977
+      minDuration: 1.999977
     - name: Play_Player_1_Callout_No_Ammo
       guid: 53acbcd9a8b55f46874580049a7449ac
       id: 3958639655
@@ -1089,9 +1062,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 53acbcd9a8b55f46874580049a7449ac
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_No_Ammo
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_1_Callout_Progress
       guid: 33bfd1862f5d304ba79eb1be72fe86df
       id: 291024034
@@ -1112,9 +1085,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 33bfd1862f5d304ba79eb1be72fe86df
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Progress
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_1_Callout_Shield_Critical
       guid: e9b6e1d0e9ec0b4e9bda0fee4a31d3d3
       id: 3482054832
@@ -1135,9 +1108,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: e9b6e1d0e9ec0b4e9bda0fee4a31d3d3
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Shield_Critical
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_1_Callout_Shield_Warning
       guid: 145d73d0b47d93498256765a88b88802
       id: 3013325661
@@ -1158,9 +1131,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 145d73d0b47d93498256765a88b88802
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Shield_Warning
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 1.999977
+      minDuration: 1.999977
     - name: Play_Player_1_Callout_Start
       guid: 80c93340b25466418cb20f782eb3f181
       id: 3632975685
@@ -1181,9 +1154,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 80c93340b25466418cb20f782eb3f181
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Start
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_1_Callout_Tower_Spawning
       guid: d81fff90f97d0f4c91ccaa4694957e13
       id: 2434368426
@@ -1204,9 +1177,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: d81fff90f97d0f4c91ccaa4694957e13
       Path: Events\Official\VO\Player_1\Play_Player_1_Callout_Tower_Spawning
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 1.999977
+      minDuration: 1.999977
     - name: Play_Player_1_Damage_Taken
       guid: 8e14be35b0362141a30da994abd05d46
       id: 1115356459
@@ -1227,9 +1200,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8e14be35b0362141a30da994abd05d46
       Path: Events\Official\VO\Player_1\Play_Player_1_Damage_Taken
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_1_Reload
       guid: f8a418ff5be4b840b6ae108d43c58496
       id: 3620234915
@@ -1250,9 +1223,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f8a418ff5be4b840b6ae108d43c58496
       Path: Events\Official\VO\Player_1\Play_Player_1_Reload
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 15
+      maxDuration: 2
+      minDuration: 2
     - name: Play_Player_Damage_Taken
       guid: 73350ad05a191d4380428ea05328a3b5
       id: 3501151887
@@ -1277,8 +1250,8 @@ MonoBehaviour:
         guid: 73350ad05a191d4380428ea05328a3b5
       Path: Events\Official\SFX\Actors\Player\Play_Player_Damage_Taken
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.499977
+      minDuration: 0.499977
     - name: Play_Player_Footsteps
       guid: 388d5fc5e1e8cb49bad312a4b4ddb63c
       id: 98439365
@@ -1302,9 +1275,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 388d5fc5e1e8cb49bad312a4b4ddb63c
       Path: Events\Official\SFX\Actors\Player\Play_Player_Footsteps
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 5
+      maxDuration: 0.374989
+      minDuration: 0.249977
     - name: Play_Round_Start
       guid: bf4f2be9f0241b47ae43784c590a019b
       id: 1779266091
@@ -1326,8 +1299,8 @@ MonoBehaviour:
         guid: bf4f2be9f0241b47ae43784c590a019b
       Path: Events\Official\SFX\HUD_Indicators\Play_Round_Start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.999977
+      minDuration: 1.999977
     - name: Play_Shield_Amb
       guid: 99bcfa1eef676344b43e06cfa8ab6796
       id: 3521700588
@@ -1351,7 +1324,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 99bcfa1eef676344b43e06cfa8ab6796
       Path: Events\Official\SFX\3D_Env\Play\Play_Shield_Amb
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_Shield_Damaged
@@ -1377,9 +1350,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3c5bb52a92e16f46ba11b3b6adcc1e89
       Path: Events\Official\SFX\3D_Env\Play\Play_Shield_Damaged
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 200
+      maxDuration: 1.124989
+      minDuration: 1.124989
     - name: Play_Shield_Warning
       guid: 8db80c423decae4d9ba55a9615794c77
       id: 4059671168
@@ -1401,8 +1374,8 @@ MonoBehaviour:
         guid: 8db80c423decae4d9ba55a9615794c77
       Path: Events\Official\SFX\HUD_Indicators\Play_Shield_Warning
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.999977
+      minDuration: 0.999977
     - name: Play_Starting_Gun_Reload
       guid: 81ccd116ce0c194080ce1f3252f3be2a
       id: 176859227
@@ -1426,9 +1399,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 81ccd116ce0c194080ce1f3252f3be2a
       Path: Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Reload
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 5
+      maxDuration: 2.499977
+      minDuration: 2.499977
     - name: Play_Starting_Gun_Shoot
       guid: 8ed63173ded10f47b7fd5b9c276019de
       id: 4202111561
@@ -1452,9 +1425,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8ed63173ded10f47b7fd5b9c276019de
       Path: Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Shoot
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 0.562494
+      minDuration: 0.562494
     - name: Player
       guid: c04eac1efdecec4294a3b357e38cb5dd
       id: 1069431850
@@ -1599,8 +1572,8 @@ MonoBehaviour:
         guid: a6afaa867c03cb4899fb2b5cc3446149
       Path: Events\Official\Music\Stop\Stop_Gameplay_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Main_Menu_Music
       guid: 0c96ad3361ccf749b7b9c83f3652e2ff
       id: 2829915331
@@ -1622,8 +1595,8 @@ MonoBehaviour:
         guid: 0c96ad3361ccf749b7b9c83f3652e2ff
       Path: Events\Official\Music\Stop\Stop_Main_Menu_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Shield_Amb
       guid: cb854e16c182764abf9d6b129337e41e
       id: 820446518
@@ -1648,8 +1621,8 @@ MonoBehaviour:
         guid: cb854e16c182764abf9d6b129337e41e
       Path: Events\Official\SFX\3D_Env\Stop\Stop_Shield_Amb
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: 21d6121f686c4d4cb6d72d0a17d007a7
       id: 1551306167
@@ -1718,7 +1691,7 @@ MonoBehaviour:
     ParentPath: Events\Test
     guid: 5211d38364814e4dbc7ae1aecec07899
     GuidInternal: 
-    m_lastTime: -8585511158002797323
+    m_lastTime: -8585509224584730329
     List:
     - name: Music
       guid: c054ae734ff34049b6f6f0e9302be79b
@@ -1758,6 +1731,26 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Play
+      guid: dcf6bb354cf7c14289b5bd4a492d0769
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: Music
+        ObjectType: 4
+        guid: c054ae734ff34049b6f6f0e9302be79b
+      - ElementName: Play
+        ObjectType: 4
+        guid: dcf6bb354cf7c14289b5bd4a492d0769
+      Path: Events\Test\Music\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
       guid: 1bb6d73df92152439a1f378ece969c70
       id: 1256202815
       PathAndIcons:
@@ -1777,9 +1770,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play
-      guid: dcf6bb354cf7c14289b5bd4a492d0769
-      id: 1256202815
+    - name: Play_Shield_Hum_2
+      guid: ea3133eb0909cc48ab7186a20ca0d53e
+      id: 1084999509
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1787,14 +1780,17 @@ MonoBehaviour:
       - ElementName: Test
         ObjectType: 12
         guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: Music
+      - ElementName: SFX
         ObjectType: 4
-        guid: c054ae734ff34049b6f6f0e9302be79b
+        guid: ec40455e58c4d74e90a7dff537df3f1c
       - ElementName: Play
         ObjectType: 4
-        guid: dcf6bb354cf7c14289b5bd4a492d0769
-      Path: Events\Test\Music\Play
-      maxAttenuation: 0
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Shield_Hum_2
+        ObjectType: 3
+        guid: ea3133eb0909cc48ab7186a20ca0d53e
+      Path: Events\Test\SFX\Play\Play_Shield_Hum_2
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_Test_2D_Env_Switch
@@ -1840,7 +1836,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e5e796a5c0266640af23cce5d0634692
       Path: Events\Test\SFX\Play\Play_Test_3D_Ambiance
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_Test_Click
@@ -1886,7 +1882,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: d6c4a6400815b24c805d85b8f82c4a9b
       Path: Events\Test\SFX\Play\Play_Test_Explosion
-      maxAttenuation: 0
+      maxAttenuation: 500
       maxDuration: 1.38805
       minDuration: 1.38805
     - name: Play_Test_Gameplay_Music
@@ -1932,7 +1928,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4a98cae5a93f5545bc6959e91eb38373
       Path: Events\Test\SFX\Play\Play_Test_Gunshot
-      maxAttenuation: 0
+      maxAttenuation: 200
       maxDuration: 1.123719
       minDuration: 1.123719
     - name: Play_Test_Main_Menu_Music
@@ -1978,7 +1974,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6c39a6a3e6abfb42a9c9dd7c8eca10a5
       Path: Events\Test\SFX\Play\Play_Test_NPC_Footstep
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 1.328549
       minDuration: 1.328549
     - name: Play_Test_NPC_VO
@@ -2001,7 +1997,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e746c14b325b574ea3f18dbe1187b37f
       Path: Events\Test\SFX\Play\Play_Test_NPC_VO
-      maxAttenuation: 0
+      maxAttenuation: 25
       maxDuration: 1.981202
       minDuration: 1.981202
     - name: Play_Test_Player_Footstep
@@ -2024,7 +2020,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e14b25a659c8e44ba0e7316ed4119d9c
       Path: Events\Test\SFX\Play\Play_Test_Player_Footstep
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0.909388
       minDuration: 0.909388
     - name: Play_Test_Player_VO
@@ -2047,9 +2043,55 @@ MonoBehaviour:
         ObjectType: 3
         guid: a6cd57b4c4b4af47b96bbe7330baa9ca
       Path: Events\Test\SFX\Play\Play_Test_Player_VO
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 2.496757
       minDuration: 2.496757
+    - name: Play_Test_Shield_Hum
+      guid: 25f5dc735ee57449ab57859f31e880b1
+      id: 3741023885
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Shield_Hum
+        ObjectType: 3
+        guid: 25f5dc735ee57449ab57859f31e880b1
+      Path: Events\Test\SFX\Play\Play_Test_Shield_Hum
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Test_Static
+      guid: 8e15ea367839744b9a2bb31c97693091
+      id: 2003780355
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Play
+        ObjectType: 4
+        guid: 1bb6d73df92152439a1f378ece969c70
+      - ElementName: Play_Test_Static
+        ObjectType: 3
+        guid: 8e15ea367839744b9a2bb31c97693091
+      Path: Events\Test\SFX\Play\Play_Test_Static
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Set_State_Test_Boss
       guid: ef15962636d82c4db52ff670df25a350
       id: 1780085868
@@ -2478,26 +2520,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Stop
-      guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
-      id: 788884573
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 5211d38364814e4dbc7ae1aecec07899
-      - ElementName: SFX
-        ObjectType: 4
-        guid: ec40455e58c4d74e90a7dff537df3f1c
-      - ElementName: Stop
-        ObjectType: 4
-        guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
-      Path: Events\Test\SFX\Stop
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stop
       guid: a1160634fadcc44eac9403648fbe4be6
       id: 788884573
       PathAndIcons:
@@ -2514,6 +2536,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: a1160634fadcc44eac9403648fbe4be6
       Path: Events\Test\Music\Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 5211d38364814e4dbc7ae1aecec07899
+      - ElementName: SFX
+        ObjectType: 4
+        guid: ec40455e58c4d74e90a7dff537df3f1c
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 4a7d685d9f9e444ea9d6e1eaef1c3e2c
+      Path: Events\Test\SFX\Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2618,7 +2660,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1836d610d40dfb4faddc13e819bb9ce7
     GuidInternal: 
-    m_lastTime: -8585511158002777360
+    m_lastTime: -8585509224637215732
     List: []
   - PhysicalPath: Game Parameters\Official.wwu
     PathAndIcons:
@@ -2631,7 +2673,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Official
     guid: af48b73903eae84b9ac4ca105bc1d93f
     GuidInternal: 
-    m_lastTime: -8585512752970787967
+    m_lastTime: -8585509224640487079
     List:
     - name: Ammo_Count
       guid: 40ed0bbf9e57204bb6d8eb9cf7f396dd
@@ -2701,7 +2743,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6095d92da86b84f8c13dbea62b3c8a6
     GuidInternal: 
-    m_lastTime: -8585511158001435192
+    m_lastTime: -8585509224568340644
     List: []
   - PhysicalPath: States\Official.wwu
     PathAndIcons:
@@ -2714,7 +2756,7 @@ MonoBehaviour:
     ParentPath: States\Official
     guid: e6dc25221ff5a24c995b333ad943df76
     GuidInternal: 
-    m_lastTime: -8585512752964202017
+    m_lastTime: -8585509224574875615
     List:
     - name: Env
       guid: 31feea5dd19e484b89b85ee4882450c4
@@ -3055,7 +3097,7 @@ MonoBehaviour:
     ParentPath: States\Test
     guid: fbb18a0440baaa45a8bc4d5aa5a5a73e
     GuidInternal: 
-    m_lastTime: -8585511158001425217
+    m_lastTime: -8585509224571579104
     List:
     - name: Test_Env
       guid: d0294041368d0d469f010c921fea7193
@@ -3365,7 +3407,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d171cdcb3cf9d14780b6b2fae736e7e7
     GuidInternal: 
-    m_lastTime: -8585511158001415245
+    m_lastTime: -8585509223778615022
     List: []
   - PhysicalPath: Switches\Official.wwu
     PathAndIcons:
@@ -3378,7 +3420,7 @@ MonoBehaviour:
     ParentPath: Switches\Official
     guid: 8b4588e0071ec149b7caaac68cff8bb8
     GuidInternal: 
-    m_lastTime: -8585512751072966119
+    m_lastTime: -8585509223775416942
     List:
     - name: Surface
       guid: 687436df547ecb428a62862d1687b5ae
@@ -3441,7 +3483,7 @@ MonoBehaviour:
     ParentPath: Switches\Test
     guid: eecad20c2180674b8bef59790c3746e6
     GuidInternal: 
-    m_lastTime: -8585511158001395304
+    m_lastTime: -8585509223781856871
     List:
     - name: Test_2D_Env
       guid: 128ca34ae5d1304e93e6e4bb6e76c8e2
@@ -3603,11 +3645,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6053f6c4d583f544aa4b00f85c8169c5
     GuidInternal: 
-    m_lastTime: -8585511158001385327
+    m_lastTime: -8585509224624072652
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

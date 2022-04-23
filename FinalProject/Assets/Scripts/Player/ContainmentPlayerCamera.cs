@@ -85,6 +85,8 @@ public class ContainmentPlayerCamera : MonoBehaviour
     {
         if (FollowTransform)
         {
+            Debug.Log("got here");
+
             if (InvertX)
             {
                 rotationInput.x *= -1f;
