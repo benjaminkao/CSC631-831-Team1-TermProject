@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2b53f5a3859a5d54bb0fc919cefd6f38, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -3642,6 +3642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JD_Lab
       objectReference: {fileID: 0}
+    - target: {fileID: 8611595648250005421, guid: 3aa5a9a9cdf12b14da5691337347706d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8611595648900992913, guid: 3aa5a9a9cdf12b14da5691337347706d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3691,7 +3695,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50604
+  m_Name: pb_Mesh-6680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7179,9 +7183,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1503417145}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -7264,9 +7280,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1755034720}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -8224,7 +8252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50416
+  m_Name: pb_Mesh-38916
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14027,9 +14055,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1424793551}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -14809,7 +14849,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50266
+  m_Name: pb_Mesh-6342
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15769,9 +15809,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 815861034}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -15962,7 +16014,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50428
+  m_Name: pb_Mesh-38928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20164,9 +20216,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1607629990}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -20582,7 +20646,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49198
+  m_Name: pb_Mesh-5274
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20767,6 +20831,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2041317969}
+    - target: {fileID: 3699885156035159235, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699885156035159235, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5408481208278905258, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -20907,6 +20979,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 698644052}
+    - target: {fileID: 6000405787263030659, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6000405787318935065, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -20943,6 +21019,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 875141103}
+    - target: {fileID: 6000405787762039295, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6000405787887546517, guid: 07f41776dce1caa48a1f5ad7e4d09510, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -21024,7 +21104,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49208
+  m_Name: pb_Mesh-5284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21911,7 +21991,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50164
+  m_Name: pb_Mesh-6240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22129,9 +22209,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 104822783}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -22517,7 +22609,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49352
+  m_Name: pb_Mesh-5428
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23208,7 +23300,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49244
+  m_Name: pb_Mesh-5320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23700,7 +23792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50368
+  m_Name: pb_Mesh-6444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23864,7 +23956,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49220
+  m_Name: pb_Mesh-5296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25048,7 +25140,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49454
+  m_Name: pb_Mesh-5530
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25540,7 +25632,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50808
+  m_Name: pb_Mesh-6884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25726,9 +25818,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1822337487}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -25950,7 +26054,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-50706
+  m_Name: pb_Mesh-6782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29857,7 +29961,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49256
+  m_Name: pb_Mesh-5332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30212,9 +30316,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1791010947}
+    - target: {fileID: 2611705485808674282, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: m_Name
       value: TowerSpawner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989027786168918989, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7175520594780102239, guid: a872d8c6cadafae4680f668506685b7d, type: 3}
       propertyPath: sceneId
@@ -30636,7 +30752,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49232
+  m_Name: pb_Mesh-5308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

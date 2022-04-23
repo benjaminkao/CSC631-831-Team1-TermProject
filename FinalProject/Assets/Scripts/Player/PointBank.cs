@@ -15,7 +15,7 @@ public class PointBank : NetworkBehaviour
 
     public int TotalPoints { get { return _totalPoints; } }
 
-    public override void OnStartClient()
+    public override void OnStartAuthority()
     {
         if (_player == null)
         {
@@ -23,7 +23,7 @@ public class PointBank : NetworkBehaviour
         }
 
 
-        if (isLocalPlayer)
+        if (hasAuthority)
         {
             label = GameObject.Find("PlayerPointsLabel").GetComponent<TextMeshProUGUI>();
         }
