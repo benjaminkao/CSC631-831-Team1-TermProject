@@ -118,7 +118,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public override void OnStartAuthority()
     {
-        Debug.Log(hasAuthority);
         if(!hasAuthority)
         {
             return;
@@ -193,7 +192,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
                 StartCoroutine(RegenerateHealth());
             }
         }
-        Debug.Log(hasAuthority);
 
         if (!hasAuthority)
         {

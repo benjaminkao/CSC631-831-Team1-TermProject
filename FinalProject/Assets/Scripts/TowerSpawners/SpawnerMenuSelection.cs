@@ -34,6 +34,14 @@ public class SpawnerMenuSelection : NetworkBehaviour
     }
 
 
+    public void SpawnTower(int towerPrefabIndex)
+    {
+        MenuActive = false;
+
+        CmdSpawnTower(towerPrefabIndex);
+    }
+
+
     /** IMPORTANT
  * ===================================================
  * Why did I (Benjamin) change SpawnTower(GameObject towerPrefab); to [Command] CmdSpawnTower(int towerPrefabIndex);?
@@ -104,9 +112,7 @@ public class SpawnerMenuSelection : NetworkBehaviour
 */
     [Command]
     public void CmdSpawnTower(int towerPrefabIndex)
-    {
-        Debug.Log("Should spawn Tower");
-        
+    {        
         TowerSpawnerInteractable interactable = GetComponent<TowerSpawnerInteractable>();
         // Save the reference to the player to access their points in the future
         _towerOwner = interactable.InteractPlayer;
@@ -121,23 +127,19 @@ public class SpawnerMenuSelection : NetworkBehaviour
             Debug.Log(string.Format("Spawning new tower: {0}. Bank before / after: {1} / {2}",
                 towerPrefabIndex, playerBank.TotalPoints + _spawnCost, playerBank.TotalPoints));
 
-            StartCoroutine(TowerSpawnProgress(towerPrefab));
+            TowerSpawnProgress(towerPrefab);
 
             // disable the tower, as it has already been used
             interactable.CanInteract = false;
-            // auto exit the menu
-            MenuActive = false;
+            
         } else
         {
             Debug.Log("Cannot spawn tower. Insufficient number of points.");
         }
     }
 
-    public IEnumerator TowerSpawnProgress(GameObject towerPrefab)
+    public void TowerSpawnProgress(GameObject towerPrefab)
     {
-        // can add multiple stages of waiting for gradually building the geometry
-        yield return new WaitForSecondsRealtime(1.0f);
-
         // places object at top of tower
         Vector3 position = new Vector3(_towerLocation.x, _towerLocation.y + _towerHeight, _towerLocation.z);
         GameObject towerGO = Instantiate(towerPrefab, position, Quaternion.identity);

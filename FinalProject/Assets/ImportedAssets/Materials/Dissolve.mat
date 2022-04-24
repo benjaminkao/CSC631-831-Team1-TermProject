@@ -130,7 +130,7 @@ Material:
     m_Colors:
     - Color_1e19a4a7656b45f09eeb9030e363ddfc: {r: 0, g: 5.019608, b: 16, a: 0}
     - Color_6c481823765447928bdbc3406bb8d372: {r: 0, g: 4.742003, b: 7.464264, a: 0}
-    - Color_f754061dbd144622988784c2addad818: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+    - Color_f754061dbd144622988784c2addad818: {r: 1, g: 0, b: 0, a: 1}
     - Vector2_a5f76e6d890b4ae5b00d583cb635a8c7: {r: 3, g: 3, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

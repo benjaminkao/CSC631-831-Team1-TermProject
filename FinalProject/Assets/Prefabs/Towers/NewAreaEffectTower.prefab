@@ -67,6 +67,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  renderers:
+  - {fileID: 3793909589768939471}
+  craftTime: 4
+  towerMaterial: {fileID: 2100000, guid: 257068007f4952c46a4e8346142275c0, type: 2}
+  spawnProgressMaterial: {fileID: 2100000, guid: 13e1106f5806e864da854e748c791a38, type: 2}
   _targetPosition: {fileID: 8974506580492171805}
   health: {fileID: 2950644452622805011}
   _playerOwner: {fileID: 0}
@@ -183,6 +188,11 @@ PrefabInstance:
 --- !u!4 &3793909589767169327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: caef14d1446d1184abe0e540bec074da, type: 3}
+  m_PrefabInstance: {fileID: 3793909589767045039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3793909589768939471 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: caef14d1446d1184abe0e540bec074da, type: 3}
   m_PrefabInstance: {fileID: 3793909589767045039}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4265555545903758319

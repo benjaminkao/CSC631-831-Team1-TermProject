@@ -166,6 +166,11 @@ public class Rifle : MonoBehaviour
 
     private void UpdateAmmoUI()
     {
+        if(this.ammoLabel == null)
+        {
+            return;
+        }
+
         this.ammoLabel.text = $"{currentAmmo} / {ammoPerClip}";
     }
 }

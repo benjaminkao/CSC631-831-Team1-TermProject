@@ -180,6 +180,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  renderers:
+  - {fileID: 7958389167161234479}
+  - {fileID: 1898391627246361260}
+  craftTime: 4
+  towerMaterial: {fileID: 2100000, guid: a85712b22ad692b42b5b2abc52c2e7c0, type: 2}
+  spawnProgressMaterial: {fileID: 2100000, guid: 13e1106f5806e864da854e748c791a38, type: 2}
   _targetPosition: {fileID: 3288602666587260049}
   health: {fileID: 4531068006841651554}
   _playerOwner: {fileID: 0}

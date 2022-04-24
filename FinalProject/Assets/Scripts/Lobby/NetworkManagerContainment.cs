@@ -112,6 +112,8 @@ public class NetworkManagerContainment : NetworkManager
 
 
             NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
+
+            NotifyPlayersOfReadyState();
         }
     }
 

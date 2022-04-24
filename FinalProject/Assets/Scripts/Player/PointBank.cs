@@ -15,7 +15,7 @@ public class PointBank : NetworkBehaviour
 
     public int TotalPoints { get { return _totalPoints; } }
 
-    public override void OnStartAuthority()
+    public override void OnStartClient()
     {
         if (_player == null)
         {

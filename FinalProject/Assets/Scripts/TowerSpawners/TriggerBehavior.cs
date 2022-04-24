@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class TriggerBehavior : MonoBehaviour
 {
@@ -22,19 +23,45 @@ public class TriggerBehavior : MonoBehaviour
             {
                 // set player reference to the most recent player that has stepped into
                 // the trigger
+
+                ContainmentPlayer player = other.GetComponent<ContainmentPlayer>();
+
+                NetworkIdentity playerIdentity = player.GetComponent<NetworkIdentity>();
+
+
                 interactable.InteractPlayer = other.gameObject;
-                _interactText.SetActive(true);
+
+                if (playerIdentity.hasAuthority)
+                {
+                    // Only show the Interact Prompt on the player's screen that has authority
+                    _interactText.SetActive(true);
+                }
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        SpawnerMenuSelection menu = _spawnerMenu.GetComponent<SpawnerMenuSelection>();
-        _interactText.SetActive(false);
-        if(menu.MenuActive)
+
+        if (other.gameObject.CompareTag("Player"))
         {
-            menu.MenuActive = false;
+            SpawnerMenuSelection menu = _spawnerMenu.GetComponent<SpawnerMenuSelection>();
+
+
+            ContainmentPlayer player = other.GetComponent<ContainmentPlayer>();
+
+            NetworkIdentity playerIdentity = player.GetComponent<NetworkIdentity>();
+
+            if (playerIdentity.hasAuthority)
+            {
+                // Only disable the Interact Prompt on the player's screen that has authority
+                _interactText.SetActive(false);
+            }
+
+            if (menu.MenuActive)
+            {
+                menu.MenuActive = false;
+            }
         }
     }
 }

@@ -45,4 +45,16 @@ public class TowerSpawnerInteractable : NetworkBehaviour, IInteractable
             }
         }
     }
+
+    [Command]
+    public void CmdSetAuthority(NetworkIdentity grabID, NetworkIdentity playerID)
+    {
+        grabID.AssignClientAuthority(playerID.connectionToClient);
+    }
+
+    [Command]
+    public void CmdRemoveAuthority(NetworkIdentity grabID)
+    {
+        grabID.RemoveClientAuthority();
+    }
 }

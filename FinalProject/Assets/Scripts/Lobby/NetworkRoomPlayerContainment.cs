@@ -69,6 +69,12 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
         UpdateDisplay();
     }
 
+    private void OnEnable()
+    {
+        startGameButton.interactable = false;
+    }
+
+
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
 
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
