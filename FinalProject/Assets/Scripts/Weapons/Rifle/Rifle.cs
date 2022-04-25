@@ -13,11 +13,29 @@ public class Rifle : MonoBehaviour
     public int ammoPerClip = 30;
     public int currentAmmo;
 
+    [SerializeField] private bool automaticReload;
+
+    public bool CanReload
+    {
+        get
+        {
+            return !reloading && currentAmmo < ammoPerClip;
+        }
+    }
+
     public bool CanShoot
     {
         get
         {
             return this.canShoot && !this.reloading;
+        }
+    }
+
+    public bool HasAmmo
+    {
+        get
+        {
+            return currentAmmo > 0;
         }
     }
 
@@ -76,7 +94,7 @@ public class Rifle : MonoBehaviour
 
     public void Reload()
     {
-        if(reloading)
+        if(!CanReload)
         {
             // Don't need to reload if already reloading
             return;
@@ -120,7 +138,8 @@ public class Rifle : MonoBehaviour
     {
         currentAmmo--;
 
-        if(currentAmmo <= 0)
+
+        if (automaticReload && currentAmmo <= 0)
         {
             StartCoroutine(ReloadDelay());
         }

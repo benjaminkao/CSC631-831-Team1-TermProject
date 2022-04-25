@@ -571,7 +571,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2303,11 +2303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38ad63de04a31af47833067dfb0ad531, type: 3}
---- !u!1 &2232828059006153960 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2515110542405759967, guid: 38ad63de04a31af47833067dfb0ad531, type: 3}
-  m_PrefabInstance: {fileID: 4331318234213599031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2232828058849522010 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2515110541739521645, guid: 38ad63de04a31af47833067dfb0ad531, type: 3}
@@ -2322,6 +2317,11 @@ MonoBehaviour:
 --- !u!224 &2232828059006153963 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2515110542405759964, guid: 38ad63de04a31af47833067dfb0ad531, type: 3}
+  m_PrefabInstance: {fileID: 4331318234213599031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2232828059006153960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2515110542405759967, guid: 38ad63de04a31af47833067dfb0ad531, type: 3}
   m_PrefabInstance: {fileID: 4331318234213599031}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8845281105249794195

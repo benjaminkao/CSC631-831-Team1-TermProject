@@ -16,14 +16,16 @@ public class PlayerAudio : NetworkBehaviour
    [SerializeField]
    private AK.Wwise.Event shieldbeacondamagedVoiceLine; 
    [SerializeField]
-   private AK.Wwise.Event shieldbeaconlowVoiceLine; 
+   private AK.Wwise.Event shieldbeaconlowVoiceLine;
+    [SerializeField]
+    private AK.Wwise.Event noammoVoiceLine;
 
    [SerializeField]
    private AK.Wwise.RTPC playerHealth; 
    [SerializeField]
    private AK.Wwise.Event playerHealthAudio; 
 
-   public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5;  
+   public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5, NOAMMO = 6;  
    
     public override void OnStartClient() {
         if(isServerOnly) return; 
@@ -48,6 +50,9 @@ public class PlayerAudio : NetworkBehaviour
            case PlayerAudio.DAMAGED:
                 damagedVoiceLine.Post(gameObject);
                break;
+            case PlayerAudio.NOAMMO:
+                noammoVoiceLine.Post(gameObject);
+                break;
            case PlayerAudio.RELOADING:
                 reloadingVoiceLine.Post(gameObject);
                break;

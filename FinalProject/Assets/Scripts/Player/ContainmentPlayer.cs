@@ -76,7 +76,12 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     [Tooltip("How much the player regens health after every second.")]
     [SerializeField] private float healthRegenRate;
+
+    [Tooltip("How long the player shouldn't shoot with an empty clip before the player calls out they have no ammo.")]
+    [SerializeField] private float noAmmoVoiceLineCooldown;
+
     private float lastDamaged;
+    private float lastVoicedNoAmmo;
     private bool _canRegen;
 
 
@@ -150,6 +155,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         }
 
         lastDamaged = 0;
+        lastVoicedNoAmmo = 0;
         _canRegen = true;
     }
 
@@ -180,7 +186,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             if (ShouldRegenerateHealth())
             {
-                //StartCoroutine(RegenerateHealth());
+                StartCoroutine(RegenerateHealth());
             }
         }
 
@@ -191,16 +197,20 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         if (Input.GetButton("Fire1"))
         {
-            if (gun.CanShoot)
+            if (gun.CanShoot && gun.HasAmmo)
             {
 
                 gun.ClientShoot();
 
                 CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
+            } else if(!gun.HasAmmo)
+            {
+                HandleNoAmmo();
+                
             }
         }
 
-        if(Input.GetButtonDown("Reload"))
+        if(Input.GetButtonDown("Reload") && gun.CanReload)
         {
             playerAudio.TriggerVoiceLine(PlayerAudio.RELOADING); 
             gun.Reload();
@@ -313,6 +323,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     void RpcUpdatePlayerHealth(float healthValue)
     {
         this.health.SetHealth(healthValue);
+        playerAudio.SetPlayerHealthRTPC(this.health.HealthValue);
     }
 
 
@@ -356,6 +367,17 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     bool ShouldRegenerateHealth()
     {
         return !this.health.AtMaxHealth && this._canRegen && Time.time - lastDamaged >= healthRegenCooldown;
+    }
+
+    void HandleNoAmmo()
+    {
+        float currentTime = Time.time;
+        if (currentTime - lastVoicedNoAmmo >= noAmmoVoiceLineCooldown)
+        {
+            playerAudio.TriggerVoiceLine(PlayerAudio.NOAMMO);
+        }
+
+        lastVoicedNoAmmo = currentTime;
     }
 
 
