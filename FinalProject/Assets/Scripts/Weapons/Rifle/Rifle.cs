@@ -15,6 +15,9 @@ public class Rifle : MonoBehaviour
 
     [SerializeField] private bool automaticReload;
 
+    [Header("Audio")]
+    [SerializeField] private RifleAudio rifleAudio;
+
     public bool CanReload
     {
         get
@@ -77,9 +80,6 @@ public class Rifle : MonoBehaviour
 
         StartCoroutine(ShootDelay());
         
-
-        source = GetComponent<Cinemachine.CinemachineImpulseSource>();
-        source.GenerateImpulse(tpsCamera.transform.forward);
     }
 
 
@@ -137,6 +137,9 @@ public class Rifle : MonoBehaviour
     private GameObject HandleShoot(Vector3 startPos, Vector3 forward)
     {
         currentAmmo--;
+
+        rifleAudio.PlayRifleShot();
+        rifleAudio.SetRifleAmmoRTPC(currentAmmo);
 
 
         if (automaticReload && currentAmmo <= 0)
