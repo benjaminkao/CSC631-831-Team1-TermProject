@@ -8,10 +8,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	986341748	Stop_Test_2D_Env_Switch			\Test\SFX\Stop\Stop_Test_2D_Env_Switch	
 	1001261022	Play_Test_Explosion			\Test\SFX\Play\Play_Test_Explosion	
 	1013698891	Set_Switch_Test_Preparation			\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_Preparation	
+	1084999509	Play_Shield_Hum_2			\Test\SFX\Play\Play_Shield_Hum_2	
 	1347450883	Set_State_Test_Low			\Test\States\Set_State_Test_Low	
 	1612650449	Set_State_Test_Low_Intensity			\Test\Music\States\Set_State_Test_Low_Intensity	
 	1780085868	Set_State_Test_Boss			\Test\Music\States\Set_State_Test_Boss	
 	1883426811	Set_Switch_Test_Boss			\Test\Music\Not_Currently_Used_Switches\Set_Switch_Test_Boss	
+	2003780355	Play_Test_Static			\Test\SFX\Play\Play_Test_Static	
 	2053261897	Play_Test_Gameplay_Music			\Test\Music\Play\Play_Test_Gameplay_Music	
 	2377014604	Play_Test_NPC_VO			\Test\SFX\Play\Play_Test_NPC_VO	
 	2540652967	Set_State_Test_Pause			\Test\States\Set_State_Test_Pause	
@@ -24,6 +26,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3327457886	Set_State_Test_Indoor			\Test\States\Set_State_Test_Indoor	
 	3428582015	Play_Test_3D_Ambiance			\Test\SFX\Play\Play_Test_3D_Ambiance	
 	3682958602	Stop_Test_Main_Menu_Music			\Test\Music\Stop\Stop_Test_Main_Menu_Music	
+	3741023885	Play_Test_Shield_Hum			\Test\SFX\Play\Play_Test_Shield_Hum	
 	3782809477	Play_Test_Gunshot			\Test\SFX\Play\Play_Test_Gunshot	
 	3974311268	Set_Switch_Test_Outdoor			\Test\SFX\Switches\Set_Switch_Test_Outdoor	
 	4019638669	Set_Switch_Test_Indoor			\Test\SFX\Switches\Set_Switch_Test_Indoor	
@@ -49,21 +52,57 @@ State	ID	Name	State Group			Notes
 	3275738912	Test_Low_Intensity	Test_Gameplay_Music			
 	3922783959	Test_Preparation	Test_Gameplay_Music			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	878297735	Shield_Health			\Official\Shield_Health	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	185052	SFX_Gameplay_Environment_Shield_Static_28	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_28_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_28		11088
+	18550808	SFX_Gameplay_Environment_Shield_Static_22	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_22_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_22		44164
+	39168517	Test_Boss_Loop	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Loop\Test_Boss_Loop		22793460
+	57485541	SFX_Gameplay_Environment_Shield_Static_49	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_49_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_49		24696
+	61065432	SFX_Gameplay_Environment_Shield_Static_08	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_08_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_08		24872
+	102406056	SFX_Gameplay_Environment_Shield_Static_55	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_55_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_55		88264
+	134661588	SFX_Gameplay_Environment_Shield_Static_37	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_37_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_37		33140
 	139233690	Test_Indoor_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Indoor_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Indoor_Ambiance		341848
 	157487487	Test_Player_VO	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Player_VO_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Player\Test_VO\Test_Player_VO		440492
 	160682465	Test_Silent	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Silent_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Silent		180528
 	194517771	Test_Click	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_UI\Test_Click		103348
+	204853246	SFX_Gameplay_Environment_Shield_Static_39	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_39_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_39		22116
+	247881581	SFX_Gameplay_Environment_Shield_Static_32	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_32_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_32		24872
 	254003914	Test_3D_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_3D_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_3D_Ambiance		411076
 	265934756	Test_Low_Intensity_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Low_Intensity_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Low_Intensity_Combat_Music\Test_Low_Intensity_Music\Test_Low_Intensity_Music		414764
 	271685855	Test_Preparation_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Preparation_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Preparation_Music\Test_Preparation_Music\Test_Preparation_Music		376796
+	272156793	SFX_Gameplay_Environment_Shield_Static_27	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_27_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_27		16600
+	275662187	SFX_Gameplay_Environment_Shield_Static_03	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_03_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_03		99288
+	365859447	Test_Shield_Hum	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Beacon_Hum_C5579977.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Shield_Hum		2794900
+	378076827	SFX_Gameplay_Environment_Shield_Static_81	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_81_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_81		44164
+	389255086	SFX_Gameplay_Environment_Shield_Static_38	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_38_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_38		16600
+	412009136	SFX_Gameplay_Environment_Shield_Static_82	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_82_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_82		44164
+	416479176	Test_Boss_Outro	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Outro_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Outro\Test_Boss_Outro		1176060
+	416520800	SFX_Gameplay_Environment_Shield_Static_20	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_20_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_20		44164
 	423697351	Test_Main_Menu_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Main_Menu_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Main_Menu_Music\Test_Main_Menu_Music_01\Test_Main_Menu_Music		369088
+	447548303	Test_Boss_Intro	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Intro\Test_Boss_Intro		4189564
+	448900386	SFX_Gameplay_Environment_Shield_Static_23	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_23_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_23		44164
 	493028397	Test_High_Intensity_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_High_Intensity_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_High_Intensity_Combat_Music\Test_High_Intensity_Music\Test_High_Intensity_Music		347672
+	494426934	SFX_Gameplay_Environment_Shield_Static_16	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_16_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_16		27628
+	509151175	SFX_Gameplay_Environment_Shield_Static_15	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_15_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_15		27628
 	512659968	Test_Gunshot	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Gunshot_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Weapons\Test_Guns\Test_Gunshot		198288
+	517717740	Test_Boss_Loop_3	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Loop_3_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Loop_3\Test_Boss_Loop_3		8820060
 	561729691	Test_NPC_Footstep	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_NPC_Footstep_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_NPC\Test_Locomotion\Test_NPC_Footstep		234420
+	564008503	SFX_Gameplay_Environment_Shield_Static_02	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_02_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_02		88264
+	662893980	Shield_Hum_2	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Hum_2_EFBF3F7E.wem		\Actor-Mixer Hierarchy\Official\3D_Env\Shield_Amb\Shield_Hum_2		986160
+	676030747	Test_Boss_Loop_1	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Loop_1_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Loop_1\Test_Boss_Loop_1		7660864
 	722686722	Test_Boss_Music	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Music_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Music\Test_Boss_Music		414712
+	769277145	SFX_Gameplay_Environment_Shield_Static_33	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_33_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_33		16600
 	773901135	Test_Outdoor_Ambiance	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Outdoor_Ambiance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Test\Test_2D_Env\Test_2D_Env_Switch\Test_Outdoor_Ambiance		493672
+	780807024	SFX_Gameplay_Environment_Shield_Static_30	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_30_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_30		13844
 	800788653	Test_Explosion	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Weapons\Test_Explosions\Test_Explosion		244916
+	828953374	SFX_Gameplay_Environment_Shield_Static_04	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_04_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_04		88264
+	938469144	SFX_Gameplay_Environment_Shield_Static_05	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_05_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_05		35896
+	939204248	SFX_Gameplay_Environment_Shield_Static_79	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_79_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_79		44164
+	1011213175	SFX_Gameplay_Environment_Shield_Static_21	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_21_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_21		38652
 	1024711393	Test_NPC_VO	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_NPC_VO_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_NPC\Test_VO\Test_NPC_VO		349548
+	1032745514	Test_Boss_Loop_2	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Boss_Loop_2_D79FB2B7.wem		\Interactive Music Hierarchy\Test\Test_Gameplay_Music\Test_Boss_Music\Test_Boss_Loop_2\Test_Boss_Loop_2		7505464
 	1042278865	Test_Player_Footstep	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\Test_Player_Footstep_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_Player\Test_Locomotion\Test_Player_Footstep		160480
+	1053197791	SFX_Gameplay_Environment_Shield_Static_40	C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\SFX\SFX_Gameplay_Environment_Shield_Static_40_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Test_3D_Env\Test_Static\SFX_Gameplay_Environment_Shield_Static_40		13844
 

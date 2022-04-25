@@ -11,10 +11,12 @@ public class WaveSpawner : NetworkBehaviour
     public static event Action<WaveSpawner> OnWaveSpawnerDisabled;
     public static event Action OnWaveStart;
     public static event Action OnWaveCompleted;
+    
 
     //public enum SpawnState {SPAWNING, WAITING, COUNTING};    // Check the state of the spawner
     public SpawnManager spawnManager;
     public LightingManager lightingManager;
+    public AudioManager audioManager; 
 
     // Define what our wave is
     [System.Serializable]
@@ -47,6 +49,7 @@ public class WaveSpawner : NetworkBehaviour
     }
 
     public Wave[] waves;
+    [SerializeField]
     private int nextWave = 1;   // Store index of wave we want to create next
     private Wave currentWave;
     public Transform[] spawnPoints; // Array of spawn points
@@ -66,6 +69,9 @@ public class WaveSpawner : NetworkBehaviour
             Debug.Log("No spawn points referenced");
         }
         //waveCountdown = timeBetweenWaves;
+
+
+
     }
 
 
@@ -74,6 +80,8 @@ public class WaveSpawner : NetworkBehaviour
         Enemy.OnEnemyDied += HandleEnemyDied;
 
         OnWaveSpawnerEnabled?.Invoke(this);
+
+        audioManager.RpcChangeGameplayAudioState(AudioManager.PREPARATION); 
     }
 
     private void OnDisable()
@@ -131,8 +139,23 @@ public class WaveSpawner : NetworkBehaviour
         this.numberOfEnemiesSpawned = 0;
         this.numberOfEnemiesDied = 0;
 
+        Wave _wave = GetWaveType(nextWave);
+        if((nextWave-4)%5 == 0) {
+                Debug.Log("THIS IS WORKING!");
+                audioManager.RpcChangeGameplayAudioState(AudioManager.HIGHINTENSITY);
+            } else {
+                        if(_wave.boss) {
+                            Debug.Log("Got here! Boss MUSIC");
+                            audioManager.RpcChangeGameplayAudioState(AudioManager.BOSS);
+                        } else {
+                            audioManager.RpcChangeGameplayAudioState(AudioManager.LOWINTENSITY);
+                        }
+            }
+
         StartCoroutine(SpawnWave(GetWaveType(nextWave)));
         RpcNight();
+
+        
     }
 
 
@@ -148,6 +171,8 @@ public class WaveSpawner : NetworkBehaviour
         }
 
         Debug.Log("Wave Completed!");
+        audioManager.RpcChangeGameplayAudioState(AudioManager.NONE);
+        
 
         // Set state back to counting when wave is completed and restart the countdown timer
         //state = SpawnState.COUNTING;
@@ -251,6 +276,9 @@ public class WaveSpawner : NetworkBehaviour
         else
         {
             Debug.Log($"Wave #{nextWave}: Spawning \"{_wave.name}\" Wave.");
+            
+            
+             
 
 
             for (int i = 0; i < _wave.enemies.Count; i++)

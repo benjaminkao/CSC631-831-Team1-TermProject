@@ -750,6 +750,7 @@ GameObject:
   - component: {fileID: -720955074844046644}
   - component: {fileID: 8018481888692623953}
   - component: {fileID: -5152881195494091501}
+  - component: {fileID: 729655464824862038}
   m_Layer: 2
   m_Name: Player-v2
   m_TagString: Player
@@ -915,6 +916,7 @@ MonoBehaviour:
   syncInterval: 0.1
   Character: {fileID: 3999230457164330227}
   CharacterCamera: {fileID: 0}
+  playerAudio: {fileID: 729655464824862038}
   _playerNum: 0
   gun: {fileID: 2418616444409012679}
   health: {fileID: 7330713135887376453}
@@ -1021,6 +1023,52 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 7575131321492687406}
+--- !u!114 &729655464824862038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052736592563684396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf55bffa621614348823d1f43f051cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  bossVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 77adc8c41ca0f481db3c812bfe52b685, type: 2}
+  damagedVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7472053bf05d74ea6be2ae1b3e88e29d, type: 2}
+  reloadingVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3dbe50d5dd35748a596b6669e780f60d, type: 2}
+  roundendingVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 94fb7153fcafb4097a9055f1b5176ca4, type: 2}
+  shieldbeacondamagedVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 715b6cbbbb293463585bcc40aa2a45b7, type: 2}
+  shieldbeaconlowVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 186cf63e06b7544cb9110f285f982bb9, type: 2}
+  playerHealth:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 651014dc239b6427fa86c0bdec139342, type: 2}
+  playerHealthAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3f29b8531e7314564a64d3192e62e70d, type: 2}
 --- !u!1 &2418616446353135364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,3 +1318,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5072009815009700193, guid: 206751215df68f540b70b3b9a6157121, type: 3}
   m_PrefabInstance: {fileID: 8764865878451730741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3786324099971435246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5559894543706551259, guid: 206751215df68f540b70b3b9a6157121, type: 3}
+  m_PrefabInstance: {fileID: 8764865878451730741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1901222122794380744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786324099971435246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596c95573dcb403ea0f17b6b3b4589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 31eaad928dbea486da5aa33ccb9d1be3, type: 2}

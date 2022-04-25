@@ -7,25 +7,16 @@ using KinematicCharacterController.Examples;
 using Mirror;
 
 
-public enum ContainmentPlayerVoiceLine
-{
-    SHIELDBEACONDAMAGED,
-    SHIELDBEACONLOW,
-    RELOADING,
-    DAMAGED,
-    BOSS,
-    ROUNDENDING
-}
-
-
-
 public class ContainmentPlayer : NetworkBehaviour, ITargetable
 {
     [Header("Player Components")]
     public ContainmentPlayerController Character;
     public ContainmentPlayerCamera CharacterCamera;
 
-    
+    [SerializeField]
+    private PlayerAudio playerAudio; 
+
+
     public int PlayerNum
     {
         get { return this._playerNum;  }
@@ -190,7 +181,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             if (ShouldRegenerateHealth())
             {
-                StartCoroutine(RegenerateHealth());
+                //StartCoroutine(RegenerateHealth());
             }
         }
 
@@ -213,6 +204,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         if(Input.GetButtonDown("Reload"))
         {
+            playerAudio.TriggerVoiceLine(PlayerAudio.RELOADING); 
             gun.Reload();
         }
 
@@ -243,7 +235,8 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         //Debug.Log("Player hit");
 
         health.alterHealth(-damage);
-
+        playerAudio.TriggerVoiceLine(PlayerAudio.DAMAGED);
+        playerAudio.SetPlayerHealthRTPC(this.health.HealthValue); 
 
         RpcUpdatePlayerHealth(this.health.HealthValue);
 
@@ -276,7 +269,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             return;
         }
 
-        TriggerVoiceLine(ContainmentPlayerVoiceLine.SHIELDBEACONDAMAGED);
+        playerAudio.TriggerVoiceLine(PlayerAudio.SHIELDBEACONDAMAGED);
         
     }
 
@@ -322,31 +315,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     void RpcUpdatePlayerHealth(float healthValue)
     {
         this.health.SetHealth(healthValue);
-    }
-
-
-    [ClientRpc]
-    void TriggerVoiceLine(ContainmentPlayerVoiceLine voiceLine)
-    {
-
-        //switch(voiceLine)
-        //{
-        //    case ContainmentPlayerVoiceLine.BOSS:
-        //        break;
-        //    case ContainmentPlayerVoiceLine.DAMAGED:
-        //        break;
-        //    case ContainmentPlayerVoiceLine.RELOADING:
-        //        break;
-        //    case ContainmentPlayerVoiceLine.ROUNDENDING:
-        //        break;
-        //    case ContainmentPlayerVoiceLine.SHIELDBEACONDAMAGED:
-        //        break;
-        //    case ContainmentPlayerVoiceLine.SHIELDBEACONLOW:
-        //        break;
-
-        //}
-
-        Debug.Log($"Triggered Voice Line: {voiceLine}");
     }
 
 

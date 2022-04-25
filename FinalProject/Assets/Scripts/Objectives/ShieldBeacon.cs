@@ -23,6 +23,9 @@ public class ShieldBeacon : Objective
     [SerializeField] private float notifyDamageCooldown;
     private float _timeLastHit;
 
+    [SerializeField]
+    private ShieldBeaconAudio shieldBeaconAudio; 
+
 
     private void Start()
     {
@@ -57,7 +60,7 @@ public class ShieldBeacon : Objective
     public override void Damage(float damage)
     {
         base.Damage(damage);
-
+        shieldBeaconAudio.RpcShieldBeaconHealthAudio(this.health.HealthValue); 
         float currentTime = Time.time;
 
         if(currentTime - this._timeLastHit > notifyDamageCooldown)

@@ -1,10 +1,17 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	529726550	Env			\Official\Env	
 	1023376889	Test_Player_Lfe			\Test\Test_Player_Lfe	
 	1631956748	Test_Gameplay_Music			\Test\Test_Gameplay_Music	
+	1647429799	Player_Status			\Official\Player_Status	
+	2322231365	Gameplay_Music			\Official\Gameplay_Music	
 	2923888242	Test_Pause			\Test\Test_Pause	
+	3092587493	Pause			\Official\Pause	
 	3579906457	Test_Env			\Test\Test_Env	
 
 State	ID	Name	State Group			Notes
+	144697359	Outdoor	Env			
+	340398852	Indoor	Env			
+	748895195	None	Env			
 	565720069	Test_Normal	Test_Player_Lfe			
 	748895195	None	Test_Player_Lfe			
 	3561702010	Test_Low	Test_Player_Lfe			
@@ -13,9 +20,22 @@ State	ID	Name	State Group			Notes
 	2766477831	Test_Boss	Test_Gameplay_Music			
 	3275738912	Test_Low_Intensity	Test_Gameplay_Music			
 	3922783959	Test_Preparation	Test_Gameplay_Music			
+	748895195	None	Player_Status			
+	966261518	Downed	Player_Status			
+	1160234136	Normal	Player_Status			
+	562163035	Low_Intensity	Gameplay_Music			
+	748895195	None	Gameplay_Music			
+	1281810935	Start	Gameplay_Music			
+	1560169506	Boss	Gameplay_Music			
+	1593864692	Defeat	Gameplay_Music			
+	2083763927	High_Intensity	Gameplay_Music			
+	2716678721	Victory	Gameplay_Music			
 	748895195	None	Test_Pause			
 	2923888242	Test_Pause	Test_Pause			
 	4239277797	Test_Unpause	Test_Pause			
+	748895195	None	Pause			
+	3092587493	Pause	Pause			
+	3412868374	Unpause	Pause			
 	748895195	None	Test_Env			
 	836963824	Test_Outdoor	Test_Env			
 	2395569889	Test_Indoor	Test_Env			
@@ -23,38 +43,68 @@ State	ID	Name	State Group			Notes
 Custom State	ID	Name	State Group	Owner		Notes
 	3632512	Test_Low	Test_Player_Lfe	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Indoor		
 	14035810	Test_Pause	Test_Pause	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Indoor		
+	31139262	Indoor	Env	\Master-Mixer Hierarchy\Official\Master\Outdoor_Reverb		
+	54991458	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\Music		
 	91133324	Test_Pause	Test_Pause	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor		
+	157777049	Downed	Player_Status	\Master-Mixer Hierarchy\Official\Master\VO		
+	170473056	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\VO		
+	255750433	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\Indoor_Reverb		
 	257169427	Test_Low	Test_Player_Lfe	\Master-Mixer Hierarchy\Test\Test_Master\Test_VO		
+	287207726	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\SFX_Bus		
 	344941028	Test_Low	Test_Player_Lfe	\Master-Mixer Hierarchy\Test\Test_Master\Test_Music		
 	472346811	Test_Pause	Test_Pause	\Master-Mixer Hierarchy\Test\Test_Master\Test_SFX		
+	483868334	Outdoor	Env	\Master-Mixer Hierarchy\Official\Master\Extra_Reverb		
+	615925618	Downed	Player_Status	\Master-Mixer Hierarchy\Official\Master\SFX_Bus		
+	657140752	Downed	Player_Status	\Master-Mixer Hierarchy\Official\Master\Music		
+	697490571	Outdoor	Env	\Master-Mixer Hierarchy\Official\Master\Indoor_Reverb		
 	785276943	Test_Low	Test_Player_Lfe	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor		
+	844647770	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\Extra_Reverb		
 	846774747	Test_Outdoor	Test_Env	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Indoor		
 	912347942	Test_Pause	Test_Pause	\Master-Mixer Hierarchy\Test\Test_Master\Test_VO		
 	971402495	Test_Pause	Test_Pause	\Master-Mixer Hierarchy\Test\Test_Master\Test_Music		
 	1016843337	Test_Indoor	Test_Env	\Master-Mixer Hierarchy\Test\Test_Master\Test_Reverb_Outdoor		
 	1071704071	Test_Low	Test_Player_Lfe	\Master-Mixer Hierarchy\Test\Test_Master\Test_SFX		
+	1073587357	Pause	Pause	\Master-Mixer Hierarchy\Official\Master\Outdoor_Reverb		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	29620449	Test_NPC_SFX			\Test\Test_Master\Test_SFX\Test_NPC_SFX	
+	213475909	SFX_Bus			\Official\Master\SFX_Bus	
+	264242718	2D_Amb			\Official\Master\SFX_Bus\SFX\2D_Amb	
 	379521629	Test_Music			\Test\Test_Master\Test_Music	
+	393239870	SFX			\Official\Master\SFX_Bus\SFX	
 	767111401	Test_3D_Env			\Test\Test_Master\Test_SFX\Test_3D_Env	
+	817096458	Player_SFX			\Official\Master\SFX_Bus\SFX\Player_SFX	
 	959552862	Test_Master			\Test\Test_Master	
 	1328375135	Test_Player_SFX			\Test\Test_Master\Test_SFX\Test_Player_SFX	
+	1534528548	VO			\Official\Master\VO	
+	1551306167	UI			\Official\Master\UI	
 	1896376002	Test_UI			\Test\Test_Master\Test_UI	
 	1913153617	Test_VO			\Test\Test_Master\Test_VO	
+	2410125880	BakedIn_Bypassed_Reverb			\Official\Master\SFX_Bus\BakedIn_Bypassed_Reverb	
+	2487412084	3D_Env			\Official\Master\SFX_Bus\SFX\3D_Env	
+	2764240573	Combat			\Official\Master\SFX_Bus\SFX\Combat	
+	2997659434	NPC_SFX			\Official\Master\SFX_Bus\SFX\NPC_SFX	
 	3105609280	Test_Explosions			\Test\Test_Master\Test_SFX\Test_Explosions	
 	3192105708	Test_Combat			\Test\Test_Master\Test_SFX\Test_Combat	
 	3712553433	Test_SFX			\Test\Test_Master\Test_SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Official\Master\Music	
+	4007621200	Player_VO			\Official\Master\VO\Player_VO	
+	4056684167	Master			\Official\Master	
 	4223207942	Test_2D_Env			\Test\Test_Master\Test_SFX\Test_2D_Env	
+	4294123248	NPC_VO			\Official\Master\VO\NPC_VO	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	487886702	Outdoor_Reverb			\Official\Master\Outdoor_Reverb	
 	838584038	Test_Reverb_Indoor			\Test\Test_Master\Test_Reverb_Indoor	
+	1577402288	Extra_Reverb			\Official\Master\Extra_Reverb	
 	3089001037	Test_Reverb_Outdoor			\Test\Test_Master\Test_Reverb_Outdoor	
+	3891222523	Indoor_Reverb			\Official\Master\Indoor_Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
-	2791153688	Hall_Small	Wwise RoomVerb			
+	602546716	Room_Large	Wwise RoomVerb			
+	1990128658	Room_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
