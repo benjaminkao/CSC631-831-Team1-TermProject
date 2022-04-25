@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 2051587059824023611}
   - component: {fileID: 2418616444409012679}
   - component: {fileID: 2418616444409012680}
+  - component: {fileID: 8796219721657746372}
   m_Layer: 2
   m_Name: Rifle
   m_TagString: Untagged
@@ -687,6 +688,7 @@ MonoBehaviour:
   ammoPerClip: 30
   currentAmmo: 0
   automaticReload: 0
+  rifleAudio: {fileID: 8796219721657746372}
   tpsCamera: {fileID: 0}
   gunPoint: {fileID: 1624540227267797061}
 --- !u!114 &2418616444409012680
@@ -731,6 +733,26 @@ MonoBehaviour:
     m_DissipationMode: 2
     m_DissipationDistance: 1000
     m_PropagationSpeed: 343
+--- !u!114 &8796219721657746372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051587059824378907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13509071eda4fe42a35cca854af037b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2cf5d3c91f91ef1458019d5d958f963f, type: 2}
+  ammoRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d41e6d6fefa6e674daa269957a5420a8, type: 2}
 --- !u!1 &2052736592563684396
 GameObject:
   m_ObjectHideFlags: 0
