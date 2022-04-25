@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
 {
-    public Button playButton, optionsButton, quitButton;
+    public Button playButton, optionsButton, quitButton, backButton, confirmNameButton, hostLobbyButton, joinLobbyButton, joinButton;
     public AK.Wwise.Event buttonClickedEvent; 
 
     void Start()
@@ -13,6 +13,7 @@ public class ButtonClick : MonoBehaviour
         playButton.onClick.AddListener(TaskOnClick);
         optionsButton.onClick.AddListener(TaskOnClick);
         quitButton.onClick.AddListener(TaskOnClick);
+        backButton.onClick.AddListener(TaskOnClick); 
     }
 
     void TaskOnClick() {
