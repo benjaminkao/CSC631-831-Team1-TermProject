@@ -107,10 +107,9 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public static event Action<ContainmentPlayer> OnPlayerReady;
 
-    public override void OnStartClient()
+    public override void OnStartAuthority()
     {
-
-        if(!isLocalPlayer)
+        if(!hasAuthority)
         {
             return;
         }
@@ -185,8 +184,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             }
         }
 
-
-        if (!isLocalPlayer)
+        if (!hasAuthority)
         {
             return;
         }
@@ -218,7 +216,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     private void LateUpdate()
     {
-        if(!isLocalPlayer)
+        if(!hasAuthority)
         {
             return;
         }

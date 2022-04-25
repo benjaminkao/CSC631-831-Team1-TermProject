@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TowerSpawnerPreset
   m_EditorClassIdentifier: 
   _towerPrefabs:
-  - {fileID: 6966539777286236236, guid: 9ae555b63ae1a174985253ce6f57ce33, type: 3}
-  - {fileID: 6937039787718890886, guid: b477e947109f3094ab5dc041eeb9b080, type: 3}
+  - {fileID: 3775519950768475133, guid: 6dc810eb42b0ec3428776ab2eb809399, type: 3}
+  - {fileID: 5370619356427318624, guid: a1d61c92725947146ba675b5e2a63580, type: 3}

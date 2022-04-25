@@ -28,10 +28,8 @@ public class PlayerInteract : MonoBehaviour
         // interactions
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Interact pressed");
             if (_canInteract)
             {
-                Debug.Log("Interaction successful");
                 _interactAction.Invoke();
             }
         }
@@ -78,9 +76,13 @@ public class PlayerInteract : MonoBehaviour
         {
             ContainmentPlayer player = other.gameObject.GetComponent<ContainmentPlayer>();
 
-            towerSpawnerIdentity.AssignClientAuthority(player.GetComponent<NetworkIdentity>().connectionToClient);
+            NetworkIdentity playerIdentity = player.GetComponent<NetworkIdentity>();
 
-
+            towerSpawnerIdentity.RemoveClientAuthority();
+            towerSpawnerIdentity.AssignClientAuthority(playerIdentity.connectionToClient);
+            
+            
+           
 
 
             //Debug.Log("Can interact");
@@ -95,9 +97,15 @@ public class PlayerInteract : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            Player player = other.gameObject.GetComponent<Player>();
+            ContainmentPlayer player = other.gameObject.GetComponent<ContainmentPlayer>();
 
+            NetworkIdentity playerIdentity = player.GetComponent<NetworkIdentity>();
+
+
+            
             towerSpawnerIdentity.RemoveClientAuthority();
+
+            
 
 
             //Debug.Log("No longer able to interact");

@@ -85,6 +85,7 @@ public class ContainmentPlayerCamera : MonoBehaviour
     {
         if (FollowTransform)
         {
+
             if (InvertX)
             {
                 rotationInput.x *= -1f;

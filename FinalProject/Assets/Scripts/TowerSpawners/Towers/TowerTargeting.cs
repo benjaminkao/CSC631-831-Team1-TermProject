@@ -5,6 +5,19 @@ using UnityEngine;
 
 public abstract class TowerTargeting: NetworkBehaviour, ITargetable
 {
+
+
+
+    [Header("Tower Spawning")]
+    [Tooltip("All of the mesh renderers of the tower.")]
+    [SerializeField] private List<Renderer> renderers;
+    [SerializeField] private float craftTime;
+    [SerializeField] private Material towerMaterial;
+    [SerializeField] private Material spawnProgressMaterial;
+   
+
+
+
     protected float _targetingRadius;
     protected float _cooldownTime;
     private bool _canShoot = true;
@@ -60,6 +73,12 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
 
     private void OnEnable()
     {
+        foreach(Renderer renderer in renderers)
+        {
+
+            StartCoroutine(SpawnRoutine(renderer));
+        }
+
         this.RegisterTargetable();
     }
 
@@ -112,6 +131,26 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
     public GameObject GetTargetPosition()
     {
         return this._targetPosition;
+    }
+
+    public IEnumerator SpawnRoutine(Renderer renderer)
+    {
+        this._canShoot = false;
+
+        renderer.material = spawnProgressMaterial;
+        renderer.material.SetFloat("Progress", 0f);
+
+        for (float progress = 0; progress < craftTime; progress += 0.1f)
+        {
+            renderer.material.SetFloat("Progress", progress / craftTime);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        renderer.material.SetFloat("Progress", 1.1f);
+
+        renderer.material = towerMaterial;
+
+        this._canShoot = true;
     }
 
 

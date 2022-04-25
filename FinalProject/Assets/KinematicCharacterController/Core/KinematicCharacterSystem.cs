@@ -163,7 +163,7 @@ namespace KinematicCharacterController
 
                 Mirror.NetworkIdentity networkObject = motor.GetComponent<Mirror.NetworkIdentity>();
 
-                if (networkObject != null && !networkObject.isLocalPlayer)
+                if (networkObject != null && !networkObject.hasAuthority)
                 {
                     continue;
                 }
@@ -224,7 +224,7 @@ namespace KinematicCharacterController
 
                 Mirror.NetworkIdentity networkObject = motor.GetComponent<Mirror.NetworkIdentity>();
 
-                if (networkObject != null && !networkObject.isLocalPlayer)
+                if (networkObject != null && !networkObject.hasAuthority)
                 {
                     continue;
                 }
@@ -249,7 +249,7 @@ namespace KinematicCharacterController
 
                 Mirror.NetworkIdentity networkObject = motor.GetComponent<Mirror.NetworkIdentity>();
 
-                if (networkObject != null && !networkObject.isLocalPlayer)
+                if (networkObject != null && !networkObject.hasAuthority)
                 {
                     continue;
                 }
@@ -292,7 +292,7 @@ namespace KinematicCharacterController
                 // IMPORTANT: For Mirror networking, must check if motor should be updated by the local player
                 Mirror.NetworkIdentity networkObject = motor.GetComponent<Mirror.NetworkIdentity>();
 
-                if(networkObject != null && !networkObject.isLocalPlayer)
+                if(networkObject != null && !networkObject.hasAuthority)
                 {
                     continue;
                 }

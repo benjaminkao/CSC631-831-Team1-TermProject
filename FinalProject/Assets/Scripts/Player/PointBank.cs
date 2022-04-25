@@ -23,7 +23,7 @@ public class PointBank : NetworkBehaviour
         }
 
 
-        if (isLocalPlayer)
+        if (hasAuthority)
         {
             label = GameObject.Find("PlayerPointsLabel").GetComponent<TextMeshProUGUI>();
         }
