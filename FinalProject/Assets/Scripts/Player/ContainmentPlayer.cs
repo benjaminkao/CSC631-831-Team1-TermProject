@@ -80,8 +80,12 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     [Tooltip("How long the player shouldn't shoot with an empty clip before the player calls out they have no ammo.")]
     [SerializeField] private float noAmmoVoiceLineCooldown;
 
+    [Tooltip("How long the player shouldn't shoot with an empty clip before the gun plays the no ammo sound.")]
+    [SerializeField] private float noAmmoGunCooldown;
+
     private float lastDamaged;
     private float lastVoicedNoAmmo;
+    private float lastGunSoundNoAmmo;
     private bool _canRegen;
 
 
@@ -156,6 +160,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         lastDamaged = 0;
         lastVoicedNoAmmo = 0;
+        lastGunSoundNoAmmo = 0;
         _canRegen = true;
     }
 
@@ -206,7 +211,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             } else if(!gun.HasAmmo)
             {
                 HandleNoAmmo();
-                
             }
         }
 
@@ -377,7 +381,13 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             playerAudio.TriggerVoiceLine(PlayerAudio.NOAMMO);
         }
 
+        if(currentTime - lastGunSoundNoAmmo >= noAmmoGunCooldown)
+        {
+            gun.ClientPlayShoot();
+        }
+
         lastVoicedNoAmmo = currentTime;
+        lastGunSoundNoAmmo = currentTime;
     }
 
 

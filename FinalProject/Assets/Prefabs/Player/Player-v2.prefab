@@ -946,6 +946,7 @@ MonoBehaviour:
   healthRegenCooldown: 2
   healthRegenRate: 2
   noAmmoVoiceLineCooldown: 3
+  noAmmoGunCooldown: 1
   _readyNextWave: 0
   _inPreparationPhase: 0
 --- !u!114 &-1990248360644953847

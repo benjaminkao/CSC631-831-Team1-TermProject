@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1104,8 +1104,6 @@ GameObject:
   - component: {fileID: 283890666}
   - component: {fileID: 283890670}
   - component: {fileID: 283890667}
-  - component: {fileID: 283890669}
-  - component: {fileID: 283890668}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1142,23 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a353cf1cb723e4f1eb4d97e51e1aa24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &283890667
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283890664}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &283890668
+--- !u!114 &283890667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1167,53 +1149,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 283890664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c378074fb7c3c9439cf41703d54fedb, type: 3}
+  m_Script: {fileID: 11500000, guid: c5d8ff69f8079194d9f7abdb3a0bdd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
+  mainMenuMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9c727df0e88e04f8aaec4eadd9a7fec5, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &283890669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283890664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a79d6e3e6f6fe842bd0334e6ddf7f80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
+    WwiseObjectReference: {fileID: 11400000, guid: 20583a45d859b1342ab9ba7fe6f04960, type: 2}
 --- !u!114 &283890670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,18 +1168,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fdaa1c3c68e94f749224f166924cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 1327952031}
-  optionsButton: {fileID: 92511711}
-  quitButton: {fileID: 220413633}
-  backButton: {fileID: 1123954483}
-  confirmNameButton: {fileID: 494223400}
-  hostLobbyButton: {fileID: 1529736495}
-  joinLobbyButton: {fileID: 804661426}
-  joinButton: {fileID: 431493152}
+  buttons:
+  - {fileID: 1327952031}
+  - {fileID: 92511711}
+  - {fileID: 220413633}
+  - {fileID: 1123954483}
+  - {fileID: 1529736495}
+  - {fileID: 804661426}
+  - {fileID: 431493152}
+  - {fileID: 494223400}
   buttonClickedEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4df41a703e54d4991b472dc3c6e239f3, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dd757aaaceef0204fb12c0d47d630534, type: 2}
 --- !u!1 &339006050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,6 +1594,7 @@ GameObject:
   - component: {fileID: 494223402}
   - component: {fileID: 494223401}
   - component: {fileID: 494223400}
+  - component: {fileID: 494223403}
   m_Layer: 5
   m_Name: Button_ConfirmName
   m_TagString: Untagged
@@ -1772,7 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1796,6 +1740,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494223398}
   m_CullTransparentMesh: 1
+--- !u!114 &494223403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494223398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764a07b1b7391dd4184ba8905294e3d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 494223400}
 --- !u!1 &511371081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4568,7 +4525,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 94ec7682ba5ed412292131364b83953e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6b353b4d58a4d1c4c8ee8c8e3fde72af, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0

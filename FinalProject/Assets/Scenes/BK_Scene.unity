@@ -17976,19 +17976,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20996d0912b33bc44a879c0777089a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientEvent:
+  wwiseEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  switchEvent:
+  wwiseState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5f731cd2d3ad9402181277f7a7cbb46e, type: 2}
-  objectAffected: {fileID: 5559894543706551259, guid: 206751215df68f540b70b3b9a6157121, type: 3}
-  forEvent: 0
-  forSwitch: 1
+    WwiseObjectReference: {fileID: 0}
+  wwiseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  triggerType: 0
   tags:
   - Player
 --- !u!114 &1295786209
@@ -19436,19 +19440,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20996d0912b33bc44a879c0777089a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientEvent:
+  wwiseEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  switchEvent:
+  wwiseState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 08f54824362b14b5a8077f6bde2c0774, type: 2}
-  objectAffected: {fileID: 5559894543706551259, guid: 206751215df68f540b70b3b9a6157121, type: 3}
-  forEvent: 0
-  forSwitch: 1
+    WwiseObjectReference: {fileID: 0}
+  wwiseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  triggerType: 0
   tags:
   - Player
 --- !u!114 &1346152497
@@ -27697,6 +27705,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5083876504857248989, guid: e29ffa2548ca2154390f694e230f7514, type: 3}
+      propertyPath: shieldNoise.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d16b2e508cdfd4438d461a0fe5587fa, type: 2}
     - target: {fileID: 8562080361563103041, guid: e29ffa2548ca2154390f694e230f7514, type: 3}
       propertyPath: m_Name
       value: BeaconGenerator

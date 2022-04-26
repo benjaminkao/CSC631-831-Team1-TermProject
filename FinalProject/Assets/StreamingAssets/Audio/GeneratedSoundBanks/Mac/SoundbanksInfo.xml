@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/alekhya/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Masters/SF_State/CSC831GameDev/CSC631-831-Team1-TermProject/Wwise/Containment/</ProjectRoot>
-		<SourceFilesRoot>/Users/alekhya/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Masters/SF_State/CSC831GameDev/CSC631-831-Team1-TermProject/Wwise/Containment/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/alekhya/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Masters/SF_State/CSC831GameDev/CSC631-831-Team1-TermProject/Wwise/Containment/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/alekhya/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Masters/SF_State/CSC831GameDev/CSC631-831-Team1-TermProject/Wwise/Containment/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4248397843">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3230628781">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -67,7 +67,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4056684167" Language="SFX" Hash="3694471546">
+		<SoundBank Id="4056684167" Language="SFX" Hash="3862861600">
 			<ObjectPath>\SoundBanks\Official\Master</ObjectPath>
 			<ShortName>Master</ShortName>
 			<Path>Master.bnk</Path>
@@ -76,7 +76,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1033308013" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Ammo_Pickup.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Gun_Ammo_Pickup_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Gun_Ammo_Pickup_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -84,67 +84,67 @@
 					<IncludedMemoryFiles>
 						<File Id="113629022" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Boss_Outro.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Boss_Outro_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Boss_Outro_9EDFC787.wem</Path>
 						</File>
 						<File Id="202842578" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_1.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_1_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_1_9EDFC787.wem</Path>
 						</File>
 						<File Id="214799316" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Boss_3.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Boss_3_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Boss_3_9EDFC787.wem</Path>
 						</File>
 						<File Id="331899700" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Boss_Intro.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Boss_Intro_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Boss_Intro_9EDFC787.wem</Path>
 						</File>
 						<File Id="494254151" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_4.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_4_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_4_9EDFC787.wem</Path>
 						</File>
 						<File Id="556398334" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_High_Intro.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_High_Intro_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_High_Intro_9EDFC787.wem</Path>
 						</File>
 						<File Id="563838138" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_5.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_5_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_5_9EDFC787.wem</Path>
 						</File>
 						<File Id="604367269" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Boss_1.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Boss_1_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Boss_1_9EDFC787.wem</Path>
 						</File>
 						<File Id="622080793" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_1.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_1_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_1_9EDFC787.wem</Path>
 						</File>
 						<File Id="639453726" Language="SFX">
 							<ShortName>SFX_Gameplay_Stinger_Round_End.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Stinger_Round_End_D79FB2B7.wem</Path>
+							<Path>SFX\SFX_Gameplay_Stinger_Round_End_9EDFC787.wem</Path>
 						</File>
 						<File Id="675435905" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_3.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_3_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_3_9EDFC787.wem</Path>
 						</File>
 						<File Id="695137203" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_Outro.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_Outro_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_Outro_9EDFC787.wem</Path>
 						</File>
 						<File Id="719364963" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Boss_2.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Boss_2_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Boss_2_9EDFC787.wem</Path>
 						</File>
 						<File Id="825003402" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_2.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_2_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_2_9EDFC787.wem</Path>
 						</File>
 						<File Id="997225675" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_High_Loop.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_High_Loop_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_High_Loop_9EDFC787.wem</Path>
 						</File>
 						<File Id="1030639214" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_2.wav</ShortName>
-							<Path>SFX/MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_2_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_2_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -189,7 +189,7 @@
 					<IncludedMemoryFiles>
 						<File Id="21095463" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Low_Health_Indicator.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Low_Health_Indicator_D79FB2B7.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Low_Health_Indicator_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -197,15 +197,15 @@
 					<IncludedMemoryFiles>
 						<File Id="182166338" Language="SFX">
 							<ShortName>MC_Main_Menu.wav</ShortName>
-							<Path>SFX/MC_Main_Menu_D79FB2B7.wem</Path>
+							<Path>SFX\MC_Main_Menu_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="817598862" Name="Play_Menu_Confirm" ObjectPath="\Events\Official\SFX\UI\Play_Menu_Confirm" DurationType="OneShot" DurationMin="0.999977" DurationMax="0.999977">
+				<Event Id="817598862" Name="Play_Menu_Confirm" ObjectPath="\Events\Official\SFX\UI\Play_Menu_Confirm" DurationType="OneShot" DurationMin="0.950845" DurationMax="0.950845">
 					<IncludedMemoryFiles>
 						<File Id="58641328" Language="SFX">
 							<ShortName>SFX_UI_Menu_Confirm.wav</ShortName>
-							<Path>SFX/SFX_UI_Menu_Confirm_10C4C929.wem</Path>
+							<Path>SFX\SFX_UI_Menu_Confirm_E99B26FE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -213,7 +213,7 @@
 					<IncludedMemoryFiles>
 						<File Id="283692226" Language="SFX">
 							<ShortName>SFX_UI_Menu_Select.wav</ShortName>
-							<Path>SFX/SFX_UI_Menu_Select_10C4C929.wem</Path>
+							<Path>SFX\SFX_UI_Menu_Select_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -221,7 +221,7 @@
 					<IncludedMemoryFiles>
 						<File Id="338034573" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Boss.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Boss_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Boss_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -229,7 +229,7 @@
 					<IncludedMemoryFiles>
 						<File Id="898426149" Language="SFX">
 							<ShortName>VO_Player_1_Callout_No_Ammo.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_No_Ammo_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_No_Ammo_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -237,11 +237,11 @@
 					<IncludedMemoryFiles>
 						<File Id="339408245" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Progress_1.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Progress_1_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Progress_1_3F75BDB9.wem</Path>
 						</File>
 						<File Id="558978181" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Progress_2.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Progress_2_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Progress_2_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -249,7 +249,7 @@
 					<IncludedMemoryFiles>
 						<File Id="141666873" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Shield_Critical.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Shield_Critical_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Shield_Critical_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -257,11 +257,11 @@
 					<IncludedMemoryFiles>
 						<File Id="793316159" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Shield_Warning_1.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Shield_Warning_1_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Shield_Warning_1_3F75BDB9.wem</Path>
 						</File>
 						<File Id="1059179223" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Shield_Warning_2.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Shield_Warning_2_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Shield_Warning_2_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -269,11 +269,11 @@
 					<IncludedMemoryFiles>
 						<File Id="113964577" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Start_1.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Start_1_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Start_1_3F75BDB9.wem</Path>
 						</File>
 						<File Id="805043485" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Start_2.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Start_2_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Start_2_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -281,11 +281,11 @@
 					<IncludedMemoryFiles>
 						<File Id="330847810" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Tower_Spawning_1.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Tower_Spawning_1_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Tower_Spawning_1_3F75BDB9.wem</Path>
 						</File>
 						<File Id="596073822" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Tower_Spawning_2.wav</ShortName>
-							<Path>SFX/VO_Player_1_Callout_Tower_Spawning_2_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Callout_Tower_Spawning_2_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -293,7 +293,7 @@
 					<IncludedMemoryFiles>
 						<File Id="885874087" Language="SFX">
 							<ShortName>VO_Player_1_Damage_Taken.wav</ShortName>
-							<Path>SFX/VO_Player_1_Damage_Taken_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Damage_Taken_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -301,11 +301,11 @@
 					<IncludedMemoryFiles>
 						<File Id="43110385" Language="SFX">
 							<ShortName>VO_Player_1_Reload_2.wav</ShortName>
-							<Path>SFX/VO_Player_1_Reload_2_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Reload_2_3F75BDB9.wem</Path>
 						</File>
 						<File Id="386456288" Language="SFX">
 							<ShortName>VO_Player_1_Reload_1.wav</ShortName>
-							<Path>SFX/VO_Player_1_Reload_1_10C4C929.wem</Path>
+							<Path>SFX\VO_Player_1_Reload_1_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -313,7 +313,7 @@
 					<IncludedMemoryFiles>
 						<File Id="561084219" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Damage_Taken.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Damage_Taken_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Damage_Taken_AE0B80D2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -321,30 +321,30 @@
 					<IncludedMemoryFiles>
 						<File Id="93853120" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Dirt_3.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Dirt_3_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Dirt_3_3F75BDB9.wem</Path>
 						</File>
 						<File Id="288822575" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Dirt_1.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Dirt_1_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Dirt_1_3F75BDB9.wem</Path>
 						</File>
 						<File Id="336412676" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Metal_2.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Metal_2_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Metal_2_3F75BDB9.wem</Path>
 						</File>
 						<File Id="725985352" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Dirt_4.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Dirt_4_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Dirt_4_3F75BDB9.wem</Path>
 						</File>
 						<File Id="821156214" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Dirt_2.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Dirt_2_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Dirt_2_3F75BDB9.wem</Path>
 						</File>
 						<File Id="1071251603" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Metal_1.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Player_Footsteps_Metal_1_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Footsteps_Metal_1_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<DefaultSwitchValue>{FDC47755-F7E5-4EBE-8FF5-82752890AAD4}</DefaultSwitchValue>
+					<DefaultSwitchValue>{00771E4E-1A10-442C-8900-BF948325EA7D}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{00771E4E-1A10-442C-8900-BF948325EA7D}">
 							<Media>
@@ -366,83 +366,83 @@
 					<IncludedMemoryFiles>
 						<File Id="42354746" Language="SFX">
 							<ShortName>SFX_Gameplay_Stinger_Round_Start.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Stinger_Round_Start_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Stinger_Round_Start_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3521700588" Name="Play_Shield_Amb" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_Shield_Amb" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="18550808" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_22.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_22_10C4C929.wem</Path>
+						<File Id="6750034" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_15.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_15_3F75BDB9.wem</Path>
 						</File>
-						<File Id="57485541" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_49.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_49_10C4C929.wem</Path>
-						</File>
-						<File Id="61065432" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_08.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_08_10C4C929.wem</Path>
-						</File>
-						<File Id="102406056" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_55.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_55_10C4C929.wem</Path>
-						</File>
-						<File Id="275662187" Language="SFX">
+						<File Id="66848517" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_03.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_03_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_03_3F75BDB9.wem</Path>
+						</File>
+						<File Id="276076064" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_21.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_21_3F75BDB9.wem</Path>
 						</File>
 						<File Id="276835273" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_76.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_76_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_76_3F75BDB9.wem</Path>
+						</File>
+						<File Id="295999015" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_49.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_49_3F75BDB9.wem</Path>
 						</File>
 						<File Id="332709986" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_12.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_12_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_12_3F75BDB9.wem</Path>
 						</File>
-						<File Id="416520800" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_20.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_20_10C4C929.wem</Path>
+						<File Id="432286047" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_08.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_08_3F75BDB9.wem</Path>
 						</File>
-						<File Id="448900386" Language="SFX">
+						<File Id="564541520" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_22.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_22_3F75BDB9.wem</Path>
+						</File>
+						<File Id="583133837" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_23.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_23_10C4C929.wem</Path>
-						</File>
-						<File Id="509151175" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_15.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_15_10C4C929.wem</Path>
-						</File>
-						<File Id="564008503" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_02.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_02_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_23_3F75BDB9.wem</Path>
 						</File>
 						<File Id="614046182" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_51.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_51_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_51_3F75BDB9.wem</Path>
 						</File>
 						<File Id="662893980" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Hum_2.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Hum_2_EFBF3F7E.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Hum_2_6FD1B30E.wem</Path>
 						</File>
 						<File Id="729653491" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_47.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_47_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_47_3F75BDB9.wem</Path>
 						</File>
 						<File Id="875745390" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_D79FB2B7.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_9EDFC787.wem</Path>
 						</File>
 						<File Id="893361238" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_48.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_48_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_48_3F75BDB9.wem</Path>
 						</File>
-						<File Id="1011213175" Language="SFX">
-							<ShortName>SFX_Gameplay_Environment_Shield_Static_21.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_21_10C4C929.wem</Path>
+						<File Id="927400630" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_20.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_20_3F75BDB9.wem</Path>
+						</File>
+						<File Id="953986671" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_55.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_55_3F75BDB9.wem</Path>
 						</File>
 						<File Id="1043400699" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_77.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_77_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_77_3F75BDB9.wem</Path>
+						</File>
+						<File Id="1044715729" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Static_02.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_02_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -453,7 +453,7 @@
 					<IncludedMemoryFiles>
 						<File Id="946755834" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Beacon_Damaged.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Beacon_Damaged_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Beacon_Damaged_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -461,7 +461,7 @@
 					<IncludedMemoryFiles>
 						<File Id="662893980" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Hum_2.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Hum_2_EFBF3F7E.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Hum_2_6FD1B30E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -469,7 +469,7 @@
 					<IncludedMemoryFiles>
 						<File Id="694795838" Language="SFX">
 							<ShortName>SFX_Gameplay_System_Shield_Warning.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_System_Shield_Warning_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_System_Shield_Warning_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -477,7 +477,7 @@
 					<IncludedMemoryFiles>
 						<File Id="582389488" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Reload.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Gun_Reload_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Gun_Reload_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -485,15 +485,15 @@
 					<IncludedMemoryFiles>
 						<File Id="235420434" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Shoot_Low_Ammo_Indicator.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Gun_Shoot_Low_Ammo_Indicator_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Gun_Shoot_Low_Ammo_Indicator_3F75BDB9.wem</Path>
 						</File>
 						<File Id="303680268" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Shoot.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Gun_Shoot_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Gun_Shoot_3F75BDB9.wem</Path>
 						</File>
 						<File Id="830782111" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Shoot_No_Ammo_Indicator.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Gun_Shoot_No_Ammo_Indicator_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Gun_Shoot_No_Ammo_Indicator_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -501,15 +501,15 @@
 					<IncludedMemoryFiles>
 						<File Id="139233690" Language="SFX">
 							<ShortName>Test_Indoor_Ambiance.wav</ShortName>
-							<Path>SFX/Test_Indoor_Ambiance_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Indoor_Ambiance_F87B0DC7.wem</Path>
 						</File>
 						<File Id="160682465" Language="SFX">
 							<ShortName>Test_Silent.wav</ShortName>
-							<Path>SFX/Test_Silent_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Silent_F87B0DC7.wem</Path>
 						</File>
 						<File Id="773901135" Language="SFX">
 							<ShortName>Test_Outdoor_Ambiance.wav</ShortName>
-							<Path>SFX/Test_Outdoor_Ambiance_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Outdoor_Ambiance_F87B0DC7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{929DBB78-E36F-4F66-BDEC-F433D080DC67}</DefaultSwitchValue>
@@ -535,7 +535,7 @@
 					<IncludedMemoryFiles>
 						<File Id="254003914" Language="SFX">
 							<ShortName>Test_3D_Ambiance.wav</ShortName>
-							<Path>SFX/Test_3D_Ambiance_D79FB2B7.wem</Path>
+							<Path>SFX\Test_3D_Ambiance_F87B0DC7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -543,7 +543,7 @@
 					<IncludedMemoryFiles>
 						<File Id="194517771" Language="SFX">
 							<ShortName>Test_Click.wav</ShortName>
-							<Path>SFX/Test_Click_10C4C929.wem</Path>
+							<Path>SFX\Test_Click_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -551,7 +551,7 @@
 					<IncludedMemoryFiles>
 						<File Id="800788653" Language="SFX">
 							<ShortName>Test_Explosion.wav</ShortName>
-							<Path>SFX/Test_Explosion_10C4C929.wem</Path>
+							<Path>SFX\Test_Explosion_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -559,43 +559,43 @@
 					<IncludedMemoryFiles>
 						<File Id="39168517" Language="SFX">
 							<ShortName>Test_Boss_Loop.wav</ShortName>
-							<Path>SFX/Test_Boss_Loop_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Loop_F87B0DC7.wem</Path>
 						</File>
 						<File Id="265934756" Language="SFX">
 							<ShortName>Test_Low_Intensity_Music.wav</ShortName>
-							<Path>SFX/Test_Low_Intensity_Music_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Low_Intensity_Music_F87B0DC7.wem</Path>
 						</File>
 						<File Id="271685855" Language="SFX">
 							<ShortName>Test_Preparation_Music.wav</ShortName>
-							<Path>SFX/Test_Preparation_Music_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Preparation_Music_F87B0DC7.wem</Path>
 						</File>
 						<File Id="416479176" Language="SFX">
 							<ShortName>Test_Boss_Outro.wav</ShortName>
-							<Path>SFX/Test_Boss_Outro_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Outro_F87B0DC7.wem</Path>
 						</File>
 						<File Id="447548303" Language="SFX">
 							<ShortName>Test_Boss_Intro.wav</ShortName>
-							<Path>SFX/Test_Boss_Intro_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Intro_F87B0DC7.wem</Path>
 						</File>
 						<File Id="493028397" Language="SFX">
 							<ShortName>Test_High_Intensity_Music.wav</ShortName>
-							<Path>SFX/Test_High_Intensity_Music_D79FB2B7.wem</Path>
+							<Path>SFX\Test_High_Intensity_Music_F87B0DC7.wem</Path>
 						</File>
 						<File Id="517717740" Language="SFX">
 							<ShortName>Test_Boss_Loop_3.wav</ShortName>
-							<Path>SFX/Test_Boss_Loop_3_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Loop_3_F87B0DC7.wem</Path>
 						</File>
 						<File Id="676030747" Language="SFX">
 							<ShortName>Test_Boss_Loop_1.wav</ShortName>
-							<Path>SFX/Test_Boss_Loop_1_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Loop_1_F87B0DC7.wem</Path>
 						</File>
 						<File Id="722686722" Language="SFX">
 							<ShortName>Test_Boss_Music.wav</ShortName>
-							<Path>SFX/Test_Boss_Music_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Music_F87B0DC7.wem</Path>
 						</File>
 						<File Id="1032745514" Language="SFX">
 							<ShortName>Test_Boss_Loop_2.wav</ShortName>
-							<Path>SFX/Test_Boss_Loop_2_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Boss_Loop_2_F87B0DC7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -631,7 +631,7 @@
 					<IncludedMemoryFiles>
 						<File Id="512659968" Language="SFX">
 							<ShortName>Test_Gunshot.wav</ShortName>
-							<Path>SFX/Test_Gunshot_10C4C929.wem</Path>
+							<Path>SFX\Test_Gunshot_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -639,7 +639,7 @@
 					<IncludedMemoryFiles>
 						<File Id="423697351" Language="SFX">
 							<ShortName>Test_Main_Menu_Music.wav</ShortName>
-							<Path>SFX/Test_Main_Menu_Music_D79FB2B7.wem</Path>
+							<Path>SFX\Test_Main_Menu_Music_F87B0DC7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -647,7 +647,7 @@
 					<IncludedMemoryFiles>
 						<File Id="561729691" Language="SFX">
 							<ShortName>Test_NPC_Footstep.wav</ShortName>
-							<Path>SFX/Test_NPC_Footstep_10C4C929.wem</Path>
+							<Path>SFX\Test_NPC_Footstep_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -655,7 +655,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1024711393" Language="SFX">
 							<ShortName>Test_NPC_VO.wav</ShortName>
-							<Path>SFX/Test_NPC_VO_10C4C929.wem</Path>
+							<Path>SFX\Test_NPC_VO_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -667,7 +667,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1042278865" Language="SFX">
 							<ShortName>Test_Player_Footstep.wav</ShortName>
-							<Path>SFX/Test_Player_Footstep_10C4C929.wem</Path>
+							<Path>SFX\Test_Player_Footstep_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -675,7 +675,7 @@
 					<IncludedMemoryFiles>
 						<File Id="157487487" Language="SFX">
 							<ShortName>Test_Player_VO.wav</ShortName>
-							<Path>SFX/Test_Player_VO_10C4C929.wem</Path>
+							<Path>SFX\Test_Player_VO_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -683,7 +683,7 @@
 					<IncludedMemoryFiles>
 						<File Id="365859447" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Beacon_Hum.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Beacon_Hum_C5579977.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Beacon_Hum_546AD5C7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -691,103 +691,103 @@
 					<IncludedMemoryFiles>
 						<File Id="185052" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_28.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_28_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_28_636989F9.wem</Path>
 						</File>
 						<File Id="18550808" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_22.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_22_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_22_636989F9.wem</Path>
 						</File>
 						<File Id="57485541" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_49.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_49_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_49_636989F9.wem</Path>
 						</File>
 						<File Id="61065432" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_08.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_08_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_08_636989F9.wem</Path>
 						</File>
 						<File Id="102406056" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_55.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_55_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_55_636989F9.wem</Path>
 						</File>
 						<File Id="134661588" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_37.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_37_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_37_636989F9.wem</Path>
 						</File>
 						<File Id="204853246" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_39.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_39_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_39_636989F9.wem</Path>
 						</File>
 						<File Id="247881581" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_32.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_32_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_32_636989F9.wem</Path>
 						</File>
 						<File Id="272156793" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_27.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_27_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_27_636989F9.wem</Path>
 						</File>
 						<File Id="275662187" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_03.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_03_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_03_636989F9.wem</Path>
 						</File>
 						<File Id="378076827" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_81.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_81_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_81_636989F9.wem</Path>
 						</File>
 						<File Id="389255086" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_38.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_38_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_38_636989F9.wem</Path>
 						</File>
 						<File Id="412009136" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_82.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_82_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_82_636989F9.wem</Path>
 						</File>
 						<File Id="416520800" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_20.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_20_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_20_636989F9.wem</Path>
 						</File>
 						<File Id="448900386" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_23.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_23_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_23_636989F9.wem</Path>
 						</File>
 						<File Id="494426934" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_16.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_16_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_16_636989F9.wem</Path>
 						</File>
 						<File Id="509151175" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_15.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_15_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_15_636989F9.wem</Path>
 						</File>
 						<File Id="564008503" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_02.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_02_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_02_636989F9.wem</Path>
 						</File>
 						<File Id="769277145" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_33.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_33_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_33_636989F9.wem</Path>
 						</File>
 						<File Id="780807024" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_30.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_30_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_30_636989F9.wem</Path>
 						</File>
 						<File Id="828953374" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_04.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_04_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_04_636989F9.wem</Path>
 						</File>
 						<File Id="938469144" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_05.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_05_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_05_636989F9.wem</Path>
 						</File>
 						<File Id="939204248" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_79.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_79_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_79_636989F9.wem</Path>
 						</File>
 						<File Id="1011213175" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_21.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_21_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_21_636989F9.wem</Path>
 						</File>
 						<File Id="1053197791" Language="SFX">
 							<ShortName>SFX_Gameplay_Environment_Shield_Static_40.wav</ShortName>
-							<Path>SFX/SFX_Gameplay_Environment_Shield_Static_40_10C4C929.wem</Path>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Static_40_636989F9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

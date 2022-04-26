@@ -82,6 +82,11 @@ public class Rifle : MonoBehaviour
         
     }
 
+    public void ClientPlayShoot()
+    {
+        rifleAudio.PlayRifleShot();
+    }
+
 
     public GameObject Shoot(Vector3 startPos, Vector3 forward)
     {
@@ -133,13 +138,14 @@ public class Rifle : MonoBehaviour
     }
 
 
-
     private GameObject HandleShoot(Vector3 startPos, Vector3 forward)
     {
         currentAmmo--;
-
+        
         rifleAudio.PlayRifleShot();
+
         rifleAudio.SetRifleAmmoRTPC(currentAmmo);
+
 
 
         if (automaticReload && currentAmmo <= 0)

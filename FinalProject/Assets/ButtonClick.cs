@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
 {
-    public Button playButton, optionsButton, quitButton, backButton, confirmNameButton, hostLobbyButton, joinLobbyButton, joinButton;
+    public List<Button> buttons;
     public AK.Wwise.Event buttonClickedEvent; 
 
     void Start()
     {
-        playButton.onClick.AddListener(TaskOnClick);
-        optionsButton.onClick.AddListener(TaskOnClick);
-        quitButton.onClick.AddListener(TaskOnClick);
-        backButton.onClick.AddListener(TaskOnClick); 
+        foreach(Button button in buttons)
+        {
+            button.onClick.AddListener(TaskOnClick);
+        }
     }
 
     void TaskOnClick() {

@@ -5,11 +5,16 @@ using UnityEngine;
 public class AudioTriggerEnter : MonoBehaviour
 {
 
-    [SerializeField] private AK.Wwise.Event ambientEvent;
-    [SerializeField] private AK.Wwise.Switch switchEvent;
-    [SerializeField] private GameObject objectAffected; 
+    [SerializeField] private AK.Wwise.Event wwiseEvent;
+    [SerializeField] private AK.Wwise.State wwiseState;
+    [SerializeField] private AK.Wwise.Switch wwiseSwitch;
 
-    public bool forEvent, forSwitch; 
+    public enum WwiseTrigger {
+        forEvent, forState, forSwitch
+    }
+
+    public WwiseTrigger triggerType;
+
 
 
     [SerializeField] private List<string> tags;
@@ -18,15 +23,17 @@ public class AudioTriggerEnter : MonoBehaviour
     {
 
         if (tags.Contains(other.gameObject.tag))
-        {   
-            if(forEvent) {
-                ambientEvent.Post(objectAffected);
-            }
+        {
+            switch(triggerType)
+            {
+                case WwiseTrigger.forEvent:
 
-            if(forSwitch) {
-                switchEvent.SetValue(objectAffected); 
+                    break;
+                case WwiseTrigger.forState:
+                    break;
+                case WwiseTrigger.forSwitch:
+                    break;
             }
-            
         }
     }
 }
