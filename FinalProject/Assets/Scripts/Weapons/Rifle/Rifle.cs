@@ -53,6 +53,15 @@ public class Rifle : MonoBehaviour
     private TextMeshProUGUI ammoLabel;
 
 
+    [Header("Debug")]
+    [Tooltip("If debug is off, no raycast tracing or primitive sphere spawning will be done.")]
+    [SerializeField] private bool debug;
+    [Tooltip("Spawn a sphere at the point where the camera raycast hits.")]
+    [SerializeField] private bool spawnSphereAtCameraRaycastPoint;
+    [Tooltip("Trace the camera raycast and the gun raycast.")]
+    [SerializeField] private bool showRaycastTraces;
+
+
     void Start()
     {
         ammoLabel = GameObject.Find("HUD - Roaming").transform.Find("AmmoLabel").GetComponent<TextMeshProUGUI>();
@@ -169,9 +178,23 @@ public class Rifle : MonoBehaviour
             return null;
         }
 
+        
+        bool gun = Physics.Linecast(gunPoint.transform.position, cameraHit.point, out gunHit);
 
-        bool gun = Physics.Linecast(gunPoint.transform.position, cameraHit.transform.position, out gunHit);
 
+        // View Debug Raycasts
+        if (debug) {
+            if (spawnSphereAtCameraRaycastPoint)
+            {
+                var tmp = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                tmp.transform.position = cameraHit.point;
+            }
+            if (showRaycastTraces) {
+                Debug.DrawRay(startPos, forward * range, Color.blue, 2f);
+                Debug.DrawLine(gunPoint.transform.position, cameraHit.point, Color.red, 2f);
+            }
+
+        }
 
         // Two Cases:
         // 1. Gun ray hit GameObject that is the same as Camera ray hit
@@ -182,9 +205,12 @@ public class Rifle : MonoBehaviour
             return null;
         }
 
+        Debug.Log(gunHit.transform.gameObject.name);
+
 
         if (gunHit.transform.gameObject == cameraHit.transform.gameObject)
         {
+            
             return gunHit.transform.gameObject;
         }
 
