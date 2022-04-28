@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 3836096485352635246}
   m_Layer: 0
   m_Name: Zombie-v2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 
+  m_AssetId: f5cf7cc646c8a3e4f80b8787d85d6c2a
   hasSpawned: 0
 --- !u!114 &3236639504391318785
 MonoBehaviour:
@@ -188,7 +188,7 @@ MonoBehaviour:
   syncInterval: 0.1
   TimeBetweenUpdatingTargets: 1
   AttackDamage: 10
-  AttackRange: 1
+  AttackRange: 1.5
   TimeBetweenAttacks: 0.5
   enemyType: {fileID: 11400000, guid: 378bb0967c3f7d3469d1adf90624769d, type: 2}
   bloodSpawnPosition: {fileID: 4819282977146917228}
