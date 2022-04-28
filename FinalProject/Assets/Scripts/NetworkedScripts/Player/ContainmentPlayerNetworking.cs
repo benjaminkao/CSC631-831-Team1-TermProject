@@ -115,7 +115,7 @@ public class ContainmentPlayerNetworking : NetworkBehaviour, ITargetable
             if (gun.CanShoot)
             {
 
-                gun.ClientShoot();
+                //gun.ClientShoot();
 
                 CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
             }

@@ -204,10 +204,10 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             if (gun.CanShoot && gun.HasAmmo)
             {
+                Vector3 direction = GetGunShootDirection(Camera.main.transform.forward);
+                gun.ClientShoot(Camera.main.transform.position, direction);
 
-                gun.ClientShoot();
-
-                CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
+                CmdShoot(Camera.main.transform.position, direction);
             } else if(!gun.HasAmmo)
             {
                 HandleNoAmmo();
@@ -298,9 +298,12 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     }
 
     [Command]
-    void CmdShoot(Vector3 startPos, Vector3 forward)
+    void CmdShoot(Vector3 startPos, Vector3 direction)
     {
-        GameObject targetHit = gun.Shoot(startPos, forward);
+        RpcShootGun(startPos, direction);
+
+        
+        GameObject targetHit = gun.Shoot(startPos, direction);
 
         if (targetHit == null)
         {
@@ -322,6 +325,18 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
+
+    [ClientRpc]
+    void RpcShootGun(Vector3 startPos, Vector3 direction)
+    {
+        if(hasAuthority || isLocalPlayer)
+        {
+            return;
+        }
+
+        gun.ShootVFX(startPos, direction);
+    }
+
 
     [ClientRpc]
     void RpcUpdatePlayerHealth(float healthValue)
@@ -390,7 +405,23 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         lastGunSoundNoAmmo = currentTime;
     }
 
+    Vector3 GetGunShootDirection(Vector3 forward)
+    {
+        Vector3 direction = forward;
 
+        if(gun.AddBulletSpread)
+        {
+            direction += new Vector3(
+                UnityEngine.Random.Range(-gun.BulletSpreadVariance.x, gun.BulletSpreadVariance.x),
+                UnityEngine.Random.Range(-gun.BulletSpreadVariance.y, gun.BulletSpreadVariance.y),
+                UnityEngine.Random.Range(-gun.BulletSpreadVariance.z, gun.BulletSpreadVariance.z)
+                );
+
+            direction.Normalize();
+        }
+
+        return direction;
+    }
 
 
 

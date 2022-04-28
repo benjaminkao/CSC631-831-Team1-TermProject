@@ -108,7 +108,7 @@ public class Player : NetworkBehaviour
         {
             if(gun.CanShoot) {
 
-                gun.ClientShoot();
+                //gun.ClientShoot();
 
                 CmdShoot(Camera.main.transform.position, Camera.main.transform.forward);
             }

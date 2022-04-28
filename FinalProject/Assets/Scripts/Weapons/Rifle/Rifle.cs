@@ -12,8 +12,19 @@ public class Rifle : MonoBehaviour
     public float reloadTime = 1f;
     public int ammoPerClip = 30;
     public int currentAmmo;
+    public bool AddBulletSpread;
+    public Vector3 BulletSpreadVariance = new Vector3(0.1f, 0.1f, 0.1f);
 
     [SerializeField] private bool automaticReload;
+
+
+    [Header("VFX")]
+    [SerializeField] private ParticleSystem muzzleFlash;
+
+    [SerializeField] private ParticleSystem bulletImpact;
+
+    [SerializeField] private TrailRenderer bulletTrail;
+
 
     [Header("Audio")]
     [SerializeField] private RifleAudio rifleAudio;
@@ -84,9 +95,9 @@ public class Rifle : MonoBehaviour
         UpdateAmmoUI();
     }
 
-    public void ClientShoot()
+    public void ClientShoot(Vector3 startPos, Vector3 direction)
     {
-
+        ShootVFX(startPos, direction);
         StartCoroutine(ShootDelay());
         
     }
@@ -147,7 +158,7 @@ public class Rifle : MonoBehaviour
     }
 
 
-    private GameObject HandleShoot(Vector3 startPos, Vector3 forward)
+    private GameObject HandleShoot(Vector3 startPos, Vector3 direction)
     {
         currentAmmo--;
         
@@ -169,7 +180,7 @@ public class Rifle : MonoBehaviour
         layerMask = ~layerMask;
 
         // Camera: Physics.Raycast(origin, endPoint, hit)
-        bool camera = Physics.Raycast(startPos, forward, out cameraHit, range, layerMask);
+        bool camera = Physics.Raycast(startPos, direction, out cameraHit, range, layerMask);
 
 
         if (!camera)
@@ -190,7 +201,7 @@ public class Rifle : MonoBehaviour
                 tmp.transform.position = cameraHit.point;
             }
             if (showRaycastTraces) {
-                Debug.DrawRay(startPos, forward * range, Color.blue, 2f);
+                Debug.DrawRay(startPos, direction * range, Color.blue, 2f);
                 Debug.DrawLine(gunPoint.transform.position, cameraHit.point, Color.red, 2f);
             }
 
@@ -205,7 +216,6 @@ public class Rifle : MonoBehaviour
             return null;
         }
 
-        Debug.Log(gunHit.transform.gameObject.name);
 
 
         if (gunHit.transform.gameObject == cameraHit.transform.gameObject)
@@ -218,6 +228,30 @@ public class Rifle : MonoBehaviour
     }
 
 
+    public void ShootVFX(Vector3 startPos, Vector3 direction)
+    {
+        muzzleFlash.Play();
+
+        RaycastHit hit;
+
+        int layerMask = 1 << 2;
+        layerMask = ~layerMask;
+
+        // Camera: Physics.Raycast(origin, endPoint, hit)
+        bool didHit = Physics.Raycast(startPos, direction, out hit, float.MaxValue, layerMask);
+
+        if(didHit)
+        {
+            TrailRenderer trail = Instantiate(bulletTrail, gunPoint.transform.position, Quaternion.identity);
+
+            StartCoroutine(SpawnTrail(trail, hit));
+
+
+        }
+
+    }
+
+
     private void UpdateAmmoUI()
     {
         if(this.ammoLabel == null)
@@ -226,5 +260,26 @@ public class Rifle : MonoBehaviour
         }
 
         this.ammoLabel.text = $"{currentAmmo} / {ammoPerClip}";
+    }
+
+
+    private IEnumerator SpawnTrail(TrailRenderer trail, RaycastHit hit)
+    {
+        float time = 0;
+        Vector3 startPosition = trail.transform.position;
+        trail.gameObject.transform.LookAt(hit.point);
+        while(time < 1)
+        {
+            trail.transform.position = Vector3.Lerp(startPosition, hit.point, time);
+            time += Time.deltaTime / trail.time;
+
+            yield return null;
+        }
+
+        trail.transform.position = hit.point;
+
+        Instantiate(bulletImpact, hit.point, Quaternion.LookRotation(hit.normal));
+
+        Destroy(trail.gameObject, trail.time);
     }
 }
