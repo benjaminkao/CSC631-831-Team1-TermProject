@@ -20,7 +20,8 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
     [SyncVar(hook = nameof(HandleReadyStatusChanged))]
     public bool IsReady = false;
 
-    private bool isLeader;
+    [SyncVar(hook = nameof(HandleLeaderStatusChanged))]
+    [SerializeField] private bool isLeader;
 
     public bool IsLeader
     {
@@ -59,6 +60,7 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
         Room.RoomPlayers.Add(this);
 
         UpdateDisplay();
+
     }
 
 
@@ -78,6 +80,13 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
 
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
+
+    public void HandleLeaderStatusChanged(bool oldValue, bool newValue) => UpdateStartGameDisplay();
+
+    private void UpdateStartGameDisplay()
+    {
+        startGameButton.gameObject.SetActive(isLeader);
+    }
 
 
     private void UpdateDisplay()
@@ -102,12 +111,23 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
             playerReadyTexts[i].text = string.Empty;
         }
 
+        bool isReadyToStart = true;
         for(int i = 0; i < Room.RoomPlayers.Count; i++)
         {
+            if(!Room.RoomPlayers[i].IsReady)
+            {
+                isReadyToStart = false;
+            }
+
             playerNameTexts[i].text = Room.RoomPlayers[i].DisplayName;
             playerReadyTexts[i].text = Room.RoomPlayers[i].IsReady ?
                 "<color=green>Ready</color>" :
                 "<color=red>Not Ready</color>";
+        }
+
+        if(isLeader)
+        {
+            HandleReadyToStart(isReadyToStart);
         }
     }
 
@@ -144,6 +164,20 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
         }
 
         Room.StartGame();
+    }
+
+
+    [ClientRpc]
+    public void RpcSetLeader(bool isLeader)
+    {
+        IsLeader = isLeader;
+    }
+
+    [ClientRpc]
+    public void RpcHandleReadyToStart(bool isReadyToStart)
+    {
+        Debug.Log(isReadyToStart);
+        HandleReadyToStart(isReadyToStart);
     }
 
 }

@@ -3179,7 +3179,7 @@ MonoBehaviour:
   _startPower: 1
   rotationSpeed: 35
   notifyDamageCooldown: 10
-  shieldBeaconAudio: {fileID: 0}
+  shieldBeaconAudio: {fileID: 5083876504857248989}
 --- !u!114 &5083876504857248989
 MonoBehaviour:
   m_ObjectHideFlags: 0

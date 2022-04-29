@@ -43,7 +43,8 @@ public class SpawnPoolManager : MonoBehaviour
         // Check if a Pool already exists for the given poolableObject
         if (HasPool(poolItem.Prefab))
         {
-            Debug.LogError("A pool of this PoolableObject has already been created.");
+            //Debug.LogError("A pool of this PoolableObject has already been created.");
+            return;
         }
 
         // If a Pool doesn't already exist, need to add one to the dictionary

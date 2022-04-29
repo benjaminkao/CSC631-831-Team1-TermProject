@@ -333,8 +333,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             return;
         }
-
-        gun.ShootVFX(startPos, direction);
+        gun.ClientShoot(startPos, direction);
     }
 
 

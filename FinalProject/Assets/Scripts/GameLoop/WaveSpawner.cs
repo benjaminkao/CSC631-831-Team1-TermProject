@@ -81,7 +81,7 @@ public class WaveSpawner : NetworkBehaviour
 
         OnWaveSpawnerEnabled?.Invoke(this);
 
-        audioManager.RpcChangeGameplayAudioState(AudioManager.PREPARATION); 
+        
     }
 
     private void OnDisable()

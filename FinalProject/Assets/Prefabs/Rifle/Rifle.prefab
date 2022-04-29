@@ -85,11 +85,11 @@ MonoBehaviour:
   shootEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 03293e2edae1c3245878b90d3bca7bf4, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 2cf5d3c91f91ef1458019d5d958f963f, type: 2}
   ammoRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ad9d2adbb2358444c817601f55ccbd07, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: d41e6d6fefa6e674daa269957a5420a8, type: 2}
 --- !u!1 &12801757635976432
 GameObject:
   m_ObjectHideFlags: 0

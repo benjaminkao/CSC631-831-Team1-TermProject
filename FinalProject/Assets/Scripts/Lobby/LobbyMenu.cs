@@ -15,4 +15,10 @@ public class LobbyMenu : MonoBehaviour
         networkManager.StartHost();
         landingPagePanel.SetActive(false);
     }
+
+    public void HostServer()
+    {
+        networkManager.StartServer();
+        landingPagePanel.SetActive(false);
+    }
 }

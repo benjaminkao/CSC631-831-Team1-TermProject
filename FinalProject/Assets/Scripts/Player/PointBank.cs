@@ -15,6 +15,14 @@ public class PointBank : NetworkBehaviour
 
     public int TotalPoints { get { return _totalPoints; } }
 
+
+    private void Start()
+    {
+        _totalPoints = _startingPoints;
+
+        Reset();
+    }
+
     public override void OnStartClient()
     {
         if (_player == null)
@@ -29,11 +37,7 @@ public class PointBank : NetworkBehaviour
         }
 
 
-        
-
-
-        _totalPoints = _startingPoints;
-
+       
         Reset();
     }
 

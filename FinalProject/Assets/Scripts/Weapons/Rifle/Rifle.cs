@@ -97,7 +97,9 @@ public class Rifle : MonoBehaviour
 
     public void ClientShoot(Vector3 startPos, Vector3 direction)
     {
+        currentAmmo--;
         ShootVFX(startPos, direction);
+        PlayShootAudio();
         StartCoroutine(ShootDelay());
         
     }
@@ -161,10 +163,6 @@ public class Rifle : MonoBehaviour
     private GameObject HandleShoot(Vector3 startPos, Vector3 direction)
     {
         currentAmmo--;
-        
-        rifleAudio.PlayRifleShot();
-
-        rifleAudio.SetRifleAmmoRTPC(currentAmmo);
 
 
 
@@ -251,6 +249,12 @@ public class Rifle : MonoBehaviour
 
     }
 
+    public void PlayShootAudio()
+    {
+        rifleAudio.PlayRifleShot();
+
+        rifleAudio.SetRifleAmmoRTPC(currentAmmo);
+    }
 
     private void UpdateAmmoUI()
     {
