@@ -2045,10 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3596c95573dcb403ea0f17b6b3b4589e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FootStep:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 43f5277783822854a98fdbc86f2383be, type: 2}
+  audioStorage: {fileID: 11400000, guid: 90568e086383d234ebb56efb0b286135, type: 2}
 --- !u!1 &6103955523901390508
 GameObject:
   m_ObjectHideFlags: 0

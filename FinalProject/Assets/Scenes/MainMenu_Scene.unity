@@ -1152,10 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d8ff69f8079194d9f7abdb3a0bdd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuMusic:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 20583a45d859b1342ab9ba7fe6f04960, type: 2}
+  audioStorage: {fileID: 11400000, guid: f55459b032dd3e24682e7abd878f732c, type: 2}
 --- !u!114 &283890670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,10 +1174,7 @@ MonoBehaviour:
   - {fileID: 804661426}
   - {fileID: 431493152}
   - {fileID: 494223400}
-  buttonClickedEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: dd757aaaceef0204fb12c0d47d630534, type: 2}
+  audioStorage: {fileID: 11400000, guid: f55459b032dd3e24682e7abd878f732c, type: 2}
 --- !u!1 &339006050
 GameObject:
   m_ObjectHideFlags: 0

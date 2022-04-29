@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class FootSteps : MonoBehaviour
 {
-    public AK.Wwise.Event FootStep; 
+    public PlayerAudioStorage audioStorage;
 
     void PlayFootStep() {
-        FootStep.Post(gameObject); 
+        audioStorage.FootStep.Post(gameObject); 
     }
 }

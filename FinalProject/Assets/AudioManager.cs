@@ -7,16 +7,7 @@ using Mirror;
 
 public class AudioManager : NetworkBehaviour
 {
-    [SerializeField]
-    private AK.Wwise.State preparationGameplayState;
-    [SerializeField]
-    private AK.Wwise.State bossGameplayState;
-    [SerializeField]
-    private AK.Wwise.State lowIntensityGameplayState;
-    [SerializeField]
-    private AK.Wwise.State highIntensityGameplayState;
-    [SerializeField]
-    private AK.Wwise.State noneState;
+    public GameplayMusicAudioStorage audioStorage;
 
     //uint currentState = 0; 
     public const int PREPARATION = 0, BOSS = 1, LOWINTENSITY = 2, HIGHINTENSITY = 3, NONE = 4;
@@ -60,23 +51,23 @@ public class AudioManager : NetworkBehaviour
         switch(state)
         {
             case AudioManager.NONE:
-                noneState.SetValue(); 
+                audioStorage.noneState.SetValue(); 
                 break; 
             case AudioManager.PREPARATION:  
                 Debug.Log("AudioManager-Preparation Music");
-                preparationGameplayState.SetValue(); 
+                audioStorage.preparationGameplayState.SetValue(); 
                 break; 
             case AudioManager.BOSS : 
                 Debug.Log("AudioManager-Boss Music");
-                bossGameplayState.SetValue(); 
+                audioStorage.bossGameplayState.SetValue(); 
                 break;
             case AudioManager.LOWINTENSITY : 
                 Debug.Log("AudioManager-LowIntensity Music");
-                lowIntensityGameplayState.SetValue();
+                audioStorage.lowIntensityGameplayState.SetValue();
                 break;
             case AudioManager.HIGHINTENSITY :
                 Debug.Log("AudioManager-highIntensity Music");
-                highIntensityGameplayState.SetValue();
+                audioStorage.highIntensityGameplayState.SetValue();
                 break;
         }
     }

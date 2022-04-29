@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ButtonClick : MonoBehaviour
 {
     public List<Button> buttons;
-    public AK.Wwise.Event buttonClickedEvent; 
+
+    public MainMenuAudioStorage audioStorage;
 
     void Start()
     {
@@ -17,6 +18,6 @@ public class ButtonClick : MonoBehaviour
     }
 
     void TaskOnClick() {
-        buttonClickedEvent.Post(gameObject);
+        audioStorage.buttonClickedEvent.Post(gameObject);
     }
 }

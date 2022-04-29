@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe4e46cd3b2c5e429885bb8b983dc8b, type: 3}
+  m_Name: PlayerAudioStorage
+  m_EditorClassIdentifier: 
+  bossVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1c7e5862f4acce44b9ffa23ea7a43097, type: 2}
+  damagedVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3a9999e5c03eaa3458a11fccc2922a8d, type: 2}
+  reloadingVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b388f386e5d88674d9bc350cb0cac4d1, type: 2}
+  roundendingVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 54d1ff6ffd535fb4aaba714787c963e1, type: 2}
+  shieldbeacondamagedVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d102af2714c97424c9cd7c5414b775d6, type: 2}
+  shieldbeaconlowVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 85bea89890ccb3643bf6e2511ee6a7e2, type: 2}
+  noammoVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2f83735f2f695414dad8c35c6ef36eec, type: 2}
+  playerHealth:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c5176fa0cf137f34fbe897566ce083f4, type: 2}
+  playerHealthAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 28a6048089e3173489bf9dce3bd08d77, type: 2}
+  FootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 43f5277783822854a98fdbc86f2383be, type: 2}

@@ -82,14 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13509071eda4fe42a35cca854af037b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2cf5d3c91f91ef1458019d5d958f963f, type: 2}
-  ammoRTPC:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d41e6d6fefa6e674daa269957a5420a8, type: 2}
+  audioStorage: {fileID: 11400000, guid: e4a87bb83c323254a80f6d97ffd3ec78, type: 2}
 --- !u!1 &12801757635976432
 GameObject:
   m_ObjectHideFlags: 0

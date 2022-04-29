@@ -5,20 +5,17 @@ using Mirror;
 
 public class ShieldBeaconAudio : NetworkBehaviour 
 {
-    [SerializeField]
-    private AK.Wwise.RTPC healthRTPC;
-    [SerializeField]
-    private AK.Wwise.Event shieldNoise;  
+    public ShieldBeaconAudioStorage audioStorage;
     
 
     void Start()
     {
-        shieldNoise.Post(gameObject); 
+        audioStorage.shieldNoise.Post(gameObject); 
     }
 
 
     [ClientRpc]
     public void RpcShieldBeaconHealthAudio(float health) {
-        healthRTPC.SetValue(gameObject, health);
+        audioStorage.healthRTPC.SetValue(gameObject, health);
     }
 }

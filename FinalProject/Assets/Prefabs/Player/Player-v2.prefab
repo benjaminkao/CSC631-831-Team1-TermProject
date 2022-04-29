@@ -339,42 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  bossVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1c7e5862f4acce44b9ffa23ea7a43097, type: 2}
-  damagedVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3a9999e5c03eaa3458a11fccc2922a8d, type: 2}
-  reloadingVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b388f386e5d88674d9bc350cb0cac4d1, type: 2}
-  roundendingVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 54d1ff6ffd535fb4aaba714787c963e1, type: 2}
-  shieldbeacondamagedVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d102af2714c97424c9cd7c5414b775d6, type: 2}
-  shieldbeaconlowVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 85bea89890ccb3643bf6e2511ee6a7e2, type: 2}
-  noammoVoiceLine:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2f83735f2f695414dad8c35c6ef36eec, type: 2}
-  playerHealth:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c5176fa0cf137f34fbe897566ce083f4, type: 2}
-  playerHealthAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 28a6048089e3173489bf9dce3bd08d77, type: 2}
+  audioStorage: {fileID: 11400000, guid: 90568e086383d234ebb56efb0b286135, type: 2}
 --- !u!1 &6609654028327704278
 GameObject:
   m_ObjectHideFlags: 0

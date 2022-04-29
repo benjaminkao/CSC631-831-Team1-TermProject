@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuAudio : MonoBehaviour
 {
-
-    [SerializeField] private AK.Wwise.Event mainMenuMusic;
+    public MainMenuAudioStorage audioStorage;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        mainMenuMusic.Post(gameObject);
+        audioStorage.mainMenuMusic.Post(gameObject);
 
         
     }
@@ -31,7 +31,7 @@ public class MainMenuAudio : MonoBehaviour
 
     void StopMainMenuMusic()
     {
-        mainMenuMusic.Stop(gameObject);
+        audioStorage.mainMenuMusic.Stop(gameObject);
     }
 
     

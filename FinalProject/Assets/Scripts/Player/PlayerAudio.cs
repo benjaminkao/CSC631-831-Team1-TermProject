@@ -5,25 +5,7 @@ using Mirror;
 
 public class PlayerAudio : NetworkBehaviour
 {
-   [SerializeField]
-   private AK.Wwise.Event bossVoiceLine; 
-   [SerializeField]
-   private AK.Wwise.Event damagedVoiceLine; 
-   [SerializeField]
-   private AK.Wwise.Event reloadingVoiceLine; 
-   [SerializeField]
-   private AK.Wwise.Event roundendingVoiceLine; 
-   [SerializeField]
-   private AK.Wwise.Event shieldbeacondamagedVoiceLine; 
-   [SerializeField]
-   private AK.Wwise.Event shieldbeaconlowVoiceLine;
-    [SerializeField]
-    private AK.Wwise.Event noammoVoiceLine;
-
-   [SerializeField]
-   private AK.Wwise.RTPC playerHealth; 
-   [SerializeField]
-   private AK.Wwise.Event playerHealthAudio; 
+    public PlayerAudioStorage audioStorage;
 
    public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5, NOAMMO = 6;  
    
@@ -31,12 +13,12 @@ public class PlayerAudio : NetworkBehaviour
         if(isServerOnly) return; 
 
         Debug.Log("PlayerHealthAudio"); 
-        playerHealthAudio.Post(gameObject); 
+        audioStorage.playerHealthAudio.Post(gameObject); 
 
     }
 
     public void SetPlayerHealthRTPC(float health) {
-        playerHealth.SetValue(gameObject, health);
+        audioStorage.playerHealth.SetValue(gameObject, health);
     }
 
     [ClientRpc]
@@ -45,25 +27,25 @@ public class PlayerAudio : NetworkBehaviour
         switch(voiceLine)
         {
            case PlayerAudio.BOSS:
-               bossVoiceLine.Post(gameObject); 
+                audioStorage.bossVoiceLine.Post(gameObject); 
                break;
            case PlayerAudio.DAMAGED:
-                damagedVoiceLine.Post(gameObject);
+                audioStorage.damagedVoiceLine.Post(gameObject);
                break;
             case PlayerAudio.NOAMMO:
-                noammoVoiceLine.Post(gameObject);
+                audioStorage.noammoVoiceLine.Post(gameObject);
                 break;
            case PlayerAudio.RELOADING:
-                reloadingVoiceLine.Post(gameObject);
+                audioStorage.reloadingVoiceLine.Post(gameObject);
                break;
            case PlayerAudio.ROUNDENDING:
-                roundendingVoiceLine.Post(gameObject);
+                audioStorage.roundendingVoiceLine.Post(gameObject);
                break;
            case PlayerAudio.SHIELDBEACONDAMAGED:
-                shieldbeacondamagedVoiceLine.Post(gameObject);
+                audioStorage.shieldbeacondamagedVoiceLine.Post(gameObject);
                break;
            case PlayerAudio.SHIELDBEACONLOW:
-                shieldbeaconlowVoiceLine.Post(gameObject);
+                audioStorage.shieldbeaconlowVoiceLine.Post(gameObject);
                break;
 
         }

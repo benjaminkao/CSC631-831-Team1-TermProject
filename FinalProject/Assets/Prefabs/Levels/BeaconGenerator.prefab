@@ -3194,14 +3194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  healthRTPC:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 048400a48f194784bbd3544f19ef3ebc, type: 2}
-  shieldNoise:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5d16b2e508cdfd4438d461a0fe5587fa, type: 2}
+  audioStorage: {fileID: 11400000, guid: ba637482721f1fc45875752ed729bd68, type: 2}
 --- !u!1 &8562080363108774152
 GameObject:
   m_ObjectHideFlags: 0
