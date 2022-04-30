@@ -92,6 +92,11 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
     // Update function for TowerTargeting sub-classes
     public void SearchForTargets()
     {
+        if(!isServer)
+        {
+            return;
+        }
+
         if (_canShoot)
         {
             ApplyEffects(GetEntitiesInRange());

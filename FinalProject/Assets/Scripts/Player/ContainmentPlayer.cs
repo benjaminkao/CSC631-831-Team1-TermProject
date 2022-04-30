@@ -12,6 +12,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     [Header("Player Components")]
     public ContainmentPlayerController Character;
     public ContainmentPlayerCamera CharacterCamera;
+    public ContainmentPlayerAnimator Animator;
 
     [SerializeField]
     private PlayerAudio playerAudio; 
@@ -110,6 +111,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public static event Action<ContainmentPlayer> OnPlayerDown;
     public static event Action<ContainmentPlayer> OnPlayerDeath;
+    public static event Action<ContainmentPlayer> OnPlayerResurrect;
 
     public static event Action<ContainmentPlayer> OnPlayerJoin;
     public static event Action<ContainmentPlayer> OnPlayerLeave;
@@ -200,12 +202,15 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             return;
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && !Downed && !Died)
         {
             if (gun.CanShoot && gun.HasAmmo)
             {
                 Vector3 direction = GetGunShootDirection(Camera.main.transform.forward);
-                gun.ClientShoot(Camera.main.transform.position, direction);
+
+                    gun.ClientShoot(Camera.main.transform.position, direction);
+
+                
 
                 CmdShoot(Camera.main.transform.position, direction);
             } else if(!gun.HasAmmo)
@@ -214,9 +219,9 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
             }
         }
 
-        if(Input.GetButtonDown("Reload") && gun.CanReload)
+        if(Input.GetButtonDown("Reload") && !Downed && !Died && gun.CanReload)
         {
-            playerAudio.TriggerVoiceLine(PlayerAudio.RELOADING); 
+            CmdReload();
             gun.Reload();
         }
 
@@ -254,15 +259,18 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         if(health.IsDown)
         {
+            Debug.Log("Player is downed.");
             // Handle Player Down
-
+            HandlePlayerDown(true);
+            RpcUpdatePlayerDown(true);
             OnPlayerDown?.Invoke(this);
         }
 
         if(health.Died)
         {
             // Handle Player Death
-
+            HandlePlayerDied(true);
+            RpcUpdatePlayerDied(true);
             OnPlayerDeath?.Invoke(this);
         }
     }
@@ -326,6 +334,12 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
 
+    [Command]
+    void CmdReload()
+    {
+        playerAudio.TriggerVoiceLine(PlayerAudio.RELOADING);
+    }
+
     [ClientRpc]
     void RpcShootGun(Vector3 startPos, Vector3 direction)
     {
@@ -344,6 +358,21 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         playerAudio.SetPlayerHealthRTPC(this.health.HealthValue);
     }
 
+    [ClientRpc]
+    void RpcUpdatePlayerDown(bool downed)
+    {
+        this.health.IsDown = downed;
+        // Handle Player Down
+        HandlePlayerDown(downed);
+    }
+
+    [ClientRpc]
+    void RpcUpdatePlayerDied(bool died)
+    {
+        this.health.Died = died;
+        this.health.IsDown = !died;
+        HandlePlayerDied(died);
+    }
 
 
     #endregion Mirror Remote Actions
@@ -357,6 +386,26 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         this._readyNextWave = false;
 
         Debug.Log("In preparation phase, press ready to start next wave");
+
+        if(Downed)
+        {
+            Debug.Log("Player should get back up.");
+            // Pick Player back up
+            this.health.IsDown = false;
+            HandlePlayerDown(false);
+            RpcUpdatePlayerDown(false);
+            OnPlayerResurrect?.Invoke(this);
+        }
+
+        if(Died)
+        {
+            Debug.Log("Bring Player back to life.");
+
+            this.health.Died = false;
+            HandlePlayerDied(false);
+            RpcUpdatePlayerDied(false);
+            OnPlayerResurrect?.Invoke(this);
+        }
     }
 
     private void HandleWaveStart()
@@ -384,8 +433,30 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     bool ShouldRegenerateHealth()
     {
-        return !this.health.AtMaxHealth && this._canRegen && Time.time - lastDamaged >= healthRegenCooldown;
+        return !Downed && !Died && !this.health.AtMaxHealth && this._canRegen && Time.time - lastDamaged >= healthRegenCooldown;
     }
+
+
+    void HandlePlayerDown(bool downed)
+    {
+        // Handle player movement variables
+        Character.canSprint = downed ? false : true;
+        Character.canJump = downed ? false : true;
+
+        // Handle player down animation
+        Animator.HandleDowned(downed);
+
+        // Hide weapon
+        gun.gameObject.SetActive(!downed);
+    }
+
+    void HandlePlayerDied(bool died)
+    {
+        HandlePlayerDown(died);
+
+        Character.canMove = died ? false : true;
+    }
+
 
     void HandleNoAmmo()
     {

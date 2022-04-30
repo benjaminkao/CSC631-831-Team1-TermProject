@@ -9,7 +9,7 @@ using Mirror;
 [RequireComponent(typeof(NavMeshAgent), typeof(Health), typeof(EnemyPoolable))]
 public class Enemy : NetworkBehaviour
 {
-
+    public EnemyAnimator enemyAnimator;
 
     public static event Action OnEnemyDied;
     public static event Action<ContainmentPlayer, int> OnEnemyDiedPoints;
@@ -47,6 +47,8 @@ public class Enemy : NetworkBehaviour
 
     private bool _shouldUpdateTarget;
     private bool _canAttack;
+    private bool _canWalk;
+    private bool _hasDied;
     private float _sqrAttackRange;
 
 
@@ -70,6 +72,8 @@ public class Enemy : NetworkBehaviour
 
         _sqrAttackRange = AttackRange * AttackRange;
         _canAttack = true;
+        _canWalk = true;
+        _hasDied = false;
     }
 
 
@@ -82,6 +86,10 @@ public class Enemy : NetworkBehaviour
             return;
         }
 
+        if(_hasDied)
+        {
+            return;
+        }
 
         if(_shouldUpdateTarget)
         {
@@ -97,26 +105,34 @@ public class Enemy : NetworkBehaviour
         float sqrDistanceFromTarget = (targetable.GetTargetPosition().gameObject.transform.position - transform.position).sqrMagnitude;
 
 
-
-        if (sqrDistanceFromTarget <= _sqrAttackRange)
+        if (!_hasDied)
         {
-            if (_canAttack)
+            if (sqrDistanceFromTarget <= _sqrAttackRange)
             {
-                StartCoroutine(AttackTarget());
+                if (_canAttack)
+                {
+                    StartCoroutine(AttackTarget());
+                }
             }
-        }
-        else
-        {
+            else
+            {
 
-
-            agent.SetDestination(targetable.GetTargetPosition().gameObject.transform.position);
+                enemyAnimator.HandleMovementAnimation(agent.velocity.sqrMagnitude);
+                if (_canWalk)
+                {
+                    agent.SetDestination(targetable.GetTargetPosition().gameObject.transform.position);
+                }
+            }
         }
     }
 
 
     public void Damage(ContainmentPlayer player, float damage)
     {
-
+        if(!isServer)
+        {
+            return;
+        }
 
         //Debug.Log("Enemy hit");
 
@@ -125,11 +141,12 @@ public class Enemy : NetworkBehaviour
         this.RpcUpdateHealth(this.health.HealthValue);
 
 
-        if (health.Died)
+        if (health.Died && !this._hasDied)
         {
+            this._hasDied = true;
             OnEnemyDied?.Invoke();
             OnEnemyDiedPoints?.Invoke(player, this._pointsForDeath);
-            enemyPoolable.Despawn();
+            RpcDied();
         }
     }
 
@@ -140,11 +157,11 @@ public class Enemy : NetworkBehaviour
 
         health.SetHealth(healthValue);
         //Debug.Log(healthValue);
-        if(!isServer && health.Died)
-        {
-            //OnEnemyDied?.Invoke(player, this._pointsForDeath);
-            enemyPoolable.Despawn();
-        }
+        //if(!isServer && health.Died)
+        //{
+        //    //OnEnemyDied?.Invoke(player, this._pointsForDeath);
+        //    enemyPoolable.Despawn();
+        //}
     }
 
 
@@ -153,7 +170,7 @@ public class Enemy : NetworkBehaviour
     {
         Instantiate(enemyType.bloodSprayPrefab, bloodSpawnPosition.transform.position, Quaternion.identity);
         Instantiate(enemyType.bloodPrefab, bloodSpawnPosition.transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        enemyPoolable.Despawn();
     }
 
     private GameObject FindClosestTarget()
@@ -189,10 +206,14 @@ public class Enemy : NetworkBehaviour
     IEnumerator AttackTarget()
     {
         _canAttack = false;
+        _canWalk = false;
 
 
         // Attack Target
         ITargetable targetable = target.GetComponent<ITargetable>();
+
+        RpcAttack();
+        
 
         targetable.Damage(AttackDamage);
 
@@ -200,5 +221,18 @@ public class Enemy : NetworkBehaviour
         yield return new WaitForSeconds(TimeBetweenAttacks);
 
         _canAttack = true;
+        _canWalk = true;
+    }
+
+    [ClientRpc]
+    private void RpcAttack()
+    {
+        enemyAnimator.HandleAttackAnimation();
+    }
+
+    [ClientRpc]
+    private void RpcDied()
+    {
+        enemyAnimator.HandleDeathAnimation();
     }
 }

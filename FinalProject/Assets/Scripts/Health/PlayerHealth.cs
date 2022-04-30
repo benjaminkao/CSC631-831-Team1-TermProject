@@ -32,9 +32,9 @@ public class PlayerHealth : Health
         }
     }
 
-    private bool _hasDied;
+    [SerializeField] private bool _hasDied;
 
-    private bool _isDown;
+    [SerializeField] private bool _isDown;
 
     
 
@@ -70,10 +70,11 @@ public class PlayerHealth : Health
     {
         base.alterHealth(value);
 
-        if(atZeroHealth() && !_isDown)
+        if(atZeroHealth() && !_isDown && !_hasDied)
         {
             // Player is downed
             _isDown = true;
+            this.SetHealth(MaxHealthValue);
             return;
         }
 

@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 
 
 
 public class ContainmentPlayerAnimator : MonoBehaviour
 {
-    public enum Movement { IDLE, WALKING, RUNNING}
+    public enum Movement { IDLE, WALKING, RUNNING, DOWNED}
 
 
     public Animator animator;
 
     public float MaxWalkingSpeed;
+
+    public Rig headRig;
+    public Rig armsRig;
+
+    private bool _downed;
 
     private bool _walking;
     private bool _running;
@@ -35,6 +41,16 @@ public class ContainmentPlayerAnimator : MonoBehaviour
         _isDirty = false;
         currentMovementAnimation = Movement.IDLE;
     }
+
+    public void HandleDowned(bool downed)
+    {
+        this._isDirty = true;
+        this._downed = downed;
+
+        this.headRig.weight = downed ? 0 : 1;
+        this.armsRig.weight = downed ? 0 : 1;
+    }
+
 
     public void HandleMovementAnimation(float speed)
     {
@@ -93,5 +109,9 @@ public class ContainmentPlayerAnimator : MonoBehaviour
 
         animator.SetBool("Walk", this._walking);
         animator.SetBool("Run", this._running);
+        animator.SetBool("downed", this._downed);
     }
+
+
+
 }

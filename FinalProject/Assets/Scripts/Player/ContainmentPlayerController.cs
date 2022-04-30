@@ -83,6 +83,9 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
     private bool _shouldBeCrouching = false;
     private bool _isCrouching = false;
     private bool _isSprinting = false;
+    public bool canSprint = true;
+    public bool canJump = true;
+    public bool canMove = true;
 
     private Vector3 lastInnerNormal = Vector3.zero;
     private Vector3 lastOuterNormal = Vector3.zero;
@@ -156,7 +159,7 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
             case CharacterState.Default:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+                    _moveInputVector = canMove ? cameraPlanarRotation * moveInputVector : Vector3.zero;
 
                     switch (OrientationMethod)
                     {
@@ -169,7 +172,7 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
                     }
 
                     // Jumping input
-                    if (inputs.JumpDown)
+                    if (canJump && inputs.JumpDown)
                     {
                         _timeSinceJumpRequested = 0f;
                         _jumpRequested = true;
@@ -192,8 +195,10 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
                         _shouldBeCrouching = false;
                     }
 
-
-                    _isSprinting = inputs.Sprinting;
+                    if (canSprint)
+                    {
+                        _isSprinting = inputs.Sprinting;
+                    }
 
                     break;
                 }

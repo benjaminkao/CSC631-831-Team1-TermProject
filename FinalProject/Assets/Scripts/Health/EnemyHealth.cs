@@ -46,10 +46,11 @@ public class EnemyHealth : Health
         if (atMaxHealth())
         {
             _healthBarUI.gameObject.SetActive(false);
+            return;
         }
 
         //Debug.Log("Should show health bar");
-        _healthBarUI.gameObject.SetActive(true);
+        _healthBarUI.gameObject.SetActive(!Died());
         
     }
 

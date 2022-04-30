@@ -170,7 +170,7 @@ public class WaveSpawner : NetworkBehaviour
             return;
         }
 
-        Debug.Log("Wave Completed!");
+        Debug.Log($"Wave #{nextWave} Completed!");
         audioManager.RpcChangeGameplayAudioState(AudioManager.NONE);
         
 
@@ -249,6 +249,8 @@ public class WaveSpawner : NetworkBehaviour
 
         this.numberOfEnemiesDied++;
 
+        Debug.Log($"Number of Enemies Died: {numberOfEnemiesDied}");
+
         if(this.numberOfEnemiesDied >= this.numberOfEnemiesSpawned)
         {
             WaveCompleted(currentWave);
@@ -294,6 +296,8 @@ public class WaveSpawner : NetworkBehaviour
 
 
             }
+
+            Debug.Log($"Spawned {numberOfEnemiesSpawned}");
 
             //state = SpawnState.SPAWNING;
             //for (int i = 0; i < _wave.count; i++){

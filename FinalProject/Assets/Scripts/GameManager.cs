@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         ContainmentPlayer.OnPlayerDown += HandlePlayerDowned;
         ContainmentPlayer.OnPlayerDeath += HandlePlayerDeath;
         ContainmentPlayer.OnPlayerReady += HandlePlayerReady;
+        ContainmentPlayer.OnPlayerResurrect += HandlePlayerResurrect;
 
 
         TargetableManager.OnTargetableEnabled += RegisterTargetable;
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
         ContainmentPlayer.OnPlayerDown -= HandlePlayerDowned;
         ContainmentPlayer.OnPlayerDeath -= HandlePlayerDeath;
         ContainmentPlayer.OnPlayerReady -= HandlePlayerReady;
+        ContainmentPlayer.OnPlayerResurrect -= HandlePlayerResurrect;
 
 
         TargetableManager.OnTargetableEnabled -= RegisterTargetable;
@@ -218,6 +220,9 @@ public class GameManager : MonoBehaviour
     public void HandlePlayerDowned(ContainmentPlayer playerDowned)
     {
         bool gameOver = true;
+
+        _enemyTargetables.Remove(playerDowned.gameObject);
+
         foreach(ContainmentPlayer player in this._players)
         {
             if(player == playerDowned)
@@ -245,7 +250,9 @@ public class GameManager : MonoBehaviour
     {
         bool gameOver = true;
 
-        foreach(ContainmentPlayer player in this._players)
+        _enemyTargetables.Remove(playerDied.gameObject);
+
+        foreach (ContainmentPlayer player in this._players)
         {
             if(player == playerDied)
             {
@@ -266,6 +273,14 @@ public class GameManager : MonoBehaviour
         }
 
         // Networking - Notify clients of player died and if game is over
+    }
+
+    public void HandlePlayerResurrect(ContainmentPlayer playerRez)
+    {
+        if(!_enemyTargetables.Contains(playerRez.gameObject))
+        {
+            _enemyTargetables.Add(playerRez.gameObject);
+        }
     }
 
 
