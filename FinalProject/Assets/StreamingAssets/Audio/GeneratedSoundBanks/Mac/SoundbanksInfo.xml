@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -67,7 +67,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4056684167" Language="SFX" Hash="3862861600">
+		<SoundBank Id="4056684167" Language="SFX" Hash="2439974817">
 			<ObjectPath>\SoundBanks\Official\Master</ObjectPath>
 			<ShortName>Master</ShortName>
 			<Path>Master.bnk</Path>
