@@ -14,6 +14,7 @@ public class Rifle : MonoBehaviour
     public int currentAmmo;
     public bool AddBulletSpread;
     public Vector3 BulletSpreadVariance = new Vector3(0.1f, 0.1f, 0.1f);
+    public bool infiniteAmmo;
 
     [SerializeField] private bool automaticReload;
 
@@ -63,6 +64,15 @@ public class Rifle : MonoBehaviour
 
     private TextMeshProUGUI ammoLabel;
 
+    public TextMeshProUGUI AmmoLabel
+    {
+        set
+        {
+            ammoLabel = value;
+            UpdateAmmoUI();
+        }
+    }
+
 
     [Header("Debug")]
     [Tooltip("If debug is off, no raycast tracing or primitive sphere spawning will be done.")]
@@ -72,13 +82,6 @@ public class Rifle : MonoBehaviour
     [Tooltip("Trace the camera raycast and the gun raycast.")]
     [SerializeField] private bool showRaycastTraces;
 
-
-    void Start()
-    {
-        ammoLabel = GameObject.Find("HUD - Roaming").transform.Find("AmmoLabel").GetComponent<TextMeshProUGUI>();
-
-        UpdateAmmoUI();
-    }
 
 
     void OnEnable()
@@ -97,7 +100,10 @@ public class Rifle : MonoBehaviour
 
     public void ClientShoot(Vector3 startPos, Vector3 direction)
     {
-        currentAmmo--;
+        if (!infiniteAmmo)
+        {
+            currentAmmo--;
+        }
         ShootVFX(startPos, direction);
         PlayShootAudio();
         StartCoroutine(ShootDelay());
@@ -162,7 +168,10 @@ public class Rifle : MonoBehaviour
 
     private GameObject HandleShoot(Vector3 startPos, Vector3 direction)
     {
-        currentAmmo--;
+        if (!infiniteAmmo)
+        {
+            currentAmmo--;
+        }
 
 
 
@@ -174,7 +183,10 @@ public class Rifle : MonoBehaviour
         RaycastHit cameraHit;
         RaycastHit gunHit;
 
+        // Set layermask to Ignore Raycast
         int layerMask = 1 << 2;
+
+        // Set layermask to everything but Ignore Raycast
         layerMask = ~layerMask;
 
         // Camera: Physics.Raycast(origin, endPoint, hit)
@@ -188,7 +200,9 @@ public class Rifle : MonoBehaviour
         }
 
         
-        bool gun = Physics.Linecast(gunPoint.transform.position, cameraHit.point, out gunHit);
+
+        
+        bool gun = Physics.Linecast(gunPoint.transform.position, cameraHit.point, out gunHit, layerMask);
 
 
         // View Debug Raycasts
@@ -213,8 +227,6 @@ public class Rifle : MonoBehaviour
         {
             return null;
         }
-
-
 
         if (gunHit.transform.gameObject == cameraHit.transform.gameObject)
         {

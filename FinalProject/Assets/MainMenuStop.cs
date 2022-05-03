@@ -7,6 +7,11 @@ public class MainMenuStop : MonoBehaviour
     public AK.Wwise.Event mainMenuMusicStop; 
     void Start()
     {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         mainMenuMusicStop.Post(gameObject); 
     }
 

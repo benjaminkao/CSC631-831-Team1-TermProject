@@ -9,10 +9,9 @@ public class PlayerAudio : NetworkBehaviour
 
    public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5, NOAMMO = 6;  
    
-    public override void OnStartClient() {
-        if(isServerOnly) return; 
+    public override void OnStartAuthority() {
+        if(isServerOnly) return;
 
-        Debug.Log("PlayerHealthAudio"); 
         audioStorage.playerHealthAudio.Post(gameObject); 
 
     }
@@ -21,8 +20,18 @@ public class PlayerAudio : NetworkBehaviour
         audioStorage.playerHealth.SetValue(gameObject, health);
     }
 
-    [ClientRpc]
     public void TriggerVoiceLine(int voiceLine)
+    {
+        if(!isServer)
+        {
+            return;
+        }
+
+        RpcTriggerVoiceLine(voiceLine);
+    }
+
+    [ClientRpc]
+    public void RpcTriggerVoiceLine(int voiceLine)
     {
         switch(voiceLine)
         {
@@ -50,6 +59,6 @@ public class PlayerAudio : NetworkBehaviour
 
         }
 
-        Debug.Log($"Triggered Voice Line: {voiceLine}");
+        //Debug.Log($"Triggered Voice Line: {voiceLine}");
     }
 }

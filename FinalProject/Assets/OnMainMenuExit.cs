@@ -14,7 +14,12 @@ public class OnMainMenuExit : MonoBehaviour
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == nextSceneIndex) {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == nextSceneIndex) {
             mainMenuStopEvent.Post(gameObject); 
         }
     }

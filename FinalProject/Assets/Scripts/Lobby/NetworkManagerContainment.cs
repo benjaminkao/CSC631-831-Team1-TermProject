@@ -254,7 +254,7 @@ public class NetworkManagerContainment : NetworkManager
     }
 
 
-    bool IsHeadless()
+    public static bool IsHeadless()
     {
         return SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null;
     }

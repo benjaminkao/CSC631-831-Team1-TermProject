@@ -16,6 +16,8 @@ public class Health : MonoBehaviour
         set
         {
             this._healthBarUI = value;
+            this._healthBarUI.SetMaxHealth(_maxHealth);
+            this._healthBarUI.SetHealth(_maxHealth);
         }
     }
 
@@ -82,6 +84,11 @@ public class Health : MonoBehaviour
     public virtual void SetHealth(float healthValue)
     {
         HealthValue = healthValue;
+
+        if(_healthBarUI != null)
+        {
+            _healthBarUI.SetHealth(HealthValue);
+        }
     }
 
     protected virtual bool atMaxHealth() { return _healthValue >= _maxHealth; }

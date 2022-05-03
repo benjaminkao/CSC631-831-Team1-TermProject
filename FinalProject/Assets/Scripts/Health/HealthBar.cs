@@ -51,6 +51,8 @@ public class HealthBar : MonoBehaviour
         // Get the percentage of health left
         float healthPercentage = healthBarSlider.value / healthBarSlider.maxValue;
 
+        
+
         Color color = gradient.Evaluate(healthPercentage);
 
         // Change color of fill area of health bar to the appropriate gradient color based off of the health percentage left

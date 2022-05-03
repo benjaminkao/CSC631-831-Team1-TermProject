@@ -10,6 +10,10 @@ public class ShieldBeaconAudio : NetworkBehaviour
 
     void Start()
     {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
         audioStorage.shieldNoise.Post(gameObject); 
     }
 

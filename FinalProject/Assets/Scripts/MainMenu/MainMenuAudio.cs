@@ -12,6 +12,11 @@ public class MainMenuAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         audioStorage.mainMenuMusic.Post(gameObject);
 
         
@@ -31,6 +36,11 @@ public class MainMenuAudio : MonoBehaviour
 
     void StopMainMenuMusic()
     {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         audioStorage.mainMenuMusic.Stop(gameObject);
     }
 

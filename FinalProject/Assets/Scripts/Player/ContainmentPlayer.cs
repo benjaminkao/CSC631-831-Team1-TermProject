@@ -5,6 +5,7 @@ using UnityEngine;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 using Mirror;
+using TMPro;
 
 
 public class ContainmentPlayer : NetworkBehaviour, ITargetable
@@ -89,16 +90,17 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     private float lastGunSoundNoAmmo;
     private bool _canRegen;
 
-
+    [SerializeField]
+    private PlayerUI ui;
 
 
     [Header("Ready Up")]
     [SerializeField]
-    [SyncVar]
+    [SyncVar(hook = nameof(HandleReadyUp))]
     private bool _readyNextWave;
 
     [SerializeField]
-    [SyncVar]
+    [SyncVar(hook = nameof(HandlePreparationPhase))]
     private bool _inPreparationPhase;
 
 
@@ -120,7 +122,9 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     public override void OnStartAuthority()
     {
-        if(!hasAuthority)
+        GameMenuUIManager uiManager = GameObject.FindObjectOfType<GameMenuUIManager>();
+
+        if (!hasAuthority)
         {
             return;
         }
@@ -141,11 +145,32 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
 
 
+        gun.AmmoLabel = GameObject.Find("HUD - Roaming").transform.Find("AmmoLabel").GetComponent<TextMeshProUGUI>();
 
         // Set what Player the health is for
         health.Player = this;
-        health.HealthBarUI = GameObject.Find("HUD - Roaming").transform.Find("HealthBarCanvas").Find("HealthBar").GetComponent<HealthBar>();
 
+
+        ui = uiManager.GetLocalPlayerUI();
+        health.HealthBarUI = ui.HealthBar;
+
+    }
+
+    public override void OnStartClient()
+    {
+        if (hasAuthority)
+        {
+            return;
+        }
+
+        GameMenuUIManager uiManager = GameObject.FindObjectOfType<GameMenuUIManager>();
+
+        ui = uiManager.GetOtherPlayerUI();
+
+        ui.gameObject.SetActive(true);
+
+        health.Player = this;
+        health.HealthBarUI = ui.HealthBar;
     }
 
     public override void OnStartServer()
@@ -337,6 +362,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     [Command]
     void CmdReload()
     {
+        gun.Reload();
         playerAudio.TriggerVoiceLine(PlayerAudio.RELOADING);
     }
 
@@ -473,6 +499,29 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         lastVoicedNoAmmo = currentTime;
         lastGunSoundNoAmmo = currentTime;
+    }
+
+    void HandleReadyUp(bool oldValue, bool newValue)
+    {
+        if (ui == null) return;
+
+        ui.SetReadyUp(true);
+    }
+
+    void HandlePreparationPhase(bool oldValue, bool newValue)
+    {
+        if (ui == null) return;
+
+        if(newValue)
+        {
+            ui.SetReadyUp(false);
+            ui.ToggleReadyUpActive(true);
+        } else
+        {
+            ui.ToggleReadyUpActive(false);
+        }
+
+        
     }
 
     Vector3 GetGunShootDirection(Vector3 forward)

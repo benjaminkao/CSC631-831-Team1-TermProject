@@ -9,11 +9,14 @@ public class GameMenuUIManager : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject craftingHUD;
 
+    [SerializeField] PlayerUI[] playerUis = new PlayerUI[3];
+    [SerializeField] PlayerUI localPlayer;
+
 
 
     [SerializeField] TowerSpawner selectedTowerSpawner;
 
-
+    private int _otherPlayerCount;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,13 @@ public class GameMenuUIManager : MonoBehaviour
         {
             Debug.LogError("Pause Menu is undefined.");
             //UnityEditor.EditorApplication.isPlaying = false;
+        }
+
+        this._otherPlayerCount = 0;
+
+        foreach(PlayerUI playerUI in playerUis)
+        {
+            playerUI.gameObject.SetActive(false);
         }
     }
 
@@ -73,5 +83,16 @@ public class GameMenuUIManager : MonoBehaviour
         craftingHUD.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public PlayerUI GetLocalPlayerUI()
+    {
+        return localPlayer;
+    }
+
+    public PlayerUI GetOtherPlayerUI()
+    {
+        PlayerUI result = playerUis[this._otherPlayerCount++];
+        return result;
     }
 }

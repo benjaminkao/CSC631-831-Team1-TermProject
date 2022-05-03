@@ -11,6 +11,11 @@ public class GameplayMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         audioStorage.gameplayMusic.Post(gameObject);
     }
 

@@ -430,14 +430,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3094057687910534620}
   - component: {fileID: 3094057687918289480}
-  - component: {fileID: 7806980429587679760}
   - component: {fileID: 7806980429587679761}
+  - component: {fileID: 7806980429587679760}
   - component: {fileID: 8840798479654820998}
   - component: {fileID: 8845281106942047186}
   - component: {fileID: 6765295589278649692}
   - component: {fileID: 8845281106942047147}
   - component: {fileID: 7578360966598625310}
   - component: {fileID: -387820814965732588}
+  - component: {fileID: 3436449536640457549}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -482,6 +483,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7806980429587679761
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094057687910895676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38
+  m_Height: 2.21
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &7806980429587679760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -498,20 +513,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &7806980429587679761
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3094057687910895676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.38
-  m_Height: 2.21
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8840798479654820998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  enemyAnimator: {fileID: 3436449536640457549}
   TimeBetweenUpdatingTargets: 1
   AttackDamage: 10
   AttackRange: 1.5
@@ -634,6 +636,23 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &3436449536640457549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094057687910895676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293cf409df2752f41a24fd82a28c3559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  animator: {fileID: 3094057687918289480}
+  currentMovementAnimation: 0
+  walkingSpeed: 0
 --- !u!1 &3094057687910895678
 GameObject:
   m_ObjectHideFlags: 0

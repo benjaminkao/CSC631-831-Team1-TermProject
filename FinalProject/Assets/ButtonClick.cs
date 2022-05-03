@@ -18,6 +18,11 @@ public class ButtonClick : MonoBehaviour
     }
 
     void TaskOnClick() {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         audioStorage.buttonClickedEvent.Post(gameObject);
     }
 }

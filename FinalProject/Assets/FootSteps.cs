@@ -8,6 +8,11 @@ public class FootSteps : MonoBehaviour
     public PlayerAudioStorage audioStorage;
 
     void PlayFootStep() {
+        if (NetworkManagerContainment.IsHeadless())
+        {
+            return;
+        }
+
         audioStorage.FootStep.Post(gameObject); 
     }
 }
