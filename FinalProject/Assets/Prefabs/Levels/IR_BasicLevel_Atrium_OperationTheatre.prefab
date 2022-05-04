@@ -93936,6 +93936,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2299524064506628623, guid: 9ba7df5a6640507439986121757baf0f, type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299524064506628623, guid: 9ba7df5a6640507439986121757baf0f, type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299524064506628623, guid: 9ba7df5a6640507439986121757baf0f, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2299524065239615933, guid: 9ba7df5a6640507439986121757baf0f, type: 3}
       propertyPath: m_Name
       value: BeaconConsole
