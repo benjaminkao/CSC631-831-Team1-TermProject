@@ -185,6 +185,9 @@ MonoBehaviour:
   MainFollowPoint: {fileID: 3941307286465170870}
   AdsFollowPoint: {fileID: 3841026483141142760}
   CrouchedCapsuleHeight: 1
+  canSprint: 1
+  canJump: 1
+  canMove: 1
 --- !u!114 &-5232513251473546867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b30d1ef96948d42b300bc4388b0138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   animator: {fileID: 7575131321492687406}
   MaxWalkingSpeed: 5
   headRig: {fileID: 4056283545556450543}
@@ -263,6 +264,8 @@ MonoBehaviour:
   _maxHealth: 100
   _healthBarUI: {fileID: 0}
   _healthValue: 100
+  _hasDied: 0
+  _isDown: 0
 --- !u!114 &-720955074844046644
 MonoBehaviour:
   m_ObjectHideFlags: 0
