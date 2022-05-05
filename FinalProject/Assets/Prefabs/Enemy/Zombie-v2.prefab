@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioStorage: {fileID: 11400000, guid: 928d9511ba0a54fd287ace92c90b4228, type: 2}
+  eventLikelihood: 0.1
 --- !u!1001 &6205025269569855216
 PrefabInstance:
   m_ObjectHideFlags: 0

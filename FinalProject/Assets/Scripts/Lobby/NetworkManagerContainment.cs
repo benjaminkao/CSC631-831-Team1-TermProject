@@ -33,12 +33,25 @@ public class NetworkManagerContainment : NetworkManager
     public static event Action<NetworkConnection> OnServerReadied;
 
     [SerializeField]
+    private List<NetworkIdentity> players = new List<NetworkIdentity>();
+    public List<NetworkIdentity> Players = new List<NetworkIdentity>();
+
+    [SerializeField]
     private List<NetworkRoomPlayerContainment> roomPlayers = new List<NetworkRoomPlayerContainment>();
     public List<NetworkRoomPlayerContainment> RoomPlayers { get { return roomPlayers; } }
-    public List<NetworkGamePlayerContainment> GamePlayers { get; } = new List<NetworkGamePlayerContainment>();
+
+    [SerializeField]
+    private List<NetworkGamePlayerContainment> gamePlayers = new List<NetworkGamePlayerContainment>();
+    public List<NetworkGamePlayerContainment> GamePlayers { get { return gamePlayers; } }
 
     public override void Awake()
     {
+        if (singleton != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         base.Awake();
 
         if (IsHeadless())
@@ -105,9 +118,12 @@ public class NetworkManagerContainment : NetworkManager
     {
         if(conn.identity != null)
         {
-            var player = conn.identity.GetComponent<NetworkRoomPlayerContainment>();
+            //var player = conn.identity.GetComponent<NetworkRoomPlayerContainment>();
 
-            RoomPlayers.Remove(player);
+            //RoomPlayers.Remove(player);
+
+            RoomPlayers.RemoveAll(roomPlayer => roomPlayer.GetComponent<NetworkIdentity>().connectionToClient == conn);
+
 
             NotifyPlayersOfReadyState();
         }
@@ -139,13 +155,14 @@ public class NetworkManagerContainment : NetworkManager
             NotifyPlayersOfReadyState();
 
             DisplayPlayers();
-        } else if(SceneManager.GetActiveScene().path == gameScene)
-        {
-            NetworkGamePlayerContainment gamePlayerInstance = Instantiate(gamePlayerPrefab);
-
-            gamePlayerInstance.name = $"{gamePlayerInstance.name} [connId={conn.connectionId}]";
-            NetworkServer.AddPlayerForConnection(conn, gamePlayerInstance.gameObject);            
         }
+        //else if(SceneManager.GetActiveScene().path == gameScene)
+        //{
+        //    NetworkGamePlayerContainment gamePlayerInstance = Instantiate(gamePlayerPrefab);
+
+        //    gamePlayerInstance.name = $"{gamePlayerInstance.name} [connId={conn.connectionId}]";
+        //    NetworkServer.AddPlayerForConnection(conn, gamePlayerInstance.gameObject);            
+        //}
     }
 
     public override void OnStopServer()
@@ -202,31 +219,36 @@ public class NetworkManagerContainment : NetworkManager
         //}
     }
 
-    //public override void ServerChangeScene(string newSceneName)
-    //{
-    //    // From Menu to Game
-    //    if (SceneManager.GetActiveScene().path == menuScene && newSceneName == gameScene)
-    //    {
+    public override void ServerChangeScene(string newSceneName)
+    {
+        // From Menu to Game
+        if (SceneManager.GetActiveScene().path == menuScene && newSceneName == gameScene)
+        {
 
-    //        for (int i = RoomPlayers.Count - 1; i >= 0; i--)
-    //        {
-    //            var conn = RoomPlayers[i].connectionToClient;
+            for (int i = RoomPlayers.Count - 1; i >= 0; i--)
+            {
+                var conn = RoomPlayers[i].connectionToClient;
 
-    //            var gamePlayerInstance = Instantiate(gamePlayerPrefab);
-    //            gamePlayerInstance.SetDisplayName(RoomPlayers[i].DisplayName);
+                var gamePlayerInstance = Instantiate(gamePlayerPrefab);
+                gamePlayerInstance.SetDisplayName(RoomPlayers[i].DisplayName);
 
-    //            // Destroy NetworkRoomPlayerContainment's gameobject that is attached to the NetworkIdentity
-    //            NetworkServer.Destroy(conn.identity.gameObject);
+                // Set all clients to not ready so that when clients are ready, scene objects will spawn in.
+                NetworkServer.SetAllClientsNotReady();
 
-    //            gamePlayerInstance.name = $"{gamePlayerInstance.name} [connId={conn.connectionId}]";
-    //            // Assign the new NetworkGamePlayerContainment's gameobject to the isolated NetworkIdentity that is the player's connection to the server
-    //            NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject);
-    //        }
+                // Destroy NetworkRoomPlayerContainment's gameobject that is attached to the NetworkIdentity
+                NetworkServer.Destroy(conn.identity.gameObject);
 
-    //    }
+                gamePlayerInstance.name = $"{gamePlayerInstance.name} [connId={conn.connectionId}]";
+                // Assign the new NetworkGamePlayerContainment's gameobject to the isolated NetworkIdentity that is the player's connection to the server
+                NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject);
+            }
 
-    //    base.ServerChangeScene(newSceneName);
-    //}
+            RoomPlayers.Clear();
+
+        }
+
+        base.ServerChangeScene(newSceneName);
+    }
 
     public override void OnServerSceneChanged(string sceneName)
     {

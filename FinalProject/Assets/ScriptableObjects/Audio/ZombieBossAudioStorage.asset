@@ -15,20 +15,20 @@ MonoBehaviour:
   ZombieBossFootStep:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 18b58d7321352445bbe9d5c8a8fe48b1, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 1e7964222a8f4944fa7bd26399ce32b1, type: 2}
   ZombieBossAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8ff5da249668d4ba3a821777a5f15c8f, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 934dcdef5de712a4ba5e319d15ee5073, type: 2}
   ZombieBossRoar:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c630e9733145148639d30f9513ac6db8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 7ac41802104be404e95060e2c186a775, type: 2}
   ZombieBossDamageTaken:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 26a84f76e4ac44abfb99e762daf11ecb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 09a5308fea759b543b7599e1a41ace1b, type: 2}
   ZombieBossDeath:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6afeeb5e0f03540cda7a5302a6829595, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 7ba7c83940b33ec4da7d36c82eb212ff, type: 2}

@@ -7,7 +7,10 @@ public class NetworkGamePlayerContainment : NetworkBehaviour
 {
 
     [SyncVar]
+    [SerializeField]
     private string displayName = "Loading...";
+
+    public string DisplayName { get { return displayName;  } }
 
     //private bool isLeader;
 
@@ -33,8 +36,16 @@ public class NetworkGamePlayerContainment : NetworkBehaviour
         }
     }
 
+    public override void OnStartServer()
+    {
+        DontDestroyOnLoad(gameObject);
+        Room.GamePlayers.Add(this);
+    }
 
-
+    public override void OnStopServer()
+    {
+        Room.GamePlayers.Remove(this);
+    }
 
     public override void OnStartClient()
     {

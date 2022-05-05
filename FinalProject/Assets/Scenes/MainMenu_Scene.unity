@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031931403, g: 0.0063399686, b: 0.014472501, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: da4b7d91ac691e34a997966ab7024d45, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8bfa88a230c0ebe45b0130c041c54608, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 30
-  offlineScene: 
+  offlineScene: Assets/Scenes/MainMenu_Scene.unity
   onlineScene: Assets/Scenes/MainMenu_Scene.unity
   transport: {fileID: 715525151}
   networkAddress: localhost
@@ -2301,7 +2301,10 @@ MonoBehaviour:
   roomPlayerPrefab: {fileID: 1304739153747181877, guid: 783fcd91b8655cc47a4f9fe1d2372e6d, type: 3}
   gamePlayerPrefab: {fileID: 3651724979802685642, guid: 424fc0808e3af3743ac1429d8d47b5bf, type: 3}
   playerSpawnSystem: {fileID: 8195439974385758068, guid: 15f7724adf79de944a11ada0adb2852b, type: 3}
+  players: []
+  Players: []
   roomPlayers: []
+  gamePlayers: []
 --- !u!4 &715525153
 Transform:
   m_ObjectHideFlags: 0
@@ -4805,7 +4808,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5ea3cdbfcf66e424f98d1cffa25af60d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6b353b4d58a4d1c4c8ee8c8e3fde72af, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0

@@ -15,24 +15,24 @@ MonoBehaviour:
   ZombieFootStep:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 0998cc5c8d1a7944bb14930bf5b7047b, type: 2}
   ZombieAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: e5bbe14574a4ed04787cec9aa2223894, type: 2}
   ZombieGroan:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 239379722e6193a46af9e8b8fa9dd379, type: 2}
   ZombieScreech:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: aba7248b53f404327aa801811f5923c0, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: bcac013afd3fdd14ea8be8714408a5d0, type: 2}
   ZombieDamageTaken:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 760c0756e02c84a6ea46e83de4f3e6cb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 179258995e11de34cb4f6daa95496041, type: 2}
   ZombieDeath:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: a9d27617b1f2b0a45be5d4e688588354, type: 2}
