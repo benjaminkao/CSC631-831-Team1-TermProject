@@ -15,12 +15,12 @@ MonoBehaviour:
   buttonClickedEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: dd757aaaceef0204fb12c0d47d630534, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a0eccee8a6a3349bd86c6b1e6e400202, type: 2}
   buttonHoverEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fbc24761e3cd41e46b3c5fcc1b1729f2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ab4d277b73431463dadb2f43ce8897a1, type: 2}
   mainMenuMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 20583a45d859b1342ab9ba7fe6f04960, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 27229c3d5c6554abfaee6e54127c6a9b, type: 2}

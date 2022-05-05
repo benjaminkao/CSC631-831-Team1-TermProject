@@ -451,6 +451,10 @@ GameObject:
   - component: {fileID: 8570376831934662049}
   - component: {fileID: -4338107688095294846}
   - component: {fileID: 3045713778365586383}
+  - component: {fileID: 1292981860156895138}
+  - component: {fileID: 2708865071649437739}
+  - component: {fileID: 1857955869366393815}
+  - component: {fileID: 3226873171268630395}
   m_Layer: 0
   m_Name: thinzombietestv2
   m_TagString: Enemy
@@ -648,6 +652,58 @@ MonoBehaviour:
   animator: {fileID: 5005415066917560573}
   currentMovementAnimation: 0
   walkingSpeed: 2
+--- !u!114 &1292981860156895138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311898635981674876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e24d24d76ef4dfc83c87ecef0c3c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 0ff2df4cf5b2a4e07955d2f56f96b715, type: 2}
+--- !u!114 &2708865071649437739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311898635981674876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac14cc5cf3b264063a91181b91891aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 0ff2df4cf5b2a4e07955d2f56f96b715, type: 2}
+--- !u!114 &1857955869366393815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311898635981674876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0cef685aaa24e2aaef2ca2dee04a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 0ff2df4cf5b2a4e07955d2f56f96b715, type: 2}
+--- !u!114 &3226873171268630395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311898635981674876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e939a0ef8fafb4441b96f144f16c803c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 0ff2df4cf5b2a4e07955d2f56f96b715, type: 2}
 --- !u!1 &6984493058132193959
 GameObject:
   m_ObjectHideFlags: 0

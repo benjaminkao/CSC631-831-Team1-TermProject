@@ -48,6 +48,10 @@ GameObject:
   - component: {fileID: 6557974182657968588}
   - component: {fileID: 3836096485352635246}
   - component: {fileID: 7527293751991682580}
+  - component: {fileID: 8093133651165425374}
+  - component: {fileID: 4488840497236991787}
+  - component: {fileID: 7835746391117133006}
+  - component: {fileID: -2244697149886774906}
   m_Layer: 0
   m_Name: Zombie-v2
   m_TagString: Enemy
@@ -245,6 +249,58 @@ MonoBehaviour:
   animator: {fileID: 3219097756755243057}
   currentMovementAnimation: 0
   walkingSpeed: 5
+--- !u!114 &8093133651165425374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326832860580121300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb76d2f6bd5f4f7dab338489ec2f662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 928d9511ba0a54fd287ace92c90b4228, type: 2}
+--- !u!114 &4488840497236991787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326832860580121300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb47567b0e6474a40a98bf50b477d1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 928d9511ba0a54fd287ace92c90b4228, type: 2}
+--- !u!114 &7835746391117133006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326832860580121300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82351f6c1085b46d9ac17b3cb501d40d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 928d9511ba0a54fd287ace92c90b4228, type: 2}
+--- !u!114 &-2244697149886774906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326832860580121300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f36bd30c869b42fca26d9e334075f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioStorage: {fileID: 11400000, guid: 928d9511ba0a54fd287ace92c90b4228, type: 2}
 --- !u!1001 &6205025269569855216
 PrefabInstance:
   m_ObjectHideFlags: 0

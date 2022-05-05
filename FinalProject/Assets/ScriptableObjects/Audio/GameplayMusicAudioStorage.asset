@@ -17,32 +17,32 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 49904dd559aa0564ca86f5c0d86a3d69, type: 2}
+    WwiseObjectReference: {fileID: 0}
   bossGameplayState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cfed64f00308d134ea6feada02f01d0d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   lowIntensityGameplayState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b6612fa235fc24f489c7210153251e25, type: 2}
+    WwiseObjectReference: {fileID: 0}
   highIntensityGameplayState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1a57a161cff725a419cc74dc44960e0c, type: 2}
+    WwiseObjectReference: {fileID: 0}
   noneState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 14fb724109991184ba47c9217f80b79e, type: 2}
+    WwiseObjectReference: {fileID: 0}
   gameplayMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4aa20088c2ae74b4196737c4a38550e7, type: 2}
+    WwiseObjectReference: {fileID: 0}
