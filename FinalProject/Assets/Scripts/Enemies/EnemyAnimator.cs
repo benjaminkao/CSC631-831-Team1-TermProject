@@ -107,13 +107,14 @@ public class EnemyAnimator : NetworkBehaviour
     {
         this._isDirty = false;
 
-        CmdUpdateAnimation(this._walking, false);
+        CmdUpdateAnimation(this._walking, this._running);
     }
 
     [ClientRpc]
     public virtual void CmdUpdateAnimation(bool walking, bool running)
     {
         animator.SetBool("walk", walking);
+        animator.SetBool("run", running);
     }
 
 

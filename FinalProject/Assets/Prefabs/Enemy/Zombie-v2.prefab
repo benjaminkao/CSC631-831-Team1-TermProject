@@ -155,6 +155,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   enemyAnimator: {fileID: 7527293751991682580}
+  walkingSpeed: 3.5
+  shouldRunAtPlayer: 1
+  distanceFromPlayerToRun: 20
+  runningSpeed: 5.5
   TimeBetweenUpdatingTargets: 1
   AttackDamage: 10
   AttackRange: 1.5

@@ -19,6 +19,14 @@ public class Enemy : NetworkBehaviour
         get { return health; }
        }
 
+
+    [Header("Movement")]
+    public float walkingSpeed;
+    public bool shouldRunAtPlayer;
+    [Tooltip("The distance the zombie should be before it starts running/chasing the player.")]
+    public float distanceFromPlayerToRun;
+    public float runningSpeed;
+
     [Header("Attack")]
 
     public float TimeBetweenUpdatingTargets = 1f;
@@ -51,6 +59,7 @@ public class Enemy : NetworkBehaviour
     private bool _canWalk;
     private bool _hasDied;
     private float _sqrAttackRange;
+    private float _sqrRunRange;
 
 
     void Awake()
@@ -72,6 +81,7 @@ public class Enemy : NetworkBehaviour
         _shouldUpdateTarget = true;
 
         _sqrAttackRange = AttackRange * AttackRange;
+        _sqrRunRange = distanceFromPlayerToRun * distanceFromPlayerToRun;
         _canAttack = true;
         _canWalk = true;
         _hasDied = false;
@@ -117,6 +127,18 @@ public class Enemy : NetworkBehaviour
             }
             else
             {
+                if (shouldRunAtPlayer)
+                {
+                    if (sqrDistanceFromTarget <= _sqrRunRange)
+                    {
+                        agent.speed = runningSpeed;
+                    }
+                    else
+                    {
+                        agent.speed = walkingSpeed;
+                    }
+                }
+
 
                 enemyAnimator.HandleMovementAnimation(agent.velocity.sqrMagnitude);
                 if (_canWalk)
