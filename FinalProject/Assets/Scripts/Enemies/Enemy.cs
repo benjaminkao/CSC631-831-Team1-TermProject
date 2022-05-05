@@ -34,6 +34,7 @@ public class Enemy : NetworkBehaviour
 
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private GameObject bloodSpawnPosition;
+    [SerializeField] private GameObject particleBloodSpawnPosition;
 
     [SerializeField] private GameObject target;
     private ITargetable targetable;
@@ -136,10 +137,14 @@ public class Enemy : NetworkBehaviour
 
         //Debug.Log("Enemy hit");
 
+        
+
+
         health.alterHealth(-damage);
 
         this.RpcUpdateHealth(this.health.HealthValue);
 
+        
 
         if (health.Died && !this._hasDied)
         {
@@ -154,6 +159,7 @@ public class Enemy : NetworkBehaviour
     [ClientRpc]
     public void RpcUpdateHealth(float healthValue)
     {
+         Destroy(Instantiate(enemyType.bloodSprayPrefab, particleBloodSpawnPosition.transform.position, Quaternion.identity), 3);
 
         health.SetHealth(healthValue);
         //Debug.Log(healthValue);
