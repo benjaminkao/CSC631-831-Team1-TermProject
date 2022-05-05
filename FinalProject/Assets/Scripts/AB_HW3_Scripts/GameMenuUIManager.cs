@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Mirror;
 
 public class GameMenuUIManager : MonoBehaviour
 {
@@ -54,7 +55,9 @@ public class GameMenuUIManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Debug.Log("Return to main menu");
-        //SceneManager.LoadScene(0);
+        ContainmentPlayer player = GameManager.Instance.LocalPlayer;
+
+        player.LeaveGame();
     }
 
 

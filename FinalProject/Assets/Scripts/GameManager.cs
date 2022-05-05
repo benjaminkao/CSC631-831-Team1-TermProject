@@ -102,8 +102,8 @@ public class GameManager : MonoBehaviour
         WaveSpawner.OnWaveStart += HandleWaveStart;
 
 
-        //ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
-        //ContainmentPlayer.OnLocalPlayerLeave += RemoveLocalPlayer;
+        ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
+        ContainmentPlayer.OnLocalPlayerLeave += RemoveLocalPlayer;
 
         this._playersReadied = 0;
     }
@@ -134,8 +134,8 @@ public class GameManager : MonoBehaviour
         WaveSpawner.OnWaveStart -= HandleWaveStart;
 
 
-        //ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
-        //ContainmentPlayer.OnLocalPlayerLeave -= RemoveLocalPlayer;
+        ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
+        ContainmentPlayer.OnLocalPlayerLeave -= RemoveLocalPlayer;
     }
 
 
@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
         this._localPlayer = player;
     }
 
-    public void RemoveLocalPlayer(ContainmentPlayer player)
+    public void RemoveLocalPlayer()
     {
         this._localPlayer = null;
     }

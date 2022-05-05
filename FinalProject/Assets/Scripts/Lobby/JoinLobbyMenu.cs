@@ -46,6 +46,10 @@ public class JoinLobbyMenu : MonoBehaviour
 
     private void HandleClientDisconnected()
     {
+        if(joinButton == null)
+        {
+            return;
+        }
         joinButton.interactable = true;
     }
 

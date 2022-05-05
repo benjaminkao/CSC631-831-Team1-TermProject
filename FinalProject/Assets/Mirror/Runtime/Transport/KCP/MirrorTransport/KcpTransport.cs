@@ -70,7 +70,6 @@ namespace kcp2k
 
         void Awake()
         {
-            Debug.Log("got here 1");
             // logging
             //   Log.Info should use Debug.Log if enabled, or nothing otherwise
             //   (don't want to spam the console on headless servers)
@@ -81,7 +80,6 @@ namespace kcp2k
             Log.Warning = Debug.LogWarning;
             Log.Error = Debug.LogError;
 
-            Debug.Log("got here 1");
 
 #if ENABLE_IL2CPP
             // NonAlloc doesn't work with IL2CPP builds
@@ -99,7 +97,6 @@ namespace kcp2k
                       (message, channel) => OnClientDataReceived.Invoke(message, FromKcpChannel(channel)),
                       () => OnClientDisconnected.Invoke());
 
-            Debug.Log("got here 2");
 
             // server
             server = NonAlloc
@@ -132,7 +129,6 @@ namespace kcp2k
                       MaxRetransmit,
                       MaximizeSendReceiveBuffersToOSLimit);
 
-            Debug.Log("got here 3");
 
             if (statisticsLog)
                 InvokeRepeating(nameof(OnLogStatistics), 1, 1);

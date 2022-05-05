@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\benja\Desktop_Offline\SF State\Masters_2nd_Semester\CSC831_MultiplayerGameDevelopment\Team1_FinalProject\Wwise\Containment\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Kevin\Documents\WwiseProjects\Containment\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3230628781">
+		<SoundBank Id="1355168291" Language="SFX" Hash="256880371">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -67,7 +67,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4056684167" Language="SFX" Hash="2439974817">
+		<SoundBank Id="4056684167" Language="SFX" Hash="3976308852">
 			<ObjectPath>\SoundBanks\Official\Master</ObjectPath>
 			<ShortName>Master</ShortName>
 			<Path>Master.bnk</Path>
@@ -77,6 +77,62 @@
 						<File Id="1033308013" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Ammo_Pickup.wav</ShortName>
 							<Path>SFX\SFX_Gameplay_Gun_Ammo_Pickup_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4155093788" Name="Play_Boss_Attack" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Attack" MaxAttenuation="20." DurationType="OneShot" DurationMin="2.374989" DurationMax="2.5">
+					<IncludedMemoryFiles>
+						<File Id="106240569" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Attack_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Attack_1_3F75BDB9.wem</Path>
+						</File>
+						<File Id="673332560" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Attack_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Attack_2_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3367086695" Name="Play_Boss_Damage_Taken" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Damage_Taken" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.999977" DurationMax="2.062494">
+					<IncludedMemoryFiles>
+						<File Id="54811737" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Damage_Taken_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Damage_Taken_1_3F75BDB9.wem</Path>
+						</File>
+						<File Id="461459140" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Damage_Taken_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Damage_Taken_2_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3695176782" Name="Play_Boss_Death" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Death" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.874989" DurationMax="3.874989">
+					<IncludedMemoryFiles>
+						<File Id="775196149" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Death.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Death_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2955770602" Name="Play_Boss_Footstep" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Footstep" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.760564" DurationMax="0.760564">
+					<IncludedMemoryFiles>
+						<File Id="907921487" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Footstep.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Footstep_AE15A926.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="506157627" Name="Play_Boss_Groan" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Groan" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.312494" DurationMax="3.312494">
+					<IncludedMemoryFiles>
+						<File Id="861980406" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Groan.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Groan_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="253434116" Name="Play_Boss_Roar" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Roar" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.937483" DurationMax="3.937483">
+					<IncludedMemoryFiles>
+						<File Id="300129364" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Boss_Roar.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Roar_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -184,6 +240,58 @@
 					<ActionSetState>
 						<ActionSetStateEntry Id="1281810935" Name="Start" ObjectPath="\States\Official\Gameplay_Music\Start"/>
 					</ActionSetState>
+				</Event>
+				<Event Id="4203263974" Name="Play_Heavy_Attack" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Heavy_Attack" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.843741" DurationMax="1.062494">
+					<IncludedMemoryFiles>
+						<File Id="661533197" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Attack_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Attack_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="830839952" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Attack_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Attack_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1073347929" Name="Play_Heavy_Damage_Taken" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Heavy_Damage_Taken" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.46873" DurationMax="1.46873">
+					<IncludedMemoryFiles>
+						<File Id="636710830" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Damage_Taken.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Damage_Taken_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3375478812" Name="Play_Heavy_Death" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Heavy_Death" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.374989" DurationMax="1.374989">
+					<IncludedMemoryFiles>
+						<File Id="893504991" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Death.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Death_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3452970140" Name="Play_Heavy_Footstep" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Heavy_Footstep" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.593741" DurationMax="0.593741">
+					<IncludedMemoryFiles>
+						<File Id="142348801" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Footstep.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Footstep_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3984828673" Name="Play_Heavy_Groan" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Heavy_Groan" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.843741" DurationMax="1.75">
+					<IncludedMemoryFiles>
+						<File Id="483442031" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Groan_3.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Groan_3_3F75BDB9.wem</Path>
+						</File>
+						<File Id="647092854" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Groan_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Groan_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="681065179" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Heavy_Groan_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Heavy_Groan_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="833469641" Name="Play_Low_Health" ObjectPath="\Events\Official\SFX\HUD_Indicators\Play_Low_Health" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -313,11 +421,11 @@
 					<IncludedMemoryFiles>
 						<File Id="561084219" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Damage_Taken.wav</ShortName>
-							<Path>SFX\SFX_Gameplay_Player_Damage_Taken_AE0B80D2.wem</Path>
+							<Path>SFX\SFX_Gameplay_Player_Damage_Taken_8FED8CE7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="98439365" Name="Play_Player_Footsteps" ObjectPath="\Events\Official\SFX\Actors\Player\Play_Player_Footsteps" MaxAttenuation="5." DurationType="OneShot" DurationMin="0.249977" DurationMax="0.374989">
+				<Event Id="98439365" Name="Play_Player_Footsteps" ObjectPath="\Events\Official\SFX\Actors\Player\Play_Player_Footsteps" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.249977" DurationMax="0.374989">
 					<IncludedMemoryFiles>
 						<File Id="93853120" Language="SFX">
 							<ShortName>SFX_Gameplay_Player_Footsteps_Dirt_3.wav</ShortName>
@@ -367,6 +475,54 @@
 						<File Id="42354746" Language="SFX">
 							<ShortName>SFX_Gameplay_Stinger_Round_Start.wav</ShortName>
 							<Path>SFX\SFX_Gameplay_Stinger_Round_Start_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1938190050" Name="Play_SFX_Gameplay_Environment_Data_Stream" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_SFX_Gameplay_Environment_Data_Stream" MaxAttenuation="20." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="524301052" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Data_Stream.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Data_Stream_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="384644052" Name="Play_SFX_Gameplay_Environment_Shield_Destroyed" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_SFX_Gameplay_Environment_Shield_Destroyed" DurationType="OneShot" DurationMin="4." DurationMax="4.">
+					<IncludedMemoryFiles>
+						<File Id="685315395" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Shield_Destroyed.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Shield_Destroyed_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1488871855" Name="Play_SFX_Gameplay_Environment_Test_Tubes" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_SFX_Gameplay_Environment_Test_Tubes" MaxAttenuation="20." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="986457412" Language="SFX">
+							<ShortName>SFX_Gameplay_Environment_Test_Tubes.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Environment_Test_Tubes_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="896322546" Name="Play_SFX_Gameplay_Gun_Impact" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_SFX_Gameplay_Gun_Impact" DurationType="OneShot" DurationMin="0.812494" DurationMax="0.812494">
+					<IncludedMemoryFiles>
+						<File Id="982344213" Language="SFX">
+							<ShortName>SFX_Gameplay_Gun_Impact.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Gun_Impact_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4293875601" Name="Play_SFX_Gameplay_Gun_No_Shoot" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_SFX_Gameplay_Gun_No_Shoot" DurationType="OneShot" DurationMin="0.093741" DurationMax="0.093741">
+					<IncludedMemoryFiles>
+						<File Id="256662230" Language="SFX">
+							<ShortName>SFX_Gameplay_Gun_No_Shoot.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Gun_No_Shoot_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="919344490" Name="Play_SFX_Gameplay_Tower_Shoot_01" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_SFX_Gameplay_Tower_Shoot_01" DurationType="OneShot" DurationMin="0.562494" DurationMax="0.562494">
+					<IncludedMemoryFiles>
+						<File Id="643911166" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Shoot.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Shoot_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -481,7 +637,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4202111561" Name="Play_Starting_Gun_Shoot" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Shoot" MaxAttenuation="50." DurationType="OneShot" DurationMin="0.562494" DurationMax="0.562494">
+				<Event Id="4202111561" Name="Play_Starting_Gun_Shoot" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_Starting_Gun_Shoot" MaxAttenuation="50." DurationType="OneShot" DurationMin="0.530924" DurationMax="0.631379">
 					<IncludedMemoryFiles>
 						<File Id="235420434" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Shoot_Low_Ammo_Indicator.wav</ShortName>
@@ -791,6 +947,170 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2227986239" Name="Play_Tower_Spawning" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_Tower_Spawning" MaxAttenuation="20." DurationType="OneShot" DurationMin="7.673926" DurationMax="7.673926">
+					<IncludedMemoryFiles>
+						<File Id="646489773" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Spawning_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Spawning_2_52F5AD93.wem</Path>
+						</File>
+						<File Id="856777508" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Spawning_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Spawning_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4186568673" Name="Play_Tower_Zap" ObjectPath="\Events\Official\SFX\3D_Env\Play\Play_Tower_Zap" DurationType="OneShot" DurationMin="0.156236" DurationMax="0.281247">
+					<IncludedMemoryFiles>
+						<File Id="151283928" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_3.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_3_3F75BDB9.wem</Path>
+						</File>
+						<File Id="301402824" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_4.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_4_3F75BDB9.wem</Path>
+						</File>
+						<File Id="391844318" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_6.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_6_3F75BDB9.wem</Path>
+						</File>
+						<File Id="601831582" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_5.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_5_3F75BDB9.wem</Path>
+						</File>
+						<File Id="661323018" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="772778983" Language="SFX">
+							<ShortName>SFX_Gameplay_Tower_Zap_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Tower_Zap_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="63801537" Name="Play_VO_System_Area_Breach" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Breach" DurationType="OneShot" DurationMin="1.781247" DurationMax="1.781247">
+					<IncludedMemoryFiles>
+						<File Id="843820513" Language="SFX">
+							<ShortName>VO_System_Area_Breach.wav</ShortName>
+							<Path>SFX\VO_System_Area_Breach_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2261942417" Name="Play_VO_System_Area_Clear" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Clear" DurationType="OneShot" DurationMin="1.031247" DurationMax="1.031247">
+					<IncludedMemoryFiles>
+						<File Id="228003724" Language="SFX">
+							<ShortName>VO_System_Area_Clear.wav</ShortName>
+							<Path>SFX\VO_System_Area_Clear_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3755416648" Name="Play_VO_System_Area_Enemies_Inbound" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Enemies_Inbound" DurationType="OneShot" DurationMin="1.187483" DurationMax="1.187483">
+					<IncludedMemoryFiles>
+						<File Id="1007950637" Language="SFX">
+							<ShortName>VO_System_Area_Enemies_Inbound.wav</ShortName>
+							<Path>SFX\VO_System_Area_Enemies_Inbound_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2812380522" Name="Play_VO_System_Area_Enemies_Inbound2" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Enemies_Inbound2" DurationType="OneShot" DurationMin="1.187483" DurationMax="1.187483">
+					<IncludedMemoryFiles>
+						<File Id="994834243" Language="SFX">
+							<ShortName>VO_System_Area_Enemies_Inbound2.wav</ShortName>
+							<Path>SFX\VO_System_Area_Enemies_Inbound2_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3475383289" Name="Play_VO_System_Area_Neutralized" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Neutralized" DurationType="OneShot" DurationMin="1.937483" DurationMax="1.937483">
+					<IncludedMemoryFiles>
+						<File Id="482596684" Language="SFX">
+							<ShortName>VO_System_Area_Neutralized.wav</ShortName>
+							<Path>SFX\VO_System_Area_Neutralized_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1525197282" Name="Play_VO_System_Area_Warning" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Warning" DurationType="OneShot" DurationMin="2.999977" DurationMax="2.999977">
+					<IncludedMemoryFiles>
+						<File Id="243375714" Language="SFX">
+							<ShortName>VO_System_Area_Warning.wav</ShortName>
+							<Path>SFX\VO_System_Area_Warning_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1420974093" Name="Play_VO_System_Shield_Critical" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Shield_Critical" DurationType="OneShot" DurationMin="1.781247" DurationMax="1.781247">
+					<IncludedMemoryFiles>
+						<File Id="801866766" Language="SFX">
+							<ShortName>VO_System_Shield_Critical.wav</ShortName>
+							<Path>SFX\VO_System_Shield_Critical_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3597927707" Name="Play_Zombie_Attack" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Attack" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.749977" DurationMax="1.156236">
+					<IncludedMemoryFiles>
+						<File Id="576676453" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Attack_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Attack_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="944542921" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Attack_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Attack_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2496015196" Name="Play_Zombie_Damage_Taken" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Damage_Taken" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.624989" DurationMax="0.624989">
+					<IncludedMemoryFiles>
+						<File Id="1043498577" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Damage_Taken.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Damage_Taken_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2032644619" Name="Play_Zombie_Death" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Death" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.499977" DurationMax="1.499977">
+					<IncludedMemoryFiles>
+						<File Id="803631638" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Death.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Death_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1151043021" Name="Play_Zombie_Footstep" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Footstep" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.124989" DurationMax="0.156236">
+					<IncludedMemoryFiles>
+						<File Id="296654120" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Footstep_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Footstep_1_3F75BDB9.wem</Path>
+						</File>
+						<File Id="364612698" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Footstep_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Footstep_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="754303660" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Footstep_3.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Footstep_3_3F75BDB9.wem</Path>
+						</File>
+						<File Id="1032037663" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Footstep_4.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Footstep_4_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3208013810" Name="Play_Zombie_Groan" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Groan" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.374989" DurationMax="1.374989">
+					<IncludedMemoryFiles>
+						<File Id="318108917" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Groan_1.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Groan_1_3F75BDB9.wem</Path>
+						</File>
+						<File Id="603003601" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Groan_2.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Groan_2_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1726155342" Name="Play_Zombie_Screech" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Zombie_Screech" MaxAttenuation="20." DurationType="OneShot" DurationMin="2.687483" DurationMax="2.687483">
+					<IncludedMemoryFiles>
+						<File Id="745448827" Language="SFX">
+							<ShortName>SFX_Gameplay_Zombie_Screech.wav</ShortName>
+							<Path>SFX\SFX_Gameplay_Zombie_Screech_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1780085868" Name="Set_State_Test_Boss" ObjectPath="\Events\Test\Music\States\Set_State_Test_Boss" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2766477831" Name="Test_Boss" ObjectPath="\States\Test\Test_Gameplay_Music\Test_Boss"/>
@@ -878,6 +1198,8 @@
 				</Event>
 				<Event Id="3536547992" Name="Stop_Gameplay_Music" ObjectPath="\Events\Official\Music\Stop\Stop_Gameplay_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2829915331" Name="Stop_Main_Menu_Music" ObjectPath="\Events\Official\Music\Stop\Stop_Main_Menu_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1484223108" Name="Stop_SFX_Gameplay_Environment_Data_Stream" ObjectPath="\Events\Official\SFX\3D_Env\Stop\Stop_SFX_Gameplay_Environment_Data_Stream" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2916742697" Name="Stop_SFX_Gameplay_Environment_Test_Tubes" ObjectPath="\Events\Official\SFX\3D_Env\Stop\Stop_SFX_Gameplay_Environment_Test_Tubes" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="820446518" Name="Stop_Shield_Amb" ObjectPath="\Events\Official\SFX\3D_Env\Stop\Stop_Shield_Amb" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="986341748" Name="Stop_Test_2D_Env_Switch" ObjectPath="\Events\Test\SFX\Stop\Stop_Test_2D_Env_Switch" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="327767067" Name="Stop_Test_Gameplay_Music" ObjectPath="\Events\Test\Music\Stop\Stop_Test_Gameplay_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>

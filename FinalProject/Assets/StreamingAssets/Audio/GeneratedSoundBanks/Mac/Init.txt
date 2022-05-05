@@ -86,13 +86,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2997659434	NPC_SFX			\Official\Master\SFX_Bus\SFX\NPC_SFX	
 	3105609280	Test_Explosions			\Test\Test_Master\Test_SFX\Test_Explosions	
 	3192105708	Test_Combat			\Test\Test_Master\Test_SFX\Test_Combat	
+	3705197267	AI_VO			\Official\Master\VO\AI_VO	
 	3712553433	Test_SFX			\Test\Test_Master\Test_SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Official\Master\Music	
 	4007621200	Player_VO			\Official\Master\VO\Player_VO	
 	4056684167	Master			\Official\Master	
 	4223207942	Test_2D_Env			\Test\Test_Master\Test_SFX\Test_2D_Env	
-	4294123248	NPC_VO			\Official\Master\VO\NPC_VO	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	487886702	Outdoor_Reverb			\Official\Master\Outdoor_Reverb	

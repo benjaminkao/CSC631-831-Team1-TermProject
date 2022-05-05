@@ -138,6 +138,11 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
             return;
         }
 
+        if(startGameButton == null)
+        {
+            return;
+        }
+
         startGameButton.interactable = readyToStart;
     }
 
@@ -176,7 +181,6 @@ public class NetworkRoomPlayerContainment : NetworkBehaviour
     [ClientRpc]
     public void RpcHandleReadyToStart(bool isReadyToStart)
     {
-        Debug.Log(isReadyToStart);
         HandleReadyToStart(isReadyToStart);
     }
 

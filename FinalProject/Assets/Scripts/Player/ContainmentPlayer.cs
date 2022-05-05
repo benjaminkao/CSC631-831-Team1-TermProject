@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 using Mirror;
@@ -16,8 +17,16 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     public ContainmentPlayerAnimator Animator;
 
     [SerializeField]
-    private PlayerAudio playerAudio; 
+    private PlayerAudio playerAudio;
 
+    [SyncVar(hook = nameof(HandleDisplayName))]
+    [SerializeField]
+    private string playerName;
+
+
+    public string PlayerName { 
+        get { return playerName; }
+    }
 
     public int PlayerNum
     {
@@ -118,6 +127,9 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     public static event Action<ContainmentPlayer> OnPlayerJoin;
     public static event Action<ContainmentPlayer> OnPlayerLeave;
 
+    public static event Action<ContainmentPlayer> OnLocalPlayerJoin;
+    public static event Action OnLocalPlayerLeave;
+
     public static event Action<ContainmentPlayer> OnPlayerReady;
 
     public override void OnStartAuthority()
@@ -154,6 +166,21 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         ui = uiManager.GetLocalPlayerUI();
         health.HealthBarUI = ui.HealthBar;
 
+        NetworkGamePlayerContainment[] networkGamePlayers = FindObjectsOfType<NetworkGamePlayerContainment>();
+
+        foreach(NetworkGamePlayerContainment networkGamePlayer in networkGamePlayers)
+        {
+            if(networkGamePlayer.connectionToServer != null)
+            {
+                this.playerName = networkGamePlayer.DisplayName;
+                ui.SetPlayerName(this.playerName);
+                CmdSetPlayerName(this.PlayerName);
+            }
+        }
+
+
+        OnLocalPlayerJoin?.Invoke(this);
+
     }
 
     public override void OnStartClient()
@@ -168,6 +195,8 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         ui = uiManager.GetOtherPlayerUI();
 
         ui.gameObject.SetActive(true);
+
+        ui.SetPlayerName(this.playerName);
 
         health.Player = this;
         health.HealthBarUI = ui.HealthBar;
@@ -205,6 +234,8 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     private void OnDisable()
     {
         this.DeregisterTargetable();
+
+        OnPlayerLeave?.Invoke(this);
 
         WaveSpawner.OnWaveCompleted -= HandleWaveCompleted;
         WaveSpawner.OnWaveStart -= HandleWaveStart;
@@ -324,6 +355,12 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     #region Mirror Remote Actions
 
     [Command]
+    private void CmdSetPlayerName(string playerName)
+    {
+        this.playerName = playerName;
+    }
+
+    [Command]
     private void ReadyUp()
     {
         this._readyNextWave = true;
@@ -358,6 +395,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         enemy.RpcUpdateHealth(enemy.Health.HealthValue);
     }
+
 
     [Command]
     void CmdReload()
@@ -405,6 +443,20 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
 
     #region Event Subscription Methods
+
+    public void LeaveGame()
+    {
+        ui.gameObject.SetActive(false);
+
+        if (isServer)
+        {
+            NetworkManagerContainment.singleton.StopHost();
+        }
+        else
+        {
+            NetworkManagerContainment.singleton.StopClient();
+        }
+    }
 
     private void HandleWaveCompleted()
     {
@@ -499,6 +551,16 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
         lastVoicedNoAmmo = currentTime;
         lastGunSoundNoAmmo = currentTime;
+    }
+
+    void HandleDisplayName(string oldValue, string newValue)
+    {
+        Debug.Log("got here");
+        if(ui == null)
+        {
+            return;
+        }
+        ui.SetPlayerName(newValue);
     }
 
     void HandleReadyUp(bool oldValue, bool newValue)
