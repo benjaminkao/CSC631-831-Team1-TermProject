@@ -463,6 +463,36 @@ Transform:
   m_Father: {fileID: 4826863772215903174}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2510637619646013529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5427273962988911594}
+  m_Layer: 0
+  m_Name: TargetablePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5427273962988911594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510637619646013529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.057612, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4826863772215903174}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5311898635981674876
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +537,7 @@ Transform:
   - {fileID: 108725446086624372}
   - {fileID: 5536419359827893197}
   - {fileID: 4086024617845333005}
+  - {fileID: 5427273962988911594}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -618,6 +649,7 @@ MonoBehaviour:
   enemyType: {fileID: 11400000, guid: d3b4a5baf5030c34386e8bb92e1fcc42, type: 2}
   bloodSpawnPosition: {fileID: 6984493058132193959}
   particleBloodSpawnPosition: {fileID: 1309926480908583583}
+  targetablePosition: {fileID: 2510637619646013529}
   target: {fileID: 0}
   _pointsForDeath: 500
 --- !u!114 &8570376831934662049

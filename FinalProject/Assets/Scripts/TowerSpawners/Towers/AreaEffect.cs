@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class AreaEffect : TowerTargeting
 {
+    
+    [SerializeField] private GameObject shootPosition;
+
     [SerializeField] private float _aoeRadius = 5.0f;
     [SerializeField] private float _aoeCooldown = 1.0f;
     [SerializeField] private int _aoeDamage = 15;
@@ -37,6 +41,15 @@ public class AreaEffect : TowerTargeting
             }
             else if (obj.CompareTag("Enemy"))
             {
+                Enemy enemy = obj.GetComponent<Enemy>();
+
+                if(enemy == null || enemy.HasDied)
+                {
+                    continue;
+                }
+
+                RpcShootVFX(enemy.targetablePosition.transform.position);
+
                 Health enemyHP = obj.GetComponent<Health>();
                 enemyHP.alterHealth(-_aoeDamage);
                 Debug.Log(string.Format("Applying {0} damage to [{1}] Total Health: {2}",
@@ -45,4 +58,40 @@ public class AreaEffect : TowerTargeting
             }
         }
     }
+
+
+    [ClientRpc]
+    void RpcShootVFX(Vector3 enemyPos)
+    {
+        towerAudio.PlayShootAudio();
+
+        TrailRenderer trail = Instantiate(towerFx.bulletTrail, shootPosition.transform.position, Quaternion.identity);
+
+        StartCoroutine(SpawnTrail(trail, enemyPos));
+        
+
+    }
+
+    IEnumerator SpawnTrail(TrailRenderer trail, Vector3 enemyPos)
+    {
+        float time = 0;
+
+        Vector3 startPosition = trail.transform.position;
+        trail.gameObject.transform.LookAt(enemyPos);
+
+        while (time < 1)
+        {
+            trail.transform.position = Vector3.Lerp(startPosition, enemyPos, time);
+            time += Time.deltaTime / trail.time;
+
+            yield return null;
+        }
+
+        trail.transform.position = enemyPos;
+
+        Instantiate(towerFx.bulletImpact, enemyPos, Quaternion.identity);
+
+        Destroy(trail.gameObject, trail.time);
+    }
+
 }

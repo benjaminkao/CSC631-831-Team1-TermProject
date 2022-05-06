@@ -5,9 +5,8 @@ using UnityEngine;
 
 public abstract class TowerTargeting: NetworkBehaviour, ITargetable
 {
-
-
-
+    public TowerFX towerFx;
+    public TowerAudio towerAudio;
     [Header("Tower Spawning")]
     [Tooltip("All of the mesh renderers of the tower.")]
     [SerializeField] private List<Renderer> renderers;
@@ -140,6 +139,8 @@ public abstract class TowerTargeting: NetworkBehaviour, ITargetable
 
     public IEnumerator SpawnRoutine(Renderer renderer)
     {
+        towerAudio.PlaySpawnAudio();
+
         this._canShoot = false;
 
         renderer.material = spawnProgressMaterial;

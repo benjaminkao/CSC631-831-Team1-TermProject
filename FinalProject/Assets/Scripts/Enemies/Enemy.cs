@@ -43,11 +43,19 @@ public class Enemy : NetworkBehaviour
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private GameObject bloodSpawnPosition;
     [SerializeField] private GameObject particleBloodSpawnPosition;
+    [Tooltip("The position where the towers should aim at.")]
+    public GameObject targetablePosition;
 
     [SerializeField] private GameObject target;
     private ITargetable targetable;
 
     [SerializeField] private int _pointsForDeath = 100;
+
+
+    public bool HasDied
+    {
+        get { return this._hasDied; }
+    }
 
     private NavMeshAgent agent;
     private Health health;
@@ -159,8 +167,11 @@ public class Enemy : NetworkBehaviour
 
         //Debug.Log("Enemy hit");
 
-        
 
+        if (this._hasDied)
+        {
+            return;
+        }
 
         health.alterHealth(-damage);
 
