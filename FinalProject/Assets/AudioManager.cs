@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,22 @@ using Mirror;
 
 public class AudioManager : NetworkBehaviour
 {
+    public static event Action<AudioManager> OnAudioManagerEnabled;
+
+
     public GameplayMusicAudioStorage audioStorage;
+    public AIAudioStorage aiAudioStorage;
 
     //uint currentState = 0; 
     public const int PREPARATION = 0, BOSS = 1, LOWINTENSITY = 2, HIGHINTENSITY = 3, NONE = 4;
+
+    public const int AIWAVESTART = 5, AIWAVEEND = 6, AIBOSSWAVESTART = 10, AISHIELDBEACONLOW = 11;
+
+
+    private void OnEnable()
+    {
+        OnAudioManagerEnabled?.Invoke(this);
+    }
 
     // Update is called once per frame
     void Update()
@@ -69,6 +82,53 @@ public class AudioManager : NetworkBehaviour
                 Debug.Log("AudioManager-highIntensity Music");
                 audioStorage.highIntensityGameplayState.SetValue();
                 break;
+        }
+    }
+
+    [ClientRpc]
+    public void RpcPlayAIVoiceLine(int voiceLine)
+    {
+        int rand = 0;
+        switch (voiceLine)
+        {
+            case AIWAVESTART:
+
+                rand = UnityEngine.Random.Range(0, 2);
+
+                if (rand == 0)
+                {
+                    aiAudioStorage.waveStartVoiceLine1.Post(gameObject);
+                }
+                else if (rand == 1)
+                {
+                    aiAudioStorage.waveStartVoiceLine2.Post(gameObject);
+                }
+                else if (rand == 2)
+                {
+                    aiAudioStorage.waveStartVoiceLine3.Post(gameObject);
+                }
+                break;
+            case AIWAVEEND:
+
+                rand = UnityEngine.Random.Range(0, 1);
+
+                if (rand == 0)
+                {
+
+                    aiAudioStorage.waveEndVoiceLine1.Post(gameObject);
+                }
+                else if (rand == 1)
+                {
+                    aiAudioStorage.waveEndVoiceLine2.Post(gameObject);
+                }
+                break;
+            case AIBOSSWAVESTART:
+                aiAudioStorage.bossWaveStartVoiceLine.Post(gameObject);
+                break;
+            case AISHIELDBEACONLOW:
+                aiAudioStorage.shieldBeaconLowVoiceLine.Post(gameObject);
+                break;
+
         }
     }
 }

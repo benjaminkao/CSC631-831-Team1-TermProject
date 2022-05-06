@@ -7,6 +7,7 @@ public class ShieldBeacon : Objective
 {
 
     public static event Action OnShieldBeaconDamaged;
+    public static event Action OnShieldBeaconCritical;
 
 
 
@@ -14,6 +15,7 @@ public class ShieldBeacon : Objective
     Renderer beaconRenderer;
 
     [Range(0, 1)] [SerializeField] private float _startPower;
+    [SerializeField] private float criticalValue;
 
 
     [Header("IsoSphere Rotation")]
@@ -60,7 +62,14 @@ public class ShieldBeacon : Objective
     public override void Damage(float damage)
     {
         base.Damage(damage);
-        shieldBeaconAudio.RpcShieldBeaconHealthAudio(this.health.HealthValue); 
+        shieldBeaconAudio.RpcShieldBeaconHealthAudio(this.health.HealthValue);
+        shieldBeaconAudio.RpcShieldBeaconDamaged();
+
+        if(this.health.HealthValue < criticalValue)
+        {
+            OnShieldBeaconCritical?.Invoke();
+        }
+
         float currentTime = Time.time;
 
         if(currentTime - this._timeLastHit > notifyDamageCooldown)

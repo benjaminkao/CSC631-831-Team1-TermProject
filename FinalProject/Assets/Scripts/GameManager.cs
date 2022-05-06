@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Objective> _objectives;
 
     [SerializeField] private WaveSpawner _waveSpawner;
+    [SerializeField] private AudioManager _audioManager;
 
     // Used to give each player a unique player number, total number of players joined, doesn't decrease if players leave
     private int _numPlayersJoined;
@@ -97,9 +98,14 @@ public class GameManager : MonoBehaviour
 
 
         ShieldBeacon.OnShieldBeaconDamaged += NotifyShieldBeaconDamaged;
+        ShieldBeacon.OnShieldBeaconCritical += NotifyShieldBeaconCritical;
 
         WaveSpawner.OnWaveSpawnerEnabled += RegisterWaveSpawner;
         WaveSpawner.OnWaveStart += HandleWaveStart;
+        WaveSpawner.OnWaveProgress += HandleWaveProgress;
+        WaveSpawner.OnWaveCompleted += HandleWaveEnd;
+
+        AudioManager.OnAudioManagerEnabled += RegisterAudioManager;
 
 
         ContainmentPlayer.OnLocalPlayerJoin += RegisterLocalPlayer;
@@ -121,6 +127,7 @@ public class GameManager : MonoBehaviour
         TargetableManager.OnTargetableEnabled -= RegisterTargetable;
         TargetableManager.OnTargetableDisabled -= DeregisterTargetable;
 
+        AudioManager.OnAudioManagerEnabled -= RegisterAudioManager;
 
 
         Objective.OnObjectiveEnabled -= RegisterObjective;
@@ -129,9 +136,12 @@ public class GameManager : MonoBehaviour
 
 
         ShieldBeacon.OnShieldBeaconDamaged -= NotifyShieldBeaconDamaged;
+        ShieldBeacon.OnShieldBeaconCritical -= NotifyShieldBeaconCritical;
 
         WaveSpawner.OnWaveSpawnerEnabled -= RegisterWaveSpawner;
         WaveSpawner.OnWaveStart -= HandleWaveStart;
+        WaveSpawner.OnWaveProgress -= HandleWaveProgress;
+        WaveSpawner.OnWaveCompleted -= HandleWaveEnd;
 
 
         ContainmentPlayer.OnLocalPlayerJoin -= RegisterLocalPlayer;
@@ -175,6 +185,11 @@ public class GameManager : MonoBehaviour
     public void DeregisterWaveSpawner(WaveSpawner waveSpawner)
     {
         this._waveSpawner = waveSpawner;
+    }
+
+    public void RegisterAudioManager(AudioManager audioManager)
+    {
+        this._audioManager = audioManager;
     }
 
 
@@ -284,18 +299,66 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void HandleWaveStart()
+    public void HandleWaveStart(bool boss)
     {
         this._playersReadied = 0;
+
+        if (boss)
+        {
+            this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIBOSSWAVESTART);
+        } else
+        {
+            int rand = (int)UnityEngine.Random.Range(0, 10);
+
+            if (rand <= 7)
+            {
+                this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIWAVESTART);
+            }
+            else
+            {
+                if (this._players.Count <= 0)
+                {
+                    return;
+                }
+
+                // Notify random player to say voice line
+                int randomPlayer = (int)UnityEngine.Random.Range(0, this._players.Count);
+
+                ContainmentPlayer playerToNotify = this._players[randomPlayer];
+
+                playerToNotify.NotifyBossWave();
+            }
+        }
+
     }
 
+    public void HandleWaveProgress()
+    {
+        if (this._players.Count <= 0)
+        {
+            return;
+        }
 
+        // Notify random player to say voice line
+        int randomPlayer = (int)UnityEngine.Random.Range(0, this._players.Count);
+
+        ContainmentPlayer playerToNotify = this._players[randomPlayer];
+
+        playerToNotify.NotifyWaveEnding();
+
+    }
+
+    public void HandleWaveEnd()
+    {
+        this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIWAVEEND);
+    }
 
 
 
     public void NotifyShieldBeaconDamaged()
     {
-        if(this._players.Count <= 0)
+        
+        if (this._players.Count <= 0)
         {
             return;
         }
@@ -306,10 +369,33 @@ public class GameManager : MonoBehaviour
         ContainmentPlayer playerToNotify = this._players[randomPlayer];
 
         playerToNotify.NotifyShieldBeaconDamaged();
-
+        
 
     }
 
+    public void NotifyShieldBeaconCritical()
+    {
+        int rand = (int)UnityEngine.Random.Range(0, 10);
+
+        if (rand <= 7)
+        {
+            this._audioManager.RpcPlayAIVoiceLine(AudioManager.AISHIELDBEACONLOW);
+        }
+        else
+        {
+            if (this._players.Count <= 0)
+            {
+                return;
+            }
+
+            // Notify random player to say voice line
+            int randomPlayer = (int)UnityEngine.Random.Range(0, this._players.Count);
+
+            ContainmentPlayer playerToNotify = this._players[randomPlayer];
+
+            playerToNotify.NotifyShieldBeaconCritical();
+        }
+    }
 
 
     public void HandleObjectiveDestroyed(Objective objectiveDestroyed)

@@ -123,6 +123,7 @@ public class SpawnerMenuSelection : NetworkBehaviour
         {
             GameObject towerPrefab = towerSpawnerPreset.GetTowerPrefab(towerPrefabIndex);
             playerBank.SpendPoints(_spawnCost);
+            _towerOwner.GetComponent<ContainmentPlayer>().NotifyTowerSpawn();
 
             Debug.Log(string.Format("Spawning new tower: {0}. Bank before / after: {1} / {2}",
                 towerPrefabIndex, playerBank.TotalPoints + _spawnCost, playerBank.TotalPoints));

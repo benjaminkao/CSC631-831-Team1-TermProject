@@ -23,7 +23,7 @@ MonoBehaviour:
   reloadingVoiceLine:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b388f386e5d88674d9bc350cb0cac4d1, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c19b99b9dfb83d0439fbbcdc32bbe814, type: 2}
   roundendingVoiceLine:
     idInternal: 0
     valueGuidInternal: 
@@ -40,6 +40,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2f83735f2f695414dad8c35c6ef36eec, type: 2}
+  towerSpawnerVoiceLine:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b4559dfbce57ef49b70770b4cb32dec, type: 2}
   playerHealth:
     idInternal: 0
     valueGuidInternal: 

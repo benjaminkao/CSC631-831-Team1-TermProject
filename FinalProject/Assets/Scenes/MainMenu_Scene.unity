@@ -2465,6 +2465,7 @@ MonoBehaviour:
   - {fileID: 5326832860580121300, guid: f5cf7cc646c8a3e4f80b8787d85d6c2a, type: 3}
   - {fileID: 8562080361563103041, guid: e29ffa2548ca2154390f694e230f7514, type: 3}
   - {fileID: 5311898635981674876, guid: 6772fe84270bf6b4ea5dcd4fc416380e, type: 3}
+  - {fileID: 7617125612468229521, guid: 2b5748fa9d4c1e647beee82cf49541d7, type: 3}
   minPlayers: 1
   menuScene: Assets/Scenes/MainMenu_Scene.unity
   gameScene: Assets/Scenes/BK_Scene.unity

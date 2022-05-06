@@ -17,4 +17,14 @@ public class RifleAudio : MonoBehaviour
         audioStorage.shootEvent.Post(gameObject);
     }
 
+    public void PlayRifleImpact()
+    {
+        audioStorage.impactEvent.Post(gameObject);
+    }
+
+    public void PlayNoAmmo()
+    {
+        audioStorage.noAmmoEvent.Post(gameObject);
+    }
+
 }

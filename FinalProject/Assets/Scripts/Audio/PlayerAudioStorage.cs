@@ -13,6 +13,7 @@ public class PlayerAudioStorage : ScriptableObject
     public AK.Wwise.Event shieldbeacondamagedVoiceLine;
     public AK.Wwise.Event shieldbeaconlowVoiceLine;
     public AK.Wwise.Event noammoVoiceLine;
+    public AK.Wwise.Event towerSpawnerVoiceLine;
 
     public AK.Wwise.RTPC playerHealth;
     public AK.Wwise.Event playerHealthAudio;

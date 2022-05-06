@@ -9,7 +9,8 @@ public class WaveSpawner : NetworkBehaviour
 {
     public static event Action<WaveSpawner> OnWaveSpawnerEnabled;
     public static event Action<WaveSpawner> OnWaveSpawnerDisabled;
-    public static event Action OnWaveStart;
+    public static event Action<bool> OnWaveStart;
+    public static event Action OnWaveProgress;
     public static event Action OnWaveCompleted;
     
 
@@ -57,8 +58,8 @@ public class WaveSpawner : NetworkBehaviour
     public float timeBetweenWaves = 5f; // Time between waves, 5 seconds
     //public float waveCountdown = 0f;
     //private float searchCheck = 1f; // Set search time to 1 second. This is used to check if enemies are alive. We want this on a timer because running the search every frame is taxing on the game. 
-    [SerializeField] private float numberOfEnemiesSpawned;
-    [SerializeField] private float numberOfEnemiesDied;
+    [SerializeField] private int numberOfEnemiesSpawned;
+    [SerializeField] private int numberOfEnemiesDied;
 
     //private SpawnState state = SpawnState.COUNTING;     // Set default state to COUNTING
 
@@ -140,7 +141,7 @@ public class WaveSpawner : NetworkBehaviour
         this.numberOfEnemiesDied = 0;
 
         Wave _wave = GetWaveType(nextWave);
-        if((nextWave-4)%5 == 0) {
+        if(!_wave.boss && nextWave%3 == 0) {
                 Debug.Log("THIS IS WORKING!");
                 audioManager.RpcChangeGameplayAudioState(AudioManager.HIGHINTENSITY);
             } else {
@@ -249,6 +250,16 @@ public class WaveSpawner : NetworkBehaviour
 
         this.numberOfEnemiesDied++;
 
+
+        int zombiesLeft = (int) this.numberOfEnemiesSpawned - this.numberOfEnemiesDied;
+
+        if(this.numberOfEnemiesSpawned > 5 && zombiesLeft <= 3)
+        {
+            OnWaveProgress?.Invoke();
+        }
+
+
+
         Debug.Log($"Number of Enemies Died: {numberOfEnemiesDied}");
 
         if(this.numberOfEnemiesDied >= this.numberOfEnemiesSpawned)
@@ -264,7 +275,7 @@ public class WaveSpawner : NetworkBehaviour
     // IEnumerator used to write method that has to wait a certain amount of time
     IEnumerator SpawnWave(Wave _wave){
         // Make night to indicate wave starting
-        OnWaveStart?.Invoke();
+        OnWaveStart?.Invoke(_wave.boss);
 
         RpcNight();
 

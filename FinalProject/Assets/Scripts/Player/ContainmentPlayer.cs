@@ -349,6 +349,45 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         
     }
 
+    public void NotifyShieldBeaconCritical()
+    {
+        if(!isServer)
+        {
+            return;
+        }
+
+        playerAudio.TriggerVoiceLine(PlayerAudio.SHIELDBEACONLOW);
+    }
+
+    public void NotifyWaveEnding()
+    {
+        if(!isServer)
+        {
+            return;
+        }
+
+        playerAudio.TriggerVoiceLine(PlayerAudio.ROUNDENDING);
+    }
+
+    public void NotifyBossWave()
+    {
+        if(!isServer)
+        {
+            return;
+        }
+
+        playerAudio.TriggerVoiceLine(PlayerAudio.BOSS);
+    }
+
+    public void NotifyTowerSpawn()
+    {
+        if(!isServer)
+        {
+            return;
+        }
+
+        playerAudio.TriggerVoiceLine(PlayerAudio.TOWERSPAWNING);
+    }
 
 
 
@@ -486,7 +525,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         }
     }
 
-    private void HandleWaveStart()
+    private void HandleWaveStart(bool boss)
     {
         this._inPreparationPhase = false;
         this._readyNextWave = false;

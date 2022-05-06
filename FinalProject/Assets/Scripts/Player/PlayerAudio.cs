@@ -7,7 +7,7 @@ public class PlayerAudio : NetworkBehaviour
 {
     public PlayerAudioStorage audioStorage;
 
-   public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5, NOAMMO = 6;  
+   public const int BOSS = 0, DAMAGED = 1, RELOADING = 2, ROUNDENDING = 3, SHIELDBEACONDAMAGED = 4, SHIELDBEACONLOW = 5, NOAMMO = 6, TOWERSPAWNING = 7;  
    
     public override void OnStartAuthority() {
         if(isServerOnly) return;
@@ -56,6 +56,9 @@ public class PlayerAudio : NetworkBehaviour
            case PlayerAudio.SHIELDBEACONLOW:
                 audioStorage.shieldbeaconlowVoiceLine.Post(gameObject);
                break;
+            case PlayerAudio.TOWERSPAWNING:
+                audioStorage.towerSpawnerVoiceLine.Post(gameObject);
+                break;
 
         }
 

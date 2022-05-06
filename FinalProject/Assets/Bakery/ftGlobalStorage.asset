@@ -413,7 +413,11 @@ MonoBehaviour:
   - Assets/ImportedAssets/KriptoFX/VolumetricBloodFX/BloodResources/blood5/blood_mesh.fbx
   - Assets/ImportedAssets/KriptoFX/VolumetricBloodFX/BloodResources/Blood1/blood_mesh.fbx
   - Assets/ImportedAssets/KriptoFX/VolumetricBloodFX/BloodResources/blood3/blood_mesh.fbx
-  uvOverlapAssetList: 00000000ffffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  - Assets/_GhoulZombie/Ghoul@Animations.fbx
+  - Assets/ImportedAssets/Course Library/_Source_Files/FBX/Animations_Static.fbx
+  - Assets/ImportedAssets/Course Library/_Source_Files/FBX/Animations_IK.fbx
+  - Assets/ImportedAssets/PlayerChar_Soldier/soldier final.fbx
+  uvOverlapAssetList: 00000000ffffffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 0
   gpuName: 

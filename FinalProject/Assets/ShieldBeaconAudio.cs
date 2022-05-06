@@ -22,4 +22,10 @@ public class ShieldBeaconAudio : NetworkBehaviour
     public void RpcShieldBeaconHealthAudio(float health) {
         audioStorage.healthRTPC.SetValue(gameObject, health);
     }
+
+    [ClientRpc]
+    public void RpcShieldBeaconDamaged()
+    {
+        audioStorage.shieldBeaconDamaged.Post(gameObject);
+    }
 }

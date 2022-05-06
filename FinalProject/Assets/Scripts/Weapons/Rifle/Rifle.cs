@@ -112,7 +112,7 @@ public class Rifle : MonoBehaviour
 
     public void ClientPlayShoot()
     {
-        rifleAudio.PlayRifleShot();
+        rifleAudio.PlayNoAmmo();
     }
 
 
@@ -293,6 +293,8 @@ public class Rifle : MonoBehaviour
         }
 
         trail.transform.position = hit.point;
+
+        rifleAudio.PlayRifleImpact();
 
         Instantiate(bulletImpact, hit.point, Quaternion.LookRotation(hit.normal));
 
