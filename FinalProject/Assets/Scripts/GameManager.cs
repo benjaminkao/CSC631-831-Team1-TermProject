@@ -303,16 +303,16 @@ public class GameManager : MonoBehaviour
     {
         this._playersReadied = 0;
 
-        if (boss)
+        if (!boss)
         {
-            this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIBOSSWAVESTART);
+            this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIWAVESTART);
         } else
         {
             int rand = (int)UnityEngine.Random.Range(0, 10);
 
             if (rand <= 7)
             {
-                this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIWAVESTART);
+                this._audioManager.RpcPlayAIVoiceLine(AudioManager.AIBOSSWAVESTART);
             }
             else
             {

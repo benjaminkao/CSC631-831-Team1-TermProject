@@ -251,7 +251,7 @@ public class WaveSpawner : NetworkBehaviour
         this.numberOfEnemiesDied++;
 
 
-        int zombiesLeft = (int) this.numberOfEnemiesSpawned - this.numberOfEnemiesDied;
+        int zombiesLeft = (int) this.numberOfEnemiesSpawned - (int) this.numberOfEnemiesDied;
 
         if(this.numberOfEnemiesSpawned > 5 && zombiesLeft <= 3)
         {

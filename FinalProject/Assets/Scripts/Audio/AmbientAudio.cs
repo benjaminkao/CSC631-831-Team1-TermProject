@@ -12,8 +12,9 @@ public class AmbientAudio : MonoBehaviour
     {
         if(NetworkManagerContainment.IsHeadless())
         {
-            audioStorage.ambientEvent.Post(gameObject);
+            return;
         }
+        audioStorage.ambientEvent.Post(gameObject);
     }
 
 }

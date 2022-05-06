@@ -207,7 +207,6 @@ public class Enemy : NetworkBehaviour
 
     public void Died()
     {
-        Instantiate(enemyType.bloodSprayPrefab, bloodSpawnPosition.transform.position, Quaternion.identity);
         Instantiate(enemyType.bloodPrefab, bloodSpawnPosition.transform.position, Quaternion.identity);
         enemyPoolable.Despawn();
     }
