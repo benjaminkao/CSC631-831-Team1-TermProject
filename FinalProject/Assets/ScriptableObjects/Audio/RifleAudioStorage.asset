@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0bf4e10feb6eb4d9de044849df93b8, type: 3}
   m_Name: RifleAudioStorage
   m_EditorClassIdentifier: 
+  noAmmoEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4da68413c05ba2043a008760bd897866, type: 2}
+  impactEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 19de7ec31a39ea444a0948c1a056baa4, type: 2}
   shootEvent:
     idInternal: 0
     valueGuidInternal: 

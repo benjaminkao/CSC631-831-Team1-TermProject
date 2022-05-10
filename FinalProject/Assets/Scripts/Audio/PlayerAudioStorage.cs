@@ -19,4 +19,6 @@ public class PlayerAudioStorage : ScriptableObject
     public AK.Wwise.Event playerHealthAudio;
 
     public AK.Wwise.Event FootStep;
+    public AK.Wwise.Switch FootStepDirt;
+    public AK.Wwise.Switch FootStepMetal;
 }

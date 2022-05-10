@@ -11,6 +11,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TMP_Text readyUpLabel;
     [SerializeField] private HealthBar healthBar;
 
+    [SerializeField] private GameObject readyUpPrompt;
+
     public HealthBar HealthBar
     {
         get { return healthBar; }
@@ -20,6 +22,7 @@ public class PlayerUI : MonoBehaviour
     private void Start()
     {
         SetReadyUp(false);
+        ToggleReadyUpPrompt(true);
     }
 
 
@@ -38,6 +41,16 @@ public class PlayerUI : MonoBehaviour
     public void ToggleReadyUpActive(bool active)
     {
         readyUpLabel.gameObject.SetActive(active);
+    }
+
+    public void ToggleReadyUpPrompt(bool show)
+    {
+        if(readyUpPrompt == null)
+        {
+            return;
+        }
+
+        readyUpPrompt.SetActive(show);
     }
 
 

@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: 08fbdfda5a6c53d4d9f2590960406b8f, type: 3}
+    - target: {fileID: 1901222122794380744, guid: 206751215df68f540b70b3b9a6157121, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5669764142939048168}
     - target: {fileID: 4749572957459301851, guid: 206751215df68f540b70b3b9a6157121, type: 3}
       propertyPath: m_IsActive
       value: 0

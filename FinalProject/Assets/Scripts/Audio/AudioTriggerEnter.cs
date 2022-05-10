@@ -5,9 +5,8 @@ using UnityEngine;
 public class AudioTriggerEnter : MonoBehaviour
 {
 
-    [SerializeField] private AK.Wwise.Event wwiseEvent;
     [SerializeField] private AK.Wwise.State wwiseState;
-    [SerializeField] private AK.Wwise.Switch wwiseSwitch;
+
 
     public enum WwiseTrigger {
         forEvent, forState, forSwitch
@@ -30,6 +29,7 @@ public class AudioTriggerEnter : MonoBehaviour
 
                     break;
                 case WwiseTrigger.forState:
+                    wwiseState.SetValue();
                     break;
                 case WwiseTrigger.forSwitch:
                     break;

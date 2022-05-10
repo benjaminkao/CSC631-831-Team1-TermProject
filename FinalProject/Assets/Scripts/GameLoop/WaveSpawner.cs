@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using TMPro;
 
 public class WaveSpawner : NetworkBehaviour
 {
@@ -18,6 +19,8 @@ public class WaveSpawner : NetworkBehaviour
     public SpawnManager spawnManager;
     public LightingManager lightingManager;
     public AudioManager audioManager; 
+
+    public TMP_Text waveNumberLabel;
 
     // Define what our wave is
     [System.Serializable]
@@ -50,6 +53,7 @@ public class WaveSpawner : NetworkBehaviour
     }
 
     public Wave[] waves;
+
     [SerializeField]
     private int nextWave = 1;   // Store index of wave we want to create next
     private Wave currentWave;
@@ -72,7 +76,12 @@ public class WaveSpawner : NetworkBehaviour
         //waveCountdown = timeBetweenWaves;
 
 
+        if (waveNumberLabel == null)
+        {
+            return;
+        }
 
+        waveNumberLabel.text = $"";
     }
 
 
@@ -136,6 +145,7 @@ public class WaveSpawner : NetworkBehaviour
             return;
         }
 
+        RpcHandleWaveChanged(nextWave);
 
         this.numberOfEnemiesSpawned = 0;
         this.numberOfEnemiesDied = 0;
@@ -216,6 +226,17 @@ public class WaveSpawner : NetworkBehaviour
     //    }
     //    return true;
     //}
+
+    [ClientRpc]
+    void RpcHandleWaveChanged(int waveNumber)
+    {
+        if(waveNumberLabel == null)
+        {
+            return;
+        }
+
+        waveNumberLabel.text = $"{waveNumber}";
+    }
 
     Wave GetWaveType(int waveNum)
     {

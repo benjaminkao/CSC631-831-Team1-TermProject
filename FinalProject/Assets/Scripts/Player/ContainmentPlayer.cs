@@ -47,7 +47,13 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
     [SerializeField]
     private int _playerNum;
 
-
+    public bool IsGrounded
+    {
+        get
+        {
+            return Character.IsGrounded;
+        }
+    }
     public bool Downed
     {
         get
@@ -594,7 +600,6 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
 
     void HandleDisplayName(string oldValue, string newValue)
     {
-        Debug.Log("got here");
         if(ui == null)
         {
             return;
@@ -607,6 +612,7 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         if (ui == null) return;
 
         ui.SetReadyUp(true);
+        ui.ToggleReadyUpPrompt(false);
     }
 
     void HandlePreparationPhase(bool oldValue, bool newValue)
@@ -617,9 +623,11 @@ public class ContainmentPlayer : NetworkBehaviour, ITargetable
         {
             ui.SetReadyUp(false);
             ui.ToggleReadyUpActive(true);
+            ui.ToggleReadyUpPrompt(true);
         } else
         {
             ui.ToggleReadyUpActive(false);
+            ui.ToggleReadyUpPrompt(false);
         }
 
         

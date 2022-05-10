@@ -56,3 +56,15 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 43f5277783822854a98fdbc86f2383be, type: 2}
+  FootStepDirt:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8f58a4435744f9e4094a2585cd0f7a4d, type: 2}
+  FootStepMetal:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f1a2762be0e578248a9b8f39927ddda5, type: 2}

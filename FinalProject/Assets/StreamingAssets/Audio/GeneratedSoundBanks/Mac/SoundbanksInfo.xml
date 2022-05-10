@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="256880371">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3197777815">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -44,6 +44,13 @@
 						<State Id="966261518" Name="Downed" ObjectPath="\States\Official\Player_Status\Downed" GUID="{655CA3E6-514A-4A43-A355-09621F01FC7F}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="2548238350" Name="Radio" ObjectPath="\States\Official\Radio" GUID="{DE22EF7F-AD65-43EB-9903-FC2D7795DFD6}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Official\Radio\None" GUID="{8A8FCAD5-C954-4BD0-A0C9-57783ABCD299}"/>
+						<State Id="1160234136" Name="Normal" ObjectPath="\States\Official\Radio\Normal" GUID="{92E90402-B4A9-4EAF-A6E2-130CC6E1EEDC}"/>
+						<State Id="2548238350" Name="Radio" ObjectPath="\States\Official\Radio\Radio" GUID="{C39188A4-86A4-4F23-9D8D-945548F0DB1D}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2923888242" Name="Test_Pause" ObjectPath="\States\Test\Test_Pause" GUID="{33AD69DB-E9F8-4241-8FC2-3C523F789407}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Test\Test_Pause\None" GUID="{29A434D7-6B31-4A6D-A101-47B3920E2624}"/>
@@ -67,7 +74,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4056684167" Language="SFX" Hash="3976308852">
+		<SoundBank Id="4056684167" Language="SFX" Hash="1876610160">
 			<ObjectPath>\SoundBanks\Official\Master</ObjectPath>
 			<ShortName>Master</ShortName>
 			<Path>Master.bnk</Path>
@@ -80,7 +87,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4155093788" Name="Play_Boss_Attack" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Attack" MaxAttenuation="20." DurationType="OneShot" DurationMin="2.374989" DurationMax="2.5">
+				<Event Id="4155093788" Name="Play_Boss_Attack" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Attack" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.374989" DurationMax="2.5">
 					<IncludedMemoryFiles>
 						<File Id="106240569" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Attack_1.wav</ShortName>
@@ -92,7 +99,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3367086695" Name="Play_Boss_Damage_Taken" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Damage_Taken" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.999977" DurationMax="2.062494">
+				<Event Id="3367086695" Name="Play_Boss_Damage_Taken" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Damage_Taken" MaxAttenuation="40." DurationType="OneShot" DurationMin="1.999977" DurationMax="2.062494">
 					<IncludedMemoryFiles>
 						<File Id="54811737" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Damage_Taken_1.wav</ShortName>
@@ -104,7 +111,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3695176782" Name="Play_Boss_Death" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Death" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.874989" DurationMax="3.874989">
+				<Event Id="3695176782" Name="Play_Boss_Death" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Death" MaxAttenuation="40." DurationType="OneShot" DurationMin="3.874989" DurationMax="3.874989">
 					<IncludedMemoryFiles>
 						<File Id="775196149" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Death.wav</ShortName>
@@ -112,15 +119,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2955770602" Name="Play_Boss_Footstep" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Footstep" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.760564" DurationMax="0.760564">
+				<Event Id="2955770602" Name="Play_Boss_Footstep" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Footstep" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.760564" DurationMax="0.760564">
 					<IncludedMemoryFiles>
 						<File Id="907921487" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Footstep.wav</ShortName>
-							<Path>SFX\SFX_Gameplay_Zombie_Boss_Footstep_AE15A926.wem</Path>
+							<Path>SFX\SFX_Gameplay_Zombie_Boss_Footstep_ADA38877.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="506157627" Name="Play_Boss_Groan" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Groan" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.312494" DurationMax="3.312494">
+				<Event Id="506157627" Name="Play_Boss_Groan" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Groan" MaxAttenuation="40." DurationType="OneShot" DurationMin="3.312494" DurationMax="3.312494">
 					<IncludedMemoryFiles>
 						<File Id="861980406" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Groan.wav</ShortName>
@@ -128,7 +135,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="253434116" Name="Play_Boss_Roar" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Roar" MaxAttenuation="20." DurationType="OneShot" DurationMin="3.937483" DurationMax="3.937483">
+				<Event Id="253434116" Name="Play_Boss_Roar" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_Boss_Roar" MaxAttenuation="40." DurationType="OneShot" DurationMin="3.937483" DurationMax="3.937483">
 					<IncludedMemoryFiles>
 						<File Id="300129364" Language="SFX">
 							<ShortName>SFX_Gameplay_Zombie_Boss_Roar.wav</ShortName>
@@ -197,6 +204,10 @@
 						<File Id="997225675" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_High_Loop.wav</ShortName>
 							<Path>SFX\MC_Gameplay_Combat_Intensity_High_Loop_9EDFC787.wem</Path>
+						</File>
+						<File Id="1000316745" Language="SFX">
+							<ShortName>SFX_Atmosphere.wav</ShortName>
+							<Path>SFX\SFX_Atmosphere_9EDFC787.wem</Path>
 						</File>
 						<File Id="1030639214" Language="SFX">
 							<ShortName>MC_Gameplay_Combat_Intensity_Low_Transition_Stinger_2.wav</ShortName>
@@ -330,6 +341,18 @@
 						<File Id="338034573" Language="SFX">
 							<ShortName>VO_Player_1_Callout_Boss.wav</ShortName>
 							<Path>SFX\VO_Player_1_Callout_Boss_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="317124138" Name="Play_Player_1_Callout_Defeat" ObjectPath="\Events\Official\VO\Player_1\Play_Player_1_Callout_Defeat" MaxAttenuation="15." DurationType="OneShot" DurationMin="2.25" DurationMax="3.749977">
+					<IncludedMemoryFiles>
+						<File Id="447909691" Language="SFX">
+							<ShortName>VO_Player_1_Defeat_1.wav</ShortName>
+							<Path>SFX\VO_Player_1_Defeat_1_3F75BDB9.wem</Path>
+						</File>
+						<File Id="540416387" Language="SFX">
+							<ShortName>VO_Player_1_Defeat_2.wav</ShortName>
+							<Path>SFX\VO_Player_1_Defeat_2_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -470,6 +493,90 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2953849999" Name="Play_Radio" ObjectPath="\Events\Official\Music\Play\Play_Radio" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="98792049" Language="SFX">
+							<ShortName>Radio_Asian_Drama_Music.wav</ShortName>
+							<Path>SFX\Radio_Asian_Drama_Music_9EDFC787.wem</Path>
+						</File>
+						<File Id="121783260" Language="SFX">
+							<ShortName>Radio_George_Control.wav</ShortName>
+							<Path>SFX\Radio_George_Control_9EDFC787.wem</Path>
+						</File>
+						<File Id="178297360" Language="SFX">
+							<ShortName>Radio_Matteo_Planet_Hopper.wav</ShortName>
+							<Path>SFX\Radio_Matteo_Planet_Hopper_9EDFC787.wem</Path>
+						</File>
+						<File Id="292268599" Language="SFX">
+							<ShortName>button_on_off_064.wav</ShortName>
+							<Path>SFX\button_on_off_064_9EDFC787.wem</Path>
+						</File>
+						<File Id="744284155" Language="SFX">
+							<ShortName>Radio_Justin_Dont_Tempt_Me.wav</ShortName>
+							<Path>SFX\Radio_Justin_Dont_Tempt_Me_9EDFC787.wem</Path>
+						</File>
+						<File Id="921614891" Language="SFX">
+							<ShortName>Radio_Matteo_Racer.wav</ShortName>
+							<Path>SFX\Radio_Matteo_Racer_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{03180FF6-5E58-4C0F-998A-3D137C5C6E96}">
+							<Media>
+								<File Id="121783260"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{378ECF4F-9D95-4352-B758-95834E15FBCE}">
+							<Media>
+								<File Id="744284155"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{065AA809-31F3-4161-8A76-9B91BA494818}">
+							<Media>
+								<File Id="98792049"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F981FAB3-B084-4E99-A24F-B49BB772DE20}">
+							<Media>
+								<File Id="178297360"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3858E869-C47D-4E24-B646-7B7ED2E258EC}">
+							<Media>
+								<File Id="921614891"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{03180FF6-5E58-4C0F-998A-3D137C5C6E96}">
+							<Media>
+								<File Id="292268599"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{378ECF4F-9D95-4352-B758-95834E15FBCE}">
+							<Media>
+								<File Id="292268599"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{065AA809-31F3-4161-8A76-9B91BA494818}">
+							<Media>
+								<File Id="292268599"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F981FAB3-B084-4E99-A24F-B49BB772DE20}">
+							<Media>
+								<File Id="292268599"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3858E869-C47D-4E24-B646-7B7ED2E258EC}">
+							<Media>
+								<File Id="292268599"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="1160234136" Name="Normal" ObjectPath="\States\Official\Radio\Normal"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2449297370" Name="Play_Radio_Switch" ObjectPath="\Events\Default Work Unit\Play_Radio_Switch" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1779266091" Name="Play_Round_Start" ObjectPath="\Events\Official\SFX\HUD_Indicators\Play_Round_Start" DurationType="OneShot" DurationMin="1.999977" DurationMax="1.999977">
 					<IncludedMemoryFiles>
 						<File Id="42354746" Language="SFX">
@@ -502,7 +609,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="896322546" Name="Play_SFX_Gameplay_Gun_Impact" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_SFX_Gameplay_Gun_Impact" DurationType="OneShot" DurationMin="0.812494" DurationMax="0.812494">
+				<Event Id="896322546" Name="Play_SFX_Gameplay_Gun_Impact" ObjectPath="\Events\Official\SFX\Weapons\Guns\Play_SFX_Gameplay_Gun_Impact" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.812494" DurationMax="0.812494">
 					<IncludedMemoryFiles>
 						<File Id="982344213" Language="SFX">
 							<ShortName>SFX_Gameplay_Gun_Impact.wav</ShortName>
@@ -523,6 +630,14 @@
 						<File Id="643911166" Language="SFX">
 							<ShortName>SFX_Gameplay_Tower_Shoot.wav</ShortName>
 							<Path>SFX\SFX_Gameplay_Tower_Shoot_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1071020330" Name="Play_SFX_Zombie_Explode" ObjectPath="\Events\Official\SFX\Actors\NPC\Play_SFX_Zombie_Explode" MaxAttenuation="15." DurationType="OneShot" DurationMin="1.749977" DurationMax="1.854036">
+					<IncludedMemoryFiles>
+						<File Id="371416819" Language="SFX">
+							<ShortName>SFX_Zombie_Explode.wav</ShortName>
+							<Path>SFX\SFX_Zombie_Explode_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -987,6 +1102,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2627060112" Name="Play_VO_Player_1_Down" ObjectPath="\Events\Official\VO\Player_1\Play_VO_Player_1_Down" MaxAttenuation="15." DurationType="OneShot" DurationMin="3.25" DurationMax="3.25">
+					<IncludedMemoryFiles>
+						<File Id="229743409" Language="SFX">
+							<ShortName>VO_Player_1_Down.wav</ShortName>
+							<Path>SFX\VO_Player_1_Down_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="63801537" Name="Play_VO_System_Area_Breach" ObjectPath="\Events\Official\VO\AI\Play_VO_System_Area_Breach" DurationType="OneShot" DurationMin="1.781247" DurationMax="1.781247">
 					<IncludedMemoryFiles>
 						<File Id="843820513" Language="SFX">
@@ -1221,6 +1344,9 @@
 				<StateGroup Id="836963824" Name="Test_Outdoor" ObjectPath="\States\Test\Test_Env\Test_Outdoor" GUID="{9CD59E3F-CA56-430D-99F9-80CC191999CF}">
 					<States/>
 				</StateGroup>
+				<StateGroup Id="1160234136" Name="Normal" ObjectPath="\States\Official\Radio\Normal" GUID="{92E90402-B4A9-4EAF-A6E2-130CC6E1EEDC}">
+					<States/>
+				</StateGroup>
 				<StateGroup Id="1281810935" Name="Start" ObjectPath="\States\Official\Gameplay_Music\Start" GUID="{F127CF5B-F589-4B9F-9CDA-1EB34E591D9C}">
 					<States/>
 				</StateGroup>
@@ -1281,6 +1407,15 @@
 				</SwitchGroup>
 				<SwitchGroup Id="2395569889" Name="Test_Indoor" ObjectPath="\Switches\Test\Test_2D_Env\Test_Indoor" GUID="{B292D674-75DF-47C3-B94B-AED36B7AD61E}">
 					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="2548238350" Name="Radio" ObjectPath="\Switches\Official\Radio" GUID="{A1C79BD5-1A1E-4554-8C47-33F86ED8C16B}">
+					<Switches>
+						<Switch Id="1570920046" Name="Justin" ObjectPath="\Switches\Official\Radio\Justin" GUID="{378ECF4F-9D95-4352-B758-95834E15FBCE}"/>
+						<Switch Id="4280654574" Name="George" ObjectPath="\Switches\Official\Radio\George" GUID="{03180FF6-5E58-4C0F-998A-3D137C5C6E96}"/>
+						<Switch Id="1190308087" Name="Matteo_1" ObjectPath="\Switches\Official\Radio\Matteo_1" GUID="{F981FAB3-B084-4E99-A24F-B49BB772DE20}"/>
+						<Switch Id="1190308084" Name="Matteo_2" ObjectPath="\Switches\Official\Radio\Matteo_2" GUID="{3858E869-C47D-4E24-B646-7B7ED2E258EC}"/>
+						<Switch Id="1803821416" Name="Kevin_1" ObjectPath="\Switches\Official\Radio\Kevin_1" GUID="{065AA809-31F3-4161-8A76-9B91BA494818}"/>
+					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2766477831" Name="Test_Boss" ObjectPath="\Switches\Test\Test_Gameplay_Music\Test_Boss" GUID="{40170DB8-4C13-4B50-8ECA-B18533331FFF}">
 					<Switches/>

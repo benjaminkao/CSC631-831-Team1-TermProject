@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
 
     public static GameManager Instance;
+    public static event Action<string> OnGameOver;
 
     [SerializeField] private List<ContainmentPlayer> _players;
     [SerializeField] private ContainmentPlayer _localPlayer;
@@ -234,6 +235,11 @@ public class GameManager : MonoBehaviour
     
     public void HandlePlayerDowned(ContainmentPlayer playerDowned)
     {
+        if (_gameState == GameState.GAMEOVER)
+        {
+            return;
+        }
+
         bool gameOver = true;
 
         _enemyTargetables.Remove(playerDowned.gameObject);
@@ -254,8 +260,7 @@ public class GameManager : MonoBehaviour
 
         if(gameOver)
         {
-            Debug.Log("Game Over");
-            // Handle Game Over
+            GameOver("Shield Beacon Destroyed");
         }
 
         // Networking - Notify clients of player down and if game is over
@@ -263,6 +268,11 @@ public class GameManager : MonoBehaviour
 
     public void HandlePlayerDeath(ContainmentPlayer playerDied)
     {
+        if(_gameState == GameState.GAMEOVER)
+        {
+            return;
+        }
+
         bool gameOver = true;
 
         _enemyTargetables.Remove(playerDied.gameObject);
@@ -283,11 +293,19 @@ public class GameManager : MonoBehaviour
 
         if(gameOver)
         {
-            Debug.Log("Game Over - All Players Down or Killed");
-            // Handle Game Over
+            GameOver("All Players downed or killed.");
         }
 
         // Networking - Notify clients of player died and if game is over
+    }
+
+    public void GameOver(string reason)
+    {
+        Debug.Log($"Game Over - {reason}");
+
+        _gameState = GameState.GAMEOVER;
+
+        OnGameOver?.Invoke(reason);
     }
 
     public void HandlePlayerResurrect(ContainmentPlayer playerRez)

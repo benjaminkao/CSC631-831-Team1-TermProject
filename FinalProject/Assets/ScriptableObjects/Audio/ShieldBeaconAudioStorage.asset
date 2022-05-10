@@ -20,3 +20,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5d16b2e508cdfd4438d461a0fe5587fa, type: 2}
+  shieldBeaconDamaged:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d5702077ea7173147b169a736b1cf720, type: 2}

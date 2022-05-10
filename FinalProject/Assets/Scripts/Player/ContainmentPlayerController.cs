@@ -87,6 +87,14 @@ public class ContainmentPlayerController : MonoBehaviour, ICharacterController
     public bool canJump = true;
     public bool canMove = true;
 
+    public bool IsGrounded
+    {
+        get {
+            return this.Motor.GroundingStatus.IsStableOnGround;
+        }
+    }
+
+
     private Vector3 lastInnerNormal = Vector3.zero;
     private Vector3 lastOuterNormal = Vector3.zero;
 

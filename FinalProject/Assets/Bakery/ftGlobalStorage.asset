@@ -417,7 +417,8 @@ MonoBehaviour:
   - Assets/ImportedAssets/Course Library/_Source_Files/FBX/Animations_Static.fbx
   - Assets/ImportedAssets/Course Library/_Source_Files/FBX/Animations_IK.fbx
   - Assets/ImportedAssets/PlayerChar_Soldier/soldier final.fbx
-  uvOverlapAssetList: 00000000ffffffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  - Assets/Old_Radio/Mesh/Radio.FBX
+  uvOverlapAssetList: 00000000ffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 0
   gpuName: 
