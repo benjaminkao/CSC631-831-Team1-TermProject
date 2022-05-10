@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8031ebfb23fb443deb814876d734b938, type: 3}
+  m_Name: ZombieHeavyAudioStorage
+  m_EditorClassIdentifier: 
+  ZombieFootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a1d0f7e2e44de654089adf512b8ddfd2, type: 2}
+  ZombieAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7eb180ee006caed46a770dde3276cbd7, type: 2}
+  ZombieGroan:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e045d921a79bb0d4a8ddb12404e7dfb9, type: 2}
+  ZombieScreech:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e045d921a79bb0d4a8ddb12404e7dfb9, type: 2}
+  ZombieDamageTaken:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c523e705bbede2545a1ef0ea68c965bb, type: 2}
+  ZombieDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6bcce4bae6dc1cb43bc7696a5ce43ee7, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc824ffa08f2d04f9cbd7dca15cbe86, type: 3}
+  m_Name: ShieldBeaconAudioStorage
+  m_EditorClassIdentifier: 
+  healthRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 048400a48f194784bbd3544f19ef3ebc, type: 2}
+  shieldNoise:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5d16b2e508cdfd4438d461a0fe5587fa, type: 2}
+  shieldBeaconDamaged:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d5702077ea7173147b169a736b1cf720, type: 2}

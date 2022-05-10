@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
+  - Linux
+  - Mac
   - Windows
   PlatformSettingsList:
+  - {fileID: 11400000, guid: b5e4776997641f04481316d783d1dd6b, type: 2}
+  - {fileID: 11400000, guid: 7e7abe2e5e67c184a91ce41974f02351, type: 2}
   - {fileID: 11400000, guid: 265a68866df402f49af9d446b650d88d, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
@@ -52,11 +56,11 @@ MonoBehaviour:
     m_TargetAutoStreamBufferLengthMs: 380
     m_UseStreamCache: 0
     m_MaximumPinnedBytesInCache: 4294967295
-    m_EnableGameSyncPreparation: 0
+    m_EnableGameSyncPreparation: 1
     m_ContinuousPlaybackLookAhead: 1
     m_MonitorQueuePoolSize: 1048576
     m_MaximumHardwareTimeoutMs: 1000
-    m_DebugOutOfRangeCheckEnabled: 0
+    m_DebugOutOfRangeCheckEnabled: 1
     m_DebugOutOfRangeLimit: 16
     m_RenderDuringFocusLoss: 0
     m_SoundBankPersistentDataPath: 

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61912f5df1c7a0d448469f694935e038, type: 3}
+  m_Name: AreaEffectTowerFX
+  m_EditorClassIdentifier: 
+  bulletTrail: {fileID: 4083527716761709170, guid: fa1611990926115409bdbcb15bf5cb1f, type: 3}
+  bulletImpact: {fileID: 3557604821200331593, guid: a3f8f93140a9f084d8055011c964afd8, type: 3}
